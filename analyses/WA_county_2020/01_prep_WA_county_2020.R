@@ -10,7 +10,6 @@ suppressMessages({
   library(fs)
   library(sf)
   library(geomander)
-  library(eiCompare)
   devtools::load_all() # load utilities
 })
 
