@@ -1,0 +1,44 @@
+---
+title: "TODO"
+description: |
+  Ecological inference project (TODO description)
+---
+
+The main page goes here.
+
+```{r, echo = FALSE, warning = FALSE, message = FALSE}
+library(tidyverse)
+library(ggiraph)
+usa <- readRDS('usa_shp.rds')
+p <- usa %>%
+  ggplot() +
+  geom_sf_interactive(aes(onclick = paste0('window.open("', link , '")')), 
+                      fill = 'white', color = 'black') +
+  geom_sf_text(aes(label = STUSPS), fun.geometry = \(x) geomander::st_circle_center(sf::st_as_sf(x))) +
+  theme_void() +
+  guides(fill = 'none') +
+  theme(text = element_text(family = 'Arial', size = 1))
+
+
+girafe(ggobj = p, 
+       width_svg = 9, height_svg = 6,
+       options = list(
+         opts_hover(
+           css = "cursor: pointer;
+                  filter: drop-shadow(2px 2px 3px #0004);
+                  fill: #CC7810;stroke:black;",
+           reactive = TRUE),
+         opts_tooltip(css="font-family: 'Arial'; 
+                 background: #fffa; 
+                 border-radius: 3px; 
+                 padding: 0.3em;
+                 backdrop-filter: blur(6px);",
+                 delay_mouseover=100,
+                 delay_mouseout=100),
+         opts_toolbar(saveaspng=FALSE)
+       )
+)
+```
+
+
+

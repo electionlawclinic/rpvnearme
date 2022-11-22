@@ -1,0 +1,35 @@
+# Rproject
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+# Raw and draft data
+data-raw/*
+!data-raw/README.md
+data-out/*
+!data-out/README.md
+
+# R package stuff
+man/*
+
+# generated files
+*.pdf
+*.rds
+*.png
+*.rdata
+*.csv
+!data-final/**/*.rds
+!data-final/**/*.csv
+!R/epsg.rds
+
+# misc and  LaTeX
+*.tmp
+*.swp
+*.bak
+*.log
+.DS_store
+scratch/*
+.Rdata
+.httr-oauth
+.DS_Store
