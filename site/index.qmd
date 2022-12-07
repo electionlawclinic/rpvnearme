@@ -1,10 +1,11 @@
 ---
-title: "TODO"
-description: |
-  Ecological inference project (TODO description)
+title: "RPV Near Me"
 ---
 
-The main page goes here.
+## Where in America is there Racially Polarized Voting? 
+
+This is a resource designed to be used by voters, community groups, activists, and lawyers to aid in their development of campaigns to fully enfranchise voters of color in local government.  
+
 
 ```{r, echo = FALSE, warning = FALSE, message = FALSE}
 library(tidyverse)
@@ -40,5 +41,9 @@ girafe(ggobj = p,
 )
 ```
 
+
+Read more about the project here (TODO link to about page).
+
+Download the data (TODO link to the data page).
 
 

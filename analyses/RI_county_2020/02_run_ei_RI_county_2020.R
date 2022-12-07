@@ -1,18 +1,18 @@
 ###############################################################################
-# Run EI for `VA_county_2020`
+# Run EI for `RI_county_2020`
 # © Election Law Clinic, Harvard Law School, November 2022
 ###############################################################################
 
 # Run the simulation -----
-cli_process_start('Running EI analysis for {.pkg VA_county_2020}...')
+cli_process_start('Running EI analysis for {.pkg RI_county_2020}...')
 
-elecs <- va |>
+elecs <- ri |>
   dplyr::select(matches('*_\\d\\d_')) |>
   names() |>
   stringr::str_sub(1, 6) |>
   unique()
 
-county_list <- va |>
+county_list <- ri |>
   group_by(county) |>
   group_split()
 
@@ -39,6 +39,6 @@ cli_process_done()
 # Output the `ei` objects. Do not edit this path.
 cli_process_start('Saving {.cls ei} outputs.')
 
-write_rds(ei_l, here('data-out/VA_2020/VA_county_2020_ei.rds'), compress = 'xz')
+write_rds(ei_l, here('data-out/RI_2020/RI_county_2020_ei.rds'), compress = 'xz')
 
 cli_process_done()

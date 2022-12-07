@@ -84,17 +84,23 @@ run_rpv <- function(df, total, slug, county = NULL, ...) {
 #' @examples
 run_rxc <- function(df, total, ncores = 1, n_tunes = 10, thin = 5, total_draws = 10000,
                     warmup = 10000, seed = 2022, ...) {
+
+  # skip uncontesteds / weird elecs
   cands <- df %>%
     as_tibble() %>%
     select(starts_with(total), -any_of(total)) %>%
     names()
 
+  if (length(cands) != 2) {
+    return(NULL)
+  }
+
   df_ei <- df %>%
     dplyr::mutate(.rn = dplyr::row_number()) %>%
     dplyr::as_tibble() %>%
     make_proportions(.cols = starts_with(paste0(total, '_'))) %>%
-    dplyr::mutate({{ total }} := rowSums(dplyr::select(as_tibble(.),
-                                                       starts_with(paste0(total, '_'))))) %>%
+    dplyr::mutate({{ total }} := as.integer(rowSums(dplyr::select(as_tibble(.),
+                                                       starts_with(paste0(total, '_')))))) %>%
     make_proportions(.cols = dplyr::all_of(races)) %>%
     dplyr::select(starts_with('prop_'), {{ total }}, .rn) %>%
     dplyr::rename_with(.fn = \(x) str_remove(x, 'prop_')) %>%
