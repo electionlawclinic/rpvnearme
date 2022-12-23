@@ -106,6 +106,10 @@ run_rxc <- function(df, total, ncores = 1, n_tunes = 10, thin = 5, total_draws =
     dplyr::rename_with(.fn = \(x) str_remove(x, 'prop_')) %>%
     tidyr::drop_na()
 
+  if (nrow(df_ei) < 2) {
+    return(NULL)
+  }
+
   if (ncores == 1) {
     `%oper%` <- foreach::`%do%`
   } else {
