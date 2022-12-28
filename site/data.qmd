@@ -1,7 +1,9 @@
 ---
-title: "Data Download"
+title: "Data"
 ---
 
 You can access a csv with detailed RPV estimates and their credible intervals, for your chosen level of geography.
 
 *Download buttons go here, like in <https://alarm-redist.org/posts/2021-08-10-census-2020/>*
+
+https://github.com/alarm-redist/alarm-redist.github.io/blob/main/_posts/2021-08-10-census-2020/census-2020.Rmd

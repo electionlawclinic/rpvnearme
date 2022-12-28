@@ -12,14 +12,14 @@ RPV Near Me is a project of the [Election Law Clinic (“ELC”) at Harvard Law 
 
 Racially polarized voting (RPV) occurs where voters of one race or ethnicity tend to support certain candidates in elections, while voters of another race or ethnicity support different candidates. Given the types of electoral systems used across the U.S., RPV often causes voters of color to have less representation than white voters, and in some cases no representation at all.  
 
-At the congressional and state legislative level, the Voting Rights Act has been used by civil rights groups and political actors to counter attempts to dilute the voting power of Black, Latino, Asian American, and Native American voters. But at the local level, it can be hard to access the data and techniques necessary to determine whether RPV exists. This site aims to bridge that gap by providing RPV estimates for every county in the country for at least [x] recent statewide elections. 
+At the congressional and state legislative level, the Voting Rights Act has been used by civil rights groups and political actors to counter attempts to dilute the voting power of Black, Latino, Asian American, and Native American voters. But at the local level, it can be hard to access the data and techniques necessary to determine whether RPV exists. This site aims to bridge that gap by providing RPV estimates for every county in the country for at least 4 recent statewide elections. 
 
 ## Data and Methods 
 
-The RPV estimates on this site were generated using the techniques approved by federal courts for use in Voting Rights Act litigation, namely King’s Ecological Inference (King’s EI). Specifically, the election data utilized was […] and the r packages used to analyze those races are [ include hyperlinks to promote chris’s cool coding stuff] [Chris stuff] 
+The RPV estimates on this site were generated using the techniques approved by federal courts for use in Voting Rights Act litigation, namely King’s Ecological Inference (King’s EI). Specifically, we use election data from the [Voting and Election Science Team](https://dataverse.harvard.edu/dataverse/electionscience), tabulated to Census Bureau geographies in the ALARM Project [2020 Redistricting Files](https://alarm-redist.github.io/posts/2021-08-10-census-2020/). We analyze those contests using RxC ecological inference, using the R package [eiPack](http:/ /www.olivialau.org/software/eiPack.html). For demographic characteristics of each geography, we use voting age populations for White, Black, Hispanic, and other people.
 
 ## Next Steps 
 
-We are exploring adding RPV data for all the cities, towns, and villages in the U.S. If this would be useful to you, please contact us at elc@law.harvard.edu to let us know.  
+We are exploring adding RPV data for all the cities, towns, and villages in the U.S. If this would be useful to you, please contact us at [elc@law.harvard.edu](mailto:elc@law.harvard.edu) to let us know.  
 
-If there are other related products that would be useful in your efforts to enfranchise communities of color at the local level, please also reach out with a description of those products (elc@law.harvard.edu). 
+If there are other related products that would be useful in your efforts to enfranchise communities of color at the local level, please also reach out with a description of those products [elc@law.harvard.edu](mailto:elc@law.harvard.edu). 

@@ -42,8 +42,8 @@ girafe(ggobj = p,
 ```
 
 
-Read more about the project here (TODO link to about page).
+Read more about the project [here](https://www.rpvnearme.org/about.html).
 
-Download the data (TODO link to the data page).
+Download the [data](https://www.rpvnearme.org/data.html).
 
 
