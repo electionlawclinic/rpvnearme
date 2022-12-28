@@ -18,6 +18,8 @@ At the congressional and state legislative level, the Voting Rights Act has been
 
 The RPV estimates on this site were generated using the techniques approved by federal courts for use in Voting Rights Act litigation, namely King’s Ecological Inference (King’s EI). Specifically, we use election data from the [Voting and Election Science Team](https://dataverse.harvard.edu/dataverse/electionscience), tabulated to Census Bureau geographies in the ALARM Project [2020 Redistricting Files](https://alarm-redist.github.io/posts/2021-08-10-census-2020/). We analyze those contests using RxC ecological inference, using the R package [eiPack](http:/ /www.olivialau.org/software/eiPack.html). For demographic characteristics of each geography, we use voting age populations for White, Black, Hispanic, and other people.
 
+The code to replicate the analyses is available on [GitHub](https://github.com/electionlawclinic/rpvnearme).
+
 ## Next Steps 
 
 We are exploring adding RPV data for all the cities, towns, and villages in the U.S. If this would be useful to you, please contact us at [elc@law.harvard.edu](mailto:elc@law.harvard.edu) to let us know.  
