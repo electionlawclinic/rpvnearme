@@ -12,6 +12,7 @@ server: shiny
 library(tidyverse)
 library(ggiraph)
 library(ggdist)
+
 alarm_abb <- function() {
   tibble::tribble(
     ~a, ~b,
@@ -22,19 +23,8 @@ alarm_abb <- function() {
     'sos', 'Secretary of State'
   )
 }
+ei_tb <- read_csv('https://raw.githubusercontent.com/electionlawclinic/rpvnearme/main/data/NY_county_2020_summary.csv')
 
-
-counties <- tinytiger::tt_counties('NY')
-p <- counties |> 
-  ggplot() +
-  geom_sf_interactive(aes(fill = 'white', color = 'black')) +
-  geom_sf_text(aes(label = NAME), fun.geometry = \(x) geomander::st_circle_center(sf::st_as_sf(x))) +
-  theme_void() +
-  guides(fill = 'none') +
-  theme(text = element_text(family = 'Arial', size = 1))
-ei_tb <- readRDS('~/GitHub/US-ei/data-out/NY_2020/NY_county_2020_ei.rds')
-ei_tb <- bind_rows(lapply(ei_tb, bind_rows), .id = 'county')
-  
 ei_tb <- ei_tb  |> 
   mutate(
     race = recode(
@@ -53,21 +43,13 @@ ei_tb <- ei_tb  |>
          election = paste(election, year)) |>
   arrange(year, election) |>
   mutate(election = fct_inorder(election))
+
+#ojs_define(ei_df = ei_tb)
 ```
 
 ```{r}
-girafeOutput('map')
-plotOutput('ei')
-```
-
-```{r}
-#| context: server
-output$map <- renderGirafe({
-    girafe(ggobj = p)
-  })
-output$ei <- renderPlot({
-  ei_tb |>
-    filter(county == map_selected) |>
+ ei_tb |>
+    filter(county == 'New York County') |>
     ggplot() +
     geom_interval(aes(y = election, x = mean, xmin = ci_95_lower, xmax = ci_95_upper, color = race),
                   position = position_dodge(width = .5)) +
@@ -76,5 +58,13 @@ output$ei <- renderPlot({
     scale_x_continuous(name = 'Estimated Support for Democrats', labels = scales::percent, limits = c(0, 1)) +
     scale_y_discrete(name = 'Contest', limits = rev) +
     theme_bw()
-})
 ```
+
+
+
+
+<!-- ```{ojs} -->
+<!-- ei = transpose(ei_df) -->
+<!-- ``` -->
+
+

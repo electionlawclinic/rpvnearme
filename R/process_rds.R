@@ -6,8 +6,8 @@ process_rds <- function(state) {
   l <- readr::read_rds(stringr::str_glue('data-out/{state}_2020/{state}_county_2020_ei.rds'))
   l |>
     lapply(function(w) {
-      lapply(w, FUN = function(x) dplyr::bind_rows(x$estimate))
-    })|>
+      dplyr::bind_rows(lapply(w, FUN = function(x) x$estimate))
+    }) |>
     dplyr::bind_rows(.id = 'county') |>
     dplyr::mutate(county = names(l)[as.integer(county)]) |>
     suppressWarnings() |>
