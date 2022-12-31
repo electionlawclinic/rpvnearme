@@ -3,11 +3,11 @@ if (FALSE) {
     dplyr::filter(STUSPS %in% state.abb) %>%
     tigris::shift_geometry() |>
     rmapshaper::ms_simplify(keep = 0.1) %>%
-    dplyr::mutate(link = 'https://www.hlselectionlaw.org/')
+    dplyr::mutate(link = paste0('https://electionlawclinic.github.io/rpvnearme/', STUSPS, '_2020/'))
 
-  cntrd <- sf::st_centroid(sf::st_geometry(usa))
-
-  {(sf::st_geometry(usa) - cntrd) * 0.8 + cntrd} |> ggplot() + geom_sf()
+  # cntrd <- sf::st_centroid(sf::st_geometry(usa))
+  #
+  # {(sf::st_geometry(usa) - cntrd) * 0.8 + cntrd} |> ggplot() + geom_sf()
 
   saveRDS(usa, 'docs/usa_shp.rds', compress = 'xz')
 
