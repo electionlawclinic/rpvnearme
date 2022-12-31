@@ -9,8 +9,6 @@ process_rds <- function(state) {
       dplyr::bind_rows(lapply(w, FUN = function(x) x$estimate))
     }) |>
     dplyr::bind_rows(.id = 'county') |>
-    dplyr::mutate(county = names(l)[as.integer(county)]) |>
-    suppressWarnings() |>
     readr::write_csv(stringr::str_glue('data/{state}_county_2020_summary.csv'))
 
   l |>
