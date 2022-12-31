@@ -3,15 +3,13 @@ title: "NY"
 description: |
   Ecological inference estimates by county for NY
 format: html
-server: shiny
 ---
 
-```{r}
-#| echo: false
-#| message: false
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
 library(tidyverse)
 library(ggiraph)
 library(ggdist)
+library(patchwork)
 
 alarm_abb <- function() {
   tibble::tribble(
@@ -47,9 +45,10 @@ ei_tb <- ei_tb  |>
 #ojs_define(ei_df = ei_tb)
 ```
 
-```{r}
- ei_tb |>
-    filter(county == 'New York County') |>
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+lapply(ei_tb$county, function(cty) {
+   ei_tb |>
+    filter(county == cty) |>
     ggplot() +
     geom_interval(aes(y = election, x = mean, xmin = ci_95_lower, xmax = ci_95_upper, color = race),
                   position = position_dodge(width = .5)) +
@@ -57,7 +56,10 @@ ei_tb <- ei_tb  |>
                        position = position_dodge(width = .5), color = 'black') +
     scale_x_continuous(name = 'Estimated Support for Democrats', labels = scales::percent, limits = c(0, 1)) +
     scale_y_discrete(name = 'Contest', limits = rev) +
-    theme_bw()
+    theme_bw() + 
+    labs(title = cty)
+})
+
 ```
 
 
