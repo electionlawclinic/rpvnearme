@@ -16,8 +16,6 @@ man/*
 # generated files
 *.pdf
 *.rds
-*.png
-!docs/*.png
 *.rdata
 *.csv
 !data/**/*.rds

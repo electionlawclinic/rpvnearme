@@ -46,7 +46,7 @@ ei_tb <- ei_tb  |>
 ```
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE}
-lapply(ei_tb$county, function(cty) {
+lapply(unique(ei_tb$county), function(cty) {
    ei_tb |>
     filter(county == cty) |>
     ggplot() +
