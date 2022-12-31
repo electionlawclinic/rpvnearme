@@ -1,5 +1,6 @@
 project:
-  type: website
+    type: website
+    output-dir: .
 
 website:
   title: "RPV Near Me"
