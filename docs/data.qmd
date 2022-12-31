@@ -1,0 +1,40 @@
+---
+title: "Data"
+---
+
+You can access a csv with detailed RPV estimates and their credible intervals, for your chosen level of geography.
+
+```{r echo = FALSE}
+library(tidyverse)
+raw <- gh::gh('GET /repos/electionlawclinic/rpvnearme/contents/data/')
+files <- keep(raw, ~ str_ends(.$name, '\\.csv')) %>%
+  map_dfr(~ tibble(
+    abb = str_to_upper(str_sub(.$name, 1, 2)),
+    type = if_else(.$name %in% c('California', 'Hawaii', 'Oregon'), 'Census tracts', 'VTDs'),
+    filename = .$name,
+    url = .$download_url
+  ))
+files <- files %>%
+  left_join(select(censable::stata, abb, state = name), by = 'abb') %>%
+  arrange(state)
+pmap(files, function(state, abb, type, filename, url, ...) {
+  a(
+    href = url, target = '_blank', download = filename,
+    div(
+      tags$svg(
+        class = paste0('icon icon-state-', abb),
+        style = 'height: 1.8em; width: 2.0em; position: relative; top: 0.7em;',
+        tags$use(`xlink:href` = paste0('#icon-state-', abb))
+      ),
+      HTML('&nbsp;'),
+      strong(state, ' ', type),
+      HTML('&nbsp;'),
+      fontawesome::fa('circle-down'),
+      HTML('&nbsp;'),
+      code(filename, style = 'color: #777777;')
+    )
+  )
+}) %>%
+  as.tags()
+
+```

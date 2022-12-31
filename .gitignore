@@ -19,8 +19,8 @@ man/*
 *.png
 *.rdata
 *.csv
-!data-final/**/*.rds
-!data-final/**/*.csv
+!data/**/*.rds
+!data/**/*.csv
 
 # misc and  LaTeX
 *.tmp

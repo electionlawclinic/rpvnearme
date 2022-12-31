@@ -9,9 +9,9 @@ if (FALSE) {
 
   {(sf::st_geometry(usa) - cntrd) * 0.8 + cntrd} |> ggplot() + geom_sf()
 
-  saveRDS(usa, 'site/usa_shp.rds', compress = 'xz')
+  saveRDS(usa, 'docs/usa_shp.rds', compress = 'xz')
 
 
 } else {
-  usa <- readRDS('site/usa_shp.rds')
+  usa <- readRDS('docs/usa_shp.rds')
 }
