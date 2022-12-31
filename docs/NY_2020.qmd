@@ -1,0 +1,91 @@
+---
+title: "NY 2020 Demo"
+description: |
+  Ecological inference estimates by county for NY
+format: html
+---
+
+```{r, echo = FALSE, message = FALSE, warning=FALSE}
+library(tidyverse)
+library(ggiraph)
+library(ggdist)
+library(patchwork)
+
+alarm_abb <- function() {
+  tibble::tribble(
+    ~a, ~b,
+    'pre', 'President',
+    'uss', 'US Senate',
+    'gov', 'Governor',
+    'atg', 'Attorney General',
+    'sos', 'Secretary of State'
+  )
+}
+ei_tb <- read_csv('https://raw.githubusercontent.com/electionlawclinic/rpvnearme/main/data/NY_county_2020_summary.csv')
+
+ei_tb <- ei_tb  |> 
+  mutate(
+    race = recode(
+      race,
+      'vap_black' = 'Black',
+      'vap_hisp' = 'Hispanic',
+      'vap_oth' = 'Other',
+      'vap_white' = 'White'
+    ),
+    race = factor(race, levels = c('White', 'Black', 'Hispanic', 'Other'))
+  ) |>
+  filter(str_detect(cand, '_dem')) |>
+  mutate(election = word(cand, sep = fixed('_')),
+         election = recode(election, !!!deframe(alarm_abb())),
+         year = 2000 + as.integer(str_sub(cand, 5, 6)),
+         election = paste(election, year)) |>
+  arrange(year, election) |>
+  mutate(election = fct_inorder(election))
+
+ojs_define(ei_df = ei_tb)
+```
+
+
+```{ojs, echo = FALSE}
+//| echo: false
+ei = transpose(ei_df)
+```
+
+```{ojs, echo = FALSE}
+//| echo: false
+viewof countyInput = Inputs.select(ei.map(d => d.county), 
+                                {sort: true, unique: true, label: "Choose a county:"})
+
+Plot.plot({
+
+marks: [
+  Plot.dot(ei,
+    {
+    x: "mean",
+    y: "election",
+    fill: "race",
+    r: 4,
+    filter: d => d.county === countyInput
+  }),
+  Plot.link(ei,
+  {
+  x1: "ci_95_lower",
+  x2: "ci_95_upper",
+  y1: "election",
+  y2: "election",
+  //fill: "race",
+  filter: d => d.county === countyInput
+  })
+],
+
+fill: {legend: true},
+x: {label: "Estimated Support for Democrats",
+    percent: true},
+y: {label: "Contest"},
+
+height: 600,
+marginLeft: 150
+
+})
+```
+
