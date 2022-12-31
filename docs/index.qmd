@@ -10,7 +10,8 @@ This is a resource designed to be used by voters, community groups, activists, a
 ```{r, echo = FALSE, warning = FALSE, message = FALSE}
 library(tidyverse)
 library(ggiraph)
-usa <- readRDS('usa_shp.rds')
+usa <- readRDS('usa_shp.rds') |> 
+  mutate(link = paste0(STUSPS, '_2020'))
 p <- usa %>%
   ggplot() +
   geom_sf_interactive(aes(onclick = paste0('window.open("', link , '")')), 
