@@ -1,16 +1,25 @@
 ---
 title: "Data"
+format:
+  html:
+    code-overflow: wrap
 ---
 
-You can access a csv with detailed RPV estimates and their credible intervals, for your chosen level of geography.
+You can access a `.csv` with detailed RPV estimates and their confidence intervals, for every state.
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+library(tidyverse)
+library(htmltools)
+HTML(readLines("state-svg-defs.svg"))
+
+```
 
 ```{r echo = FALSE}
-library(tidyverse)
 raw <- gh::gh('GET /repos/electionlawclinic/rpvnearme/contents/data/')
-files <- keep(raw, ~ str_ends(.$name, '\\.csv')) %>%
+files <- keep(raw, ~ str_ends(.$name, pattern = 'summary\\.csv')) %>%
   map_dfr(~ tibble(
     abb = str_to_upper(str_sub(.$name, 1, 2)),
-    type = if_else(.$name %in% c('California', 'Hawaii', 'Oregon'), 'Census tracts', 'VTDs'),
+    type = if_else(.$name %in% c('CA', 'HI', 'OR'), 'Census tracts', 'VTDs'),
     filename = .$name,
     url = .$download_url
   ))
@@ -38,3 +47,4 @@ pmap(files, function(state, abb, type, filename, url, ...) {
   as.tags()
 
 ```
+<br>
