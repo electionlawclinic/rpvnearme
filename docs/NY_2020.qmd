@@ -61,7 +61,7 @@ viewof countyInput = Inputs.select(ei.map(d => d.county),
 Plot.plot({
 
 marks: [
-Plot.ruleX([0]),
+  Plot.ruleX([0]),
   Plot.dot(ei, 
     {
     x: "mean",
