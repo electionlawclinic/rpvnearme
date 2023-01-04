@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Ecological inference estimates by county for NY">
+<meta name="description" content="Ecological inference estimates by county for NY State.">
 
 <title>RPV Near Me - NY 2020 Demo</title>
 <style>
@@ -171,7 +171,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#ecological-inference-estimates" id="toc-ecological-inference-estimates" class="nav-link active" data-scroll-target="#ecological-inference-estimates">Ecological Inference Estimates</a></li>
+  <li><a href="#new-york-county" id="toc-new-york-county" class="nav-link" data-scroll-target="#new-york-county">2020 New York county</a>
+  <ul class="collapse">
+  <li><a href="#data-sources" id="toc-data-sources" class="nav-link" data-scroll-target="#data-sources">Data Sources</a>
+  <ul class="collapse">
+  <li><a href="#elections-included-in-analysis" id="toc-elections-included-in-analysis" class="nav-link" data-scroll-target="#elections-included-in-analysis">Elections Included in Analysis</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -183,7 +196,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <div>
   <div class="description">
-    <p>Ecological inference estimates by county for NY</p>
+    <p>Ecological inference estimates by county for NY State.</p>
   </div>
 </div>
 
@@ -198,11 +211,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
+<section id="ecological-inference-estimates" class="level1">
+<h1>Ecological Inference Estimates</h1>
 <div class="cell">
 
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb1" data-startfrom="50" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 49;"><span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>ei <span class="op">=</span> <span class="fu">transpose</span>(ei_df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb1" data-startfrom="52" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 51;"><span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>ei <span class="op">=</span> <span class="fu">transpose</span>(ei_df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-1" data-nodetype="declaration">
 
@@ -210,40 +225,42 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb2" data-startfrom="56" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 55;"><span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a>viewof countyInput <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">select</span>(ei<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">county</span>)<span class="op">,</span> </span>
-<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>                                {<span class="dt">sort</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span> <span class="dt">unique</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Choose a county:"</span>})</span>
-<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<div class="sourceCode cell-code hidden" id="cb2" data-startfrom="58" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 57;"><span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>viewof countyInput <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">select</span>(ei<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">county</span>)<span class="op">,</span> </span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>                                {<span class="dt">sort</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span> <span class="dt">unique</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Choose a county:"</span>})</span>
 <span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a><span class="dt">marks</span><span class="op">:</span> [</span>
-<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a>  Plot<span class="op">.</span><span class="fu">dot</span>(ei<span class="op">,</span></span>
-<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a>    {</span>
-<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a>    <span class="dt">x</span><span class="op">:</span> <span class="st">"mean"</span><span class="op">,</span></span>
-<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a>    <span class="dt">y</span><span class="op">:</span> <span class="st">"election"</span><span class="op">,</span></span>
-<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a>    <span class="dt">fill</span><span class="op">:</span> <span class="st">"race"</span><span class="op">,</span></span>
-<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a>    <span class="dt">r</span><span class="op">:</span> <span class="dv">4</span><span class="op">,</span></span>
-<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a>    <span class="dt">filter</span><span class="op">:</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">county</span> <span class="op">===</span> countyInput</span>
-<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a>  })<span class="op">,</span></span>
-<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a>  Plot<span class="op">.</span><span class="fu">link</span>(ei<span class="op">,</span></span>
-<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a>  {</span>
-<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a>  <span class="dt">x1</span><span class="op">:</span> <span class="st">"ci_95_lower"</span><span class="op">,</span></span>
-<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a>  <span class="dt">x2</span><span class="op">:</span> <span class="st">"ci_95_upper"</span><span class="op">,</span></span>
-<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a>  <span class="dt">y1</span><span class="op">:</span> <span class="st">"election"</span><span class="op">,</span></span>
-<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a>  <span class="dt">y2</span><span class="op">:</span> <span class="st">"election"</span><span class="op">,</span></span>
-<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a>  <span class="co">//fill: "race",</span></span>
-<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a>  <span class="dt">filter</span><span class="op">:</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">county</span> <span class="op">===</span> countyInput</span>
-<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a>  })</span>
-<span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a>]<span class="op">,</span></span>
-<span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-81"><a href="#cb2-81" aria-hidden="true" tabindex="-1"></a><span class="dt">fill</span><span class="op">:</span> {<span class="dt">legend</span><span class="op">:</span> <span class="kw">true</span>}<span class="op">,</span></span>
-<span id="cb2-82"><a href="#cb2-82" aria-hidden="true" tabindex="-1"></a><span class="dt">x</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"Estimated Support for Democrats"</span><span class="op">,</span></span>
-<span id="cb2-83"><a href="#cb2-83" aria-hidden="true" tabindex="-1"></a>    <span class="dt">percent</span><span class="op">:</span> <span class="kw">true</span>}<span class="op">,</span></span>
-<span id="cb2-84"><a href="#cb2-84" aria-hidden="true" tabindex="-1"></a><span class="dt">y</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"Contest"</span>}<span class="op">,</span></span>
-<span id="cb2-85"><a href="#cb2-85" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-86"><a href="#cb2-86" aria-hidden="true" tabindex="-1"></a><span class="dt">height</span><span class="op">:</span> <span class="dv">600</span><span class="op">,</span></span>
-<span id="cb2-87"><a href="#cb2-87" aria-hidden="true" tabindex="-1"></a><span class="dt">marginLeft</span><span class="op">:</span> <span class="dv">150</span></span>
-<span id="cb2-88"><a href="#cb2-88" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-89"><a href="#cb2-89" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a><span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">ruleX</span>([<span class="dv">0</span>])<span class="op">,</span></span>
+<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a>  Plot<span class="op">.</span><span class="fu">dot</span>(ei<span class="op">,</span> </span>
+<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a>    {</span>
+<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a>    <span class="dt">x</span><span class="op">:</span> <span class="st">"mean"</span><span class="op">,</span></span>
+<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a>    <span class="dt">y</span><span class="op">:</span> <span class="st">"race"</span><span class="op">,</span></span>
+<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a>    <span class="dt">fill</span><span class="op">:</span> <span class="st">"race"</span><span class="op">,</span></span>
+<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a>    <span class="dt">r</span><span class="op">:</span> <span class="dv">4</span><span class="op">,</span></span>
+<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a>    <span class="dt">filter</span><span class="op">:</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">county</span> <span class="op">===</span> countyInput<span class="op">,</span></span>
+<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a>    <span class="dt">sort</span><span class="op">:</span> {<span class="dt">y</span><span class="op">:</span> <span class="kw">null</span>}</span>
+<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a>  })<span class="op">,</span></span>
+<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a>  Plot<span class="op">.</span><span class="fu">link</span>(ei<span class="op">,</span></span>
+<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a>  {</span>
+<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a>  <span class="dt">x1</span><span class="op">:</span> <span class="st">"ci_95_lower"</span><span class="op">,</span></span>
+<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a>  <span class="dt">x2</span><span class="op">:</span> <span class="st">"ci_95_upper"</span><span class="op">,</span></span>
+<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a>  <span class="dt">y1</span><span class="op">:</span> <span class="st">"race"</span><span class="op">,</span></span>
+<span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a>  <span class="dt">y2</span><span class="op">:</span> <span class="st">"race"</span><span class="op">,</span></span>
+<span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a>  <span class="dt">filter</span><span class="op">:</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">county</span> <span class="op">===</span> countyInput</span>
+<span id="cb2-81"><a href="#cb2-81" aria-hidden="true" tabindex="-1"></a>  })</span>
+<span id="cb2-82"><a href="#cb2-82" aria-hidden="true" tabindex="-1"></a>]<span class="op">,</span></span>
+<span id="cb2-83"><a href="#cb2-83" aria-hidden="true" tabindex="-1"></a><span class="dt">facet</span><span class="op">:</span> {<span class="dt">data</span><span class="op">:</span> ei<span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"election"</span><span class="op">,</span> <span class="dt">filter</span><span class="op">:</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">county</span> <span class="op">===</span> countyInput<span class="op">,</span></span>
+<span id="cb2-84"><a href="#cb2-84" aria-hidden="true" tabindex="-1"></a><span class="dt">marginRight</span><span class="op">:</span> <span class="dv">150</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Contest"</span><span class="op">,</span> <span class="dt">sort</span><span class="op">:</span> {<span class="dt">fy</span><span class="op">:</span> <span class="kw">null</span>}}<span class="op">,</span></span>
+<span id="cb2-85"><a href="#cb2-85" aria-hidden="true" tabindex="-1"></a><span class="dt">fill</span><span class="op">:</span> {<span class="dt">legend</span><span class="op">:</span> <span class="kw">true</span>}<span class="op">,</span></span>
+<span id="cb2-86"><a href="#cb2-86" aria-hidden="true" tabindex="-1"></a><span class="dt">x</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"Estimated Support for Democrats"</span><span class="op">,</span></span>
+<span id="cb2-87"><a href="#cb2-87" aria-hidden="true" tabindex="-1"></a>    <span class="dt">percent</span><span class="op">:</span> <span class="kw">true</span>}<span class="op">,</span></span>
+<span id="cb2-88"><a href="#cb2-88" aria-hidden="true" tabindex="-1"></a><span class="dt">y</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"Race"</span>}<span class="op">,</span></span>
+<span id="cb2-89"><a href="#cb2-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-90"><a href="#cb2-90" aria-hidden="true" tabindex="-1"></a><span class="dt">height</span><span class="op">:</span> <span class="dv">600</span><span class="op">,</span></span>
+<span id="cb2-91"><a href="#cb2-91" aria-hidden="true" tabindex="-1"></a><span class="dt">marginLeft</span><span class="op">:</span> <span class="dv">80</span></span>
+<span id="cb2-92"><a href="#cb2-92" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-93"><a href="#cb2-93" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-2-1" data-nodetype="declaration">
@@ -259,12 +276,31 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 </div>
+</section>
+<section id="new-york-county" class="level1">
+<h1>2020 New York county</h1>
+<section id="data-sources" class="level2">
+<h2 class="anchored" data-anchor-id="data-sources">Data Sources</h2>
+<p>Data for New York comes from the ALARM Project’s <a href="https://alarm-redist.github.io/posts/2021-08-10-census-2020/">2020 Redistricting Data Files</a>. This data standardizes the Voting and Election Science Team (VEST) data from the <a href="https://dataverse.harvard.edu/dataverse/electionscience">Harvard Dataverse</a> to geographies from the US Census Bureau, primarily at the VTD level.</p>
+<section id="elections-included-in-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="elections-included-in-analysis">Elections Included in Analysis</h3>
+<ul>
+<li>President 2016</li>
+<li>US Senate 2016</li>
+<li>US Senate 2018</li>
+<li>Governor 2018</li>
+<li>Attorney General 2018</li>
+<li>President 2020</li>
+</ul>
 
 
+</section>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script type="ojs-module-contents">
-{"contents":[{"methodName":"interpret","cellName":"ojs-cell-1","inline":false,"source":"ei = transpose(ei_df)\n"},{"methodName":"interpret","cellName":"ojs-cell-2","inline":false,"source":"viewof countyInput = Inputs.select(ei.map(d => d.county), \n                                {sort: true, unique: true, label: \"Choose a county:\"})\n\nPlot.plot({\n\nmarks: [\n  Plot.dot(ei,\n    {\n    x: \"mean\",\n    y: \"election\",\n    fill: \"race\",\n    r: 4,\n    filter: d => d.county === countyInput\n  }),\n  Plot.link(ei,\n  {\n  x1: \"ci_95_lower\",\n  x2: \"ci_95_upper\",\n  y1: \"election\",\n  y2: \"election\",\n  //fill: \"race\",\n  filter: d => d.county === countyInput\n  })\n],\n\nfill: {legend: true},\nx: {label: \"Estimated Support for Democrats\",\n    percent: true},\ny: {label: \"Contest\"},\n\nheight: 600,\nmarginLeft: 150\n\n})\n"},{"methodName":"interpretQuiet","source":"shinyInput('countyInput')"}]}
+{"contents":[{"methodName":"interpret","cellName":"ojs-cell-1","inline":false,"source":"ei = transpose(ei_df)\n"},{"methodName":"interpret","cellName":"ojs-cell-2","inline":false,"source":"viewof countyInput = Inputs.select(ei.map(d => d.county), \n                                {sort: true, unique: true, label: \"Choose a county:\"})\n\nPlot.plot({\n\nmarks: [\nPlot.ruleX([0]),\n  Plot.dot(ei, \n    {\n    x: \"mean\",\n    y: \"race\",\n    fill: \"race\",\n    r: 4,\n    filter: d => d.county === countyInput,\n    sort: {y: null}\n  }),\n  Plot.link(ei,\n  {\n  x1: \"ci_95_lower\",\n  x2: \"ci_95_upper\",\n  y1: \"race\",\n  y2: \"race\",\n  filter: d => d.county === countyInput\n  })\n],\nfacet: {data: ei, y: \"election\", filter: d => d.county === countyInput,\nmarginRight: 150, label: \"Contest\", sort: {fy: null}},\nfill: {legend: true},\nx: {label: \"Estimated Support for Democrats\",\n    percent: true},\ny: {label: \"Race\"},\n\nheight: 600,\nmarginLeft: 80\n\n})\n"},{"methodName":"interpretQuiet","source":"shinyInput('countyInput')"}]}
 </script>
 <script type="module">
 window._ojs.paths.runtimeToDoc = "../..";

@@ -39,6 +39,20 @@
     "href": "NY_2020.html",
     "title": "NY 2020 Demo",
     "section": "",
-    "text": "ei = transpose(ei_df)\n\n\n\n\n\n\n\nviewof countyInput = Inputs.select(ei.map(d => d.county), \n                                {sort: true, unique: true, label: \"Choose a county:\"})\n\nPlot.plot({\n\nmarks: [\n  Plot.dot(ei,\n    {\n    x: \"mean\",\n    y: \"election\",\n    fill: \"race\",\n    r: 4,\n    filter: d => d.county === countyInput\n  }),\n  Plot.link(ei,\n  {\n  x1: \"ci_95_lower\",\n  x2: \"ci_95_upper\",\n  y1: \"election\",\n  y2: \"election\",\n  //fill: \"race\",\n  filter: d => d.county === countyInput\n  })\n],\n\nfill: {legend: true},\nx: {label: \"Estimated Support for Democrats\",\n    percent: true},\ny: {label: \"Contest\"},\n\nheight: 600,\nmarginLeft: 150\n\n})"
+    "text": "ei = transpose(ei_df)\n\n\n\n\n\n\n\nviewof countyInput = Inputs.select(ei.map(d => d.county), \n                                {sort: true, unique: true, label: \"Choose a county:\"})\n\nPlot.plot({\n\nmarks: [\nPlot.ruleX([0]),\n  Plot.dot(ei, \n    {\n    x: \"mean\",\n    y: \"race\",\n    fill: \"race\",\n    r: 4,\n    filter: d => d.county === countyInput,\n    sort: {y: null}\n  }),\n  Plot.link(ei,\n  {\n  x1: \"ci_95_lower\",\n  x2: \"ci_95_upper\",\n  y1: \"race\",\n  y2: \"race\",\n  filter: d => d.county === countyInput\n  })\n],\nfacet: {data: ei, y: \"election\", filter: d => d.county === countyInput,\nmarginRight: 150, label: \"Contest\", sort: {fy: null}},\nfill: {legend: true},\nx: {label: \"Estimated Support for Democrats\",\n    percent: true},\ny: {label: \"Race\"},\n\nheight: 600,\nmarginLeft: 80\n\n})"
+  },
+  {
+    "objectID": "NY_2020.html#about-the-data",
+    "href": "NY_2020.html#about-the-data",
+    "title": "NY 2020 Demo",
+    "section": "About the Data",
+    "text": "About the Data"
+  },
+  {
+    "objectID": "NY_2020.html#data-sources",
+    "href": "NY_2020.html#data-sources",
+    "title": "NY 2020 Demo",
+    "section": "Data Sources",
+    "text": "Data Sources\nData for New York comes from the ALARM Project’s 2020 Redistricting Data Files. This data standardizes the Voting and Election Science Team (VEST) data from the Harvard Dataverse to geographies from the US Census Bureau, primarily at the VTD level.\n\nElections Included in Analysis\n\nPresident 2016\nUS Senate 2016\nUS Senate 2018\nGovernor 2018\nAttorney General 2018\nPresident 2020"
   }
 ]

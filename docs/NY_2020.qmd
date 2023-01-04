@@ -1,9 +1,11 @@
 ---
 title: "NY 2020 Demo"
 description: |
-  Ecological inference estimates by county for NY
+  Ecological inference estimates by county for NY State.
 format: html
 ---
+
+# Ecological Inference Estimates
 
 ```{r, echo = FALSE, message = FALSE, warning=FALSE}
 library(tidyverse)
@@ -59,33 +61,36 @@ viewof countyInput = Inputs.select(ei.map(d => d.county),
 Plot.plot({
 
 marks: [
-  Plot.dot(ei,
+Plot.ruleX([0]),
+  Plot.dot(ei, 
     {
     x: "mean",
-    y: "election",
+    y: "race",
     fill: "race",
     r: 4,
-    filter: d => d.county === countyInput
+    filter: d => d.county === countyInput,
+    sort: {y: null}
   }),
   Plot.link(ei,
   {
   x1: "ci_95_lower",
   x2: "ci_95_upper",
-  y1: "election",
-  y2: "election",
-  //fill: "race",
+  y1: "race",
+  y2: "race",
   filter: d => d.county === countyInput
   })
 ],
-
+facet: {data: ei, y: "election", filter: d => d.county === countyInput,
+marginRight: 150, label: "Contest", sort: {fy: null}},
 fill: {legend: true},
 x: {label: "Estimated Support for Democrats",
     percent: true},
-y: {label: "Contest"},
+y: {label: "Race"},
 
 height: 600,
-marginLeft: 150
+marginLeft: 80
 
 })
 ```
 
+{{< include ../analyses/NY_county_2020/doc_NY_county_2020.md >}}
