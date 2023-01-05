@@ -1,0 +1,7 @@
+---
+title: "Analyses"
+---
+
+You've landed on the index for the analyses. Subpages are in the form `'{abb}_2020.html'`, where `abb` is a two character state abbreviation.
+
+[Return Home](https://www.rpvnearme.org)

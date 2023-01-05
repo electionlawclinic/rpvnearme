@@ -61,5 +61,12 @@
     "title": "NY 2020 Demo",
     "section": "Data Download",
     "text": "Data Download\n\n\n\n\n\n\n\n \nSummary File\n \n\n \nNY_county_2020_summary.csv\n\n\n\n\n\n\n\n\n \nPrecinct Estimates\n \n\n \nNY_county_2020_precinct.csv"
+  },
+  {
+    "objectID": "analyses/index.html",
+    "href": "analyses/index.html",
+    "title": "Analyses",
+    "section": "",
+    "text": "You’ve landed on the index for the analyses. Subpages are in the form '{abb}_2020.html', where abb is a two character state abbreviation.\nReturn Home"
   }
 ]
