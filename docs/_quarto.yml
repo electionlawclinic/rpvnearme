@@ -4,6 +4,7 @@ project:
 
 website:
   title: "RPV Near Me"
+  favicon: "elc_logo.png"
   navbar:
     left:
       - href: index.qmd
