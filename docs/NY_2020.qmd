@@ -12,6 +12,8 @@ library(tidyverse)
 library(ggiraph)
 library(ggdist)
 library(patchwork)
+library(htmltools)
+HTML(readLines("state-svg-defs.svg"))
 
 alarm_abb <- function() {
   tibble::tribble(
@@ -94,3 +96,43 @@ marginLeft: 80
 ```
 
 {{< include ../analyses/NY_county_2020/doc_NY_county_2020.md >}}
+
+## Data Download
+
+
+```{r, echo = FALSE}
+abb <- 'NY'
+state <- censable::match_name(abb)
+tibble(
+  name = c('Summary File', 'Precinct Estimates'),
+  url = c(
+    stringr::str_glue('https://raw.githubusercontent.com/electionlawclinic/rpvnearme/main/data/{abb}_county_2020_summary.csv'),
+    stringr::str_glue('https://raw.githubusercontent.com/electionlawclinic/rpvnearme/main/data/{abb}_county_2020_precinct.csv')
+  )
+) |> 
+  mutate(
+    filename = fs::path_file(url)
+  ) |> 
+  pmap(function(name, url, filename, ...) {
+      a(
+    href = url, target = '_blank', download = filename,
+    div(
+      tags$svg(
+        class = paste0('icon icon-state-', abb),
+        style = 'height: 1.7em; width: 1.8em; position: relative; top: 0em;',
+        tags$use(`xlink:href` = paste0('#icon-state-', abb))
+      ),
+      HTML('&nbsp;'),
+      strong(name),
+      HTML('&nbsp;'),
+      fontawesome::fa('circle-down'),
+      HTML('&nbsp;'),
+      code(filename, style = 'color: #777777;'),
+      tags$br()
+    )
+  )
+  }) |> 
+  as.tags()
+
+```
+

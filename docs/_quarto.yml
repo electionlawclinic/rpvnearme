@@ -13,7 +13,7 @@ website:
   page-footer:
     center: |
       RPV Near Me is a project of the [Election Law Clinic (ELC) at Harvard Law School](https://www.hlselectionlaw.org/). <br>
-      The mission of the ELC is to train the next generation of election lawyers through litigation and advocacy that bring novel academic ideas to the practice of election law. We aim to build power for voters, not politicians.<br>
+      The mission of the Election Law Clinic at Harvard Law School is to train the next generation of election lawyers through litigation and advocacy that bring novel academic ideas to the practice of election law. It aims to build power for voters, not politicians, and recognizes that the struggle for voting rights is a struggle for racial justice.<br>
       Election data is originally from the [Voting and Election Science Team](https://dataverse.harvard.edu/dataverse/electionscience).
       Joined demographic and election data is used from ALARM Project's [2020 Redistricting Data Files](https://alarm-redist.github.io/posts/2021-08-10-census-2020/).
     border: true
