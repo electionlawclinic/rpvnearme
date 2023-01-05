@@ -22,6 +22,9 @@ website:
     border: true
     background: light
 
+margin-header: |
+  ![[hlselectionlaw.org](https://www.hlselectionlaw.org/)](elc.png)
+
 format:
   html:
     theme: pulse

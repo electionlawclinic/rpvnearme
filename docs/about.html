@@ -106,7 +106,14 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="elc.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption"><a href="https://www.hlselectionlaw.org/">hlselectionlaw.org</a></figcaption><p></p>
+</figure>
+</div>
+</div></div>
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
@@ -147,12 +154,13 @@ ul.task-list li input[type="checkbox"] {
 <section id="background" class="level2">
 <h2 class="anchored" data-anchor-id="background">Background:</h2>
 <p>Racially polarized voting (RPV) occurs where voters of one race or ethnicity tend to support certain candidates in elections, while voters of another race or ethnicity support different candidates. Given the types of electoral systems used across the U.S., RPV often causes voters of color to have less representation than white voters, and in some cases no representation at all.</p>
-<p>At the congressional and state legislative level, the Voting Rights Act has been used by civil rights groups and political actors to counter attempts to dilute the voting power of Black, Latino, Asian American, and Native American voters. But at the local level, it can be hard to access the data and techniques necessary to determine whether RPV exists. This site aims to bridge that gap by providing RPV estimates for every county in the country for at least 4 recent statewide elections.</p>
+<p>At the congressional and state legislative level, the Voting Rights Act has been used by civil rights groups and political actors to counter attempts to dilute the voting power of Black, Latino, Asian American, and Native American voters. But at the local level, it can be hard to access the data and techniques necessary to determine whether RPV exists. This site aims to bridge that gap by providing RPV estimates for every county in the country for at least two recent statewide elections.</p>
 </section>
 <section id="data-and-methods" class="level2">
 <h2 class="anchored" data-anchor-id="data-and-methods">Data and Methods</h2>
-<p>The RPV estimates on this site were generated using the techniques approved by federal courts for use in Voting Rights Act litigation, namely King’s Ecological Inference (King’s EI). Specifically, we use election data from the <a href="https://dataverse.harvard.edu/dataverse/electionscience">Voting and Election Science Team</a>, tabulated to Census Bureau geographies in the ALARM Project <a href="https://alarm-redist.github.io/posts/2021-08-10-census-2020/">2020 Redistricting Files</a>. We analyze those contests using RxC ecological inference, using the R package <a href="http:/%20/www.olivialau.org/software/eiPack.html">eiPack</a>. For demographic characteristics of each geography, we use voting age populations for White, Black, Hispanic, and other people.</p>
+<p>The RPV estimates on this site were generated using the techniques approved by federal courts for use in Voting Rights Act litigation, namely King’s Ecological Inference (King’s EI). Specifically, we use election data from the <a href="https://dataverse.harvard.edu/dataverse/electionscience">Voting and Election Science Team</a>, tabulated to Census Bureau geographies in the ALARM Project <a href="https://alarm-redist.github.io/posts/2021-08-10-census-2020/">2020 Redistricting Files</a>. We analyze those contests using RxC ecological inference, using the R package <a href="http://www.olivialau.org/software/eiPack.html">eiPack</a>. For demographic characteristics of each geography, we use voting age populations for White, Black, Hispanic, and other people.</p>
 <p>The code to replicate the analyses is available on <a href="https://github.com/electionlawclinic/rpvnearme">GitHub</a>.</p>
+<p>The analysis was conducted by <a href="https://christophertkenny.com/">Christopher T. Kenny</a>, a Ph.D.&nbsp;candidate in the Department of Government at Harvard University.</p>
 </section>
 <section id="next-steps" class="level2">
 <h2 class="anchored" data-anchor-id="next-steps">Next Steps</h2>
