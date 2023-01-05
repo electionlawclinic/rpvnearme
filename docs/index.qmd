@@ -15,7 +15,7 @@ p <- usa %>%
   ggplot() +
   geom_sf_interactive(aes(onclick = paste0('window.open("', link , '")')), 
                       fill = 'white', color = 'black') +
-  geom_sf_text(aes(label = STUSPS), fun.geometry = \(x) geomander::st_circle_center(sf::st_as_sf(x))) +
+  geom_sf_text(aes(label = STUSPS), fun.geometry = \(x) geomander::st_circle_center(sf::st_as_sf(x)), size = 3) +
   theme_void() +
   guides(fill = 'none') +
   theme(text = element_text(family = 'Arial', size = 1))

@@ -1,5 +1,5 @@
 ---
-title: "NY 2020 Demo"
+title: "New York 2020"
 description: |
   Ecological inference estimates by county for NY State.
 format: html
@@ -13,7 +13,8 @@ library(ggiraph)
 library(ggdist)
 library(patchwork)
 library(htmltools)
-HTML(readLines("state-svg-defs.svg"))
+HTML(readLines("../state-svg-defs.svg"))
+abb <- 'NY'
 
 alarm_abb <- function() {
   tibble::tribble(
@@ -25,7 +26,7 @@ alarm_abb <- function() {
     'sos', 'Secretary of State'
   )
 }
-ei_tb <- read_csv('https://raw.githubusercontent.com/electionlawclinic/rpvnearme/main/data/NY_county_2020_summary.csv')
+ei_tb <- read_csv(str_glue('https://raw.githubusercontent.com/electionlawclinic/rpvnearme/main/data/{abb}_county_2020_summary.csv'))
 
 ei_tb <- ei_tb  |> 
   mutate(
@@ -85,8 +86,9 @@ marks: [
 facet: {data: ei, y: "election", filter: d => d.county === countyInput,
 marginRight: 150, label: "Contest", sort: {fy: null}},
 fill: {legend: true},
-x: {label: "Estimated Support for Democrats",
-    percent: true},
+x: {label: "(%) Estimated Support for Democrats", 
+    percent: true,
+    labelAnchor: "center"},
 y: {label: "Race"},
 
 height: 600,
@@ -95,13 +97,15 @@ marginLeft: 80
 })
 ```
 
-{{< include ../analyses/NY_county_2020/doc_NY_county_2020.md >}}
+Each point indicates the estimated mean for that race or ethnicity's estimated support for the Democratic candidate. The extent of the bar indicates a 95% confidence interval.
+
+{{< include ../../analyses/NY_county_2020/doc_NY_county_2020.md >}}
 
 ## Data Download
 
 
 ```{r, echo = FALSE}
-abb <- 'NY'
+
 state <- censable::match_name(abb)
 tibble(
   name = c('Summary File', 'Precinct Estimates'),

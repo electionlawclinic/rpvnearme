@@ -37,7 +37,7 @@
   {
     "objectID": "NY_2020.html",
     "href": "NY_2020.html",
-    "title": "NY 2020 Demo",
+    "title": "New York 2020",
     "section": "",
     "text": "AK                        AL                        AR                        AZ                        CA                        CO                        CT                        DE                        FL                        GA                        HI                        IA                        ID                        IL                        IN                        KS                        KY                        LA                        MA                        MD                        ME                        MI                        MN                        MO                        MS                        MT                        NC                        ND                        NE                        NH                        NJ                        NM                        NV                        NY                        OH                        OK                        OR                        PA                        RI                        SC                        SD                        TN                        TX                        UT                        VA                        VT                        WA                        WI                        WV                        WY                        DC                        USA                \n\n\n\nei = transpose(ei_df)\n\n\n\n\n\n\n\nviewof countyInput = Inputs.select(ei.map(d => d.county), \n                                {sort: true, unique: true, label: \"Choose a county:\"})\n\nPlot.plot({\n\nmarks: [\n  Plot.ruleX([0]),\n  Plot.dot(ei, \n    {\n    x: \"mean\",\n    y: \"race\",\n    fill: \"race\",\n    r: 4,\n    filter: d => d.county === countyInput,\n    sort: {y: null}\n  }),\n  Plot.link(ei,\n  {\n  x1: \"ci_95_lower\",\n  x2: \"ci_95_upper\",\n  y1: \"race\",\n  y2: \"race\",\n  filter: d => d.county === countyInput\n  })\n],\nfacet: {data: ei, y: \"election\", filter: d => d.county === countyInput,\nmarginRight: 150, label: \"Contest\", sort: {fy: null}},\nfill: {legend: true},\nx: {label: \"Estimated Support for Democrats\",\n    percent: true},\ny: {label: \"Race\"},\n\nheight: 600,\nmarginLeft: 80\n\n})"
   },
@@ -51,14 +51,14 @@
   {
     "objectID": "NY_2020.html#data-sources",
     "href": "NY_2020.html#data-sources",
-    "title": "NY 2020 Demo",
+    "title": "New York 2020",
     "section": "Data Sources",
     "text": "Data Sources\nData for New York comes from the ALARM Project’s 2020 Redistricting Data Files. This data standardizes the Voting and Election Science Team (VEST) data from the Harvard Dataverse to geographies from the US Census Bureau, primarily at the VTD level.\n\nElections Included in Analysis\n\nPresident 2016\nUS Senate 2016\nUS Senate 2018\nGovernor 2018\nAttorney General 2018\nPresident 2020"
   },
   {
     "objectID": "NY_2020.html#data-download",
     "href": "NY_2020.html#data-download",
-    "title": "NY 2020 Demo",
+    "title": "New York 2020",
     "section": "Data Download",
     "text": "Data Download\n\n\n\n\n\n\n\n \nSummary File\n \n\n \nNY_county_2020_summary.csv\n\n\n\n\n\n\n\n\n \nPrecinct Estimates\n \n\n \nNY_county_2020_precinct.csv"
   },
@@ -68,5 +68,26 @@
     "title": "Analyses",
     "section": "",
     "text": "You’ve landed on the index for the analyses. Subpages are in the form '{abb}_2020.html', where abb is a two character state abbreviation.\nReturn Home"
+  },
+  {
+    "objectID": "analyses/NY_2020.html",
+    "href": "analyses/NY_2020.html",
+    "title": "New York 2020",
+    "section": "",
+    "text": "AK                        AL                        AR                        AZ                        CA                        CO                        CT                        DE                        FL                        GA                        HI                        IA                        ID                        IL                        IN                        KS                        KY                        LA                        MA                        MD                        ME                        MI                        MN                        MO                        MS                        MT                        NC                        ND                        NE                        NH                        NJ                        NM                        NV                        NY                        OH                        OK                        OR                        PA                        RI                        SC                        SD                        TN                        TX                        UT                        VA                        VT                        WA                        WI                        WV                        WY                        DC                        USA                \n\n\n\nei = transpose(ei_df)\n\n\n\n\n\n\n\nviewof countyInput = Inputs.select(ei.map(d => d.county), \n                                {sort: true, unique: true, label: \"Choose a county:\"})\n\nPlot.plot({\n\nmarks: [\n  Plot.ruleX([0]),\n  Plot.dot(ei, \n    {\n    x: \"mean\",\n    y: \"race\",\n    fill: \"race\",\n    r: 4,\n    filter: d => d.county === countyInput,\n    sort: {y: null}\n  }),\n  Plot.link(ei,\n  {\n  x1: \"ci_95_lower\",\n  x2: \"ci_95_upper\",\n  y1: \"race\",\n  y2: \"race\",\n  filter: d => d.county === countyInput\n  })\n],\nfacet: {data: ei, y: \"election\", filter: d => d.county === countyInput,\nmarginRight: 150, label: \"Contest\", sort: {fy: null}},\nfill: {legend: true},\nx: {label: \"(%) Estimated Support for Democrats\", \n    percent: true,\n    labelAnchor: \"center\"},\ny: {label: \"Race\"},\n\nheight: 600,\nmarginLeft: 80\n\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEach point indicates the estimated mean for that race or ethnicity’s estimated support for the Democratic candidate. The extent of the bar indicates a 95% confidence interval."
+  },
+  {
+    "objectID": "analyses/NY_2020.html#data-sources",
+    "href": "analyses/NY_2020.html#data-sources",
+    "title": "New York 2020",
+    "section": "Data Sources",
+    "text": "Data Sources\nData for New York comes from the ALARM Project’s 2020 Redistricting Data Files. This data standardizes the Voting and Election Science Team (VEST) data from the Harvard Dataverse to geographies from the US Census Bureau, primarily at the VTD level.\n\nElections Included in Analysis\n\nPresident 2016\nUS Senate 2016\nUS Senate 2018\nGovernor 2018\nAttorney General 2018\nPresident 2020"
+  },
+  {
+    "objectID": "analyses/NY_2020.html#data-download",
+    "href": "analyses/NY_2020.html#data-download",
+    "title": "New York 2020",
+    "section": "Data Download",
+    "text": "Data Download\n\n\n\n\n\n\n\n \nSummary File\n \n\n \nNY_county_2020_summary.csv\n\n\n\n\n\n\n\n\n \nPrecinct Estimates\n \n\n \nNY_county_2020_precinct.csv"
   }
 ]

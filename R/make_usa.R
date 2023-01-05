@@ -3,7 +3,7 @@ if (FALSE) {
     dplyr::filter(STUSPS %in% state.abb) %>%
     tigris::shift_geometry() |>
     rmapshaper::ms_simplify(keep = 0.1) %>%
-    dplyr::mutate(link = paste0('https://electionlawclinic.github.io/rpvnearme/', STUSPS, '_2020/'))
+    dplyr::mutate(link = paste0('https://electionlawclinic.github.io/rpvnearme/analyses/', STUSPS, '_2020.html'))
 
   # cntrd <- sf::st_centroid(sf::st_geometry(usa))
   #
