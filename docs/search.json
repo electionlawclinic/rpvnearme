@@ -7,60 +7,298 @@
     "text": "RPV Near Me is a project of the Election Law Clinic (“ELC”) at Harvard Law School. The mission of the ELC is to train the next generation of election lawyers through litigation and advocacy that bring novel academic ideas to the practice of election law. We aim to build power for voters, not politicians.\n\n\n\nRacially polarized voting (RPV) occurs where voters of one race or ethnicity tend to support certain candidates in elections, while voters of another race or ethnicity support different candidates. Given the types of electoral systems used across the U.S., RPV often causes voters of color to have less representation than white voters, and in some cases no representation at all.\nAt the congressional and state legislative level, the Voting Rights Act has been used by civil rights groups and political actors to counter attempts to dilute the voting power of Black, Latino, Asian American, and Native American voters. But at the local level, it can be hard to access the data and techniques necessary to determine whether RPV exists. This site aims to bridge that gap by providing RPV estimates for every county in the country for at least 4 recent statewide elections.\n\n\n\nThe RPV estimates on this site were generated using the techniques approved by federal courts for use in Voting Rights Act litigation, namely King’s Ecological Inference (King’s EI). Specifically, we use election data from the Voting and Election Science Team, tabulated to Census Bureau geographies in the ALARM Project 2020 Redistricting Files. We analyze those contests using RxC ecological inference, using the R package eiPack. For demographic characteristics of each geography, we use voting age populations for White, Black, Hispanic, and other people.\nThe code to replicate the analyses is available on GitHub.\n\n\n\nWe are exploring adding RPV data for all the cities, towns, and villages in the U.S. If this would be useful to you, please contact us at elc@law.harvard.edu to let us know.\nIf there are other related products that would be useful in your efforts to enfranchise communities of color at the local level, please also reach out with a description of those products elc@law.harvard.edu."
   },
   {
-    "objectID": "data.html",
-    "href": "data.html",
-    "title": "Data",
+    "objectID": "analyses/AK_2020.html",
+    "href": "analyses/AK_2020.html",
+    "title": "Alaska 2020",
     "section": "",
-    "text": "You can access a .csv with detailed RPV estimates and their confidence intervals, for every state."
+    "text": "AK                        AL                        AR                        AZ                        CA                        CO                        CT                        DE                        FL                        GA                        HI                        IA                        ID                        IL                        IN                        KS                        KY                        LA                        MA                        MD                        ME                        MI                        MN                        MO                        MS                        MT                        NC                        ND                        NE                        NH                        NJ                        NM                        NV                        NY                        OH                        OK                        OR                        PA                        RI                        SC                        SD                        TN                        TX                        UT                        VA                        VT                        WA                        WI                        WV                        WY                        DC                        USA                \n\n\n\nei = transpose(ei_df)\n\n\n\n\n\n\n\nviewof countyInput = Inputs.select(ei.map(d => d.county),\n                                {sort: true, unique: true, label: \"Choose a county:\"})\n\nPlot.plot({\n\nmarks: [\n  Plot.ruleX([0]),\n  Plot.dot(ei,\n    {\n    x: \"mean\",\n    y: \"race\",\n    fill: \"race\",\n    r: 4,\n    filter: d => d.county === countyInput,\n    sort: {y: null}\n  }),\n  Plot.link(ei,\n  {\n  x1: \"ci_95_lower\",\n  x2: \"ci_95_upper\",\n  y1: \"race\",\n  y2: \"race\",\n  filter: d => d.county === countyInput\n  })\n],\nfacet: {data: ei, y: \"election\", filter: d => d.county === countyInput,\nmarginRight: 150, label: \"Contest\", sort: {fy: null}},\nfill: {legend: true},\nx: {label: \"(%) Estimated Support for Democrats\",\n    percent: true,\n    labelAnchor: \"center\"},\ny: {label: \"Race\"},\n\nheight: 600,\nmarginLeft: 80\n\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEach point indicates the estimated mean for that race or ethnicity’s estimated support for the Democratic candidate. The extent of the bar indicates a 95% confidence interval."
   },
   {
-    "objectID": "data.html#using-the-data",
-    "href": "data.html#using-the-data",
-    "title": "Data",
-    "section": "Using the data",
-    "text": "Using the data\n\nData Format\nIn the current iteration, data summaries are available for contested statewide and federal elections within each county in the United States. Almost all counties are included, except for a small number of extremely small counties with too few precincts or voting districts to produce estimates.\nIn the summary files, each observation is identified by county, race, and cand.\n\ncounty: County name\nrace: voter race\n\nwhite: White\nblack: Black\nhisp: Hispanic\noth: Other race or ethnicity (not White, Black, or Hispanic)\n\ncand: candidate\nmean: mean estimate of support\nsd: standard deviation of the estimate\nci_95_lower: lower bound for the 95% confidence interval\nci_95_upper: upper bound for the 95% confidence interval"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "RPV Near Me",
-    "section": "",
-    "text": "This is a resource designed to be used by voters, community groups, activists, and lawyers to aid in their development of campaigns to fully enfranchise voters of color in local government.\n\n\n\n\n\n\nRead more about the project here.\nDownload the data."
-  },
-  {
-    "objectID": "ny.html",
-    "href": "ny.html",
-    "title": "NY",
-    "section": "",
-    "text": "[[1]]\n\n\n\n\n\n\n[[2]]\n\n\n\n\n\n\n[[3]]\n\n\n\n\n\n\n[[4]]\n\n\n\n\n\n\n[[5]]\n\n\n\n\n\n\n[[6]]\n\n\n\n\n\n\n[[7]]\n\n\n\n\n\n\n[[8]]\n\n\n\n\n\n\n[[9]]\n\n\n\n\n\n\n[[10]]\n\n\n\n\n\n\n[[11]]\n\n\n\n\n\n\n[[12]]\n\n\n\n\n\n\n[[13]]\n\n\n\n\n\n\n[[14]]\n\n\n\n\n\n\n[[15]]\n\n\n\n\n\n\n[[16]]\n\n\n\n\n\n\n[[17]]\n\n\n\n\n\n\n[[18]]\n\n\n\n\n\n\n[[19]]\n\n\n\n\n\n\n[[20]]\n\n\n\n\n\n\n[[21]]\n\n\n\n\n\n\n[[22]]\n\n\n\n\n\n\n[[23]]\n\n\n\n\n\n\n[[24]]\n\n\n\n\n\n\n[[25]]\n\n\n\n\n\n\n[[26]]\n\n\n\n\n\n\n[[27]]\n\n\n\n\n\n\n[[28]]\n\n\n\n\n\n\n[[29]]\n\n\n\n\n\n\n[[30]]\n\n\n\n\n\n\n[[31]]\n\n\n\n\n\n\n[[32]]\n\n\n\n\n\n\n[[33]]\n\n\n\n\n\n\n[[34]]\n\n\n\n\n\n\n[[35]]\n\n\n\n\n\n\n[[36]]\n\n\n\n\n\n\n[[37]]\n\n\n\n\n\n\n[[38]]\n\n\n\n\n\n\n[[39]]\n\n\n\n\n\n\n[[40]]\n\n\n\n\n\n\n[[41]]\n\n\n\n\n\n\n[[42]]\n\n\n\n\n\n\n[[43]]\n\n\n\n\n\n\n[[44]]\n\n\n\n\n\n\n[[45]]\n\n\n\n\n\n\n[[46]]\n\n\n\n\n\n\n[[47]]\n\n\n\n\n\n\n[[48]]\n\n\n\n\n\n\n[[49]]\n\n\n\n\n\n\n[[50]]\n\n\n\n\n\n\n[[51]]\n\n\n\n\n\n\n[[52]]\n\n\n\n\n\n\n[[53]]\n\n\n\n\n\n\n[[54]]\n\n\n\n\n\n\n[[55]]\n\n\n\n\n\n\n[[56]]\n\n\n\n\n\n\n[[57]]\n\n\n\n\n\n\n[[58]]\n\n\n\n\n\n\n[[59]]\n\n\n\n\n\n\n[[60]]\n\n\n\n\n\n\n[[61]]\n\n\n\n\n\n\n[[62]]"
-  },
-  {
-    "objectID": "NY_2020.html",
-    "href": "NY_2020.html",
-    "title": "New York 2020",
-    "section": "",
-    "text": "AK                        AL                        AR                        AZ                        CA                        CO                        CT                        DE                        FL                        GA                        HI                        IA                        ID                        IL                        IN                        KS                        KY                        LA                        MA                        MD                        ME                        MI                        MN                        MO                        MS                        MT                        NC                        ND                        NE                        NH                        NJ                        NM                        NV                        NY                        OH                        OK                        OR                        PA                        RI                        SC                        SD                        TN                        TX                        UT                        VA                        VT                        WA                        WI                        WV                        WY                        DC                        USA                \n\n\n\nei = transpose(ei_df)\n\n\n\n\n\n\n\nviewof countyInput = Inputs.select(ei.map(d => d.county), \n                                {sort: true, unique: true, label: \"Choose a county:\"})\n\nPlot.plot({\n\nmarks: [\n  Plot.ruleX([0]),\n  Plot.dot(ei, \n    {\n    x: \"mean\",\n    y: \"race\",\n    fill: \"race\",\n    r: 4,\n    filter: d => d.county === countyInput,\n    sort: {y: null}\n  }),\n  Plot.link(ei,\n  {\n  x1: \"ci_95_lower\",\n  x2: \"ci_95_upper\",\n  y1: \"race\",\n  y2: \"race\",\n  filter: d => d.county === countyInput\n  })\n],\nfacet: {data: ei, y: \"election\", filter: d => d.county === countyInput,\nmarginRight: 150, label: \"Contest\", sort: {fy: null}},\nfill: {legend: true},\nx: {label: \"Estimated Support for Democrats\",\n    percent: true},\ny: {label: \"Race\"},\n\nheight: 600,\nmarginLeft: 80\n\n})"
-  },
-  {
-    "objectID": "NY_2020.html#about-the-data",
-    "href": "NY_2020.html#about-the-data",
-    "title": "NY 2020 Demo",
-    "section": "About the Data",
-    "text": "About the Data"
-  },
-  {
-    "objectID": "NY_2020.html#data-sources",
-    "href": "NY_2020.html#data-sources",
-    "title": "New York 2020",
+    "objectID": "analyses/AK_2020.html#data-sources",
+    "href": "analyses/AK_2020.html#data-sources",
+    "title": "Alaska 2020",
     "section": "Data Sources",
-    "text": "Data Sources\nData for New York comes from the ALARM Project’s 2020 Redistricting Data Files. This data standardizes the Voting and Election Science Team (VEST) data from the Harvard Dataverse to geographies from the US Census Bureau, primarily at the VTD level.\n\nElections Included in Analysis\n\nPresident 2016\nUS Senate 2016\nUS Senate 2018\nGovernor 2018\nAttorney General 2018\nPresident 2020"
+    "text": "Data Sources\nData for Alaska comes from the ALARM Project’s 2020 Redistricting Data Files. This data standardizes the Voting and Election Science Team (VEST) data from the Harvard Dataverse to geographies from the US Census Bureau, primarily at the VTD level.\n\nElections Included in Analysis\n\nPresident 2016\nUS Senate 2016\nGovernor 2018\nPresident 2020\nUS Senate 2020"
   },
   {
-    "objectID": "NY_2020.html#data-download",
-    "href": "NY_2020.html#data-download",
-    "title": "New York 2020",
+    "objectID": "analyses/AK_2020.html#data-download",
+    "href": "analyses/AK_2020.html#data-download",
+    "title": "Alaska 2020",
     "section": "Data Download",
-    "text": "Data Download\n\n\n\n\n\n\n\n \nSummary File\n \n\n \nNY_county_2020_summary.csv\n\n\n\n\n\n\n\n\n \nPrecinct Estimates\n \n\n \nNY_county_2020_precinct.csv"
+    "text": "Data Download\n\n\n\n\n\n\n\n \nSummary File\n \n\n \nAK_county_2020_summary.csv\n\n\n\n\n\n\n\n\n \nPrecinct Estimates\n \n\n \nAK_county_2020_precinct.csv"
+  },
+  {
+    "objectID": "analyses/AL_2020.html",
+    "href": "analyses/AL_2020.html",
+    "title": "Alabama 2020",
+    "section": "",
+    "text": "AK                        AL                        AR                        AZ                        CA                        CO                        CT                        DE                        FL                        GA                        HI                        IA                        ID                        IL                        IN                        KS                        KY                        LA                        MA                        MD                        ME                        MI                        MN                        MO                        MS                        MT                        NC                        ND                        NE                        NH                        NJ                        NM                        NV                        NY                        OH                        OK                        OR                        PA                        RI                        SC                        SD                        TN                        TX                        UT                        VA                        VT                        WA                        WI                        WV                        WY                        DC                        USA                \n\n\n\nei = transpose(ei_df)\n\n\n\n\n\n\n\nviewof countyInput = Inputs.select(ei.map(d => d.county),\n                                {sort: true, unique: true, label: \"Choose a county:\"})\n\nPlot.plot({\n\nmarks: [\n  Plot.ruleX([0]),\n  Plot.dot(ei,\n    {\n    x: \"mean\",\n    y: \"race\",\n    fill: \"race\",\n    r: 4,\n    filter: d => d.county === countyInput,\n    sort: {y: null}\n  }),\n  Plot.link(ei,\n  {\n  x1: \"ci_95_lower\",\n  x2: \"ci_95_upper\",\n  y1: \"race\",\n  y2: \"race\",\n  filter: d => d.county === countyInput\n  })\n],\nfacet: {data: ei, y: \"election\", filter: d => d.county === countyInput,\nmarginRight: 150, label: \"Contest\", sort: {fy: null}},\nfill: {legend: true},\nx: {label: \"(%) Estimated Support for Democrats\",\n    percent: true,\n    labelAnchor: \"center\"},\ny: {label: \"Race\"},\n\nheight: 600,\nmarginLeft: 80\n\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEach point indicates the estimated mean for that race or ethnicity’s estimated support for the Democratic candidate. The extent of the bar indicates a 95% confidence interval."
+  },
+  {
+    "objectID": "analyses/AL_2020.html#data-sources",
+    "href": "analyses/AL_2020.html#data-sources",
+    "title": "Alabama 2020",
+    "section": "Data Sources",
+    "text": "Data Sources\nData for Alabama comes from the ALARM Project’s 2020 Redistricting Data Files. This data standardizes the Voting and Election Science Team (VEST) data from the Harvard Dataverse to geographies from the US Census Bureau, primarily at the VTD level.\n\nElections Included in Analysis\n\nPresident 2016\nUS Senate 2016\nGovernor 2018\nAttorney General 2018\nSecretary of State 2018\nPresident 2020\nUS Senate 2020"
+  },
+  {
+    "objectID": "analyses/AL_2020.html#data-download",
+    "href": "analyses/AL_2020.html#data-download",
+    "title": "Alabama 2020",
+    "section": "Data Download",
+    "text": "Data Download\n\n\n\n\n\n\n\n \nSummary File\n \n\n \nAL_county_2020_summary.csv\n\n\n\n\n\n\n\n\n \nPrecinct Estimates\n \n\n \nAL_county_2020_precinct.csv"
+  },
+  {
+    "objectID": "analyses/AR_2020.html",
+    "href": "analyses/AR_2020.html",
+    "title": "Arkansas 2020",
+    "section": "",
+    "text": "AK                        AL                        AR                        AZ                        CA                        CO                        CT                        DE                        FL                        GA                        HI                        IA                        ID                        IL                        IN                        KS                        KY                        LA                        MA                        MD                        ME                        MI                        MN                        MO                        MS                        MT                        NC                        ND                        NE                        NH                        NJ                        NM                        NV                        NY                        OH                        OK                        OR                        PA                        RI                        SC                        SD                        TN                        TX                        UT                        VA                        VT                        WA                        WI                        WV                        WY                        DC                        USA                \n\n\n\nei = transpose(ei_df)\n\n\n\n\n\n\n\nviewof countyInput = Inputs.select(ei.map(d => d.county),\n                                {sort: true, unique: true, label: \"Choose a county:\"})\n\nPlot.plot({\n\nmarks: [\n  Plot.ruleX([0]),\n  Plot.dot(ei,\n    {\n    x: \"mean\",\n    y: \"race\",\n    fill: \"race\",\n    r: 4,\n    filter: d => d.county === countyInput,\n    sort: {y: null}\n  }),\n  Plot.link(ei,\n  {\n  x1: \"ci_95_lower\",\n  x2: \"ci_95_upper\",\n  y1: \"race\",\n  y2: \"race\",\n  filter: d => d.county === countyInput\n  })\n],\nfacet: {data: ei, y: \"election\", filter: d => d.county === countyInput,\nmarginRight: 150, label: \"Contest\", sort: {fy: null}},\nfill: {legend: true},\nx: {label: \"(%) Estimated Support for Democrats\",\n    percent: true,\n    labelAnchor: \"center\"},\ny: {label: \"Race\"},\n\nheight: 600,\nmarginLeft: 80\n\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEach point indicates the estimated mean for that race or ethnicity’s estimated support for the Democratic candidate. The extent of the bar indicates a 95% confidence interval."
+  },
+  {
+    "objectID": "analyses/AR_2020.html#data-sources",
+    "href": "analyses/AR_2020.html#data-sources",
+    "title": "Arkansas 2020",
+    "section": "Data Sources",
+    "text": "Data Sources\nData for Arkansas comes from the ALARM Project’s 2020 Redistricting Data Files. This data standardizes the Voting and Election Science Team (VEST) data from the Harvard Dataverse to geographies from the US Census Bureau, primarily at the VTD level.\n\nElections Included in Analysis\n\nPresident 2016\nUS Senate 2016\nGovernor 2018\nAttorney General 2018\nSecretary of State 2018\nPresident 2020\nUS Senate 2020"
+  },
+  {
+    "objectID": "analyses/AR_2020.html#data-download",
+    "href": "analyses/AR_2020.html#data-download",
+    "title": "Arkansas 2020",
+    "section": "Data Download",
+    "text": "Data Download\n\n\n\n\n\n\n\n \nSummary File\n \n\n \nAR_county_2020_summary.csv\n\n\n\n\n\n\n\n\n \nPrecinct Estimates\n \n\n \nAR_county_2020_precinct.csv"
+  },
+  {
+    "objectID": "analyses/AZ_2020.html",
+    "href": "analyses/AZ_2020.html",
+    "title": "Arizona 2020",
+    "section": "",
+    "text": "AK                        AL                        AR                        AZ                        CA                        CO                        CT                        DE                        FL                        GA                        HI                        IA                        ID                        IL                        IN                        KS                        KY                        LA                        MA                        MD                        ME                        MI                        MN                        MO                        MS                        MT                        NC                        ND                        NE                        NH                        NJ                        NM                        NV                        NY                        OH                        OK                        OR                        PA                        RI                        SC                        SD                        TN                        TX                        UT                        VA                        VT                        WA                        WI                        WV                        WY                        DC                        USA                \n\n\n\nei = transpose(ei_df)\n\n\n\n\n\n\n\nviewof countyInput = Inputs.select(ei.map(d => d.county),\n                                {sort: true, unique: true, label: \"Choose a county:\"})\n\nPlot.plot({\n\nmarks: [\n  Plot.ruleX([0]),\n  Plot.dot(ei,\n    {\n    x: \"mean\",\n    y: \"race\",\n    fill: \"race\",\n    r: 4,\n    filter: d => d.county === countyInput,\n    sort: {y: null}\n  }),\n  Plot.link(ei,\n  {\n  x1: \"ci_95_lower\",\n  x2: \"ci_95_upper\",\n  y1: \"race\",\n  y2: \"race\",\n  filter: d => d.county === countyInput\n  })\n],\nfacet: {data: ei, y: \"election\", filter: d => d.county === countyInput,\nmarginRight: 150, label: \"Contest\", sort: {fy: null}},\nfill: {legend: true},\nx: {label: \"(%) Estimated Support for Democrats\",\n    percent: true,\n    labelAnchor: \"center\"},\ny: {label: \"Race\"},\n\nheight: 600,\nmarginLeft: 80\n\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEach point indicates the estimated mean for that race or ethnicity’s estimated support for the Democratic candidate. The extent of the bar indicates a 95% confidence interval."
+  },
+  {
+    "objectID": "analyses/AZ_2020.html#data-sources",
+    "href": "analyses/AZ_2020.html#data-sources",
+    "title": "Arizona 2020",
+    "section": "Data Sources",
+    "text": "Data Sources\nData for Arizona comes from the ALARM Project’s 2020 Redistricting Data Files. This data standardizes the Voting and Election Science Team (VEST) data from the Harvard Dataverse to geographies from the US Census Bureau, primarily at the VTD level.\n\nElections Included in Analysis\n\nPresident 2016\nUS Senate 2016\nUS Senate 2018\nGovernor 2018\nAttorney General 2018\nSecretary of State 2018\nPresident 2020\nUS Senate 2020"
+  },
+  {
+    "objectID": "analyses/AZ_2020.html#data-download",
+    "href": "analyses/AZ_2020.html#data-download",
+    "title": "Arizona 2020",
+    "section": "Data Download",
+    "text": "Data Download\n\n\n\n\n\n\n\n \nSummary File\n \n\n \nAZ_county_2020_summary.csv\n\n\n\n\n\n\n\n\n \nPrecinct Estimates\n \n\n \nAZ_county_2020_precinct.csv"
+  },
+  {
+    "objectID": "analyses/CA_2020.html",
+    "href": "analyses/CA_2020.html",
+    "title": "California 2020",
+    "section": "",
+    "text": "AK                        AL                        AR                        AZ                        CA                        CO                        CT                        DE                        FL                        GA                        HI                        IA                        ID                        IL                        IN                        KS                        KY                        LA                        MA                        MD                        ME                        MI                        MN                        MO                        MS                        MT                        NC                        ND                        NE                        NH                        NJ                        NM                        NV                        NY                        OH                        OK                        OR                        PA                        RI                        SC                        SD                        TN                        TX                        UT                        VA                        VT                        WA                        WI                        WV                        WY                        DC                        USA                \n\n\n\nei = transpose(ei_df)\n\n\n\n\n\n\n\nviewof countyInput = Inputs.select(ei.map(d => d.county),\n                                {sort: true, unique: true, label: \"Choose a county:\"})\n\nPlot.plot({\n\nmarks: [\n  Plot.ruleX([0]),\n  Plot.dot(ei,\n    {\n    x: \"mean\",\n    y: \"race\",\n    fill: \"race\",\n    r: 4,\n    filter: d => d.county === countyInput,\n    sort: {y: null}\n  }),\n  Plot.link(ei,\n  {\n  x1: \"ci_95_lower\",\n  x2: \"ci_95_upper\",\n  y1: \"race\",\n  y2: \"race\",\n  filter: d => d.county === countyInput\n  })\n],\nfacet: {data: ei, y: \"election\", filter: d => d.county === countyInput,\nmarginRight: 150, label: \"Contest\", sort: {fy: null}},\nfill: {legend: true},\nx: {label: \"(%) Estimated Support for Democrats\",\n    percent: true,\n    labelAnchor: \"center\"},\ny: {label: \"Race\"},\n\nheight: 600,\nmarginLeft: 80\n\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEach point indicates the estimated mean for that race or ethnicity’s estimated support for the Democratic candidate. The extent of the bar indicates a 95% confidence interval."
+  },
+  {
+    "objectID": "analyses/CA_2020.html#data-sources",
+    "href": "analyses/CA_2020.html#data-sources",
+    "title": "California 2020",
+    "section": "Data Sources",
+    "text": "Data Sources\nData for California comes from the ALARM Project’s 2020 Redistricting Data Files. This data standardizes the Voting and Election Science Team (VEST) data from the Harvard Dataverse to geographies from the US Census Bureau, primarily at the VTD level.\n\nElections Included in Analysis\n\nPresident 2016\nPresident 2020"
+  },
+  {
+    "objectID": "analyses/CA_2020.html#data-download",
+    "href": "analyses/CA_2020.html#data-download",
+    "title": "California 2020",
+    "section": "Data Download",
+    "text": "Data Download\n\n\n\n\n\n\n\n \nSummary File\n \n\n \nCA_county_2020_summary.csv\n\n\n\n\n\n\n\n\n \nPrecinct Estimates\n \n\n \nCA_county_2020_precinct.csv"
+  },
+  {
+    "objectID": "analyses/CO_2020.html",
+    "href": "analyses/CO_2020.html",
+    "title": "Colorado 2020",
+    "section": "",
+    "text": "AK                        AL                        AR                        AZ                        CA                        CO                        CT                        DE                        FL                        GA                        HI                        IA                        ID                        IL                        IN                        KS                        KY                        LA                        MA                        MD                        ME                        MI                        MN                        MO                        MS                        MT                        NC                        ND                        NE                        NH                        NJ                        NM                        NV                        NY                        OH                        OK                        OR                        PA                        RI                        SC                        SD                        TN                        TX                        UT                        VA                        VT                        WA                        WI                        WV                        WY                        DC                        USA                \n\n\n\nei = transpose(ei_df)\n\n\n\n\n\n\n\nviewof countyInput = Inputs.select(ei.map(d => d.county),\n                                {sort: true, unique: true, label: \"Choose a county:\"})\n\nPlot.plot({\n\nmarks: [\n  Plot.ruleX([0]),\n  Plot.dot(ei,\n    {\n    x: \"mean\",\n    y: \"race\",\n    fill: \"race\",\n    r: 4,\n    filter: d => d.county === countyInput,\n    sort: {y: null}\n  }),\n  Plot.link(ei,\n  {\n  x1: \"ci_95_lower\",\n  x2: \"ci_95_upper\",\n  y1: \"race\",\n  y2: \"race\",\n  filter: d => d.county === countyInput\n  })\n],\nfacet: {data: ei, y: \"election\", filter: d => d.county === countyInput,\nmarginRight: 150, label: \"Contest\", sort: {fy: null}},\nfill: {legend: true},\nx: {label: \"(%) Estimated Support for Democrats\",\n    percent: true,\n    labelAnchor: \"center\"},\ny: {label: \"Race\"},\n\nheight: 600,\nmarginLeft: 80\n\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEach point indicates the estimated mean for that race or ethnicity’s estimated support for the Democratic candidate. The extent of the bar indicates a 95% confidence interval."
+  },
+  {
+    "objectID": "analyses/CO_2020.html#data-sources",
+    "href": "analyses/CO_2020.html#data-sources",
+    "title": "Colorado 2020",
+    "section": "Data Sources",
+    "text": "Data Sources\nData for Colorado comes from the ALARM Project’s 2020 Redistricting Data Files. This data standardizes the Voting and Election Science Team (VEST) data from the Harvard Dataverse to geographies from the US Census Bureau, primarily at the VTD level.\n\nElections Included in Analysis\n\nPresident 2016\nUS Senate 2016\nGovernor 2018\nAttorney General 2018\nSecretary of State 2018\nPresident 2020\nUS Senate 2020"
+  },
+  {
+    "objectID": "analyses/CO_2020.html#data-download",
+    "href": "analyses/CO_2020.html#data-download",
+    "title": "Colorado 2020",
+    "section": "Data Download",
+    "text": "Data Download\n\n\n\n\n\n\n\n \nSummary File\n \n\n \nCO_county_2020_summary.csv\n\n\n\n\n\n\n\n\n \nPrecinct Estimates\n \n\n \nCO_county_2020_precinct.csv"
+  },
+  {
+    "objectID": "analyses/CT_2020.html",
+    "href": "analyses/CT_2020.html",
+    "title": "Connecticut 2020",
+    "section": "",
+    "text": "AK                        AL                        AR                        AZ                        CA                        CO                        CT                        DE                        FL                        GA                        HI                        IA                        ID                        IL                        IN                        KS                        KY                        LA                        MA                        MD                        ME                        MI                        MN                        MO                        MS                        MT                        NC                        ND                        NE                        NH                        NJ                        NM                        NV                        NY                        OH                        OK                        OR                        PA                        RI                        SC                        SD                        TN                        TX                        UT                        VA                        VT                        WA                        WI                        WV                        WY                        DC                        USA                \n\n\n\nei = transpose(ei_df)\n\n\n\n\n\n\n\nviewof countyInput = Inputs.select(ei.map(d => d.county),\n                                {sort: true, unique: true, label: \"Choose a county:\"})\n\nPlot.plot({\n\nmarks: [\n  Plot.ruleX([0]),\n  Plot.dot(ei,\n    {\n    x: \"mean\",\n    y: \"race\",\n    fill: \"race\",\n    r: 4,\n    filter: d => d.county === countyInput,\n    sort: {y: null}\n  }),\n  Plot.link(ei,\n  {\n  x1: \"ci_95_lower\",\n  x2: \"ci_95_upper\",\n  y1: \"race\",\n  y2: \"race\",\n  filter: d => d.county === countyInput\n  })\n],\nfacet: {data: ei, y: \"election\", filter: d => d.county === countyInput,\nmarginRight: 150, label: \"Contest\", sort: {fy: null}},\nfill: {legend: true},\nx: {label: \"(%) Estimated Support for Democrats\",\n    percent: true,\n    labelAnchor: \"center\"},\ny: {label: \"Race\"},\n\nheight: 600,\nmarginLeft: 80\n\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEach point indicates the estimated mean for that race or ethnicity’s estimated support for the Democratic candidate. The extent of the bar indicates a 95% confidence interval."
+  },
+  {
+    "objectID": "analyses/CT_2020.html#data-sources",
+    "href": "analyses/CT_2020.html#data-sources",
+    "title": "Connecticut 2020",
+    "section": "Data Sources",
+    "text": "Data Sources\nData for Connecticut comes from the ALARM Project’s 2020 Redistricting Data Files. This data standardizes the Voting and Election Science Team (VEST) data from the Harvard Dataverse to geographies from the US Census Bureau, primarily at the VTD level.\n\nElections Included in Analysis\n\nPresident 2016\nUS Senate 2016\nUS Senate 2018\nGovernor 2018\nAttorney General 2018\nSecretary of State 2018\nPresident 2020"
+  },
+  {
+    "objectID": "analyses/CT_2020.html#data-download",
+    "href": "analyses/CT_2020.html#data-download",
+    "title": "Connecticut 2020",
+    "section": "Data Download",
+    "text": "Data Download\n\n\n\n\n\n\n\n \nSummary File\n \n\n \nCT_county_2020_summary.csv\n\n\n\n\n\n\n\n\n \nPrecinct Estimates\n \n\n \nCT_county_2020_precinct.csv"
+  },
+  {
+    "objectID": "analyses/DE_2020.html",
+    "href": "analyses/DE_2020.html",
+    "title": "Delaware 2020",
+    "section": "",
+    "text": "AK                        AL                        AR                        AZ                        CA                        CO                        CT                        DE                        FL                        GA                        HI                        IA                        ID                        IL                        IN                        KS                        KY                        LA                        MA                        MD                        ME                        MI                        MN                        MO                        MS                        MT                        NC                        ND                        NE                        NH                        NJ                        NM                        NV                        NY                        OH                        OK                        OR                        PA                        RI                        SC                        SD                        TN                        TX                        UT                        VA                        VT                        WA                        WI                        WV                        WY                        DC                        USA                \n\n\n\nei = transpose(ei_df)\n\n\n\n\n\n\n\nviewof countyInput = Inputs.select(ei.map(d => d.county),\n                                {sort: true, unique: true, label: \"Choose a county:\"})\n\nPlot.plot({\n\nmarks: [\n  Plot.ruleX([0]),\n  Plot.dot(ei,\n    {\n    x: \"mean\",\n    y: \"race\",\n    fill: \"race\",\n    r: 4,\n    filter: d => d.county === countyInput,\n    sort: {y: null}\n  }),\n  Plot.link(ei,\n  {\n  x1: \"ci_95_lower\",\n  x2: \"ci_95_upper\",\n  y1: \"race\",\n  y2: \"race\",\n  filter: d => d.county === countyInput\n  })\n],\nfacet: {data: ei, y: \"election\", filter: d => d.county === countyInput,\nmarginRight: 150, label: \"Contest\", sort: {fy: null}},\nfill: {legend: true},\nx: {label: \"(%) Estimated Support for Democrats\",\n    percent: true,\n    labelAnchor: \"center\"},\ny: {label: \"Race\"},\n\nheight: 600,\nmarginLeft: 80\n\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEach point indicates the estimated mean for that race or ethnicity’s estimated support for the Democratic candidate. The extent of the bar indicates a 95% confidence interval."
+  },
+  {
+    "objectID": "analyses/DE_2020.html#data-sources",
+    "href": "analyses/DE_2020.html#data-sources",
+    "title": "Delaware 2020",
+    "section": "Data Sources",
+    "text": "Data Sources\nData for Delaware comes from the ALARM Project’s 2020 Redistricting Data Files. This data standardizes the Voting and Election Science Team (VEST) data from the Harvard Dataverse to geographies from the US Census Bureau, primarily at the VTD level.\n\nElections Included in Analysis\n\nPresident 2016\nGovernor 2016\nUS Senate 2018\nAttorney General 2018\nPresident 2020\nUS Senate 2020\nGovernor 2020"
+  },
+  {
+    "objectID": "analyses/DE_2020.html#data-download",
+    "href": "analyses/DE_2020.html#data-download",
+    "title": "Delaware 2020",
+    "section": "Data Download",
+    "text": "Data Download\n\n\n\n\n\n\n\n \nSummary File\n \n\n \nDE_county_2020_summary.csv\n\n\n\n\n\n\n\n\n \nPrecinct Estimates\n \n\n \nDE_county_2020_precinct.csv"
+  },
+  {
+    "objectID": "analyses/FL_2020.html",
+    "href": "analyses/FL_2020.html",
+    "title": "Florida 2020",
+    "section": "",
+    "text": "AK                        AL                        AR                        AZ                        CA                        CO                        CT                        DE                        FL                        GA                        HI                        IA                        ID                        IL                        IN                        KS                        KY                        LA                        MA                        MD                        ME                        MI                        MN                        MO                        MS                        MT                        NC                        ND                        NE                        NH                        NJ                        NM                        NV                        NY                        OH                        OK                        OR                        PA                        RI                        SC                        SD                        TN                        TX                        UT                        VA                        VT                        WA                        WI                        WV                        WY                        DC                        USA                \n\n\n\nei = transpose(ei_df)\n\n\n\n\n\n\n\nviewof countyInput = Inputs.select(ei.map(d => d.county),\n                                {sort: true, unique: true, label: \"Choose a county:\"})\n\nPlot.plot({\n\nmarks: [\n  Plot.ruleX([0]),\n  Plot.dot(ei,\n    {\n    x: \"mean\",\n    y: \"race\",\n    fill: \"race\",\n    r: 4,\n    filter: d => d.county === countyInput,\n    sort: {y: null}\n  }),\n  Plot.link(ei,\n  {\n  x1: \"ci_95_lower\",\n  x2: \"ci_95_upper\",\n  y1: \"race\",\n  y2: \"race\",\n  filter: d => d.county === countyInput\n  })\n],\nfacet: {data: ei, y: \"election\", filter: d => d.county === countyInput,\nmarginRight: 150, label: \"Contest\", sort: {fy: null}},\nfill: {legend: true},\nx: {label: \"(%) Estimated Support for Democrats\",\n    percent: true,\n    labelAnchor: \"center\"},\ny: {label: \"Race\"},\n\nheight: 600,\nmarginLeft: 80\n\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEach point indicates the estimated mean for that race or ethnicity’s estimated support for the Democratic candidate. The extent of the bar indicates a 95% confidence interval."
+  },
+  {
+    "objectID": "analyses/FL_2020.html#data-sources",
+    "href": "analyses/FL_2020.html#data-sources",
+    "title": "Florida 2020",
+    "section": "Data Sources",
+    "text": "Data Sources\nData for Florida comes from the ALARM Project’s 2020 Redistricting Data Files. This data standardizes the Voting and Election Science Team (VEST) data from the Harvard Dataverse to geographies from the US Census Bureau, primarily at the VTD level.\n\nElections Included in Analysis\n\nPresident 2016\nUS Senate 2016\nUS Senate 2018\nGovernor 2018\nAttorney General 2018\nPresident 2020"
+  },
+  {
+    "objectID": "analyses/FL_2020.html#data-download",
+    "href": "analyses/FL_2020.html#data-download",
+    "title": "Florida 2020",
+    "section": "Data Download",
+    "text": "Data Download\n\n\n\n\n\n\n\n \nSummary File\n \n\n \nFL_county_2020_summary.csv\n\n\n\n\n\n\n\n\n \nPrecinct Estimates\n \n\n \nFL_county_2020_precinct.csv"
+  },
+  {
+    "objectID": "analyses/GA_2020.html",
+    "href": "analyses/GA_2020.html",
+    "title": "Georgia 2020",
+    "section": "",
+    "text": "AK                        AL                        AR                        AZ                        CA                        CO                        CT                        DE                        FL                        GA                        HI                        IA                        ID                        IL                        IN                        KS                        KY                        LA                        MA                        MD                        ME                        MI                        MN                        MO                        MS                        MT                        NC                        ND                        NE                        NH                        NJ                        NM                        NV                        NY                        OH                        OK                        OR                        PA                        RI                        SC                        SD                        TN                        TX                        UT                        VA                        VT                        WA                        WI                        WV                        WY                        DC                        USA                \n\n\n\nei = transpose(ei_df)\n\n\n\n\n\n\n\nviewof countyInput = Inputs.select(ei.map(d => d.county),\n                                {sort: true, unique: true, label: \"Choose a county:\"})\n\nPlot.plot({\n\nmarks: [\n  Plot.ruleX([0]),\n  Plot.dot(ei,\n    {\n    x: \"mean\",\n    y: \"race\",\n    fill: \"race\",\n    r: 4,\n    filter: d => d.county === countyInput,\n    sort: {y: null}\n  }),\n  Plot.link(ei,\n  {\n  x1: \"ci_95_lower\",\n  x2: \"ci_95_upper\",\n  y1: \"race\",\n  y2: \"race\",\n  filter: d => d.county === countyInput\n  })\n],\nfacet: {data: ei, y: \"election\", filter: d => d.county === countyInput,\nmarginRight: 150, label: \"Contest\", sort: {fy: null}},\nfill: {legend: true},\nx: {label: \"(%) Estimated Support for Democrats\",\n    percent: true,\n    labelAnchor: \"center\"},\ny: {label: \"Race\"},\n\nheight: 600,\nmarginLeft: 80\n\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEach point indicates the estimated mean for that race or ethnicity’s estimated support for the Democratic candidate. The extent of the bar indicates a 95% confidence interval."
+  },
+  {
+    "objectID": "analyses/GA_2020.html#data-sources",
+    "href": "analyses/GA_2020.html#data-sources",
+    "title": "Georgia 2020",
+    "section": "Data Sources",
+    "text": "Data Sources\nData for Georgia comes from the ALARM Project’s 2020 Redistricting Data Files. This data standardizes the Voting and Election Science Team (VEST) data from the Harvard Dataverse to geographies from the US Census Bureau, primarily at the VTD level.\n\nElections Included in Analysis\n\nPresident 2016\nUS Senate 2016\nGovernor 2018\nAttorney General 2018\nSecretary of State 2018\nPresident 2020\nUS Senate 2020"
+  },
+  {
+    "objectID": "analyses/GA_2020.html#data-download",
+    "href": "analyses/GA_2020.html#data-download",
+    "title": "Georgia 2020",
+    "section": "Data Download",
+    "text": "Data Download\n\n\n\n\n\n\n\n \nSummary File\n \n\n \nGA_county_2020_summary.csv\n\n\n\n\n\n\n\n\n \nPrecinct Estimates\n \n\n \nGA_county_2020_precinct.csv"
+  },
+  {
+    "objectID": "analyses/HI_2020.html",
+    "href": "analyses/HI_2020.html",
+    "title": "Hawaii 2020",
+    "section": "",
+    "text": "AK                        AL                        AR                        AZ                        CA                        CO                        CT                        DE                        FL                        GA                        HI                        IA                        ID                        IL                        IN                        KS                        KY                        LA                        MA                        MD                        ME                        MI                        MN                        MO                        MS                        MT                        NC                        ND                        NE                        NH                        NJ                        NM                        NV                        NY                        OH                        OK                        OR                        PA                        RI                        SC                        SD                        TN                        TX                        UT                        VA                        VT                        WA                        WI                        WV                        WY                        DC                        USA                \n\n\n\nei = transpose(ei_df)\n\n\n\n\n\n\n\nviewof countyInput = Inputs.select(ei.map(d => d.county),\n                                {sort: true, unique: true, label: \"Choose a county:\"})\n\nPlot.plot({\n\nmarks: [\n  Plot.ruleX([0]),\n  Plot.dot(ei,\n    {\n    x: \"mean\",\n    y: \"race\",\n    fill: \"race\",\n    r: 4,\n    filter: d => d.county === countyInput,\n    sort: {y: null}\n  }),\n  Plot.link(ei,\n  {\n  x1: \"ci_95_lower\",\n  x2: \"ci_95_upper\",\n  y1: \"race\",\n  y2: \"race\",\n  filter: d => d.county === countyInput\n  })\n],\nfacet: {data: ei, y: \"election\", filter: d => d.county === countyInput,\nmarginRight: 150, label: \"Contest\", sort: {fy: null}},\nfill: {legend: true},\nx: {label: \"(%) Estimated Support for Democrats\",\n    percent: true,\n    labelAnchor: \"center\"},\ny: {label: \"Race\"},\n\nheight: 600,\nmarginLeft: 80\n\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEach point indicates the estimated mean for that race or ethnicity’s estimated support for the Democratic candidate. The extent of the bar indicates a 95% confidence interval."
+  },
+  {
+    "objectID": "analyses/HI_2020.html#data-sources",
+    "href": "analyses/HI_2020.html#data-sources",
+    "title": "Hawaii 2020",
+    "section": "Data Sources",
+    "text": "Data Sources\nData for Hawaii comes from the ALARM Project’s 2020 Redistricting Data Files. This data standardizes the Voting and Election Science Team (VEST) data from the Harvard Dataverse to geographies from the US Census Bureau, primarily at the VTD level.\n\nElections Included in Analysis\n\nPresident 2016\nUS Senate 2016\nUS Senate 2018\nGovernor 2018\nPresident 2020"
+  },
+  {
+    "objectID": "analyses/HI_2020.html#data-download",
+    "href": "analyses/HI_2020.html#data-download",
+    "title": "Hawaii 2020",
+    "section": "Data Download",
+    "text": "Data Download\n\n\n\n\n\n\n\n \nSummary File\n \n\n \nHI_county_2020_summary.csv\n\n\n\n\n\n\n\n\n \nPrecinct Estimates\n \n\n \nHI_county_2020_precinct.csv"
+  },
+  {
+    "objectID": "analyses/IA_2020.html",
+    "href": "analyses/IA_2020.html",
+    "title": "Iowa 2020",
+    "section": "",
+    "text": "AK                        AL                        AR                        AZ                        CA                        CO                        CT                        DE                        FL                        GA                        HI                        IA                        ID                        IL                        IN                        KS                        KY                        LA                        MA                        MD                        ME                        MI                        MN                        MO                        MS                        MT                        NC                        ND                        NE                        NH                        NJ                        NM                        NV                        NY                        OH                        OK                        OR                        PA                        RI                        SC                        SD                        TN                        TX                        UT                        VA                        VT                        WA                        WI                        WV                        WY                        DC                        USA                \n\n\n\nei = transpose(ei_df)\n\n\n\n\n\n\n\nviewof countyInput = Inputs.select(ei.map(d => d.county),\n                                {sort: true, unique: true, label: \"Choose a county:\"})\n\nPlot.plot({\n\nmarks: [\n  Plot.ruleX([0]),\n  Plot.dot(ei,\n    {\n    x: \"mean\",\n    y: \"race\",\n    fill: \"race\",\n    r: 4,\n    filter: d => d.county === countyInput,\n    sort: {y: null}\n  }),\n  Plot.link(ei,\n  {\n  x1: \"ci_95_lower\",\n  x2: \"ci_95_upper\",\n  y1: \"race\",\n  y2: \"race\",\n  filter: d => d.county === countyInput\n  })\n],\nfacet: {data: ei, y: \"election\", filter: d => d.county === countyInput,\nmarginRight: 150, label: \"Contest\", sort: {fy: null}},\nfill: {legend: true},\nx: {label: \"(%) Estimated Support for Democrats\",\n    percent: true,\n    labelAnchor: \"center\"},\ny: {label: \"Race\"},\n\nheight: 600,\nmarginLeft: 80\n\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEach point indicates the estimated mean for that race or ethnicity’s estimated support for the Democratic candidate. The extent of the bar indicates a 95% confidence interval."
+  },
+  {
+    "objectID": "analyses/IA_2020.html#data-sources",
+    "href": "analyses/IA_2020.html#data-sources",
+    "title": "Iowa 2020",
+    "section": "Data Sources",
+    "text": "Data Sources\nData for Iowa comes from the ALARM Project’s 2020 Redistricting Data Files. This data standardizes the Voting and Election Science Team (VEST) data from the Harvard Dataverse to geographies from the US Census Bureau, primarily at the VTD level.\n\nElections Included in Analysis\n\nPresident 2016\nUS Senate 2016\nGovernor 2018\nAttorney General 2018\nSecretary of State 2018\nPresident 2020\nUS Senate 2020"
+  },
+  {
+    "objectID": "analyses/IA_2020.html#data-download",
+    "href": "analyses/IA_2020.html#data-download",
+    "title": "Iowa 2020",
+    "section": "Data Download",
+    "text": "Data Download\n\n\n\n\n\n\n\n \nSummary File\n \n\n \nIA_county_2020_summary.csv\n\n\n\n\n\n\n\n\n \nPrecinct Estimates\n \n\n \nIA_county_2020_precinct.csv"
+  },
+  {
+    "objectID": "analyses/ID_2020.html",
+    "href": "analyses/ID_2020.html",
+    "title": "Idaho 2020",
+    "section": "",
+    "text": "AK                        AL                        AR                        AZ                        CA                        CO                        CT                        DE                        FL                        GA                        HI                        IA                        ID                        IL                        IN                        KS                        KY                        LA                        MA                        MD                        ME                        MI                        MN                        MO                        MS                        MT                        NC                        ND                        NE                        NH                        NJ                        NM                        NV                        NY                        OH                        OK                        OR                        PA                        RI                        SC                        SD                        TN                        TX                        UT                        VA                        VT                        WA                        WI                        WV                        WY                        DC                        USA                \n\n\n\nei = transpose(ei_df)\n\n\n\n\n\n\n\nviewof countyInput = Inputs.select(ei.map(d => d.county),\n                                {sort: true, unique: true, label: \"Choose a county:\"})\n\nPlot.plot({\n\nmarks: [\n  Plot.ruleX([0]),\n  Plot.dot(ei,\n    {\n    x: \"mean\",\n    y: \"race\",\n    fill: \"race\",\n    r: 4,\n    filter: d => d.county === countyInput,\n    sort: {y: null}\n  }),\n  Plot.link(ei,\n  {\n  x1: \"ci_95_lower\",\n  x2: \"ci_95_upper\",\n  y1: \"race\",\n  y2: \"race\",\n  filter: d => d.county === countyInput\n  })\n],\nfacet: {data: ei, y: \"election\", filter: d => d.county === countyInput,\nmarginRight: 150, label: \"Contest\", sort: {fy: null}},\nfill: {legend: true},\nx: {label: \"(%) Estimated Support for Democrats\",\n    percent: true,\n    labelAnchor: \"center\"},\ny: {label: \"Race\"},\n\nheight: 600,\nmarginLeft: 80\n\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEach point indicates the estimated mean for that race or ethnicity’s estimated support for the Democratic candidate. The extent of the bar indicates a 95% confidence interval."
+  },
+  {
+    "objectID": "analyses/ID_2020.html#data-sources",
+    "href": "analyses/ID_2020.html#data-sources",
+    "title": "Idaho 2020",
+    "section": "Data Sources",
+    "text": "Data Sources\nData for Idaho comes from the ALARM Project’s 2020 Redistricting Data Files. This data standardizes the Voting and Election Science Team (VEST) data from the Harvard Dataverse to geographies from the US Census Bureau, primarily at the VTD level.\n\nElections Included in Analysis\n\nPresident 2016\nUS Senate 2016\nGovernor 2018\nAttorney General 2018\nSecretary of State 2018\nPresident 2020\nUS Senate 2020"
+  },
+  {
+    "objectID": "analyses/ID_2020.html#data-download",
+    "href": "analyses/ID_2020.html#data-download",
+    "title": "Idaho 2020",
+    "section": "Data Download",
+    "text": "Data Download\n\n\n\n\n\n\n\n \nSummary File\n \n\n \nID_county_2020_summary.csv\n\n\n\n\n\n\n\n\n \nPrecinct Estimates\n \n\n \nID_county_2020_precinct.csv"
+  },
+  {
+    "objectID": "analyses/IL_2020.html",
+    "href": "analyses/IL_2020.html",
+    "title": "Illinois 2020",
+    "section": "",
+    "text": "AK                        AL                        AR                        AZ                        CA                        CO                        CT                        DE                        FL                        GA                        HI                        IA                        ID                        IL                        IN                        KS                        KY                        LA                        MA                        MD                        ME                        MI                        MN                        MO                        MS                        MT                        NC                        ND                        NE                        NH                        NJ                        NM                        NV                        NY                        OH                        OK                        OR                        PA                        RI                        SC                        SD                        TN                        TX                        UT                        VA                        VT                        WA                        WI                        WV                        WY                        DC                        USA                \n\n\n\nei = transpose(ei_df)\n\n\n\n\n\n\n\nviewof countyInput = Inputs.select(ei.map(d => d.county),\n                                {sort: true, unique: true, label: \"Choose a county:\"})\n\nPlot.plot({\n\nmarks: [\n  Plot.ruleX([0]),\n  Plot.dot(ei,\n    {\n    x: \"mean\",\n    y: \"race\",\n    fill: \"race\",\n    r: 4,\n    filter: d => d.county === countyInput,\n    sort: {y: null}\n  }),\n  Plot.link(ei,\n  {\n  x1: \"ci_95_lower\",\n  x2: \"ci_95_upper\",\n  y1: \"race\",\n  y2: \"race\",\n  filter: d => d.county === countyInput\n  })\n],\nfacet: {data: ei, y: \"election\", filter: d => d.county === countyInput,\nmarginRight: 150, label: \"Contest\", sort: {fy: null}},\nfill: {legend: true},\nx: {label: \"(%) Estimated Support for Democrats\",\n    percent: true,\n    labelAnchor: \"center\"},\ny: {label: \"Race\"},\n\nheight: 600,\nmarginLeft: 80\n\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEach point indicates the estimated mean for that race or ethnicity’s estimated support for the Democratic candidate. The extent of the bar indicates a 95% confidence interval."
+  },
+  {
+    "objectID": "analyses/IL_2020.html#data-sources",
+    "href": "analyses/IL_2020.html#data-sources",
+    "title": "Illinois 2020",
+    "section": "Data Sources",
+    "text": "Data Sources\nData for Illinois comes from the ALARM Project’s 2020 Redistricting Data Files. This data standardizes the Voting and Election Science Team (VEST) data from the Harvard Dataverse to geographies from the US Census Bureau, primarily at the VTD level.\n\nElections Included in Analysis\n\nPresident 2016\nUS Senate 2016\nGovernor 2018\nAttorney General 2018\nSecretary of State 2018\nPresident 2020\nUS Senate 2020"
+  },
+  {
+    "objectID": "analyses/IL_2020.html#data-download",
+    "href": "analyses/IL_2020.html#data-download",
+    "title": "Illinois 2020",
+    "section": "Data Download",
+    "text": "Data Download\n\n\n\n\n\n\n\n \nSummary File\n \n\n \nIL_county_2020_summary.csv\n\n\n\n\n\n\n\n\n \nPrecinct Estimates\n \n\n \nIL_county_2020_precinct.csv"
   },
   {
     "objectID": "analyses/index.html",
@@ -68,6 +306,405 @@
     "title": "Analyses",
     "section": "",
     "text": "You’ve landed on the index for the analyses. Subpages are in the form '{abb}_2020.html', where abb is a two character state abbreviation.\nReturn Home"
+  },
+  {
+    "objectID": "analyses/IN_2020.html",
+    "href": "analyses/IN_2020.html",
+    "title": "Indiana 2020",
+    "section": "",
+    "text": "AK                        AL                        AR                        AZ                        CA                        CO                        CT                        DE                        FL                        GA                        HI                        IA                        ID                        IL                        IN                        KS                        KY                        LA                        MA                        MD                        ME                        MI                        MN                        MO                        MS                        MT                        NC                        ND                        NE                        NH                        NJ                        NM                        NV                        NY                        OH                        OK                        OR                        PA                        RI                        SC                        SD                        TN                        TX                        UT                        VA                        VT                        WA                        WI                        WV                        WY                        DC                        USA                \n\n\n\nei = transpose(ei_df)\n\n\n\n\n\n\n\nviewof countyInput = Inputs.select(ei.map(d => d.county),\n                                {sort: true, unique: true, label: \"Choose a county:\"})\n\nPlot.plot({\n\nmarks: [\n  Plot.ruleX([0]),\n  Plot.dot(ei,\n    {\n    x: \"mean\",\n    y: \"race\",\n    fill: \"race\",\n    r: 4,\n    filter: d => d.county === countyInput,\n    sort: {y: null}\n  }),\n  Plot.link(ei,\n  {\n  x1: \"ci_95_lower\",\n  x2: \"ci_95_upper\",\n  y1: \"race\",\n  y2: \"race\",\n  filter: d => d.county === countyInput\n  })\n],\nfacet: {data: ei, y: \"election\", filter: d => d.county === countyInput,\nmarginRight: 150, label: \"Contest\", sort: {fy: null}},\nfill: {legend: true},\nx: {label: \"(%) Estimated Support for Democrats\",\n    percent: true,\n    labelAnchor: \"center\"},\ny: {label: \"Race\"},\n\nheight: 600,\nmarginLeft: 80\n\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEach point indicates the estimated mean for that race or ethnicity’s estimated support for the Democratic candidate. The extent of the bar indicates a 95% confidence interval."
+  },
+  {
+    "objectID": "analyses/IN_2020.html#data-sources",
+    "href": "analyses/IN_2020.html#data-sources",
+    "title": "Indiana 2020",
+    "section": "Data Sources",
+    "text": "Data Sources\nData for Indiana comes from the ALARM Project’s 2020 Redistricting Data Files. This data standardizes the Voting and Election Science Team (VEST) data from the Harvard Dataverse to geographies from the US Census Bureau, primarily at the VTD level.\n\nElections Included in Analysis\n\nPresident 2016\nUS Senate 2016\nGovernor 2016\nAttorney General 2016\nUS Senate 2018\nSecretary of State 2018\nPresident 2020\nGovernor 2020\nAttorney General 2020"
+  },
+  {
+    "objectID": "analyses/IN_2020.html#data-download",
+    "href": "analyses/IN_2020.html#data-download",
+    "title": "Indiana 2020",
+    "section": "Data Download",
+    "text": "Data Download\n\n\n\n\n\n\n\n \nSummary File\n \n\n \nIN_county_2020_summary.csv\n\n\n\n\n\n\n\n\n \nPrecinct Estimates\n \n\n \nIN_county_2020_precinct.csv"
+  },
+  {
+    "objectID": "analyses/KS_2020.html",
+    "href": "analyses/KS_2020.html",
+    "title": "Kansas 2020",
+    "section": "",
+    "text": "AK                        AL                        AR                        AZ                        CA                        CO                        CT                        DE                        FL                        GA                        HI                        IA                        ID                        IL                        IN                        KS                        KY                        LA                        MA                        MD                        ME                        MI                        MN                        MO                        MS                        MT                        NC                        ND                        NE                        NH                        NJ                        NM                        NV                        NY                        OH                        OK                        OR                        PA                        RI                        SC                        SD                        TN                        TX                        UT                        VA                        VT                        WA                        WI                        WV                        WY                        DC                        USA                \n\n\n\nei = transpose(ei_df)\n\n\n\n\n\n\n\nviewof countyInput = Inputs.select(ei.map(d => d.county),\n                                {sort: true, unique: true, label: \"Choose a county:\"})\n\nPlot.plot({\n\nmarks: [\n  Plot.ruleX([0]),\n  Plot.dot(ei,\n    {\n    x: \"mean\",\n    y: \"race\",\n    fill: \"race\",\n    r: 4,\n    filter: d => d.county === countyInput,\n    sort: {y: null}\n  }),\n  Plot.link(ei,\n  {\n  x1: \"ci_95_lower\",\n  x2: \"ci_95_upper\",\n  y1: \"race\",\n  y2: \"race\",\n  filter: d => d.county === countyInput\n  })\n],\nfacet: {data: ei, y: \"election\", filter: d => d.county === countyInput,\nmarginRight: 150, label: \"Contest\", sort: {fy: null}},\nfill: {legend: true},\nx: {label: \"(%) Estimated Support for Democrats\",\n    percent: true,\n    labelAnchor: \"center\"},\ny: {label: \"Race\"},\n\nheight: 600,\nmarginLeft: 80\n\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEach point indicates the estimated mean for that race or ethnicity’s estimated support for the Democratic candidate. The extent of the bar indicates a 95% confidence interval."
+  },
+  {
+    "objectID": "analyses/KS_2020.html#data-sources",
+    "href": "analyses/KS_2020.html#data-sources",
+    "title": "Kansas 2020",
+    "section": "Data Sources",
+    "text": "Data Sources\nData for Kansas comes from the ALARM Project’s 2020 Redistricting Data Files. This data standardizes the Voting and Election Science Team (VEST) data from the Harvard Dataverse to geographies from the US Census Bureau, primarily at the VTD level.\n\nElections Included in Analysis\n\nPresident 2016\nUS Senate 2016\nGovernor 2018\nAttorney General 2018\nSecretary of State 2018\nPresident 2020\nUS Senate 2020"
+  },
+  {
+    "objectID": "analyses/KS_2020.html#data-download",
+    "href": "analyses/KS_2020.html#data-download",
+    "title": "Kansas 2020",
+    "section": "Data Download",
+    "text": "Data Download\n\n\n\n\n\n\n\n \nSummary File\n \n\n \nKS_county_2020_summary.csv\n\n\n\n\n\n\n\n\n \nPrecinct Estimates\n \n\n \nKS_county_2020_precinct.csv"
+  },
+  {
+    "objectID": "analyses/KY_2020.html",
+    "href": "analyses/KY_2020.html",
+    "title": "Kentucky 2020",
+    "section": "",
+    "text": "AK                        AL                        AR                        AZ                        CA                        CO                        CT                        DE                        FL                        GA                        HI                        IA                        ID                        IL                        IN                        KS                        KY                        LA                        MA                        MD                        ME                        MI                        MN                        MO                        MS                        MT                        NC                        ND                        NE                        NH                        NJ                        NM                        NV                        NY                        OH                        OK                        OR                        PA                        RI                        SC                        SD                        TN                        TX                        UT                        VA                        VT                        WA                        WI                        WV                        WY                        DC                        USA                \n\n\n\nei = transpose(ei_df)\n\n\n\n\n\n\n\nviewof countyInput = Inputs.select(ei.map(d => d.county),\n                                {sort: true, unique: true, label: \"Choose a county:\"})\n\nPlot.plot({\n\nmarks: [\n  Plot.ruleX([0]),\n  Plot.dot(ei,\n    {\n    x: \"mean\",\n    y: \"race\",\n    fill: \"race\",\n    r: 4,\n    filter: d => d.county === countyInput,\n    sort: {y: null}\n  }),\n  Plot.link(ei,\n  {\n  x1: \"ci_95_lower\",\n  x2: \"ci_95_upper\",\n  y1: \"race\",\n  y2: \"race\",\n  filter: d => d.county === countyInput\n  })\n],\nfacet: {data: ei, y: \"election\", filter: d => d.county === countyInput,\nmarginRight: 150, label: \"Contest\", sort: {fy: null}},\nfill: {legend: true},\nx: {label: \"(%) Estimated Support for Democrats\",\n    percent: true,\n    labelAnchor: \"center\"},\ny: {label: \"Race\"},\n\nheight: 600,\nmarginLeft: 80\n\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEach point indicates the estimated mean for that race or ethnicity’s estimated support for the Democratic candidate. The extent of the bar indicates a 95% confidence interval."
+  },
+  {
+    "objectID": "analyses/KY_2020.html#data-sources",
+    "href": "analyses/KY_2020.html#data-sources",
+    "title": "Kentucky 2020",
+    "section": "Data Sources",
+    "text": "Data Sources\nData for Kentucky comes from the ALARM Project’s 2020 Redistricting Data Files. This data standardizes the Voting and Election Science Team (VEST) data from the Harvard Dataverse to geographies from the US Census Bureau, primarily at the VTD level.\n\nElections Included in Analysis\n\nPresident 2016\nUS Senate 2016\nPresident 2020\nUS Senate 2020"
+  },
+  {
+    "objectID": "analyses/KY_2020.html#data-download",
+    "href": "analyses/KY_2020.html#data-download",
+    "title": "Kentucky 2020",
+    "section": "Data Download",
+    "text": "Data Download\n\n\n\n\n\n\n\n \nSummary File\n \n\n \nKY_county_2020_summary.csv\n\n\n\n\n\n\n\n\n \nPrecinct Estimates\n \n\n \nKY_county_2020_precinct.csv"
+  },
+  {
+    "objectID": "analyses/LA_2020.html",
+    "href": "analyses/LA_2020.html",
+    "title": "Louisiana 2020",
+    "section": "",
+    "text": "AK                        AL                        AR                        AZ                        CA                        CO                        CT                        DE                        FL                        GA                        HI                        IA                        ID                        IL                        IN                        KS                        KY                        LA                        MA                        MD                        ME                        MI                        MN                        MO                        MS                        MT                        NC                        ND                        NE                        NH                        NJ                        NM                        NV                        NY                        OH                        OK                        OR                        PA                        RI                        SC                        SD                        TN                        TX                        UT                        VA                        VT                        WA                        WI                        WV                        WY                        DC                        USA                \n\n\n\nei = transpose(ei_df)\n\n\n\n\n\n\n\nviewof countyInput = Inputs.select(ei.map(d => d.county),\n                                {sort: true, unique: true, label: \"Choose a county:\"})\n\nPlot.plot({\n\nmarks: [\n  Plot.ruleX([0]),\n  Plot.dot(ei,\n    {\n    x: \"mean\",\n    y: \"race\",\n    fill: \"race\",\n    r: 4,\n    filter: d => d.county === countyInput,\n    sort: {y: null}\n  }),\n  Plot.link(ei,\n  {\n  x1: \"ci_95_lower\",\n  x2: \"ci_95_upper\",\n  y1: \"race\",\n  y2: \"race\",\n  filter: d => d.county === countyInput\n  })\n],\nfacet: {data: ei, y: \"election\", filter: d => d.county === countyInput,\nmarginRight: 150, label: \"Contest\", sort: {fy: null}},\nfill: {legend: true},\nx: {label: \"(%) Estimated Support for Democrats\",\n    percent: true,\n    labelAnchor: \"center\"},\ny: {label: \"Race\"},\n\nheight: 600,\nmarginLeft: 80\n\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEach point indicates the estimated mean for that race or ethnicity’s estimated support for the Democratic candidate. The extent of the bar indicates a 95% confidence interval."
+  },
+  {
+    "objectID": "analyses/LA_2020.html#data-sources",
+    "href": "analyses/LA_2020.html#data-sources",
+    "title": "Louisiana 2020",
+    "section": "Data Sources",
+    "text": "Data Sources\nData for Louisiana comes from the ALARM Project’s 2020 Redistricting Data Files. This data standardizes the Voting and Election Science Team (VEST) data from the Harvard Dataverse to geographies from the US Census Bureau, primarily at the VTD level.\n\nElections Included in Analysis\n\nPresident 2016\nUS Senate 2016\nSecretary of State 2018\nPresident 2020\nUS Senate 2020"
+  },
+  {
+    "objectID": "analyses/LA_2020.html#data-download",
+    "href": "analyses/LA_2020.html#data-download",
+    "title": "Louisiana 2020",
+    "section": "Data Download",
+    "text": "Data Download\n\n\n\n\n\n\n\n \nSummary File\n \n\n \nLA_county_2020_summary.csv\n\n\n\n\n\n\n\n\n \nPrecinct Estimates\n \n\n \nLA_county_2020_precinct.csv"
+  },
+  {
+    "objectID": "analyses/MA_2020.html",
+    "href": "analyses/MA_2020.html",
+    "title": "Massachusetts 2020",
+    "section": "",
+    "text": "AK                        AL                        AR                        AZ                        CA                        CO                        CT                        DE                        FL                        GA                        HI                        IA                        ID                        IL                        IN                        KS                        KY                        LA                        MA                        MD                        ME                        MI                        MN                        MO                        MS                        MT                        NC                        ND                        NE                        NH                        NJ                        NM                        NV                        NY                        OH                        OK                        OR                        PA                        RI                        SC                        SD                        TN                        TX                        UT                        VA                        VT                        WA                        WI                        WV                        WY                        DC                        USA                \n\n\n\nei = transpose(ei_df)\n\n\n\n\n\n\n\nviewof countyInput = Inputs.select(ei.map(d => d.county),\n                                {sort: true, unique: true, label: \"Choose a county:\"})\n\nPlot.plot({\n\nmarks: [\n  Plot.ruleX([0]),\n  Plot.dot(ei,\n    {\n    x: \"mean\",\n    y: \"race\",\n    fill: \"race\",\n    r: 4,\n    filter: d => d.county === countyInput,\n    sort: {y: null}\n  }),\n  Plot.link(ei,\n  {\n  x1: \"ci_95_lower\",\n  x2: \"ci_95_upper\",\n  y1: \"race\",\n  y2: \"race\",\n  filter: d => d.county === countyInput\n  })\n],\nfacet: {data: ei, y: \"election\", filter: d => d.county === countyInput,\nmarginRight: 150, label: \"Contest\", sort: {fy: null}},\nfill: {legend: true},\nx: {label: \"(%) Estimated Support for Democrats\",\n    percent: true,\n    labelAnchor: \"center\"},\ny: {label: \"Race\"},\n\nheight: 600,\nmarginLeft: 80\n\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEach point indicates the estimated mean for that race or ethnicity’s estimated support for the Democratic candidate. The extent of the bar indicates a 95% confidence interval."
+  },
+  {
+    "objectID": "analyses/MA_2020.html#data-sources",
+    "href": "analyses/MA_2020.html#data-sources",
+    "title": "Massachusetts 2020",
+    "section": "Data Sources",
+    "text": "Data Sources\nData for Massachusetts comes from the ALARM Project’s 2020 Redistricting Data Files. This data standardizes the Voting and Election Science Team (VEST) data from the Harvard Dataverse to geographies from the US Census Bureau, primarily at the VTD level.\n\nElections Included in Analysis\n\nPresident 2016\nUS Senate 2018\nGovernor 2018\nAttorney General 2018\nPresident 2020\nUS Senate 2020"
+  },
+  {
+    "objectID": "analyses/MA_2020.html#data-download",
+    "href": "analyses/MA_2020.html#data-download",
+    "title": "Massachusetts 2020",
+    "section": "Data Download",
+    "text": "Data Download\n\n\n\n\n\n\n\n \nSummary File\n \n\n \nMA_county_2020_summary.csv\n\n\n\n\n\n\n\n\n \nPrecinct Estimates\n \n\n \nMA_county_2020_precinct.csv"
+  },
+  {
+    "objectID": "analyses/MD_2020.html",
+    "href": "analyses/MD_2020.html",
+    "title": "Maryland 2020",
+    "section": "",
+    "text": "AK                        AL                        AR                        AZ                        CA                        CO                        CT                        DE                        FL                        GA                        HI                        IA                        ID                        IL                        IN                        KS                        KY                        LA                        MA                        MD                        ME                        MI                        MN                        MO                        MS                        MT                        NC                        ND                        NE                        NH                        NJ                        NM                        NV                        NY                        OH                        OK                        OR                        PA                        RI                        SC                        SD                        TN                        TX                        UT                        VA                        VT                        WA                        WI                        WV                        WY                        DC                        USA                \n\n\n\nei = transpose(ei_df)\n\n\n\n\n\n\n\nviewof countyInput = Inputs.select(ei.map(d => d.county),\n                                {sort: true, unique: true, label: \"Choose a county:\"})\n\nPlot.plot({\n\nmarks: [\n  Plot.ruleX([0]),\n  Plot.dot(ei,\n    {\n    x: \"mean\",\n    y: \"race\",\n    fill: \"race\",\n    r: 4,\n    filter: d => d.county === countyInput,\n    sort: {y: null}\n  }),\n  Plot.link(ei,\n  {\n  x1: \"ci_95_lower\",\n  x2: \"ci_95_upper\",\n  y1: \"race\",\n  y2: \"race\",\n  filter: d => d.county === countyInput\n  })\n],\nfacet: {data: ei, y: \"election\", filter: d => d.county === countyInput,\nmarginRight: 150, label: \"Contest\", sort: {fy: null}},\nfill: {legend: true},\nx: {label: \"(%) Estimated Support for Democrats\",\n    percent: true,\n    labelAnchor: \"center\"},\ny: {label: \"Race\"},\n\nheight: 600,\nmarginLeft: 80\n\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEach point indicates the estimated mean for that race or ethnicity’s estimated support for the Democratic candidate. The extent of the bar indicates a 95% confidence interval."
+  },
+  {
+    "objectID": "analyses/MD_2020.html#data-sources",
+    "href": "analyses/MD_2020.html#data-sources",
+    "title": "Maryland 2020",
+    "section": "Data Sources",
+    "text": "Data Sources\nData for Maryland comes from the ALARM Project’s 2020 Redistricting Data Files. This data standardizes the Voting and Election Science Team (VEST) data from the Harvard Dataverse to geographies from the US Census Bureau, primarily at the VTD level.\n\nElections Included in Analysis\n\nPresident 2016\nUS Senate 2016\nUS Senate 2018\nGovernor 2018\nAttorney General 2018\nPresident 2020"
+  },
+  {
+    "objectID": "analyses/MD_2020.html#data-download",
+    "href": "analyses/MD_2020.html#data-download",
+    "title": "Maryland 2020",
+    "section": "Data Download",
+    "text": "Data Download\n\n\n\n\n\n\n\n \nSummary File\n \n\n \nMD_county_2020_summary.csv\n\n\n\n\n\n\n\n\n \nPrecinct Estimates\n \n\n \nMD_county_2020_precinct.csv"
+  },
+  {
+    "objectID": "analyses/ME_2020.html",
+    "href": "analyses/ME_2020.html",
+    "title": "Maine 2020",
+    "section": "",
+    "text": "AK                        AL                        AR                        AZ                        CA                        CO                        CT                        DE                        FL                        GA                        HI                        IA                        ID                        IL                        IN                        KS                        KY                        LA                        MA                        MD                        ME                        MI                        MN                        MO                        MS                        MT                        NC                        ND                        NE                        NH                        NJ                        NM                        NV                        NY                        OH                        OK                        OR                        PA                        RI                        SC                        SD                        TN                        TX                        UT                        VA                        VT                        WA                        WI                        WV                        WY                        DC                        USA                \n\n\n\nei = transpose(ei_df)\n\n\n\n\n\n\n\nviewof countyInput = Inputs.select(ei.map(d => d.county),\n                                {sort: true, unique: true, label: \"Choose a county:\"})\n\nPlot.plot({\n\nmarks: [\n  Plot.ruleX([0]),\n  Plot.dot(ei,\n    {\n    x: \"mean\",\n    y: \"race\",\n    fill: \"race\",\n    r: 4,\n    filter: d => d.county === countyInput,\n    sort: {y: null}\n  }),\n  Plot.link(ei,\n  {\n  x1: \"ci_95_lower\",\n  x2: \"ci_95_upper\",\n  y1: \"race\",\n  y2: \"race\",\n  filter: d => d.county === countyInput\n  })\n],\nfacet: {data: ei, y: \"election\", filter: d => d.county === countyInput,\nmarginRight: 150, label: \"Contest\", sort: {fy: null}},\nfill: {legend: true},\nx: {label: \"(%) Estimated Support for Democrats\",\n    percent: true,\n    labelAnchor: \"center\"},\ny: {label: \"Race\"},\n\nheight: 600,\nmarginLeft: 80\n\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEach point indicates the estimated mean for that race or ethnicity’s estimated support for the Democratic candidate. The extent of the bar indicates a 95% confidence interval."
+  },
+  {
+    "objectID": "analyses/ME_2020.html#data-sources",
+    "href": "analyses/ME_2020.html#data-sources",
+    "title": "Maine 2020",
+    "section": "Data Sources",
+    "text": "Data Sources\nData for Maine comes from the ALARM Project’s 2020 Redistricting Data Files. This data standardizes the Voting and Election Science Team (VEST) data from the Harvard Dataverse to geographies from the US Census Bureau, primarily at the VTD level.\n\nElections Included in Analysis\n\nPresident 2016\nUS Senate 2018\nGovernor 2018\nPresident 2020\nUS Senate 2020"
+  },
+  {
+    "objectID": "analyses/ME_2020.html#data-download",
+    "href": "analyses/ME_2020.html#data-download",
+    "title": "Maine 2020",
+    "section": "Data Download",
+    "text": "Data Download\n\n\n\n\n\n\n\n \nSummary File\n \n\n \nME_county_2020_summary.csv\n\n\n\n\n\n\n\n\n \nPrecinct Estimates\n \n\n \nME_county_2020_precinct.csv"
+  },
+  {
+    "objectID": "analyses/MI_2020.html",
+    "href": "analyses/MI_2020.html",
+    "title": "Michigan 2020",
+    "section": "",
+    "text": "AK                        AL                        AR                        AZ                        CA                        CO                        CT                        DE                        FL                        GA                        HI                        IA                        ID                        IL                        IN                        KS                        KY                        LA                        MA                        MD                        ME                        MI                        MN                        MO                        MS                        MT                        NC                        ND                        NE                        NH                        NJ                        NM                        NV                        NY                        OH                        OK                        OR                        PA                        RI                        SC                        SD                        TN                        TX                        UT                        VA                        VT                        WA                        WI                        WV                        WY                        DC                        USA                \n\n\n\nei = transpose(ei_df)\n\n\n\n\n\n\n\nviewof countyInput = Inputs.select(ei.map(d => d.county),\n                                {sort: true, unique: true, label: \"Choose a county:\"})\n\nPlot.plot({\n\nmarks: [\n  Plot.ruleX([0]),\n  Plot.dot(ei,\n    {\n    x: \"mean\",\n    y: \"race\",\n    fill: \"race\",\n    r: 4,\n    filter: d => d.county === countyInput,\n    sort: {y: null}\n  }),\n  Plot.link(ei,\n  {\n  x1: \"ci_95_lower\",\n  x2: \"ci_95_upper\",\n  y1: \"race\",\n  y2: \"race\",\n  filter: d => d.county === countyInput\n  })\n],\nfacet: {data: ei, y: \"election\", filter: d => d.county === countyInput,\nmarginRight: 150, label: \"Contest\", sort: {fy: null}},\nfill: {legend: true},\nx: {label: \"(%) Estimated Support for Democrats\",\n    percent: true,\n    labelAnchor: \"center\"},\ny: {label: \"Race\"},\n\nheight: 600,\nmarginLeft: 80\n\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEach point indicates the estimated mean for that race or ethnicity’s estimated support for the Democratic candidate. The extent of the bar indicates a 95% confidence interval."
+  },
+  {
+    "objectID": "analyses/MI_2020.html#data-sources",
+    "href": "analyses/MI_2020.html#data-sources",
+    "title": "Michigan 2020",
+    "section": "Data Sources",
+    "text": "Data Sources\nData for Michigan comes from the ALARM Project’s 2020 Redistricting Data Files. This data standardizes the Voting and Election Science Team (VEST) data from the Harvard Dataverse to geographies from the US Census Bureau, primarily at the VTD level.\n\nElections Included in Analysis\n\nPresident 2016\nUS Senate 2018\nGovernor 2018\nAttorney General 2018\nSecretary of State 2018\nPresident 2020\nUS Senate 2020"
+  },
+  {
+    "objectID": "analyses/MI_2020.html#data-download",
+    "href": "analyses/MI_2020.html#data-download",
+    "title": "Michigan 2020",
+    "section": "Data Download",
+    "text": "Data Download\n\n\n\n\n\n\n\n \nSummary File\n \n\n \nMI_county_2020_summary.csv\n\n\n\n\n\n\n\n\n \nPrecinct Estimates\n \n\n \nMI_county_2020_precinct.csv"
+  },
+  {
+    "objectID": "analyses/MN_2020.html",
+    "href": "analyses/MN_2020.html",
+    "title": "Minnesota 2020",
+    "section": "",
+    "text": "AK                        AL                        AR                        AZ                        CA                        CO                        CT                        DE                        FL                        GA                        HI                        IA                        ID                        IL                        IN                        KS                        KY                        LA                        MA                        MD                        ME                        MI                        MN                        MO                        MS                        MT                        NC                        ND                        NE                        NH                        NJ                        NM                        NV                        NY                        OH                        OK                        OR                        PA                        RI                        SC                        SD                        TN                        TX                        UT                        VA                        VT                        WA                        WI                        WV                        WY                        DC                        USA                \n\n\n\nei = transpose(ei_df)\n\n\n\n\n\n\n\nviewof countyInput = Inputs.select(ei.map(d => d.county),\n                                {sort: true, unique: true, label: \"Choose a county:\"})\n\nPlot.plot({\n\nmarks: [\n  Plot.ruleX([0]),\n  Plot.dot(ei,\n    {\n    x: \"mean\",\n    y: \"race\",\n    fill: \"race\",\n    r: 4,\n    filter: d => d.county === countyInput,\n    sort: {y: null}\n  }),\n  Plot.link(ei,\n  {\n  x1: \"ci_95_lower\",\n  x2: \"ci_95_upper\",\n  y1: \"race\",\n  y2: \"race\",\n  filter: d => d.county === countyInput\n  })\n],\nfacet: {data: ei, y: \"election\", filter: d => d.county === countyInput,\nmarginRight: 150, label: \"Contest\", sort: {fy: null}},\nfill: {legend: true},\nx: {label: \"(%) Estimated Support for Democrats\",\n    percent: true,\n    labelAnchor: \"center\"},\ny: {label: \"Race\"},\n\nheight: 600,\nmarginLeft: 80\n\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEach point indicates the estimated mean for that race or ethnicity’s estimated support for the Democratic candidate. The extent of the bar indicates a 95% confidence interval."
+  },
+  {
+    "objectID": "analyses/MN_2020.html#data-sources",
+    "href": "analyses/MN_2020.html#data-sources",
+    "title": "Minnesota 2020",
+    "section": "Data Sources",
+    "text": "Data Sources\nData for Minnesota comes from the ALARM Project’s 2020 Redistricting Data Files. This data standardizes the Voting and Election Science Team (VEST) data from the Harvard Dataverse to geographies from the US Census Bureau, primarily at the VTD level.\n\nElections Included in Analysis\n\nPresident 2016\nUS Senate 2018\nGovernor 2018\nAttorney General 2018\nSecretary of State 2018\nPresident 2020\nUS Senate 2020"
+  },
+  {
+    "objectID": "analyses/MN_2020.html#data-download",
+    "href": "analyses/MN_2020.html#data-download",
+    "title": "Minnesota 2020",
+    "section": "Data Download",
+    "text": "Data Download\n\n\n\n\n\n\n\n \nSummary File\n \n\n \nMN_county_2020_summary.csv\n\n\n\n\n\n\n\n\n \nPrecinct Estimates\n \n\n \nMN_county_2020_precinct.csv"
+  },
+  {
+    "objectID": "analyses/MO_2020.html",
+    "href": "analyses/MO_2020.html",
+    "title": "Missouri 2020",
+    "section": "",
+    "text": "AK                        AL                        AR                        AZ                        CA                        CO                        CT                        DE                        FL                        GA                        HI                        IA                        ID                        IL                        IN                        KS                        KY                        LA                        MA                        MD                        ME                        MI                        MN                        MO                        MS                        MT                        NC                        ND                        NE                        NH                        NJ                        NM                        NV                        NY                        OH                        OK                        OR                        PA                        RI                        SC                        SD                        TN                        TX                        UT                        VA                        VT                        WA                        WI                        WV                        WY                        DC                        USA                \n\n\n\nei = transpose(ei_df)\n\n\n\n\n\n\n\nviewof countyInput = Inputs.select(ei.map(d => d.county),\n                                {sort: true, unique: true, label: \"Choose a county:\"})\n\nPlot.plot({\n\nmarks: [\n  Plot.ruleX([0]),\n  Plot.dot(ei,\n    {\n    x: \"mean\",\n    y: \"race\",\n    fill: \"race\",\n    r: 4,\n    filter: d => d.county === countyInput,\n    sort: {y: null}\n  }),\n  Plot.link(ei,\n  {\n  x1: \"ci_95_lower\",\n  x2: \"ci_95_upper\",\n  y1: \"race\",\n  y2: \"race\",\n  filter: d => d.county === countyInput\n  })\n],\nfacet: {data: ei, y: \"election\", filter: d => d.county === countyInput,\nmarginRight: 150, label: \"Contest\", sort: {fy: null}},\nfill: {legend: true},\nx: {label: \"(%) Estimated Support for Democrats\",\n    percent: true,\n    labelAnchor: \"center\"},\ny: {label: \"Race\"},\n\nheight: 600,\nmarginLeft: 80\n\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEach point indicates the estimated mean for that race or ethnicity’s estimated support for the Democratic candidate. The extent of the bar indicates a 95% confidence interval."
+  },
+  {
+    "objectID": "analyses/MO_2020.html#data-sources",
+    "href": "analyses/MO_2020.html#data-sources",
+    "title": "Missouri 2020",
+    "section": "Data Sources",
+    "text": "Data Sources\nData for Missouri comes from the ALARM Project’s 2020 Redistricting Data Files. This data standardizes the Voting and Election Science Team (VEST) data from the Harvard Dataverse to geographies from the US Census Bureau, primarily at the VTD level.\n\nElections Included in Analysis\n\nPresident 2016\nUS Senate 2016\nGovernor 2016\nAttorney General 2016\nSecretary of State 2016\nUS Senate 2018\nPresident 2020\nGovernor 2020\nAttorney General 2020\nSecretary of State 2020"
+  },
+  {
+    "objectID": "analyses/MO_2020.html#data-download",
+    "href": "analyses/MO_2020.html#data-download",
+    "title": "Missouri 2020",
+    "section": "Data Download",
+    "text": "Data Download\n\n\n\n\n\n\n\n \nSummary File\n \n\n \nMO_county_2020_summary.csv\n\n\n\n\n\n\n\n\n \nPrecinct Estimates\n \n\n \nMO_county_2020_precinct.csv"
+  },
+  {
+    "objectID": "analyses/MS_2020.html",
+    "href": "analyses/MS_2020.html",
+    "title": "Mississippi 2020",
+    "section": "",
+    "text": "AK                        AL                        AR                        AZ                        CA                        CO                        CT                        DE                        FL                        GA                        HI                        IA                        ID                        IL                        IN                        KS                        KY                        LA                        MA                        MD                        ME                        MI                        MN                        MO                        MS                        MT                        NC                        ND                        NE                        NH                        NJ                        NM                        NV                        NY                        OH                        OK                        OR                        PA                        RI                        SC                        SD                        TN                        TX                        UT                        VA                        VT                        WA                        WI                        WV                        WY                        DC                        USA                \n\n\n\nei = transpose(ei_df)\n\n\n\n\n\n\n\nviewof countyInput = Inputs.select(ei.map(d => d.county),\n                                {sort: true, unique: true, label: \"Choose a county:\"})\n\nPlot.plot({\n\nmarks: [\n  Plot.ruleX([0]),\n  Plot.dot(ei,\n    {\n    x: \"mean\",\n    y: \"race\",\n    fill: \"race\",\n    r: 4,\n    filter: d => d.county === countyInput,\n    sort: {y: null}\n  }),\n  Plot.link(ei,\n  {\n  x1: \"ci_95_lower\",\n  x2: \"ci_95_upper\",\n  y1: \"race\",\n  y2: \"race\",\n  filter: d => d.county === countyInput\n  })\n],\nfacet: {data: ei, y: \"election\", filter: d => d.county === countyInput,\nmarginRight: 150, label: \"Contest\", sort: {fy: null}},\nfill: {legend: true},\nx: {label: \"(%) Estimated Support for Democrats\",\n    percent: true,\n    labelAnchor: \"center\"},\ny: {label: \"Race\"},\n\nheight: 600,\nmarginLeft: 80\n\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEach point indicates the estimated mean for that race or ethnicity’s estimated support for the Democratic candidate. The extent of the bar indicates a 95% confidence interval."
+  },
+  {
+    "objectID": "analyses/MS_2020.html#data-sources",
+    "href": "analyses/MS_2020.html#data-sources",
+    "title": "Mississippi 2020",
+    "section": "Data Sources",
+    "text": "Data Sources\nData for Mississippi comes from the ALARM Project’s 2020 Redistricting Data Files. This data standardizes the Voting and Election Science Team (VEST) data from the Harvard Dataverse to geographies from the US Census Bureau, primarily at the VTD level.\n\nElections Included in Analysis\n\nPresident 2016\nUS Senate 2018\nPresident 2020\nUS Senate 2020"
+  },
+  {
+    "objectID": "analyses/MS_2020.html#data-download",
+    "href": "analyses/MS_2020.html#data-download",
+    "title": "Mississippi 2020",
+    "section": "Data Download",
+    "text": "Data Download\n\n\n\n\n\n\n\n \nSummary File\n \n\n \nMS_county_2020_summary.csv\n\n\n\n\n\n\n\n\n \nPrecinct Estimates\n \n\n \nMS_county_2020_precinct.csv"
+  },
+  {
+    "objectID": "analyses/MT_2020.html",
+    "href": "analyses/MT_2020.html",
+    "title": "Montana 2020",
+    "section": "",
+    "text": "AK                        AL                        AR                        AZ                        CA                        CO                        CT                        DE                        FL                        GA                        HI                        IA                        ID                        IL                        IN                        KS                        KY                        LA                        MA                        MD                        ME                        MI                        MN                        MO                        MS                        MT                        NC                        ND                        NE                        NH                        NJ                        NM                        NV                        NY                        OH                        OK                        OR                        PA                        RI                        SC                        SD                        TN                        TX                        UT                        VA                        VT                        WA                        WI                        WV                        WY                        DC                        USA                \n\n\n\nei = transpose(ei_df)\n\n\n\n\n\n\n\nviewof countyInput = Inputs.select(ei.map(d => d.county),\n                                {sort: true, unique: true, label: \"Choose a county:\"})\n\nPlot.plot({\n\nmarks: [\n  Plot.ruleX([0]),\n  Plot.dot(ei,\n    {\n    x: \"mean\",\n    y: \"race\",\n    fill: \"race\",\n    r: 4,\n    filter: d => d.county === countyInput,\n    sort: {y: null}\n  }),\n  Plot.link(ei,\n  {\n  x1: \"ci_95_lower\",\n  x2: \"ci_95_upper\",\n  y1: \"race\",\n  y2: \"race\",\n  filter: d => d.county === countyInput\n  })\n],\nfacet: {data: ei, y: \"election\", filter: d => d.county === countyInput,\nmarginRight: 150, label: \"Contest\", sort: {fy: null}},\nfill: {legend: true},\nx: {label: \"(%) Estimated Support for Democrats\",\n    percent: true,\n    labelAnchor: \"center\"},\ny: {label: \"Race\"},\n\nheight: 600,\nmarginLeft: 80\n\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEach point indicates the estimated mean for that race or ethnicity’s estimated support for the Democratic candidate. The extent of the bar indicates a 95% confidence interval."
+  },
+  {
+    "objectID": "analyses/MT_2020.html#data-sources",
+    "href": "analyses/MT_2020.html#data-sources",
+    "title": "Montana 2020",
+    "section": "Data Sources",
+    "text": "Data Sources\nData for Montana comes from the ALARM Project’s 2020 Redistricting Data Files. This data standardizes the Voting and Election Science Team (VEST) data from the Harvard Dataverse to geographies from the US Census Bureau, primarily at the VTD level.\n\nElections Included in Analysis\n\nPresident 2016\nGovernor 2016\nAttorney General 2016\nSecretary of State 2016\nUS Senate 2018\nPresident 2020\nUS Senate 2020\nGovernor 2020\nAttorney General 2020\nSecretary of State 2020"
+  },
+  {
+    "objectID": "analyses/MT_2020.html#data-download",
+    "href": "analyses/MT_2020.html#data-download",
+    "title": "Montana 2020",
+    "section": "Data Download",
+    "text": "Data Download\n\n\n\n\n\n\n\n \nSummary File\n \n\n \nMT_county_2020_summary.csv\n\n\n\n\n\n\n\n\n \nPrecinct Estimates\n \n\n \nMT_county_2020_precinct.csv"
+  },
+  {
+    "objectID": "analyses/NC_2020.html",
+    "href": "analyses/NC_2020.html",
+    "title": "North Carolina 2020",
+    "section": "",
+    "text": "AK                        AL                        AR                        AZ                        CA                        CO                        CT                        DE                        FL                        GA                        HI                        IA                        ID                        IL                        IN                        KS                        KY                        LA                        MA                        MD                        ME                        MI                        MN                        MO                        MS                        MT                        NC                        ND                        NE                        NH                        NJ                        NM                        NV                        NY                        OH                        OK                        OR                        PA                        RI                        SC                        SD                        TN                        TX                        UT                        VA                        VT                        WA                        WI                        WV                        WY                        DC                        USA                \n\n\n\nei = transpose(ei_df)\n\n\n\n\n\n\n\nviewof countyInput = Inputs.select(ei.map(d => d.county),\n                                {sort: true, unique: true, label: \"Choose a county:\"})\n\nPlot.plot({\n\nmarks: [\n  Plot.ruleX([0]),\n  Plot.dot(ei,\n    {\n    x: \"mean\",\n    y: \"race\",\n    fill: \"race\",\n    r: 4,\n    filter: d => d.county === countyInput,\n    sort: {y: null}\n  }),\n  Plot.link(ei,\n  {\n  x1: \"ci_95_lower\",\n  x2: \"ci_95_upper\",\n  y1: \"race\",\n  y2: \"race\",\n  filter: d => d.county === countyInput\n  })\n],\nfacet: {data: ei, y: \"election\", filter: d => d.county === countyInput,\nmarginRight: 150, label: \"Contest\", sort: {fy: null}},\nfill: {legend: true},\nx: {label: \"(%) Estimated Support for Democrats\",\n    percent: true,\n    labelAnchor: \"center\"},\ny: {label: \"Race\"},\n\nheight: 600,\nmarginLeft: 80\n\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEach point indicates the estimated mean for that race or ethnicity’s estimated support for the Democratic candidate. The extent of the bar indicates a 95% confidence interval."
+  },
+  {
+    "objectID": "analyses/NC_2020.html#data-sources",
+    "href": "analyses/NC_2020.html#data-sources",
+    "title": "North Carolina 2020",
+    "section": "Data Sources",
+    "text": "Data Sources\nData for North Carolina comes from the ALARM Project’s 2020 Redistricting Data Files. This data standardizes the Voting and Election Science Team (VEST) data from the Harvard Dataverse to geographies from the US Census Bureau, primarily at the VTD level.\n\nElections Included in Analysis\n\nPresident 2016\nUS Senate 2016\nGovernor 2016\nAttorney General 2016\nSecretary of State 2016\nPresident 2020\nUS Senate 2020\nGovernor 2020\nAttorney General 2020\nSecretary of State 2020"
+  },
+  {
+    "objectID": "analyses/NC_2020.html#data-download",
+    "href": "analyses/NC_2020.html#data-download",
+    "title": "North Carolina 2020",
+    "section": "Data Download",
+    "text": "Data Download\n\n\n\n\n\n\n\n \nSummary File\n \n\n \nNC_county_2020_summary.csv\n\n\n\n\n\n\n\n\n \nPrecinct Estimates\n \n\n \nNC_county_2020_precinct.csv"
+  },
+  {
+    "objectID": "analyses/ND_2020.html",
+    "href": "analyses/ND_2020.html",
+    "title": "North Dakota 2020",
+    "section": "",
+    "text": "AK                        AL                        AR                        AZ                        CA                        CO                        CT                        DE                        FL                        GA                        HI                        IA                        ID                        IL                        IN                        KS                        KY                        LA                        MA                        MD                        ME                        MI                        MN                        MO                        MS                        MT                        NC                        ND                        NE                        NH                        NJ                        NM                        NV                        NY                        OH                        OK                        OR                        PA                        RI                        SC                        SD                        TN                        TX                        UT                        VA                        VT                        WA                        WI                        WV                        WY                        DC                        USA                \n\n\n\nei = transpose(ei_df)\n\n\n\n\n\n\n\nviewof countyInput = Inputs.select(ei.map(d => d.county),\n                                {sort: true, unique: true, label: \"Choose a county:\"})\n\nPlot.plot({\n\nmarks: [\n  Plot.ruleX([0]),\n  Plot.dot(ei,\n    {\n    x: \"mean\",\n    y: \"race\",\n    fill: \"race\",\n    r: 4,\n    filter: d => d.county === countyInput,\n    sort: {y: null}\n  }),\n  Plot.link(ei,\n  {\n  x1: \"ci_95_lower\",\n  x2: \"ci_95_upper\",\n  y1: \"race\",\n  y2: \"race\",\n  filter: d => d.county === countyInput\n  })\n],\nfacet: {data: ei, y: \"election\", filter: d => d.county === countyInput,\nmarginRight: 150, label: \"Contest\", sort: {fy: null}},\nfill: {legend: true},\nx: {label: \"(%) Estimated Support for Democrats\",\n    percent: true,\n    labelAnchor: \"center\"},\ny: {label: \"Race\"},\n\nheight: 600,\nmarginLeft: 80\n\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEach point indicates the estimated mean for that race or ethnicity’s estimated support for the Democratic candidate. The extent of the bar indicates a 95% confidence interval."
+  },
+  {
+    "objectID": "analyses/ND_2020.html#data-sources",
+    "href": "analyses/ND_2020.html#data-sources",
+    "title": "North Dakota 2020",
+    "section": "Data Sources",
+    "text": "Data Sources\nData for North Dakota comes from the ALARM Project’s 2020 Redistricting Data Files. This data standardizes the Voting and Election Science Team (VEST) data from the Harvard Dataverse to geographies from the US Census Bureau, primarily at the VTD level.\n\nElections Included in Analysis\n\nPresident 2016\nUS Senate 2016\nGovernor 2016\nUS Senate 2018\nAttorney General 2018\nSecretary of State 2018\nPresident 2020\nGovernor 2020"
+  },
+  {
+    "objectID": "analyses/ND_2020.html#data-download",
+    "href": "analyses/ND_2020.html#data-download",
+    "title": "North Dakota 2020",
+    "section": "Data Download",
+    "text": "Data Download\n\n\n\n\n\n\n\n \nSummary File\n \n\n \nND_county_2020_summary.csv\n\n\n\n\n\n\n\n\n \nPrecinct Estimates\n \n\n \nND_county_2020_precinct.csv"
+  },
+  {
+    "objectID": "analyses/NE_2020.html",
+    "href": "analyses/NE_2020.html",
+    "title": "Nebraska 2020",
+    "section": "",
+    "text": "AK                        AL                        AR                        AZ                        CA                        CO                        CT                        DE                        FL                        GA                        HI                        IA                        ID                        IL                        IN                        KS                        KY                        LA                        MA                        MD                        ME                        MI                        MN                        MO                        MS                        MT                        NC                        ND                        NE                        NH                        NJ                        NM                        NV                        NY                        OH                        OK                        OR                        PA                        RI                        SC                        SD                        TN                        TX                        UT                        VA                        VT                        WA                        WI                        WV                        WY                        DC                        USA                \n\n\n\nei = transpose(ei_df)\n\n\n\n\n\n\n\nviewof countyInput = Inputs.select(ei.map(d => d.county),\n                                {sort: true, unique: true, label: \"Choose a county:\"})\n\nPlot.plot({\n\nmarks: [\n  Plot.ruleX([0]),\n  Plot.dot(ei,\n    {\n    x: \"mean\",\n    y: \"race\",\n    fill: \"race\",\n    r: 4,\n    filter: d => d.county === countyInput,\n    sort: {y: null}\n  }),\n  Plot.link(ei,\n  {\n  x1: \"ci_95_lower\",\n  x2: \"ci_95_upper\",\n  y1: \"race\",\n  y2: \"race\",\n  filter: d => d.county === countyInput\n  })\n],\nfacet: {data: ei, y: \"election\", filter: d => d.county === countyInput,\nmarginRight: 150, label: \"Contest\", sort: {fy: null}},\nfill: {legend: true},\nx: {label: \"(%) Estimated Support for Democrats\",\n    percent: true,\n    labelAnchor: \"center\"},\ny: {label: \"Race\"},\n\nheight: 600,\nmarginLeft: 80\n\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEach point indicates the estimated mean for that race or ethnicity’s estimated support for the Democratic candidate. The extent of the bar indicates a 95% confidence interval."
+  },
+  {
+    "objectID": "analyses/NE_2020.html#data-sources",
+    "href": "analyses/NE_2020.html#data-sources",
+    "title": "Nebraska 2020",
+    "section": "Data Sources",
+    "text": "Data Sources\nData for Nebraska comes from the ALARM Project’s 2020 Redistricting Data Files. This data standardizes the Voting and Election Science Team (VEST) data from the Harvard Dataverse to geographies from the US Census Bureau, primarily at the VTD level.\n\nElections Included in Analysis\n\nPresident 2016\nUS Senate 2018\nGovernor 2018\nAttorney General 2018\nSecretary of State 2018\nPresident 2020\nUS Senate 2020"
+  },
+  {
+    "objectID": "analyses/NE_2020.html#data-download",
+    "href": "analyses/NE_2020.html#data-download",
+    "title": "Nebraska 2020",
+    "section": "Data Download",
+    "text": "Data Download\n\n\n\n\n\n\n\n \nSummary File\n \n\n \nNE_county_2020_summary.csv\n\n\n\n\n\n\n\n\n \nPrecinct Estimates\n \n\n \nNE_county_2020_precinct.csv"
+  },
+  {
+    "objectID": "analyses/NH_2020.html",
+    "href": "analyses/NH_2020.html",
+    "title": "New Hampshire 2020",
+    "section": "",
+    "text": "AK                        AL                        AR                        AZ                        CA                        CO                        CT                        DE                        FL                        GA                        HI                        IA                        ID                        IL                        IN                        KS                        KY                        LA                        MA                        MD                        ME                        MI                        MN                        MO                        MS                        MT                        NC                        ND                        NE                        NH                        NJ                        NM                        NV                        NY                        OH                        OK                        OR                        PA                        RI                        SC                        SD                        TN                        TX                        UT                        VA                        VT                        WA                        WI                        WV                        WY                        DC                        USA                \n\n\n\nei = transpose(ei_df)\n\n\n\n\n\n\n\nviewof countyInput = Inputs.select(ei.map(d => d.county),\n                                {sort: true, unique: true, label: \"Choose a county:\"})\n\nPlot.plot({\n\nmarks: [\n  Plot.ruleX([0]),\n  Plot.dot(ei,\n    {\n    x: \"mean\",\n    y: \"race\",\n    fill: \"race\",\n    r: 4,\n    filter: d => d.county === countyInput,\n    sort: {y: null}\n  }),\n  Plot.link(ei,\n  {\n  x1: \"ci_95_lower\",\n  x2: \"ci_95_upper\",\n  y1: \"race\",\n  y2: \"race\",\n  filter: d => d.county === countyInput\n  })\n],\nfacet: {data: ei, y: \"election\", filter: d => d.county === countyInput,\nmarginRight: 150, label: \"Contest\", sort: {fy: null}},\nfill: {legend: true},\nx: {label: \"(%) Estimated Support for Democrats\",\n    percent: true,\n    labelAnchor: \"center\"},\ny: {label: \"Race\"},\n\nheight: 600,\nmarginLeft: 80\n\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEach point indicates the estimated mean for that race or ethnicity’s estimated support for the Democratic candidate. The extent of the bar indicates a 95% confidence interval."
+  },
+  {
+    "objectID": "analyses/NH_2020.html#data-sources",
+    "href": "analyses/NH_2020.html#data-sources",
+    "title": "New Hampshire 2020",
+    "section": "Data Sources",
+    "text": "Data Sources\nData for New Hampshire comes from the ALARM Project’s 2020 Redistricting Data Files. This data standardizes the Voting and Election Science Team (VEST) data from the Harvard Dataverse to geographies from the US Census Bureau, primarily at the VTD level.\n\nElections Included in Analysis\n\nPresident 2016\nUS Senate 2016\nGovernor 2016\nGovernor 2018\nPresident 2020\nUS Senate 2020\nGovernor 2020"
+  },
+  {
+    "objectID": "analyses/NH_2020.html#data-download",
+    "href": "analyses/NH_2020.html#data-download",
+    "title": "New Hampshire 2020",
+    "section": "Data Download",
+    "text": "Data Download\n\n\n\n\n\n\n\n \nSummary File\n \n\n \nNH_county_2020_summary.csv\n\n\n\n\n\n\n\n\n \nPrecinct Estimates\n \n\n \nNH_county_2020_precinct.csv"
+  },
+  {
+    "objectID": "analyses/NJ_2020.html",
+    "href": "analyses/NJ_2020.html",
+    "title": "New Jersey 2020",
+    "section": "",
+    "text": "AK                        AL                        AR                        AZ                        CA                        CO                        CT                        DE                        FL                        GA                        HI                        IA                        ID                        IL                        IN                        KS                        KY                        LA                        MA                        MD                        ME                        MI                        MN                        MO                        MS                        MT                        NC                        ND                        NE                        NH                        NJ                        NM                        NV                        NY                        OH                        OK                        OR                        PA                        RI                        SC                        SD                        TN                        TX                        UT                        VA                        VT                        WA                        WI                        WV                        WY                        DC                        USA                \n\n\n\nei = transpose(ei_df)\n\n\n\n\n\n\n\nviewof countyInput = Inputs.select(ei.map(d => d.county),\n                                {sort: true, unique: true, label: \"Choose a county:\"})\n\nPlot.plot({\n\nmarks: [\n  Plot.ruleX([0]),\n  Plot.dot(ei,\n    {\n    x: \"mean\",\n    y: \"race\",\n    fill: \"race\",\n    r: 4,\n    filter: d => d.county === countyInput,\n    sort: {y: null}\n  }),\n  Plot.link(ei,\n  {\n  x1: \"ci_95_lower\",\n  x2: \"ci_95_upper\",\n  y1: \"race\",\n  y2: \"race\",\n  filter: d => d.county === countyInput\n  })\n],\nfacet: {data: ei, y: \"election\", filter: d => d.county === countyInput,\nmarginRight: 150, label: \"Contest\", sort: {fy: null}},\nfill: {legend: true},\nx: {label: \"(%) Estimated Support for Democrats\",\n    percent: true,\n    labelAnchor: \"center\"},\ny: {label: \"Race\"},\n\nheight: 600,\nmarginLeft: 80\n\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEach point indicates the estimated mean for that race or ethnicity’s estimated support for the Democratic candidate. The extent of the bar indicates a 95% confidence interval."
+  },
+  {
+    "objectID": "analyses/NJ_2020.html#data-sources",
+    "href": "analyses/NJ_2020.html#data-sources",
+    "title": "New Jersey 2020",
+    "section": "Data Sources",
+    "text": "Data Sources\nData for New Jersey comes from the ALARM Project’s 2020 Redistricting Data Files. This data standardizes the Voting and Election Science Team (VEST) data from the Harvard Dataverse to geographies from the US Census Bureau, primarily at the VTD level.\n\nElections Included in Analysis\n\nPresident 2016\nUS Senate 2018\nPresident 2020\nUS Senate 2020"
+  },
+  {
+    "objectID": "analyses/NJ_2020.html#data-download",
+    "href": "analyses/NJ_2020.html#data-download",
+    "title": "New Jersey 2020",
+    "section": "Data Download",
+    "text": "Data Download\n\n\n\n\n\n\n\n \nSummary File\n \n\n \nNJ_county_2020_summary.csv\n\n\n\n\n\n\n\n\n \nPrecinct Estimates\n \n\n \nNJ_county_2020_precinct.csv"
+  },
+  {
+    "objectID": "analyses/NM_2020.html",
+    "href": "analyses/NM_2020.html",
+    "title": "New Mexico 2020",
+    "section": "",
+    "text": "AK                        AL                        AR                        AZ                        CA                        CO                        CT                        DE                        FL                        GA                        HI                        IA                        ID                        IL                        IN                        KS                        KY                        LA                        MA                        MD                        ME                        MI                        MN                        MO                        MS                        MT                        NC                        ND                        NE                        NH                        NJ                        NM                        NV                        NY                        OH                        OK                        OR                        PA                        RI                        SC                        SD                        TN                        TX                        UT                        VA                        VT                        WA                        WI                        WV                        WY                        DC                        USA                \n\n\n\nei = transpose(ei_df)\n\n\n\n\n\n\n\nviewof countyInput = Inputs.select(ei.map(d => d.county),\n                                {sort: true, unique: true, label: \"Choose a county:\"})\n\nPlot.plot({\n\nmarks: [\n  Plot.ruleX([0]),\n  Plot.dot(ei,\n    {\n    x: \"mean\",\n    y: \"race\",\n    fill: \"race\",\n    r: 4,\n    filter: d => d.county === countyInput,\n    sort: {y: null}\n  }),\n  Plot.link(ei,\n  {\n  x1: \"ci_95_lower\",\n  x2: \"ci_95_upper\",\n  y1: \"race\",\n  y2: \"race\",\n  filter: d => d.county === countyInput\n  })\n],\nfacet: {data: ei, y: \"election\", filter: d => d.county === countyInput,\nmarginRight: 150, label: \"Contest\", sort: {fy: null}},\nfill: {legend: true},\nx: {label: \"(%) Estimated Support for Democrats\",\n    percent: true,\n    labelAnchor: \"center\"},\ny: {label: \"Race\"},\n\nheight: 600,\nmarginLeft: 80\n\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEach point indicates the estimated mean for that race or ethnicity’s estimated support for the Democratic candidate. The extent of the bar indicates a 95% confidence interval."
+  },
+  {
+    "objectID": "analyses/NM_2020.html#data-sources",
+    "href": "analyses/NM_2020.html#data-sources",
+    "title": "New Mexico 2020",
+    "section": "Data Sources",
+    "text": "Data Sources\nData for New Mexico comes from the ALARM Project’s 2020 Redistricting Data Files. This data standardizes the Voting and Election Science Team (VEST) data from the Harvard Dataverse to geographies from the US Census Bureau, primarily at the VTD level.\n\nElections Included in Analysis\n\nPresident 2016\nSecretary of State 2016\nUS Senate 2018\nGovernor 2018\nAttorney General 2018\nSecretary of State 2018\nPresident 2020\nUS Senate 2020"
+  },
+  {
+    "objectID": "analyses/NM_2020.html#data-download",
+    "href": "analyses/NM_2020.html#data-download",
+    "title": "New Mexico 2020",
+    "section": "Data Download",
+    "text": "Data Download\n\n\n\n\n\n\n\n \nSummary File\n \n\n \nNM_county_2020_summary.csv\n\n\n\n\n\n\n\n\n \nPrecinct Estimates\n \n\n \nNM_county_2020_precinct.csv"
+  },
+  {
+    "objectID": "analyses/NV_2020.html",
+    "href": "analyses/NV_2020.html",
+    "title": "Nevada 2020",
+    "section": "",
+    "text": "AK                        AL                        AR                        AZ                        CA                        CO                        CT                        DE                        FL                        GA                        HI                        IA                        ID                        IL                        IN                        KS                        KY                        LA                        MA                        MD                        ME                        MI                        MN                        MO                        MS                        MT                        NC                        ND                        NE                        NH                        NJ                        NM                        NV                        NY                        OH                        OK                        OR                        PA                        RI                        SC                        SD                        TN                        TX                        UT                        VA                        VT                        WA                        WI                        WV                        WY                        DC                        USA                \n\n\n\nei = transpose(ei_df)\n\n\n\n\n\n\n\nviewof countyInput = Inputs.select(ei.map(d => d.county),\n                                {sort: true, unique: true, label: \"Choose a county:\"})\n\nPlot.plot({\n\nmarks: [\n  Plot.ruleX([0]),\n  Plot.dot(ei,\n    {\n    x: \"mean\",\n    y: \"race\",\n    fill: \"race\",\n    r: 4,\n    filter: d => d.county === countyInput,\n    sort: {y: null}\n  }),\n  Plot.link(ei,\n  {\n  x1: \"ci_95_lower\",\n  x2: \"ci_95_upper\",\n  y1: \"race\",\n  y2: \"race\",\n  filter: d => d.county === countyInput\n  })\n],\nfacet: {data: ei, y: \"election\", filter: d => d.county === countyInput,\nmarginRight: 150, label: \"Contest\", sort: {fy: null}},\nfill: {legend: true},\nx: {label: \"(%) Estimated Support for Democrats\",\n    percent: true,\n    labelAnchor: \"center\"},\ny: {label: \"Race\"},\n\nheight: 600,\nmarginLeft: 80\n\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEach point indicates the estimated mean for that race or ethnicity’s estimated support for the Democratic candidate. The extent of the bar indicates a 95% confidence interval."
+  },
+  {
+    "objectID": "analyses/NV_2020.html#data-sources",
+    "href": "analyses/NV_2020.html#data-sources",
+    "title": "Nevada 2020",
+    "section": "Data Sources",
+    "text": "Data Sources\nData for Nevada comes from the ALARM Project’s 2020 Redistricting Data Files. This data standardizes the Voting and Election Science Team (VEST) data from the Harvard Dataverse to geographies from the US Census Bureau, primarily at the VTD level.\n\nElections Included in Analysis\n\nPresident 2016\nUS Senate 2016\nUS Senate 2018\nGovernor 2018\nAttorney General 2018\nSecretary of State 2018\nPresident 2020"
+  },
+  {
+    "objectID": "analyses/NV_2020.html#data-download",
+    "href": "analyses/NV_2020.html#data-download",
+    "title": "Nevada 2020",
+    "section": "Data Download",
+    "text": "Data Download\n\n\n\n\n\n\n\n \nSummary File\n \n\n \nNV_county_2020_summary.csv\n\n\n\n\n\n\n\n\n \nPrecinct Estimates\n \n\n \nNV_county_2020_precinct.csv"
   },
   {
     "objectID": "analyses/NY_2020.html",
@@ -89,5 +726,362 @@
     "title": "New York 2020",
     "section": "Data Download",
     "text": "Data Download\n\n\n\n\n\n\n\n \nSummary File\n \n\n \nNY_county_2020_summary.csv\n\n\n\n\n\n\n\n\n \nPrecinct Estimates\n \n\n \nNY_county_2020_precinct.csv"
+  },
+  {
+    "objectID": "analyses/OH_2020.html",
+    "href": "analyses/OH_2020.html",
+    "title": "Ohio 2020",
+    "section": "",
+    "text": "AK                        AL                        AR                        AZ                        CA                        CO                        CT                        DE                        FL                        GA                        HI                        IA                        ID                        IL                        IN                        KS                        KY                        LA                        MA                        MD                        ME                        MI                        MN                        MO                        MS                        MT                        NC                        ND                        NE                        NH                        NJ                        NM                        NV                        NY                        OH                        OK                        OR                        PA                        RI                        SC                        SD                        TN                        TX                        UT                        VA                        VT                        WA                        WI                        WV                        WY                        DC                        USA                \n\n\n\nei = transpose(ei_df)\n\n\n\n\n\n\n\nviewof countyInput = Inputs.select(ei.map(d => d.county),\n                                {sort: true, unique: true, label: \"Choose a county:\"})\n\nPlot.plot({\n\nmarks: [\n  Plot.ruleX([0]),\n  Plot.dot(ei,\n    {\n    x: \"mean\",\n    y: \"race\",\n    fill: \"race\",\n    r: 4,\n    filter: d => d.county === countyInput,\n    sort: {y: null}\n  }),\n  Plot.link(ei,\n  {\n  x1: \"ci_95_lower\",\n  x2: \"ci_95_upper\",\n  y1: \"race\",\n  y2: \"race\",\n  filter: d => d.county === countyInput\n  })\n],\nfacet: {data: ei, y: \"election\", filter: d => d.county === countyInput,\nmarginRight: 150, label: \"Contest\", sort: {fy: null}},\nfill: {legend: true},\nx: {label: \"(%) Estimated Support for Democrats\",\n    percent: true,\n    labelAnchor: \"center\"},\ny: {label: \"Race\"},\n\nheight: 600,\nmarginLeft: 80\n\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEach point indicates the estimated mean for that race or ethnicity’s estimated support for the Democratic candidate. The extent of the bar indicates a 95% confidence interval."
+  },
+  {
+    "objectID": "analyses/OH_2020.html#data-sources",
+    "href": "analyses/OH_2020.html#data-sources",
+    "title": "Ohio 2020",
+    "section": "Data Sources",
+    "text": "Data Sources\nData for Ohio comes from the ALARM Project’s 2020 Redistricting Data Files. This data standardizes the Voting and Election Science Team (VEST) data from the Harvard Dataverse to geographies from the US Census Bureau, primarily at the VTD level.\n\nElections Included in Analysis\n\nPresident 2016\nUS Senate 2016\nUS Senate 2018\nGovernor 2018\nAttorney General 2018\nSecretary of State 2018\nPresident 2020"
+  },
+  {
+    "objectID": "analyses/OH_2020.html#data-download",
+    "href": "analyses/OH_2020.html#data-download",
+    "title": "Ohio 2020",
+    "section": "Data Download",
+    "text": "Data Download\n\n\n\n\n\n\n\n \nSummary File\n \n\n \nOH_county_2020_summary.csv\n\n\n\n\n\n\n\n\n \nPrecinct Estimates\n \n\n \nOH_county_2020_precinct.csv"
+  },
+  {
+    "objectID": "analyses/OK_2020.html",
+    "href": "analyses/OK_2020.html",
+    "title": "Oklahoma 2020",
+    "section": "",
+    "text": "AK                        AL                        AR                        AZ                        CA                        CO                        CT                        DE                        FL                        GA                        HI                        IA                        ID                        IL                        IN                        KS                        KY                        LA                        MA                        MD                        ME                        MI                        MN                        MO                        MS                        MT                        NC                        ND                        NE                        NH                        NJ                        NM                        NV                        NY                        OH                        OK                        OR                        PA                        RI                        SC                        SD                        TN                        TX                        UT                        VA                        VT                        WA                        WI                        WV                        WY                        DC                        USA                \n\n\n\nei = transpose(ei_df)\n\n\n\n\n\n\n\nviewof countyInput = Inputs.select(ei.map(d => d.county),\n                                {sort: true, unique: true, label: \"Choose a county:\"})\n\nPlot.plot({\n\nmarks: [\n  Plot.ruleX([0]),\n  Plot.dot(ei,\n    {\n    x: \"mean\",\n    y: \"race\",\n    fill: \"race\",\n    r: 4,\n    filter: d => d.county === countyInput,\n    sort: {y: null}\n  }),\n  Plot.link(ei,\n  {\n  x1: \"ci_95_lower\",\n  x2: \"ci_95_upper\",\n  y1: \"race\",\n  y2: \"race\",\n  filter: d => d.county === countyInput\n  })\n],\nfacet: {data: ei, y: \"election\", filter: d => d.county === countyInput,\nmarginRight: 150, label: \"Contest\", sort: {fy: null}},\nfill: {legend: true},\nx: {label: \"(%) Estimated Support for Democrats\",\n    percent: true,\n    labelAnchor: \"center\"},\ny: {label: \"Race\"},\n\nheight: 600,\nmarginLeft: 80\n\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEach point indicates the estimated mean for that race or ethnicity’s estimated support for the Democratic candidate. The extent of the bar indicates a 95% confidence interval."
+  },
+  {
+    "objectID": "analyses/OK_2020.html#data-sources",
+    "href": "analyses/OK_2020.html#data-sources",
+    "title": "Oklahoma 2020",
+    "section": "Data Sources",
+    "text": "Data Sources\nData for Oklahoma comes from the ALARM Project’s 2020 Redistricting Data Files. This data standardizes the Voting and Election Science Team (VEST) data from the Harvard Dataverse to geographies from the US Census Bureau, primarily at the VTD level.\n\nElections Included in Analysis\n\nPresident 2016\nUS Senate 2016\nGovernor 2018\nAttorney General 2018\nPresident 2020\nUS Senate 2020"
+  },
+  {
+    "objectID": "analyses/OK_2020.html#data-download",
+    "href": "analyses/OK_2020.html#data-download",
+    "title": "Oklahoma 2020",
+    "section": "Data Download",
+    "text": "Data Download\n\n\n\n\n\n\n\n \nSummary File\n \n\n \nOK_county_2020_summary.csv\n\n\n\n\n\n\n\n\n \nPrecinct Estimates\n \n\n \nOK_county_2020_precinct.csv"
+  },
+  {
+    "objectID": "analyses/OR_2020.html",
+    "href": "analyses/OR_2020.html",
+    "title": "Oregon 2020",
+    "section": "",
+    "text": "AK                        AL                        AR                        AZ                        CA                        CO                        CT                        DE                        FL                        GA                        HI                        IA                        ID                        IL                        IN                        KS                        KY                        LA                        MA                        MD                        ME                        MI                        MN                        MO                        MS                        MT                        NC                        ND                        NE                        NH                        NJ                        NM                        NV                        NY                        OH                        OK                        OR                        PA                        RI                        SC                        SD                        TN                        TX                        UT                        VA                        VT                        WA                        WI                        WV                        WY                        DC                        USA                \n\n\n\nei = transpose(ei_df)\n\n\n\n\n\n\n\nviewof countyInput = Inputs.select(ei.map(d => d.county),\n                                {sort: true, unique: true, label: \"Choose a county:\"})\n\nPlot.plot({\n\nmarks: [\n  Plot.ruleX([0]),\n  Plot.dot(ei,\n    {\n    x: \"mean\",\n    y: \"race\",\n    fill: \"race\",\n    r: 4,\n    filter: d => d.county === countyInput,\n    sort: {y: null}\n  }),\n  Plot.link(ei,\n  {\n  x1: \"ci_95_lower\",\n  x2: \"ci_95_upper\",\n  y1: \"race\",\n  y2: \"race\",\n  filter: d => d.county === countyInput\n  })\n],\nfacet: {data: ei, y: \"election\", filter: d => d.county === countyInput,\nmarginRight: 150, label: \"Contest\", sort: {fy: null}},\nfill: {legend: true},\nx: {label: \"(%) Estimated Support for Democrats\",\n    percent: true,\n    labelAnchor: \"center\"},\ny: {label: \"Race\"},\n\nheight: 600,\nmarginLeft: 80\n\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEach point indicates the estimated mean for that race or ethnicity’s estimated support for the Democratic candidate. The extent of the bar indicates a 95% confidence interval."
+  },
+  {
+    "objectID": "analyses/OR_2020.html#data-sources",
+    "href": "analyses/OR_2020.html#data-sources",
+    "title": "Oregon 2020",
+    "section": "Data Sources",
+    "text": "Data Sources\nData for Oregon comes from the ALARM Project’s 2020 Redistricting Data Files. This data standardizes the Voting and Election Science Team (VEST) data from the Harvard Dataverse to geographies from the US Census Bureau, primarily at the VTD level.\n\nElections Included in Analysis\n\nPresident 2016\nUS Senate 2016\nGovernor 2016\nAttorney General 2016\nSecretary of State 2016\nGovernor 2018\nPresident 2020\nUS Senate 2020\nAttorney General 2020\nSecretary of State 2020"
+  },
+  {
+    "objectID": "analyses/OR_2020.html#data-download",
+    "href": "analyses/OR_2020.html#data-download",
+    "title": "Oregon 2020",
+    "section": "Data Download",
+    "text": "Data Download\n\n\n\n\n\n\n\n \nSummary File\n \n\n \nOR_county_2020_summary.csv\n\n\n\n\n\n\n\n\n \nPrecinct Estimates\n \n\n \nOR_county_2020_precinct.csv"
+  },
+  {
+    "objectID": "analyses/PA_2020.html",
+    "href": "analyses/PA_2020.html",
+    "title": "Pennsylvania 2020",
+    "section": "",
+    "text": "AK                        AL                        AR                        AZ                        CA                        CO                        CT                        DE                        FL                        GA                        HI                        IA                        ID                        IL                        IN                        KS                        KY                        LA                        MA                        MD                        ME                        MI                        MN                        MO                        MS                        MT                        NC                        ND                        NE                        NH                        NJ                        NM                        NV                        NY                        OH                        OK                        OR                        PA                        RI                        SC                        SD                        TN                        TX                        UT                        VA                        VT                        WA                        WI                        WV                        WY                        DC                        USA                \n\n\n\nei = transpose(ei_df)\n\n\n\n\n\n\n\nviewof countyInput = Inputs.select(ei.map(d => d.county),\n                                {sort: true, unique: true, label: \"Choose a county:\"})\n\nPlot.plot({\n\nmarks: [\n  Plot.ruleX([0]),\n  Plot.dot(ei,\n    {\n    x: \"mean\",\n    y: \"race\",\n    fill: \"race\",\n    r: 4,\n    filter: d => d.county === countyInput,\n    sort: {y: null}\n  }),\n  Plot.link(ei,\n  {\n  x1: \"ci_95_lower\",\n  x2: \"ci_95_upper\",\n  y1: \"race\",\n  y2: \"race\",\n  filter: d => d.county === countyInput\n  })\n],\nfacet: {data: ei, y: \"election\", filter: d => d.county === countyInput,\nmarginRight: 150, label: \"Contest\", sort: {fy: null}},\nfill: {legend: true},\nx: {label: \"(%) Estimated Support for Democrats\",\n    percent: true,\n    labelAnchor: \"center\"},\ny: {label: \"Race\"},\n\nheight: 600,\nmarginLeft: 80\n\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEach point indicates the estimated mean for that race or ethnicity’s estimated support for the Democratic candidate. The extent of the bar indicates a 95% confidence interval."
+  },
+  {
+    "objectID": "analyses/PA_2020.html#data-sources",
+    "href": "analyses/PA_2020.html#data-sources",
+    "title": "Pennsylvania 2020",
+    "section": "Data Sources",
+    "text": "Data Sources\nData for Pennsylvania comes from the ALARM Project’s 2020 Redistricting Data Files. This data standardizes the Voting and Election Science Team (VEST) data from the Harvard Dataverse to geographies from the US Census Bureau, primarily at the VTD level.\n\nElections Included in Analysis\n\nPresident 2016\nUS Senate 2016\nAttorney General 2016\nUS Senate 2018\nGovernor 2018\nPresident 2020\nAttorney General 2020"
+  },
+  {
+    "objectID": "analyses/PA_2020.html#data-download",
+    "href": "analyses/PA_2020.html#data-download",
+    "title": "Pennsylvania 2020",
+    "section": "Data Download",
+    "text": "Data Download\n\n\n\n\n\n\n\n \nSummary File\n \n\n \nPA_county_2020_summary.csv\n\n\n\n\n\n\n\n\n \nPrecinct Estimates\n \n\n \nPA_county_2020_precinct.csv"
+  },
+  {
+    "objectID": "analyses/RI_2020.html",
+    "href": "analyses/RI_2020.html",
+    "title": "Rhode Island 2020",
+    "section": "",
+    "text": "AK                        AL                        AR                        AZ                        CA                        CO                        CT                        DE                        FL                        GA                        HI                        IA                        ID                        IL                        IN                        KS                        KY                        LA                        MA                        MD                        ME                        MI                        MN                        MO                        MS                        MT                        NC                        ND                        NE                        NH                        NJ                        NM                        NV                        NY                        OH                        OK                        OR                        PA                        RI                        SC                        SD                        TN                        TX                        UT                        VA                        VT                        WA                        WI                        WV                        WY                        DC                        USA                \n\n\n\nei = transpose(ei_df)\n\n\n\n\n\n\n\nviewof countyInput = Inputs.select(ei.map(d => d.county),\n                                {sort: true, unique: true, label: \"Choose a county:\"})\n\nPlot.plot({\n\nmarks: [\n  Plot.ruleX([0]),\n  Plot.dot(ei,\n    {\n    x: \"mean\",\n    y: \"race\",\n    fill: \"race\",\n    r: 4,\n    filter: d => d.county === countyInput,\n    sort: {y: null}\n  }),\n  Plot.link(ei,\n  {\n  x1: \"ci_95_lower\",\n  x2: \"ci_95_upper\",\n  y1: \"race\",\n  y2: \"race\",\n  filter: d => d.county === countyInput\n  })\n],\nfacet: {data: ei, y: \"election\", filter: d => d.county === countyInput,\nmarginRight: 150, label: \"Contest\", sort: {fy: null}},\nfill: {legend: true},\nx: {label: \"(%) Estimated Support for Democrats\",\n    percent: true,\n    labelAnchor: \"center\"},\ny: {label: \"Race\"},\n\nheight: 600,\nmarginLeft: 80\n\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEach point indicates the estimated mean for that race or ethnicity’s estimated support for the Democratic candidate. The extent of the bar indicates a 95% confidence interval."
+  },
+  {
+    "objectID": "analyses/RI_2020.html#data-sources",
+    "href": "analyses/RI_2020.html#data-sources",
+    "title": "Rhode Island 2020",
+    "section": "Data Sources",
+    "text": "Data Sources\nData for Rhode Island comes from the ALARM Project’s 2020 Redistricting Data Files. This data standardizes the Voting and Election Science Team (VEST) data from the Harvard Dataverse to geographies from the US Census Bureau, primarily at the VTD level.\n\nElections Included in Analysis\n\nPresident 2016\nUS Senate 2018\nGovernor 2018\nAttorney General 2018\nSecretary of State 2018\nPresident 2020\nUS Senate 2020"
+  },
+  {
+    "objectID": "analyses/RI_2020.html#data-download",
+    "href": "analyses/RI_2020.html#data-download",
+    "title": "Rhode Island 2020",
+    "section": "Data Download",
+    "text": "Data Download\n\n\n\n\n\n\n\n \nSummary File\n \n\n \nRI_county_2020_summary.csv\n\n\n\n\n\n\n\n\n \nPrecinct Estimates\n \n\n \nRI_county_2020_precinct.csv"
+  },
+  {
+    "objectID": "analyses/SC_2020.html",
+    "href": "analyses/SC_2020.html",
+    "title": "South Carolina 2020",
+    "section": "",
+    "text": "AK                        AL                        AR                        AZ                        CA                        CO                        CT                        DE                        FL                        GA                        HI                        IA                        ID                        IL                        IN                        KS                        KY                        LA                        MA                        MD                        ME                        MI                        MN                        MO                        MS                        MT                        NC                        ND                        NE                        NH                        NJ                        NM                        NV                        NY                        OH                        OK                        OR                        PA                        RI                        SC                        SD                        TN                        TX                        UT                        VA                        VT                        WA                        WI                        WV                        WY                        DC                        USA                \n\n\n\nei = transpose(ei_df)\n\n\n\n\n\n\n\nviewof countyInput = Inputs.select(ei.map(d => d.county),\n                                {sort: true, unique: true, label: \"Choose a county:\"})\n\nPlot.plot({\n\nmarks: [\n  Plot.ruleX([0]),\n  Plot.dot(ei,\n    {\n    x: \"mean\",\n    y: \"race\",\n    fill: \"race\",\n    r: 4,\n    filter: d => d.county === countyInput,\n    sort: {y: null}\n  }),\n  Plot.link(ei,\n  {\n  x1: \"ci_95_lower\",\n  x2: \"ci_95_upper\",\n  y1: \"race\",\n  y2: \"race\",\n  filter: d => d.county === countyInput\n  })\n],\nfacet: {data: ei, y: \"election\", filter: d => d.county === countyInput,\nmarginRight: 150, label: \"Contest\", sort: {fy: null}},\nfill: {legend: true},\nx: {label: \"(%) Estimated Support for Democrats\",\n    percent: true,\n    labelAnchor: \"center\"},\ny: {label: \"Race\"},\n\nheight: 600,\nmarginLeft: 80\n\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEach point indicates the estimated mean for that race or ethnicity’s estimated support for the Democratic candidate. The extent of the bar indicates a 95% confidence interval."
+  },
+  {
+    "objectID": "analyses/SC_2020.html#data-sources",
+    "href": "analyses/SC_2020.html#data-sources",
+    "title": "South Carolina 2020",
+    "section": "Data Sources",
+    "text": "Data Sources\nData for South Carolina comes from the ALARM Project’s 2020 Redistricting Data Files. This data standardizes the Voting and Election Science Team (VEST) data from the Harvard Dataverse to geographies from the US Census Bureau, primarily at the VTD level.\n\nElections Included in Analysis\n\nPresident 2016\nUS Senate 2016\nGovernor 2018\nAttorney General 2018\nSecretary of State 2018\nPresident 2020\nUS Senate 2020"
+  },
+  {
+    "objectID": "analyses/SC_2020.html#data-download",
+    "href": "analyses/SC_2020.html#data-download",
+    "title": "South Carolina 2020",
+    "section": "Data Download",
+    "text": "Data Download\n\n\n\n\n\n\n\n \nSummary File\n \n\n \nSC_county_2020_summary.csv\n\n\n\n\n\n\n\n\n \nPrecinct Estimates\n \n\n \nSC_county_2020_precinct.csv"
+  },
+  {
+    "objectID": "analyses/SD_2020.html",
+    "href": "analyses/SD_2020.html",
+    "title": "South Dakota 2020",
+    "section": "",
+    "text": "AK                        AL                        AR                        AZ                        CA                        CO                        CT                        DE                        FL                        GA                        HI                        IA                        ID                        IL                        IN                        KS                        KY                        LA                        MA                        MD                        ME                        MI                        MN                        MO                        MS                        MT                        NC                        ND                        NE                        NH                        NJ                        NM                        NV                        NY                        OH                        OK                        OR                        PA                        RI                        SC                        SD                        TN                        TX                        UT                        VA                        VT                        WA                        WI                        WV                        WY                        DC                        USA                \n\n\n\nei = transpose(ei_df)\n\n\n\n\n\n\n\nviewof countyInput = Inputs.select(ei.map(d => d.county),\n                                {sort: true, unique: true, label: \"Choose a county:\"})\n\nPlot.plot({\n\nmarks: [\n  Plot.ruleX([0]),\n  Plot.dot(ei,\n    {\n    x: \"mean\",\n    y: \"race\",\n    fill: \"race\",\n    r: 4,\n    filter: d => d.county === countyInput,\n    sort: {y: null}\n  }),\n  Plot.link(ei,\n  {\n  x1: \"ci_95_lower\",\n  x2: \"ci_95_upper\",\n  y1: \"race\",\n  y2: \"race\",\n  filter: d => d.county === countyInput\n  })\n],\nfacet: {data: ei, y: \"election\", filter: d => d.county === countyInput,\nmarginRight: 150, label: \"Contest\", sort: {fy: null}},\nfill: {legend: true},\nx: {label: \"(%) Estimated Support for Democrats\",\n    percent: true,\n    labelAnchor: \"center\"},\ny: {label: \"Race\"},\n\nheight: 600,\nmarginLeft: 80\n\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEach point indicates the estimated mean for that race or ethnicity’s estimated support for the Democratic candidate. The extent of the bar indicates a 95% confidence interval."
+  },
+  {
+    "objectID": "analyses/SD_2020.html#data-sources",
+    "href": "analyses/SD_2020.html#data-sources",
+    "title": "South Dakota 2020",
+    "section": "Data Sources",
+    "text": "Data Sources\nData for South Dakota comes from the ALARM Project’s 2020 Redistricting Data Files. This data standardizes the Voting and Election Science Team (VEST) data from the Harvard Dataverse to geographies from the US Census Bureau, primarily at the VTD level.\n\nElections Included in Analysis\n\nPresident 2016\nUS Senate 2016\nGovernor 2018\nAttorney General 2018\nSecretary of State 2018\nPresident 2020\nUS Senate 2020"
+  },
+  {
+    "objectID": "analyses/SD_2020.html#data-download",
+    "href": "analyses/SD_2020.html#data-download",
+    "title": "South Dakota 2020",
+    "section": "Data Download",
+    "text": "Data Download\n\n\n\n\n\n\n\n \nSummary File\n \n\n \nSD_county_2020_summary.csv\n\n\n\n\n\n\n\n\n \nPrecinct Estimates\n \n\n \nSD_county_2020_precinct.csv"
+  },
+  {
+    "objectID": "analyses/TN_2020.html",
+    "href": "analyses/TN_2020.html",
+    "title": "Tennessee 2020",
+    "section": "",
+    "text": "AK                        AL                        AR                        AZ                        CA                        CO                        CT                        DE                        FL                        GA                        HI                        IA                        ID                        IL                        IN                        KS                        KY                        LA                        MA                        MD                        ME                        MI                        MN                        MO                        MS                        MT                        NC                        ND                        NE                        NH                        NJ                        NM                        NV                        NY                        OH                        OK                        OR                        PA                        RI                        SC                        SD                        TN                        TX                        UT                        VA                        VT                        WA                        WI                        WV                        WY                        DC                        USA                \n\n\n\nei = transpose(ei_df)\n\n\n\n\n\n\n\nviewof countyInput = Inputs.select(ei.map(d => d.county),\n                                {sort: true, unique: true, label: \"Choose a county:\"})\n\nPlot.plot({\n\nmarks: [\n  Plot.ruleX([0]),\n  Plot.dot(ei,\n    {\n    x: \"mean\",\n    y: \"race\",\n    fill: \"race\",\n    r: 4,\n    filter: d => d.county === countyInput,\n    sort: {y: null}\n  }),\n  Plot.link(ei,\n  {\n  x1: \"ci_95_lower\",\n  x2: \"ci_95_upper\",\n  y1: \"race\",\n  y2: \"race\",\n  filter: d => d.county === countyInput\n  })\n],\nfacet: {data: ei, y: \"election\", filter: d => d.county === countyInput,\nmarginRight: 150, label: \"Contest\", sort: {fy: null}},\nfill: {legend: true},\nx: {label: \"(%) Estimated Support for Democrats\",\n    percent: true,\n    labelAnchor: \"center\"},\ny: {label: \"Race\"},\n\nheight: 600,\nmarginLeft: 80\n\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEach point indicates the estimated mean for that race or ethnicity’s estimated support for the Democratic candidate. The extent of the bar indicates a 95% confidence interval."
+  },
+  {
+    "objectID": "analyses/TN_2020.html#data-sources",
+    "href": "analyses/TN_2020.html#data-sources",
+    "title": "Tennessee 2020",
+    "section": "Data Sources",
+    "text": "Data Sources\nData for Tennessee comes from the ALARM Project’s 2020 Redistricting Data Files. This data standardizes the Voting and Election Science Team (VEST) data from the Harvard Dataverse to geographies from the US Census Bureau, primarily at the VTD level.\n\nElections Included in Analysis\n\nPresident 2016\nPresident 2020\nUS Senate 2020"
+  },
+  {
+    "objectID": "analyses/TN_2020.html#data-download",
+    "href": "analyses/TN_2020.html#data-download",
+    "title": "Tennessee 2020",
+    "section": "Data Download",
+    "text": "Data Download\n\n\n\n\n\n\n\n \nSummary File\n \n\n \nTN_county_2020_summary.csv\n\n\n\n\n\n\n\n\n \nPrecinct Estimates\n \n\n \nTN_county_2020_precinct.csv"
+  },
+  {
+    "objectID": "analyses/TX_2020.html",
+    "href": "analyses/TX_2020.html",
+    "title": "Texas 2020",
+    "section": "",
+    "text": "AK                        AL                        AR                        AZ                        CA                        CO                        CT                        DE                        FL                        GA                        HI                        IA                        ID                        IL                        IN                        KS                        KY                        LA                        MA                        MD                        ME                        MI                        MN                        MO                        MS                        MT                        NC                        ND                        NE                        NH                        NJ                        NM                        NV                        NY                        OH                        OK                        OR                        PA                        RI                        SC                        SD                        TN                        TX                        UT                        VA                        VT                        WA                        WI                        WV                        WY                        DC                        USA                \n\n\n\nei = transpose(ei_df)\n\n\n\n\n\n\n\nviewof countyInput = Inputs.select(ei.map(d => d.county),\n                                {sort: true, unique: true, label: \"Choose a county:\"})\n\nPlot.plot({\n\nmarks: [\n  Plot.ruleX([0]),\n  Plot.dot(ei,\n    {\n    x: \"mean\",\n    y: \"race\",\n    fill: \"race\",\n    r: 4,\n    filter: d => d.county === countyInput,\n    sort: {y: null}\n  }),\n  Plot.link(ei,\n  {\n  x1: \"ci_95_lower\",\n  x2: \"ci_95_upper\",\n  y1: \"race\",\n  y2: \"race\",\n  filter: d => d.county === countyInput\n  })\n],\nfacet: {data: ei, y: \"election\", filter: d => d.county === countyInput,\nmarginRight: 150, label: \"Contest\", sort: {fy: null}},\nfill: {legend: true},\nx: {label: \"(%) Estimated Support for Democrats\",\n    percent: true,\n    labelAnchor: \"center\"},\ny: {label: \"Race\"},\n\nheight: 600,\nmarginLeft: 80\n\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEach point indicates the estimated mean for that race or ethnicity’s estimated support for the Democratic candidate. The extent of the bar indicates a 95% confidence interval."
+  },
+  {
+    "objectID": "analyses/TX_2020.html#data-sources",
+    "href": "analyses/TX_2020.html#data-sources",
+    "title": "Texas 2020",
+    "section": "Data Sources",
+    "text": "Data Sources\nData for Texas comes from the ALARM Project’s 2020 Redistricting Data Files. This data standardizes the Voting and Election Science Team (VEST) data from the Harvard Dataverse to geographies from the US Census Bureau, primarily at the VTD level.\n\nElections Included in Analysis\n\nPresident 2016\nUS Senate 2018\nGovernor 2018\nAttorney General 2018\nPresident 2020\nUS Senate 2020"
+  },
+  {
+    "objectID": "analyses/TX_2020.html#data-download",
+    "href": "analyses/TX_2020.html#data-download",
+    "title": "Texas 2020",
+    "section": "Data Download",
+    "text": "Data Download\n\n\n\n\n\n\n\n \nSummary File\n \n\n \nTX_county_2020_summary.csv\n\n\n\n\n\n\n\n\n \nPrecinct Estimates\n \n\n \nTX_county_2020_precinct.csv"
+  },
+  {
+    "objectID": "analyses/UT_2020.html",
+    "href": "analyses/UT_2020.html",
+    "title": "Utah 2020",
+    "section": "",
+    "text": "AK                        AL                        AR                        AZ                        CA                        CO                        CT                        DE                        FL                        GA                        HI                        IA                        ID                        IL                        IN                        KS                        KY                        LA                        MA                        MD                        ME                        MI                        MN                        MO                        MS                        MT                        NC                        ND                        NE                        NH                        NJ                        NM                        NV                        NY                        OH                        OK                        OR                        PA                        RI                        SC                        SD                        TN                        TX                        UT                        VA                        VT                        WA                        WI                        WV                        WY                        DC                        USA                \n\n\n\nei = transpose(ei_df)\n\n\n\n\n\n\n\nviewof countyInput = Inputs.select(ei.map(d => d.county),\n                                {sort: true, unique: true, label: \"Choose a county:\"})\n\nPlot.plot({\n\nmarks: [\n  Plot.ruleX([0]),\n  Plot.dot(ei,\n    {\n    x: \"mean\",\n    y: \"race\",\n    fill: \"race\",\n    r: 4,\n    filter: d => d.county === countyInput,\n    sort: {y: null}\n  }),\n  Plot.link(ei,\n  {\n  x1: \"ci_95_lower\",\n  x2: \"ci_95_upper\",\n  y1: \"race\",\n  y2: \"race\",\n  filter: d => d.county === countyInput\n  })\n],\nfacet: {data: ei, y: \"election\", filter: d => d.county === countyInput,\nmarginRight: 150, label: \"Contest\", sort: {fy: null}},\nfill: {legend: true},\nx: {label: \"(%) Estimated Support for Democrats\",\n    percent: true,\n    labelAnchor: \"center\"},\ny: {label: \"Race\"},\n\nheight: 600,\nmarginLeft: 80\n\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEach point indicates the estimated mean for that race or ethnicity’s estimated support for the Democratic candidate. The extent of the bar indicates a 95% confidence interval."
+  },
+  {
+    "objectID": "analyses/UT_2020.html#data-sources",
+    "href": "analyses/UT_2020.html#data-sources",
+    "title": "Utah 2020",
+    "section": "Data Sources",
+    "text": "Data Sources\nData for Utah comes from the ALARM Project’s 2020 Redistricting Data Files. This data standardizes the Voting and Election Science Team (VEST) data from the Harvard Dataverse to geographies from the US Census Bureau, primarily at the VTD level.\n\nElections Included in Analysis\n\nPresident 2016\nUS Senate 2016\nGovernor 2016\nAttorney General 2016\nUS Senate 2018\nPresident 2020\nGovernor 2020\nAttorney General 2020"
+  },
+  {
+    "objectID": "analyses/UT_2020.html#data-download",
+    "href": "analyses/UT_2020.html#data-download",
+    "title": "Utah 2020",
+    "section": "Data Download",
+    "text": "Data Download\n\n\n\n\n\n\n\n \nSummary File\n \n\n \nUT_county_2020_summary.csv\n\n\n\n\n\n\n\n\n \nPrecinct Estimates\n \n\n \nUT_county_2020_precinct.csv"
+  },
+  {
+    "objectID": "analyses/VA_2020.html",
+    "href": "analyses/VA_2020.html",
+    "title": "Virginia 2020",
+    "section": "",
+    "text": "AK                        AL                        AR                        AZ                        CA                        CO                        CT                        DE                        FL                        GA                        HI                        IA                        ID                        IL                        IN                        KS                        KY                        LA                        MA                        MD                        ME                        MI                        MN                        MO                        MS                        MT                        NC                        ND                        NE                        NH                        NJ                        NM                        NV                        NY                        OH                        OK                        OR                        PA                        RI                        SC                        SD                        TN                        TX                        UT                        VA                        VT                        WA                        WI                        WV                        WY                        DC                        USA                \n\n\n\nei = transpose(ei_df)\n\n\n\n\n\n\n\nviewof countyInput = Inputs.select(ei.map(d => d.county),\n                                {sort: true, unique: true, label: \"Choose a county:\"})\n\nPlot.plot({\n\nmarks: [\n  Plot.ruleX([0]),\n  Plot.dot(ei,\n    {\n    x: \"mean\",\n    y: \"race\",\n    fill: \"race\",\n    r: 4,\n    filter: d => d.county === countyInput,\n    sort: {y: null}\n  }),\n  Plot.link(ei,\n  {\n  x1: \"ci_95_lower\",\n  x2: \"ci_95_upper\",\n  y1: \"race\",\n  y2: \"race\",\n  filter: d => d.county === countyInput\n  })\n],\nfacet: {data: ei, y: \"election\", filter: d => d.county === countyInput,\nmarginRight: 150, label: \"Contest\", sort: {fy: null}},\nfill: {legend: true},\nx: {label: \"(%) Estimated Support for Democrats\",\n    percent: true,\n    labelAnchor: \"center\"},\ny: {label: \"Race\"},\n\nheight: 600,\nmarginLeft: 80\n\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEach point indicates the estimated mean for that race or ethnicity’s estimated support for the Democratic candidate. The extent of the bar indicates a 95% confidence interval."
+  },
+  {
+    "objectID": "analyses/VA_2020.html#data-sources",
+    "href": "analyses/VA_2020.html#data-sources",
+    "title": "Virginia 2020",
+    "section": "Data Sources",
+    "text": "Data Sources\nData for Virginia comes from the ALARM Project’s 2020 Redistricting Data Files. This data standardizes the Voting and Election Science Team (VEST) data from the Harvard Dataverse to geographies from the US Census Bureau, primarily at the VTD level.\n\nElections Included in Analysis\n\nPresident 2016\nUS Senate 2018\nPresident 2020\nUS Senate 2020"
+  },
+  {
+    "objectID": "analyses/VA_2020.html#data-download",
+    "href": "analyses/VA_2020.html#data-download",
+    "title": "Virginia 2020",
+    "section": "Data Download",
+    "text": "Data Download\n\n\n\n\n\n\n\n \nSummary File\n \n\n \nVA_county_2020_summary.csv\n\n\n\n\n\n\n\n\n \nPrecinct Estimates\n \n\n \nVA_county_2020_precinct.csv"
+  },
+  {
+    "objectID": "analyses/VT_2020.html",
+    "href": "analyses/VT_2020.html",
+    "title": "Vermont 2020",
+    "section": "",
+    "text": "AK                        AL                        AR                        AZ                        CA                        CO                        CT                        DE                        FL                        GA                        HI                        IA                        ID                        IL                        IN                        KS                        KY                        LA                        MA                        MD                        ME                        MI                        MN                        MO                        MS                        MT                        NC                        ND                        NE                        NH                        NJ                        NM                        NV                        NY                        OH                        OK                        OR                        PA                        RI                        SC                        SD                        TN                        TX                        UT                        VA                        VT                        WA                        WI                        WV                        WY                        DC                        USA                \n\n\n\nei = transpose(ei_df)\n\n\n\n\n\n\n\nviewof countyInput = Inputs.select(ei.map(d => d.county),\n                                {sort: true, unique: true, label: \"Choose a county:\"})\n\nPlot.plot({\n\nmarks: [\n  Plot.ruleX([0]),\n  Plot.dot(ei,\n    {\n    x: \"mean\",\n    y: \"race\",\n    fill: \"race\",\n    r: 4,\n    filter: d => d.county === countyInput,\n    sort: {y: null}\n  }),\n  Plot.link(ei,\n  {\n  x1: \"ci_95_lower\",\n  x2: \"ci_95_upper\",\n  y1: \"race\",\n  y2: \"race\",\n  filter: d => d.county === countyInput\n  })\n],\nfacet: {data: ei, y: \"election\", filter: d => d.county === countyInput,\nmarginRight: 150, label: \"Contest\", sort: {fy: null}},\nfill: {legend: true},\nx: {label: \"(%) Estimated Support for Democrats\",\n    percent: true,\n    labelAnchor: \"center\"},\ny: {label: \"Race\"},\n\nheight: 600,\nmarginLeft: 80\n\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEach point indicates the estimated mean for that race or ethnicity’s estimated support for the Democratic candidate. The extent of the bar indicates a 95% confidence interval."
+  },
+  {
+    "objectID": "analyses/VT_2020.html#data-sources",
+    "href": "analyses/VT_2020.html#data-sources",
+    "title": "Vermont 2020",
+    "section": "Data Sources",
+    "text": "Data Sources\nData for Vermont comes from the ALARM Project’s 2020 Redistricting Data Files. This data standardizes the Voting and Election Science Team (VEST) data from the Harvard Dataverse to geographies from the US Census Bureau, primarily at the VTD level.\n\nElections Included in Analysis\n\nPresident 2016\nUS Senate 2016\nGovernor 2016\nAttorney General 2016\nUS Senate 2018\nGovernor 2018\nAttorney General 2018\nSecretary of State 2018\nPresident 2020\nGovernor 2020\nAttorney General 2020\nSecretary of State 2020"
+  },
+  {
+    "objectID": "analyses/VT_2020.html#data-download",
+    "href": "analyses/VT_2020.html#data-download",
+    "title": "Vermont 2020",
+    "section": "Data Download",
+    "text": "Data Download\n\n\n\n\n\n\n\n \nSummary File\n \n\n \nVT_county_2020_summary.csv\n\n\n\n\n\n\n\n\n \nPrecinct Estimates\n \n\n \nVT_county_2020_precinct.csv"
+  },
+  {
+    "objectID": "analyses/WA_2020.html",
+    "href": "analyses/WA_2020.html",
+    "title": "Washington 2020",
+    "section": "",
+    "text": "AK                        AL                        AR                        AZ                        CA                        CO                        CT                        DE                        FL                        GA                        HI                        IA                        ID                        IL                        IN                        KS                        KY                        LA                        MA                        MD                        ME                        MI                        MN                        MO                        MS                        MT                        NC                        ND                        NE                        NH                        NJ                        NM                        NV                        NY                        OH                        OK                        OR                        PA                        RI                        SC                        SD                        TN                        TX                        UT                        VA                        VT                        WA                        WI                        WV                        WY                        DC                        USA                \n\n\n\nei = transpose(ei_df)\n\n\n\n\n\n\n\nviewof countyInput = Inputs.select(ei.map(d => d.county),\n                                {sort: true, unique: true, label: \"Choose a county:\"})\n\nPlot.plot({\n\nmarks: [\n  Plot.ruleX([0]),\n  Plot.dot(ei,\n    {\n    x: \"mean\",\n    y: \"race\",\n    fill: \"race\",\n    r: 4,\n    filter: d => d.county === countyInput,\n    sort: {y: null}\n  }),\n  Plot.link(ei,\n  {\n  x1: \"ci_95_lower\",\n  x2: \"ci_95_upper\",\n  y1: \"race\",\n  y2: \"race\",\n  filter: d => d.county === countyInput\n  })\n],\nfacet: {data: ei, y: \"election\", filter: d => d.county === countyInput,\nmarginRight: 150, label: \"Contest\", sort: {fy: null}},\nfill: {legend: true},\nx: {label: \"(%) Estimated Support for Democrats\",\n    percent: true,\n    labelAnchor: \"center\"},\ny: {label: \"Race\"},\n\nheight: 600,\nmarginLeft: 80\n\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEach point indicates the estimated mean for that race or ethnicity’s estimated support for the Democratic candidate. The extent of the bar indicates a 95% confidence interval."
+  },
+  {
+    "objectID": "analyses/WA_2020.html#data-sources",
+    "href": "analyses/WA_2020.html#data-sources",
+    "title": "Washington 2020",
+    "section": "Data Sources",
+    "text": "Data Sources\nData for Washington comes from the ALARM Project’s 2020 Redistricting Data Files. This data standardizes the Voting and Election Science Team (VEST) data from the Harvard Dataverse to geographies from the US Census Bureau, primarily at the VTD level.\n\nElections Included in Analysis\n\nPresident 2016\nUS Senate 2016\nGovernor 2016\nAttorney General 2016\nSecretary of State 2016\nUS Senate 2018\nPresident 2020\nGovernor 2020\nAttorney General 2020\nSecretary of State 2020"
+  },
+  {
+    "objectID": "analyses/WA_2020.html#data-download",
+    "href": "analyses/WA_2020.html#data-download",
+    "title": "Washington 2020",
+    "section": "Data Download",
+    "text": "Data Download\n\n\n\n\n\n\n\n \nSummary File\n \n\n \nWA_county_2020_summary.csv\n\n\n\n\n\n\n\n\n \nPrecinct Estimates\n \n\n \nWA_county_2020_precinct.csv"
+  },
+  {
+    "objectID": "analyses/WI_2020.html",
+    "href": "analyses/WI_2020.html",
+    "title": "Wisconsin 2020",
+    "section": "",
+    "text": "AK                        AL                        AR                        AZ                        CA                        CO                        CT                        DE                        FL                        GA                        HI                        IA                        ID                        IL                        IN                        KS                        KY                        LA                        MA                        MD                        ME                        MI                        MN                        MO                        MS                        MT                        NC                        ND                        NE                        NH                        NJ                        NM                        NV                        NY                        OH                        OK                        OR                        PA                        RI                        SC                        SD                        TN                        TX                        UT                        VA                        VT                        WA                        WI                        WV                        WY                        DC                        USA                \n\n\n\nei = transpose(ei_df)\n\n\n\n\n\n\n\nviewof countyInput = Inputs.select(ei.map(d => d.county),\n                                {sort: true, unique: true, label: \"Choose a county:\"})\n\nPlot.plot({\n\nmarks: [\n  Plot.ruleX([0]),\n  Plot.dot(ei,\n    {\n    x: \"mean\",\n    y: \"race\",\n    fill: \"race\",\n    r: 4,\n    filter: d => d.county === countyInput,\n    sort: {y: null}\n  }),\n  Plot.link(ei,\n  {\n  x1: \"ci_95_lower\",\n  x2: \"ci_95_upper\",\n  y1: \"race\",\n  y2: \"race\",\n  filter: d => d.county === countyInput\n  })\n],\nfacet: {data: ei, y: \"election\", filter: d => d.county === countyInput,\nmarginRight: 150, label: \"Contest\", sort: {fy: null}},\nfill: {legend: true},\nx: {label: \"(%) Estimated Support for Democrats\",\n    percent: true,\n    labelAnchor: \"center\"},\ny: {label: \"Race\"},\n\nheight: 600,\nmarginLeft: 80\n\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEach point indicates the estimated mean for that race or ethnicity’s estimated support for the Democratic candidate. The extent of the bar indicates a 95% confidence interval."
+  },
+  {
+    "objectID": "analyses/WI_2020.html#data-sources",
+    "href": "analyses/WI_2020.html#data-sources",
+    "title": "Wisconsin 2020",
+    "section": "Data Sources",
+    "text": "Data Sources\nData for Wisconsin comes from the ALARM Project’s 2020 Redistricting Data Files. This data standardizes the Voting and Election Science Team (VEST) data from the Harvard Dataverse to geographies from the US Census Bureau, primarily at the VTD level.\n\nElections Included in Analysis\n\nPresident 2016\nUS Senate 2016\nUS Senate 2018\nGovernor 2018\nAttorney General 2018\nSecretary of State 2018\nPresident 2020"
+  },
+  {
+    "objectID": "analyses/WI_2020.html#data-download",
+    "href": "analyses/WI_2020.html#data-download",
+    "title": "Wisconsin 2020",
+    "section": "Data Download",
+    "text": "Data Download\n\n\n\n\n\n\n\n \nSummary File\n \n\n \nWI_county_2020_summary.csv\n\n\n\n\n\n\n\n\n \nPrecinct Estimates\n \n\n \nWI_county_2020_precinct.csv"
+  },
+  {
+    "objectID": "analyses/WV_2020.html",
+    "href": "analyses/WV_2020.html",
+    "title": "West Virginia 2020",
+    "section": "",
+    "text": "AK                        AL                        AR                        AZ                        CA                        CO                        CT                        DE                        FL                        GA                        HI                        IA                        ID                        IL                        IN                        KS                        KY                        LA                        MA                        MD                        ME                        MI                        MN                        MO                        MS                        MT                        NC                        ND                        NE                        NH                        NJ                        NM                        NV                        NY                        OH                        OK                        OR                        PA                        RI                        SC                        SD                        TN                        TX                        UT                        VA                        VT                        WA                        WI                        WV                        WY                        DC                        USA                \n\n\n\nei = transpose(ei_df)\n\n\n\n\n\n\n\nviewof countyInput = Inputs.select(ei.map(d => d.county),\n                                {sort: true, unique: true, label: \"Choose a county:\"})\n\nPlot.plot({\n\nmarks: [\n  Plot.ruleX([0]),\n  Plot.dot(ei,\n    {\n    x: \"mean\",\n    y: \"race\",\n    fill: \"race\",\n    r: 4,\n    filter: d => d.county === countyInput,\n    sort: {y: null}\n  }),\n  Plot.link(ei,\n  {\n  x1: \"ci_95_lower\",\n  x2: \"ci_95_upper\",\n  y1: \"race\",\n  y2: \"race\",\n  filter: d => d.county === countyInput\n  })\n],\nfacet: {data: ei, y: \"election\", filter: d => d.county === countyInput,\nmarginRight: 150, label: \"Contest\", sort: {fy: null}},\nfill: {legend: true},\nx: {label: \"(%) Estimated Support for Democrats\",\n    percent: true,\n    labelAnchor: \"center\"},\ny: {label: \"Race\"},\n\nheight: 600,\nmarginLeft: 80\n\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEach point indicates the estimated mean for that race or ethnicity’s estimated support for the Democratic candidate. The extent of the bar indicates a 95% confidence interval."
+  },
+  {
+    "objectID": "analyses/WV_2020.html#data-sources",
+    "href": "analyses/WV_2020.html#data-sources",
+    "title": "West Virginia 2020",
+    "section": "Data Sources",
+    "text": "Data Sources\nData for West Virginia comes from the ALARM Project’s 2020 Redistricting Data Files. This data standardizes the Voting and Election Science Team (VEST) data from the Harvard Dataverse to geographies from the US Census Bureau, primarily at the VTD level.\n\nElections Included in Analysis\n\nPresident 2020\nUS Senate 2020\nGovernor 2020\nAttorney General 2020\nSecretary of State 2020"
+  },
+  {
+    "objectID": "analyses/WV_2020.html#data-download",
+    "href": "analyses/WV_2020.html#data-download",
+    "title": "West Virginia 2020",
+    "section": "Data Download",
+    "text": "Data Download\n\n\n\n\n\n\n\n \nSummary File\n \n\n \nWV_county_2020_summary.csv\n\n\n\n\n\n\n\n\n \nPrecinct Estimates\n \n\n \nWV_county_2020_precinct.csv"
+  },
+  {
+    "objectID": "analyses/WY_2020.html",
+    "href": "analyses/WY_2020.html",
+    "title": "Wyoming 2020",
+    "section": "",
+    "text": "AK                        AL                        AR                        AZ                        CA                        CO                        CT                        DE                        FL                        GA                        HI                        IA                        ID                        IL                        IN                        KS                        KY                        LA                        MA                        MD                        ME                        MI                        MN                        MO                        MS                        MT                        NC                        ND                        NE                        NH                        NJ                        NM                        NV                        NY                        OH                        OK                        OR                        PA                        RI                        SC                        SD                        TN                        TX                        UT                        VA                        VT                        WA                        WI                        WV                        WY                        DC                        USA                \n\n\n\nei = transpose(ei_df)\n\n\n\n\n\n\n\nviewof countyInput = Inputs.select(ei.map(d => d.county),\n                                {sort: true, unique: true, label: \"Choose a county:\"})\n\nPlot.plot({\n\nmarks: [\n  Plot.ruleX([0]),\n  Plot.dot(ei,\n    {\n    x: \"mean\",\n    y: \"race\",\n    fill: \"race\",\n    r: 4,\n    filter: d => d.county === countyInput,\n    sort: {y: null}\n  }),\n  Plot.link(ei,\n  {\n  x1: \"ci_95_lower\",\n  x2: \"ci_95_upper\",\n  y1: \"race\",\n  y2: \"race\",\n  filter: d => d.county === countyInput\n  })\n],\nfacet: {data: ei, y: \"election\", filter: d => d.county === countyInput,\nmarginRight: 150, label: \"Contest\", sort: {fy: null}},\nfill: {legend: true},\nx: {label: \"(%) Estimated Support for Democrats\",\n    percent: true,\n    labelAnchor: \"center\"},\ny: {label: \"Race\"},\n\nheight: 600,\nmarginLeft: 80\n\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEach point indicates the estimated mean for that race or ethnicity’s estimated support for the Democratic candidate. The extent of the bar indicates a 95% confidence interval."
+  },
+  {
+    "objectID": "analyses/WY_2020.html#data-sources",
+    "href": "analyses/WY_2020.html#data-sources",
+    "title": "Wyoming 2020",
+    "section": "Data Sources",
+    "text": "Data Sources\nData for Wyoming comes from the ALARM Project’s 2020 Redistricting Data Files. This data standardizes the Voting and Election Science Team (VEST) data from the Harvard Dataverse to geographies from the US Census Bureau, primarily at the VTD level.\n\nElections Included in Analysis\n\nPresident 2016\nUS Senate 2018\nGovernor 2018\nSecretary of State 2018\nPresident 2020\nUS Senate 2020"
+  },
+  {
+    "objectID": "analyses/WY_2020.html#data-download",
+    "href": "analyses/WY_2020.html#data-download",
+    "title": "Wyoming 2020",
+    "section": "Data Download",
+    "text": "Data Download\n\n\n\n\n\n\n\n \nSummary File\n \n\n \nWY_county_2020_summary.csv\n\n\n\n\n\n\n\n\n \nPrecinct Estimates\n \n\n \nWY_county_2020_precinct.csv"
+  },
+  {
+    "objectID": "data.html",
+    "href": "data.html",
+    "title": "Data",
+    "section": "",
+    "text": "You can access a .csv with detailed RPV estimates and their confidence intervals, for every state."
+  },
+  {
+    "objectID": "data.html#using-the-data",
+    "href": "data.html#using-the-data",
+    "title": "Data",
+    "section": "Using the data",
+    "text": "Using the data\n\nData Format\nIn the current iteration, data summaries are available for contested statewide and federal elections within each county in the United States. Almost all counties are included, except for a small number of extremely small counties with too few precincts or voting districts to produce estimates.\nIn the summary files, each observation is identified by county, race, and cand.\n\ncounty: County name\nrace: voter race\n\nwhite: White\nblack: Black\nhisp: Hispanic\noth: Other race or ethnicity (not White, Black, or Hispanic)\n\ncand: candidate\nmean: mean estimate of support\nsd: standard deviation of the estimate\nci_95_lower: lower bound for the 95% confidence interval\nci_95_upper: upper bound for the 95% confidence interval"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "RPV Near Me",
+    "section": "",
+    "text": "This is a resource designed to be used by voters, community groups, activists, and lawyers to aid in their development of campaigns to fully enfranchise voters of color in local government.\n\n\n\n\n\n\nRead more about the project here.\nDownload the data."
   }
 ]

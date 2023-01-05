@@ -1,0 +1,142 @@
+---
+title: "New Hampshire 2020"
+description: |
+  Ecological inference estimates by county for NH State.
+format: html
+---
+
+# Ecological Inference Estimates
+
+```{r, echo = FALSE, message = FALSE, warning=FALSE}
+library(tidyverse)
+library(ggiraph)
+library(ggdist)
+library(patchwork)
+library(htmltools)
+HTML(readLines("../state-svg-defs.svg"))
+abb <- 'NH'
+
+alarm_abb <- function() {
+  tibble::tribble(
+    ~a, ~b,
+    'pre', 'President',
+    'uss', 'US Senate',
+    'gov', 'Governor',
+    'atg', 'Attorney General',
+    'sos', 'Secretary of State'
+  )
+}
+ei_tb <- read_csv(str_glue('https://raw.githubusercontent.com/electionlawclinic/rpvnearme/main/data/{abb}_county_2020_summary.csv'))
+
+ei_tb <- ei_tb  |>
+  mutate(
+    race = recode(
+      race,
+      'vap_black' = 'Black',
+      'vap_hisp' = 'Hispanic',
+      'vap_oth' = 'Other',
+      'vap_white' = 'White'
+    ),
+    race = factor(race, levels = c('White', 'Black', 'Hispanic', 'Other'))
+  ) |>
+  filter(str_detect(cand, '_dem')) |>
+  mutate(election = word(cand, sep = fixed('_')),
+         election = recode(election, !!!deframe(alarm_abb())),
+         year = 2000 + as.integer(str_sub(cand, 5, 6)),
+         election = paste(election, year)) |>
+  arrange(year, election) |>
+  mutate(election = fct_inorder(election))
+
+ojs_define(ei_df = ei_tb)
+```
+
+
+```{ojs, echo = FALSE}
+//| echo: false
+ei = transpose(ei_df)
+```
+
+```{ojs, echo = FALSE}
+//| echo: false
+viewof countyInput = Inputs.select(ei.map(d => d.county),
+                                {sort: true, unique: true, label: "Choose a county:"})
+
+Plot.plot({
+
+marks: [
+  Plot.ruleX([0]),
+  Plot.dot(ei,
+    {
+    x: "mean",
+    y: "race",
+    fill: "race",
+    r: 4,
+    filter: d => d.county === countyInput,
+    sort: {y: null}
+  }),
+  Plot.link(ei,
+  {
+  x1: "ci_95_lower",
+  x2: "ci_95_upper",
+  y1: "race",
+  y2: "race",
+  filter: d => d.county === countyInput
+  })
+],
+facet: {data: ei, y: "election", filter: d => d.county === countyInput,
+marginRight: 150, label: "Contest", sort: {fy: null}},
+fill: {legend: true},
+x: {label: "(%) Estimated Support for Democrats",
+    percent: true,
+    labelAnchor: "center"},
+y: {label: "Race"},
+
+height: 600,
+marginLeft: 80
+
+})
+```
+
+Each point indicates the estimated mean for that race or ethnicity's estimated support for the Democratic candidate. The extent of the bar indicates a 95% confidence interval.
+
+{{< include ../../analyses/NH_county_2020/doc_NH_county_2020.md >}}
+
+## Data Download
+
+
+```{r, echo = FALSE}
+
+state <- censable::match_name(abb)
+tibble(
+  name = c('Summary File', 'Precinct Estimates'),
+  url = c(
+    stringr::str_glue('https://raw.githubusercontent.com/electionlawclinic/rpvnearme/main/data/{abb}_county_2020_summary.csv'),
+    stringr::str_glue('https://raw.githubusercontent.com/electionlawclinic/rpvnearme/main/data/{abb}_county_2020_precinct.csv')
+  )
+) |>
+  mutate(
+    filename = fs::path_file(url)
+  ) |>
+  pmap(function(name, url, filename, ...) {
+      a(
+    href = url, target = '_blank', download = filename,
+    div(
+      tags$svg(
+        class = paste0('icon icon-state-', abb),
+        style = 'height: 1.7em; width: 1.8em; position: relative; top: 0em;',
+        tags$use(`xlink:href` = paste0('#icon-state-', abb))
+      ),
+      HTML('&nbsp;'),
+      strong(name),
+      HTML('&nbsp;'),
+      fontawesome::fa('circle-down'),
+      HTML('&nbsp;'),
+      code(filename, style = 'color: #777777;'),
+      tags$br()
+    )
+  )
+  }) |>
+  as.tags()
+
+```
+

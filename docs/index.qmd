@@ -2,10 +2,9 @@
 title: "RPV Near Me"
 ---
 
-## Where in America is there Racially Polarized Voting? 
+## Where in America is there Racially Polarized Voting?
 
-This is a resource designed to be used by voters, community groups, activists, and lawyers to aid in their development of campaigns to fully enfranchise voters of color in local government.  
-
+This is a resource designed to be used by voters, community groups, activists, and lawyers to aid in their development of campaigns to fully enfranchise voters of color in local government.
 
 ```{r, echo = FALSE, warning = FALSE, message = FALSE}
 library(tidyverse)
@@ -41,9 +40,6 @@ girafe(ggobj = p,
 )
 ```
 
-
 Read more about the project [here](https://www.rpvnearme.org/about.html).
 
 Download the [data](https://www.rpvnearme.org/data.html).
-
-
