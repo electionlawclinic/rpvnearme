@@ -4,7 +4,8 @@ title: "About"
 
 # RPV Near Me
 
-RPV Near Me is a project of the [Election Law Clinic (“ELC”) at Harvard Law School](https://www.hlselectionlaw.org/). The mission of the ELC is to train the next generation of election lawyers through litigation and advocacy that bring novel academic ideas to the practice of election law. We aim to build power for voters, not politicians. 
+RPV Near Me is a project of the [Election Law Clinic (“ELC”) at Harvard Law School](https://www.hlselectionlaw.org/). The mission of the Election Law Clinic at Harvard Law School is to train the next generation of election lawyers through litigation and advocacy that bring novel academic ideas to the practice of election law. It aims to build power for voters, not politicians, and recognizes that the struggle for voting rights is a struggle for racial justice.
+
 
 ![](elc.png)
 
