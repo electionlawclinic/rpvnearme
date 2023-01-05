@@ -11,6 +11,8 @@ website:
         text: Home
       - about.qmd
       - data.qmd
+      - href: states.qmd
+        text: States
   page-footer:
     center: |
       RPV Near Me is a project of the [Election Law Clinic (ELC) at Harvard Law School](https://www.hlselectionlaw.org/). <br>

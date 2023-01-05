@@ -1,0 +1,30 @@
+---
+title: "Analyses by State"
+format: html
+---
+ 
+To preview the data, each state has an analysis page with graphs and additional information. States can be opened by pressing the buttons below or by clicking on a state on the [home page](https://www.rpvnearme.org/).
+
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+library(tidyverse)
+
+tibble(
+  abb = state.abb, 
+  state = sapply(abb, censable::match_name),
+  link = stringr::str_glue('https://electionlawclinic.github.io/rpvnearme/analyses/{abb}_2020.html')
+) |> 
+  pmap(function(link, state, ...) {
+        htmltools::a(
+      href = link,
+      htmltools::tags$button(class = "link-btn",
+                             htmltools::tags$i(class = "fa fa-link"),
+                             str_glue('Open {state}')),
+      htmltools::tags$br()
+    )
+  }) |> 
+  htmltools::as.tags()
+```
+
+
+

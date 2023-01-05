@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>RPV Near Me - About</title>
+<title>RPV Near Me - Analyses by State</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -85,7 +85,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page">
+    <a class="nav-link" href="./about.html">
  <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
@@ -93,7 +93,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Data</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./states.html">
+    <a class="nav-link active" href="./states.html" aria-current="page">
  <span class="menu-text">States</span></a>
   </li>  
 </ul>
@@ -107,25 +107,14 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#rpv-near-me" id="toc-rpv-near-me" class="nav-link active" data-scroll-target="#rpv-near-me">RPV Near Me</a>
-  <ul class="collapse">
-  <li><a href="#background" id="toc-background" class="nav-link" data-scroll-target="#background">Background:</a></li>
-  <li><a href="#data-and-methods" id="toc-data-and-methods" class="nav-link" data-scroll-target="#data-and-methods">Data and Methods</a></li>
-  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps">Next Steps</a></li>
-  </ul></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">About</h1>
+<h1 class="title">Analyses by State</h1>
 </div>
 
 
@@ -140,28 +129,363 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="rpv-near-me" class="level1">
-<h1>RPV Near Me</h1>
-<p>RPV Near Me is a project of the <a href="https://www.hlselectionlaw.org/">Election Law Clinic (“ELC”) at Harvard Law School</a>. The mission of the ELC is to train the next generation of election lawyers through litigation and advocacy that bring novel academic ideas to the practice of election law. We aim to build power for voters, not politicians.</p>
-<p><img src="elc.png" class="img-fluid"></p>
-<section id="background" class="level2">
-<h2 class="anchored" data-anchor-id="background">Background:</h2>
-<p>Racially polarized voting (RPV) occurs where voters of one race or ethnicity tend to support certain candidates in elections, while voters of another race or ethnicity support different candidates. Given the types of electoral systems used across the U.S., RPV often causes voters of color to have less representation than white voters, and in some cases no representation at all.</p>
-<p>At the congressional and state legislative level, the Voting Rights Act has been used by civil rights groups and political actors to counter attempts to dilute the voting power of Black, Latino, Asian American, and Native American voters. But at the local level, it can be hard to access the data and techniques necessary to determine whether RPV exists. This site aims to bridge that gap by providing RPV estimates for every county in the country for at least 4 recent statewide elections.</p>
-</section>
-<section id="data-and-methods" class="level2">
-<h2 class="anchored" data-anchor-id="data-and-methods">Data and Methods</h2>
-<p>The RPV estimates on this site were generated using the techniques approved by federal courts for use in Voting Rights Act litigation, namely King’s Ecological Inference (King’s EI). Specifically, we use election data from the <a href="https://dataverse.harvard.edu/dataverse/electionscience">Voting and Election Science Team</a>, tabulated to Census Bureau geographies in the ALARM Project <a href="https://alarm-redist.github.io/posts/2021-08-10-census-2020/">2020 Redistricting Files</a>. We analyze those contests using RxC ecological inference, using the R package <a href="http:/%20/www.olivialau.org/software/eiPack.html">eiPack</a>. For demographic characteristics of each geography, we use voting age populations for White, Black, Hispanic, and other people.</p>
-<p>The code to replicate the analyses is available on <a href="https://github.com/electionlawclinic/rpvnearme">GitHub</a>.</p>
-</section>
-<section id="next-steps" class="level2">
-<h2 class="anchored" data-anchor-id="next-steps">Next Steps</h2>
-<p>We are exploring adding RPV data for all the cities, towns, and villages in the U.S. If this would be useful to you, please contact us at <a href="mailto:elc@law.harvard.edu">elc@law.harvard.edu</a> to let us know.</p>
-<p>If there are other related products that would be useful in your efforts to enfranchise communities of color at the local level, please also reach out with a description of those products <a href="mailto:elc@law.harvard.edu">elc@law.harvard.edu</a>.</p>
+<p>To preview the data, each state has an analysis page with graphs and additional information. States can be opened by pressing the buttons below or by clicking on a state on the <a href="https://www.rpvnearme.org/">home page</a>.</p>
+<div class="cell">
+<div class="cell-output-display">
+<a href="https://electionlawclinic.github.io/rpvnearme/analyses/AL_2020.html">
+<button class="link-btn">
+<i class="fa fa-link"></i>
+Open Alabama
+</button>
+<br>
+</a>
+<a href="https://electionlawclinic.github.io/rpvnearme/analyses/AK_2020.html">
+<button class="link-btn">
+<i class="fa fa-link"></i>
+Open Alaska
+</button>
+<br>
+</a>
+<a href="https://electionlawclinic.github.io/rpvnearme/analyses/AZ_2020.html">
+<button class="link-btn">
+<i class="fa fa-link"></i>
+Open Arizona
+</button>
+<br>
+</a>
+<a href="https://electionlawclinic.github.io/rpvnearme/analyses/AR_2020.html">
+<button class="link-btn">
+<i class="fa fa-link"></i>
+Open Arkansas
+</button>
+<br>
+</a>
+<a href="https://electionlawclinic.github.io/rpvnearme/analyses/CA_2020.html">
+<button class="link-btn">
+<i class="fa fa-link"></i>
+Open California
+</button>
+<br>
+</a>
+<a href="https://electionlawclinic.github.io/rpvnearme/analyses/CO_2020.html">
+<button class="link-btn">
+<i class="fa fa-link"></i>
+Open Colorado
+</button>
+<br>
+</a>
+<a href="https://electionlawclinic.github.io/rpvnearme/analyses/CT_2020.html">
+<button class="link-btn">
+<i class="fa fa-link"></i>
+Open Connecticut
+</button>
+<br>
+</a>
+<a href="https://electionlawclinic.github.io/rpvnearme/analyses/DE_2020.html">
+<button class="link-btn">
+<i class="fa fa-link"></i>
+Open Delaware
+</button>
+<br>
+</a>
+<a href="https://electionlawclinic.github.io/rpvnearme/analyses/FL_2020.html">
+<button class="link-btn">
+<i class="fa fa-link"></i>
+Open Florida
+</button>
+<br>
+</a>
+<a href="https://electionlawclinic.github.io/rpvnearme/analyses/GA_2020.html">
+<button class="link-btn">
+<i class="fa fa-link"></i>
+Open Georgia
+</button>
+<br>
+</a>
+<a href="https://electionlawclinic.github.io/rpvnearme/analyses/HI_2020.html">
+<button class="link-btn">
+<i class="fa fa-link"></i>
+Open Hawaii
+</button>
+<br>
+</a>
+<a href="https://electionlawclinic.github.io/rpvnearme/analyses/ID_2020.html">
+<button class="link-btn">
+<i class="fa fa-link"></i>
+Open Idaho
+</button>
+<br>
+</a>
+<a href="https://electionlawclinic.github.io/rpvnearme/analyses/IL_2020.html">
+<button class="link-btn">
+<i class="fa fa-link"></i>
+Open Illinois
+</button>
+<br>
+</a>
+<a href="https://electionlawclinic.github.io/rpvnearme/analyses/IN_2020.html">
+<button class="link-btn">
+<i class="fa fa-link"></i>
+Open Indiana
+</button>
+<br>
+</a>
+<a href="https://electionlawclinic.github.io/rpvnearme/analyses/IA_2020.html">
+<button class="link-btn">
+<i class="fa fa-link"></i>
+Open Iowa
+</button>
+<br>
+</a>
+<a href="https://electionlawclinic.github.io/rpvnearme/analyses/KS_2020.html">
+<button class="link-btn">
+<i class="fa fa-link"></i>
+Open Kansas
+</button>
+<br>
+</a>
+<a href="https://electionlawclinic.github.io/rpvnearme/analyses/KY_2020.html">
+<button class="link-btn">
+<i class="fa fa-link"></i>
+Open Kentucky
+</button>
+<br>
+</a>
+<a href="https://electionlawclinic.github.io/rpvnearme/analyses/LA_2020.html">
+<button class="link-btn">
+<i class="fa fa-link"></i>
+Open Louisiana
+</button>
+<br>
+</a>
+<a href="https://electionlawclinic.github.io/rpvnearme/analyses/ME_2020.html">
+<button class="link-btn">
+<i class="fa fa-link"></i>
+Open Maine
+</button>
+<br>
+</a>
+<a href="https://electionlawclinic.github.io/rpvnearme/analyses/MD_2020.html">
+<button class="link-btn">
+<i class="fa fa-link"></i>
+Open Maryland
+</button>
+<br>
+</a>
+<a href="https://electionlawclinic.github.io/rpvnearme/analyses/MA_2020.html">
+<button class="link-btn">
+<i class="fa fa-link"></i>
+Open Massachusetts
+</button>
+<br>
+</a>
+<a href="https://electionlawclinic.github.io/rpvnearme/analyses/MI_2020.html">
+<button class="link-btn">
+<i class="fa fa-link"></i>
+Open Michigan
+</button>
+<br>
+</a>
+<a href="https://electionlawclinic.github.io/rpvnearme/analyses/MN_2020.html">
+<button class="link-btn">
+<i class="fa fa-link"></i>
+Open Minnesota
+</button>
+<br>
+</a>
+<a href="https://electionlawclinic.github.io/rpvnearme/analyses/MS_2020.html">
+<button class="link-btn">
+<i class="fa fa-link"></i>
+Open Mississippi
+</button>
+<br>
+</a>
+<a href="https://electionlawclinic.github.io/rpvnearme/analyses/MO_2020.html">
+<button class="link-btn">
+<i class="fa fa-link"></i>
+Open Missouri
+</button>
+<br>
+</a>
+<a href="https://electionlawclinic.github.io/rpvnearme/analyses/MT_2020.html">
+<button class="link-btn">
+<i class="fa fa-link"></i>
+Open Montana
+</button>
+<br>
+</a>
+<a href="https://electionlawclinic.github.io/rpvnearme/analyses/NE_2020.html">
+<button class="link-btn">
+<i class="fa fa-link"></i>
+Open Nebraska
+</button>
+<br>
+</a>
+<a href="https://electionlawclinic.github.io/rpvnearme/analyses/NV_2020.html">
+<button class="link-btn">
+<i class="fa fa-link"></i>
+Open Nevada
+</button>
+<br>
+</a>
+<a href="https://electionlawclinic.github.io/rpvnearme/analyses/NH_2020.html">
+<button class="link-btn">
+<i class="fa fa-link"></i>
+Open New Hampshire
+</button>
+<br>
+</a>
+<a href="https://electionlawclinic.github.io/rpvnearme/analyses/NJ_2020.html">
+<button class="link-btn">
+<i class="fa fa-link"></i>
+Open New Jersey
+</button>
+<br>
+</a>
+<a href="https://electionlawclinic.github.io/rpvnearme/analyses/NM_2020.html">
+<button class="link-btn">
+<i class="fa fa-link"></i>
+Open New Mexico
+</button>
+<br>
+</a>
+<a href="https://electionlawclinic.github.io/rpvnearme/analyses/NY_2020.html">
+<button class="link-btn">
+<i class="fa fa-link"></i>
+Open New York
+</button>
+<br>
+</a>
+<a href="https://electionlawclinic.github.io/rpvnearme/analyses/NC_2020.html">
+<button class="link-btn">
+<i class="fa fa-link"></i>
+Open North Carolina
+</button>
+<br>
+</a>
+<a href="https://electionlawclinic.github.io/rpvnearme/analyses/ND_2020.html">
+<button class="link-btn">
+<i class="fa fa-link"></i>
+Open North Dakota
+</button>
+<br>
+</a>
+<a href="https://electionlawclinic.github.io/rpvnearme/analyses/OH_2020.html">
+<button class="link-btn">
+<i class="fa fa-link"></i>
+Open Ohio
+</button>
+<br>
+</a>
+<a href="https://electionlawclinic.github.io/rpvnearme/analyses/OK_2020.html">
+<button class="link-btn">
+<i class="fa fa-link"></i>
+Open Oklahoma
+</button>
+<br>
+</a>
+<a href="https://electionlawclinic.github.io/rpvnearme/analyses/OR_2020.html">
+<button class="link-btn">
+<i class="fa fa-link"></i>
+Open Oregon
+</button>
+<br>
+</a>
+<a href="https://electionlawclinic.github.io/rpvnearme/analyses/PA_2020.html">
+<button class="link-btn">
+<i class="fa fa-link"></i>
+Open Pennsylvania
+</button>
+<br>
+</a>
+<a href="https://electionlawclinic.github.io/rpvnearme/analyses/RI_2020.html">
+<button class="link-btn">
+<i class="fa fa-link"></i>
+Open Rhode Island
+</button>
+<br>
+</a>
+<a href="https://electionlawclinic.github.io/rpvnearme/analyses/SC_2020.html">
+<button class="link-btn">
+<i class="fa fa-link"></i>
+Open South Carolina
+</button>
+<br>
+</a>
+<a href="https://electionlawclinic.github.io/rpvnearme/analyses/SD_2020.html">
+<button class="link-btn">
+<i class="fa fa-link"></i>
+Open South Dakota
+</button>
+<br>
+</a>
+<a href="https://electionlawclinic.github.io/rpvnearme/analyses/TN_2020.html">
+<button class="link-btn">
+<i class="fa fa-link"></i>
+Open Tennessee
+</button>
+<br>
+</a>
+<a href="https://electionlawclinic.github.io/rpvnearme/analyses/TX_2020.html">
+<button class="link-btn">
+<i class="fa fa-link"></i>
+Open Texas
+</button>
+<br>
+</a>
+<a href="https://electionlawclinic.github.io/rpvnearme/analyses/UT_2020.html">
+<button class="link-btn">
+<i class="fa fa-link"></i>
+Open Utah
+</button>
+<br>
+</a>
+<a href="https://electionlawclinic.github.io/rpvnearme/analyses/VT_2020.html">
+<button class="link-btn">
+<i class="fa fa-link"></i>
+Open Vermont
+</button>
+<br>
+</a>
+<a href="https://electionlawclinic.github.io/rpvnearme/analyses/VA_2020.html">
+<button class="link-btn">
+<i class="fa fa-link"></i>
+Open Virginia
+</button>
+<br>
+</a>
+<a href="https://electionlawclinic.github.io/rpvnearme/analyses/WA_2020.html">
+<button class="link-btn">
+<i class="fa fa-link"></i>
+Open Washington
+</button>
+<br>
+</a>
+<a href="https://electionlawclinic.github.io/rpvnearme/analyses/WV_2020.html">
+<button class="link-btn">
+<i class="fa fa-link"></i>
+Open West Virginia
+</button>
+<br>
+</a>
+<a href="https://electionlawclinic.github.io/rpvnearme/analyses/WI_2020.html">
+<button class="link-btn">
+<i class="fa fa-link"></i>
+Open Wisconsin
+</button>
+<br>
+</a>
+<a href="https://electionlawclinic.github.io/rpvnearme/analyses/WY_2020.html">
+<button class="link-btn">
+<i class="fa fa-link"></i>
+Open Wyoming
+</button>
+<br>
+</a>
+</div>
+</div>
 
 
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
