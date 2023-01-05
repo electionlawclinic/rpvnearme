@@ -32,7 +32,7 @@ pmap(files, function(state, abb, type, filename, url, ...) {
     div(
       tags$svg(
         class = paste0('icon icon-state-', abb),
-        style = 'height: 1.8em; width: 2.0em; position: relative; top: 0.7em;',
+        style = 'height: 1.8em; width: 2.0em; position: relative; top: 0em;',
         tags$use(`xlink:href` = paste0('#icon-state-', abb))
       ),
       HTML('&nbsp;'),
@@ -48,24 +48,25 @@ pmap(files, function(state, abb, type, filename, url, ...) {
   as.tags()
 
 ```
+
 <br>
 
 ## Using the data
-  
+
 ### Data Format
 
 In the current iteration, data summaries are available for contested statewide and federal elections within each county in the United States. Almost all counties are included, except for a small number of extremely small counties with too few precincts or voting districts to produce estimates.
 
 In the summary files, each observation is identified by `county`, `race`, and `cand`.
 
-- `county`: County name
-- `race`: voter race
-  - `white`: White
-  - `black`: Black
-  - `hisp`: Hispanic
-  - `oth`: Other race or ethnicity (not White, Black, or Hispanic)
-- `cand`: candidate
-- `mean`: mean estimate of support
-- `sd`: standard deviation of the estimate
-- `ci_95_lower`: lower bound for the 95% confidence interval
-- `ci_95_upper`: upper bound for the 95% confidence interval
+-   `county`: County name
+-   `race`: voter race
+    -   `white`: White
+    -   `black`: Black
+    -   `hisp`: Hispanic
+    -   `oth`: Other race or ethnicity (not White, Black, or Hispanic)
+-   `cand`: candidate
+-   `mean`: mean estimate of support
+-   `sd`: standard deviation of the estimate
+-   `ci_95_lower`: lower bound for the 95% confidence interval
+-   `ci_95_upper`: upper bound for the 95% confidence interval
