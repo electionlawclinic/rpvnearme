@@ -1,0 +1,30 @@
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+# RPV Near Me
+
+<!-- badges: start -->
+
+[![License:
+MIT](https://img.shields.io/badge/Software%20License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+<!-- badges: end -->
+
+RPV Near Me is a project of the [Election Law Clinic at Harvard Law
+School](https://www.hlselectionlaw.org/).
+
+![](https://www.rpvnearme.org/elc.png)
+
+Racially polarized voting (RPV) occurs where voters of one race or
+ethnicity tend to support certain candidates in elections, while voters
+of another race or ethnicity support different candidates. Given the
+types of electoral systems used across the U.S., RPV often causes voters
+of color to have less representation than white voters, and in some
+cases no representation at all.
+
+At the congressional and state legislative level, the Voting Rights Act
+has been used by civil rights groups and political actors to counter
+attempts to dilute the voting power of Black, Latino, Asian American,
+and Native American voters. But at the local level, it can be hard to
+access the data and techniques necessary to determine whether RPV
+exists. This site aims to bridge that gap by providing RPV estimates for
+every county in the country for at least two recent statewide elections.
