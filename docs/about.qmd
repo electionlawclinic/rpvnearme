@@ -4,27 +4,30 @@ title: "About"
 
 # RPV Near Me
 
-RPV Near Me is a project of the [Election Law Clinic (“ELC”) at Harvard Law School](https://www.hlselectionlaw.org/). The mission of the Election Law Clinic at Harvard Law School is to train the next generation of election lawyers through litigation and advocacy that bring novel academic ideas to the practice of election law. It aims to build power for voters, not politicians, and recognizes that the struggle for voting rights is a struggle for racial justice.
-
+RPV Near Me is a project of the [Election Law Clinic ("ELC") at Harvard Law School](https://www.hlselectionlaw.org/). The mission of the Election Law Clinic at Harvard Law School is to train the next generation of election lawyers through litigation and advocacy that bring novel academic ideas to the practice of election law. It aims to build power for voters, not politicians, and recognizes that the struggle for voting rights is a struggle for racial justice.
 
 ![](elc.png)
 
 ## Background:
 
-Racially polarized voting (RPV) occurs where voters of one race or ethnicity tend to support certain candidates in elections, while voters of another race or ethnicity support different candidates. Given the types of electoral systems used across the U.S., RPV often causes voters of color to have less representation than white voters, and in some cases no representation at all.  
+Racially polarized voting (RPV) occurs where voters of one race or ethnicity tend to support certain candidates in elections, while voters of another race or ethnicity support different candidates. Given the types of electoral systems used across the U.S., RPV often causes voters of color to have less representation than white voters, and in some cases no representation at all.
 
-At the congressional and state legislative level, the Voting Rights Act has been used by civil rights groups and political actors to counter attempts to dilute the voting power of Black, Latino, Asian American, and Native American voters. But at the local level, it can be hard to access the data and techniques necessary to determine whether RPV exists. This site aims to bridge that gap by providing RPV estimates for every county in the country for at least two recent statewide elections. 
+At the congressional and state legislative level, the Voting Rights Act has been used by civil rights groups and political actors to counter attempts to dilute the voting power of Black, Latino, Asian American, and Native American voters. But at the local level, it can be hard to access the data and techniques necessary to determine whether RPV exists. This site aims to bridge that gap by providing RPV estimates for every county in the country for at least two recent statewide elections.
 
-## Data and Methods 
+## Data and Methods
 
-The RPV estimates on this site were generated using the techniques approved by federal courts for use in Voting Rights Act litigation, namely King’s Ecological Inference (King’s EI). Specifically, we use election data from the [Voting and Election Science Team](https://dataverse.harvard.edu/dataverse/electionscience), tabulated to Census Bureau geographies in the ALARM Project [2020 Redistricting Files](https://alarm-redist.github.io/posts/2021-08-10-census-2020/). We analyze those contests using RxC ecological inference, using the R package [eiPack](http://www.olivialau.org/software/eiPack.html). For demographic characteristics of each geography, we use voting age populations for White, Black, Hispanic, and other people.
+The RPV estimates on this site were generated using the techniques approved by federal courts for use in Voting Rights Act litigation, namely King's Ecological Inference (King's EI). Specifically, we use election data from the [Voting and Election Science Team](https://dataverse.harvard.edu/dataverse/electionscience), tabulated to Census Bureau geographies in the ALARM Project [2020 Redistricting Files](https://alarm-redist.github.io/posts/2021-08-10-census-2020/). We analyze those contests using RxC ecological inference, using the R package [eiPack](http://www.olivialau.org/software/eiPack.html). For demographic characteristics of each geography, we use voting age populations for White, Black, Hispanic, and other people.
 
 The code to replicate the analyses is available on [GitHub](https://github.com/electionlawclinic/rpvnearme).
 
 The analysis was conducted by [Christopher T. Kenny](https://christophertkenny.com/), a Ph.D. candidate in the Department of Government at Harvard University.
 
-## Next Steps 
+## Using This Site
 
-We are exploring adding RPV data for all the cities, towns, and villages in the U.S. If this would be useful to you, please contact us at [elc@law.harvard.edu](mailto:elc@law.harvard.edu) to let us know.  
+RPV Near Me is intended to inform the public, not serve as evidence for litigation. Analyses are conducted in a cookie-cutter style and are not adjusted to suit potential needs of particular places, which could require additional expert discretion. This site should be used to identify trends and hotspots in state and federal electoral contests, often called "exogenous" elections in legal contexts. Evidence of RPV in "exogenous" elections does not necessarily imply RPV in "endogenous" elections, nor does absence of RPV in "exogenous" elections imply absence of RPV in "endogenous" elections.
 
-If there are other related products that would be useful in your efforts to enfranchise communities of color at the local level, please also reach out with a description of those products [elc@law.harvard.edu](mailto:elc@law.harvard.edu). 
+## Next Steps
+
+We are exploring adding RPV data for all the cities, towns, and villages in the U.S. If this would be useful to you, please contact us at [elc\@law.harvard.edu](mailto:elc@law.harvard.edu) to let us know.
+
+If there are other related products that would be useful in your efforts to enfranchise communities of color at the local level, please also reach out with a description of those products [elc\@law.harvard.edu](mailto:elc@law.harvard.edu).
