@@ -18,7 +18,6 @@ man/*
 *.rds
 *.rdata
 *.csv
-*.png
 !data/**/*.rds
 !data/**/*.csv
 
