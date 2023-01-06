@@ -23,7 +23,7 @@ website:
     background: light
 
 margin-header: |
-  ![[hlselectionlaw.org](https://www.hlselectionlaw.org/)](elc.png)
+  ![[hlselectionlaw.org](https://www.hlselectionlaw.org/)](https://raw.githubusercontent.com/electionlawclinic/rpvnearme/main/docs/elc.png)
 
 format:
   html:
