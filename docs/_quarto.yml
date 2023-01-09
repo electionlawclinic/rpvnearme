@@ -21,6 +21,7 @@ website:
       Joined demographic and election data is used from ALARM Project's [2020 Redistricting Data Files](https://alarm-redist.github.io/posts/2021-08-10-census-2020/).
     border: true
     background: light
+  google-analytics: "G-DMTGHZ2N2J"
 
 margin-header: |
   ![[hlselectionlaw.org](https://www.hlselectionlaw.org/)](https://raw.githubusercontent.com/electionlawclinic/rpvnearme/main/docs/elc.png)
