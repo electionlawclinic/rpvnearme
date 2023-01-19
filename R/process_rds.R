@@ -27,3 +27,20 @@ process_rds <- function(state) {
     precinct = stringr::str_glue('data/{state}_county_2020_precinct.csv')
   )
 }
+
+process_national_csv <- function(type = 'county') {
+  purrr::map_dfr(
+    fs::dir_ls(path = 'data', regexp = stringr::str_glue('.+{type}.+summary\\.csv')),
+    readr::read_csv,
+    col_types = readr::cols(
+      county = readr::col_character(),
+      race = readr::col_character(),
+      cand = readr::col_character(),
+      mean        = readr::col_number(),
+      sd          = readr::col_number(),
+      ci_95_lower = readr::col_number(),
+      ci_95_upper = readr::col_number(),
+    )
+  ) |>
+    write_csv('data/national_summary_2020.csv')
+}
