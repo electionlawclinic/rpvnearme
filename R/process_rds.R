@@ -40,7 +40,9 @@ process_national_csv <- function(type = 'county') {
       sd          = readr::col_number(),
       ci_95_lower = readr::col_number(),
       ci_95_upper = readr::col_number(),
-    )
+    ),
+    .id = 'state'
   ) |>
-    write_csv('data/national_summary_2020.csv')
+    dplyr::mutate(state = stringr::str_sub(state, 6, 7)) |>
+    readr::write_csv('data/national_summary_2020.csv')
 }
