@@ -28,7 +28,7 @@ man/*
 *.bak
 *.log
 .DS_store
-scratch/*
+scratch/*.pptx
 .Rdata
 .httr-oauth
 .DS_Store
