@@ -8,7 +8,7 @@ Description: County-by-county racially polarized voting analyses.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.2.0
+RoxygenNote: 7.2.3
 Imports: 
     cli,
     dplyr,
