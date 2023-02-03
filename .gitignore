@@ -29,6 +29,7 @@ man/*
 *.log
 .DS_store
 scratch/*.pptx
+!scratch/2022-10-05_va_rpv.pptx
 .Rdata
 .httr-oauth
 .DS_Store
