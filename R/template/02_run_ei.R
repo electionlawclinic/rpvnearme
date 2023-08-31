@@ -16,7 +16,7 @@ county_list <- ``state`` |>
   group_by(county) |>
   group_split()
 
-races <- c('vap_white', 'vap_black', 'vap_hisp', 'vap_oth')
+races <- c('vap_white', 'vap_black', 'vap_hisp', 'vap_asian', 'vap_aian', 'vap_oth_b')
 id <- 'GEOID'
 
 ei_l <- lapply(
