@@ -23,8 +23,8 @@ process_rds <- function(state, version = '') {
     readr::write_csv(stringr::str_glue('data/{state}_county_2020_precinct{version}.csv'))
 
   list(
-    summary = stringr::str_glue('data/{state}_county_2020_summary.csv'),
-    precinct = stringr::str_glue('data/{state}_county_2020_precinct.csv')
+    summary = stringr::str_glue('data/{state}_county_2020_summary{version}.csv'),
+    precinct = stringr::str_glue('data/{state}_county_2020_precinct{version}.csv')
   )
 }
 
