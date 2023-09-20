@@ -1,6 +1,6 @@
 ###############################################################################
 # Download and prepare data for `NE_county_2020` analysis
-# © Election Law Clinic, Harvard Law School, December 2022
+# © Election Law Clinic, Harvard Law School, September 2023
 ###############################################################################
 
 suppressMessages({
@@ -27,7 +27,10 @@ state_md_path <- 'analyses/NE_county_2020/doc_NE_county_2020.md'
 if (!file_exists(here(state_path))) {
   ne <- read_csv(here(path_data), col_types = cols(GEOID20 = 'c')) |>
     rename_with(function(x) gsub('[0-9.]', '', x), starts_with('GEOID')) |>
-    mutate(vap_oth = vap - vap_white - vap_black - vap_hisp)
+    mutate(
+      vap_oth = vap - vap_white - vap_black - vap_hisp,
+      vap_oth_b = vap_oth - vap_asian - vap_aian
+    )
 
   md <- read_lines(file = here(state_md_path))
   if (md[length(md)] == '### Elections Included in Analysis') {
