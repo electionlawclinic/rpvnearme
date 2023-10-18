@@ -6,7 +6,7 @@ process_rds <- function(state, version = '') {
   l <- readr::read_rds(stringr::str_glue('data-out/{state}_2020/{state}_county_2020_ei{version}.rds'))
   l |>
     lapply(function(w) {
-      dplyr::bind_rows(lapply(w, FUN = function(x) x$estimate))
+      dplyr::bind_rows(lapply(w, FUN = function(x) x$estimates))
     }) |>
     dplyr::bind_rows(.id = 'county') |>
     readr::write_csv(stringr::str_glue('data/{state}_county_2020_summary{version}.csv'))
