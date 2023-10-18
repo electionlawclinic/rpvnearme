@@ -1,22 +1,22 @@
 ###############################################################################
 # Run EI for `IN_county_2020`
-# © Election Law Clinic, Harvard Law School, December 2022
+# © Election Law Clinic, Harvard Law School, October 2023
 ###############################################################################
 
 # Run the simulation -----
 cli_process_start('Running EI analysis for {.pkg IN_county_2020}...')
 
-elecs <- ind |>
+elecs <- in2 |>
   dplyr::select(matches('*_\\d\\d_')) |>
   names() |>
   stringr::str_sub(1, 6) |>
   unique()
 
-county_list <- ind |>
+county_list <- in2 |>
   group_by(county) |>
   group_split()
 
-races <- c('vap_white', 'vap_black', 'vap_hisp', 'vap_oth')
+races <- c('vap_white', 'vap_black', 'vap_hisp', 'vap_asian', 'vap_aian', 'vap_oth_b')
 id <- 'GEOID'
 
 ei_l <- lapply(
@@ -39,6 +39,6 @@ cli_process_done()
 # Output the `ei` objects. Do not edit this path.
 cli_process_start('Saving {.cls ei} outputs.')
 
-write_rds(ei_l, here('data-out/IN_2020/IN_county_2020_ei.rds'), compress = 'xz')
+write_rds(ei_l, here('data-out/IN_2020/IN_county_2020_ei_b.rds'), compress = 'xz')
 
 cli_process_done()

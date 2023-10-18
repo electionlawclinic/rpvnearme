@@ -1,5 +1,6 @@
 ###############################################################################
 # Run EI for `CA_county_2020`
+
 # © Election Law Clinic, Harvard Law School, October 2023
 ###############################################################################
 
@@ -25,8 +26,10 @@ ei_l <- lapply(
     lapply(
       elecs,
       function(total) {
+        gc()
         cli::cli_alert_info('Running {total} in {cty$county[1]}:')
         run_rxc(df = cty, total = total)
+        gc()
       }
     )
   }
