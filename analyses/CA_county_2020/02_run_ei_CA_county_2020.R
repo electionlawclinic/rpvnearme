@@ -1,6 +1,7 @@
 ###############################################################################
 # Run EI for `CA_county_2020`
-# © Election Law Clinic, Harvard Law School, September 2023
+
+# © Election Law Clinic, Harvard Law School, October 2023
 ###############################################################################
 
 # Run the simulation -----
