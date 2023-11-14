@@ -26,10 +26,8 @@ ei_l <- lapply(
     lapply(
       elecs,
       function(total) {
-        gc()
         cli::cli_alert_info('Running {total} in {cty$county[1]}:')
         run_rxc(df = cty, total = total)
-        gc()
       }
     )
   }
