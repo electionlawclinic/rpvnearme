@@ -30,7 +30,13 @@ if (!file_exists(here(state_path))) {
     mutate(
       vap_oth = vap - vap_white - vap_black - vap_hisp,
       vap_oth_b = vap_oth - vap_asian - vap_aian
-    )
+    ) |>
+  group_by(GEOID) |>
+  summarize(
+    state = state[1],
+    county = county[1],
+    across(where(is.numeric), sum)
+  )
 
   md <- read_lines(file = here(state_md_path))
   if (md[length(md)] == '### Elections Included in Analysis') {
