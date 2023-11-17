@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.269">
+<meta name="generator" content="quarto-1.4.176">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -18,9 +18,10 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -47,43 +48,13 @@ pre.numberSource code > span > a:first-child::before
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
     padding: 0 4px; width: 4em;
-    color: #aaaaaa;
   }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
 div.sourceCode
   {   }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -111,6 +82,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   "panel-placement": "end",
   "type": "overlay",
   "limit": 20,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -120,7 +96,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-DMTGHZ2N2J"></script>
@@ -135,7 +112,7 @@ gtag('config', 'G-DMTGHZ2N2J', { 'anonymize_ip': true});
 <script type="module" src="../site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
 <link href="../site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 <script type="ojs-define">
-{"contents":[{"name":"ei_df","value":{"county":["Kent County","Kent County","Kent County","Kent County","New Castle County","New Castle County","New Castle County","New Castle County","Sussex County","Sussex County","Sussex County","Sussex County","Kent County","Kent County","Kent County","Kent County","New Castle County","New Castle County","New Castle County","New Castle County","Sussex County","Sussex County","Sussex County","Sussex County","Kent County","Kent County","Kent County","Kent County","New Castle County","New Castle County","New Castle County","New Castle County","Sussex County","Sussex County","Sussex County","Sussex County","Kent County","Kent County","Kent County","Kent County","New Castle County","New Castle County","New Castle County","New Castle County","Sussex County","Sussex County","Sussex County","Sussex County","Kent County","Kent County","Kent County","Kent County","New Castle County","New Castle County","New Castle County","New Castle County","Sussex County","Sussex County","Sussex County","Sussex County","Kent County","Kent County","Kent County","Kent County","New Castle County","New Castle County","New Castle County","New Castle County","Sussex County","Sussex County","Sussex County","Sussex County","Kent County","Kent County","Kent County","Kent County","New Castle County","New Castle County","New Castle County","New Castle County","Sussex County","Sussex County","Sussex County","Sussex County"],"race":["White","Black","Hispanic","Other","White","Black","Hispanic","Other","White","Black","Hispanic","Other","White","Black","Hispanic","Other","White","Black","Hispanic","Other","White","Black","Hispanic","Other","White","Black","Hispanic","Other","White","Black","Hispanic","Other","White","Black","Hispanic","Other","White","Black","Hispanic","Other","White","Black","Hispanic","Other","White","Black","Hispanic","Other","White","Black","Hispanic","Other","White","Black","Hispanic","Other","White","Black","Hispanic","Other","White","Black","Hispanic","Other","White","Black","Hispanic","Other","White","Black","Hispanic","Other","White","Black","Hispanic","Other","White","Black","Hispanic","Other","White","Black","Hispanic","Other"],"cand":["gov_16_dem_car","gov_16_dem_car","gov_16_dem_car","gov_16_dem_car","gov_16_dem_car","gov_16_dem_car","gov_16_dem_car","gov_16_dem_car","gov_16_dem_car","gov_16_dem_car","gov_16_dem_car","gov_16_dem_car","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","atg_18_dem_jen","atg_18_dem_jen","atg_18_dem_jen","atg_18_dem_jen","atg_18_dem_jen","atg_18_dem_jen","atg_18_dem_jen","atg_18_dem_jen","atg_18_dem_jen","atg_18_dem_jen","atg_18_dem_jen","atg_18_dem_jen","uss_18_dem_car","uss_18_dem_car","uss_18_dem_car","uss_18_dem_car","uss_18_dem_car","uss_18_dem_car","uss_18_dem_car","uss_18_dem_car","uss_18_dem_car","uss_18_dem_car","uss_18_dem_car","uss_18_dem_car","gov_20_dem_car","gov_20_dem_car","gov_20_dem_car","gov_20_dem_car","gov_20_dem_car","gov_20_dem_car","gov_20_dem_car","gov_20_dem_car","gov_20_dem_car","gov_20_dem_car","gov_20_dem_car","gov_20_dem_car","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","uss_20_dem_coo","uss_20_dem_coo","uss_20_dem_coo","uss_20_dem_coo","uss_20_dem_coo","uss_20_dem_coo","uss_20_dem_coo","uss_20_dem_coo","uss_20_dem_coo","uss_20_dem_coo","uss_20_dem_coo","uss_20_dem_coo"],"mean":[0.3185,0.933,0.6351,0.7146,0.527,0.9635,0.9367,0.8075,0.4216,0.6663,0.4796,0.4921,0.2471,0.9249,0.7414,0.7854,0.4717,0.9609,0.9304,0.8638,0.3315,0.6251,0.3815,0.4994,0.3661,0.9173,0.6486,0.7462,0.5943,0.9149,0.8547,0.7101,0.4536,0.587,0.4074,0.4276,0.351,0.9356,0.6941,0.7119,0.571,0.9694,0.9276,0.8454,0.4063,0.6247,0.3796,0.4852,0.3408,0.9273,0.6947,0.7549,0.5507,0.9636,0.8981,0.9082,0.4211,0.585,0.378,0.4252,0.3229,0.9308,0.6872,0.7664,0.5421,0.964,0.8966,0.8355,0.4049,0.5801,0.3997,0.4402,0.3417,0.9178,0.7014,0.7847,0.5738,0.9642,0.9076,0.823,0.4159,0.5833,0.4212,0.4648],"sd":[0.0192,0.0266,0.1382,0.1182,0.0076,0.008,0.0149,0.0441,0.0176,0.1143,0.1044,0.1955,0.0189,0.0253,0.1086,0.0878,0.0073,0.0079,0.0188,0.0369,0.0191,0.1186,0.0933,0.1721,0.0232,0.0289,0.147,0.1354,0.0105,0.0118,0.0376,0.0676,0.0194,0.1219,0.0959,0.1665,0.0218,0.0258,0.1248,0.1208,0.0073,0.0056,0.0175,0.0405,0.0179,0.1157,0.1045,0.163,0.0228,0.0283,0.1213,0.1021,0.0086,0.0068,0.0227,0.0436,0.0186,0.1211,0.1001,0.1698,0.0183,0.0235,0.1089,0.1023,0.0082,0.0069,0.0252,0.0494,0.0197,0.1261,0.1118,0.1566,0.0186,0.0269,0.1009,0.1,0.0083,0.0068,0.0231,0.0463,0.0178,0.1045,0.0987,0.1547],"ci_95_lower":[0.284,0.8646,0.3326,0.4424,0.5136,0.9458,0.903,0.7139,0.3895,0.408,0.2998,0.1628,0.2142,0.8677,0.4747,0.59,0.4581,0.9438,0.8841,0.7838,0.2961,0.4133,0.2089,0.1904,0.3262,0.8532,0.2929,0.4171,0.5759,0.8919,0.777,0.5681,0.4179,0.358,0.2265,0.1053,0.3132,0.8719,0.4146,0.4446,0.5592,0.957,0.889,0.7547,0.3718,0.3719,0.2018,0.1687,0.303,0.8594,0.4335,0.519,0.5387,0.9487,0.8489,0.7644,0.381,0.3551,0.2015,0.1323,0.2875,0.8773,0.4509,0.549,0.5277,0.9483,0.839,0.7363,0.3665,0.3313,0.2003,0.1504,0.3083,0.8551,0.4942,0.5587,0.5604,0.9496,0.8596,0.7156,0.3811,0.3775,0.2374,0.184],"ci_95_upper":[0.3581,0.9696,0.8546,0.8936,0.543,0.977,0.9614,0.8854,0.4549,0.8623,0.7047,0.8726,0.2904,0.9632,0.9008,0.915,0.4872,0.9743,0.9605,0.9292,0.3688,0.8504,0.5666,0.8487,0.42,0.9641,0.8732,0.9249,0.6158,0.9379,0.9201,0.8254,0.4918,0.8237,0.5928,0.7373,0.3968,0.9716,0.8933,0.8928,0.588,0.979,0.9552,0.9135,0.4439,0.8303,0.6002,0.7893,0.3949,0.9684,0.8888,0.9045,0.5763,0.9755,0.9374,0.954,0.456,0.7938,0.5825,0.7685,0.358,0.9678,0.8701,0.9236,0.5577,0.9757,0.9387,0.9199,0.4404,0.8152,0.622,0.7417,0.381,0.9603,0.8695,0.9371,0.5927,0.9762,0.9474,0.8968,0.4501,0.7828,0.617,0.7578],"election":["Governor 2016","Governor 2016","Governor 2016","Governor 2016","Governor 2016","Governor 2016","Governor 2016","Governor 2016","Governor 2016","Governor 2016","Governor 2016","Governor 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","Attorney General 2018","Attorney General 2018","Attorney General 2018","Attorney General 2018","Attorney General 2018","Attorney General 2018","Attorney General 2018","Attorney General 2018","Attorney General 2018","Attorney General 2018","Attorney General 2018","Attorney General 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","Governor 2020","Governor 2020","Governor 2020","Governor 2020","Governor 2020","Governor 2020","Governor 2020","Governor 2020","Governor 2020","Governor 2020","Governor 2020","Governor 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020"],"year":[2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020]}}]}
+{"contents":[{"name":"ei_df","value":{"county":["Kent County","Kent County","Kent County","Kent County","Kent County","Kent County","New Castle County","New Castle County","New Castle County","New Castle County","New Castle County","New Castle County","Sussex County","Sussex County","Sussex County","Sussex County","Sussex County","Sussex County","Kent County","Kent County","Kent County","Kent County","Kent County","Kent County","New Castle County","New Castle County","New Castle County","New Castle County","New Castle County","New Castle County","Sussex County","Sussex County","Sussex County","Sussex County","Sussex County","Sussex County","Kent County","Kent County","Kent County","Kent County","Kent County","Kent County","New Castle County","New Castle County","New Castle County","New Castle County","New Castle County","New Castle County","Sussex County","Sussex County","Sussex County","Sussex County","Sussex County","Sussex County","Kent County","Kent County","Kent County","Kent County","Kent County","Kent County","New Castle County","New Castle County","New Castle County","New Castle County","New Castle County","New Castle County","Sussex County","Sussex County","Sussex County","Sussex County","Sussex County","Sussex County","Kent County","Kent County","Kent County","Kent County","Kent County","Kent County","New Castle County","New Castle County","New Castle County","New Castle County","New Castle County","New Castle County","Sussex County","Sussex County","Sussex County","Sussex County","Sussex County","Sussex County","Kent County","Kent County","Kent County","Kent County","Kent County","Kent County","New Castle County","New Castle County","New Castle County","New Castle County","New Castle County","New Castle County","Sussex County","Sussex County","Sussex County","Sussex County","Sussex County","Sussex County","Kent County","Kent County","Kent County","Kent County","Kent County","Kent County","New Castle County","New Castle County","New Castle County","New Castle County","New Castle County","New Castle County","Sussex County","Sussex County","Sussex County","Sussex County","Sussex County","Sussex County"],"race":["White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other"],"cand":["gov_16_dem_car","gov_16_dem_car","gov_16_dem_car","gov_16_dem_car","gov_16_dem_car","gov_16_dem_car","gov_16_dem_car","gov_16_dem_car","gov_16_dem_car","gov_16_dem_car","gov_16_dem_car","gov_16_dem_car","gov_16_dem_car","gov_16_dem_car","gov_16_dem_car","gov_16_dem_car","gov_16_dem_car","gov_16_dem_car","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","atg_18_dem_jen","atg_18_dem_jen","atg_18_dem_jen","atg_18_dem_jen","atg_18_dem_jen","atg_18_dem_jen","atg_18_dem_jen","atg_18_dem_jen","atg_18_dem_jen","atg_18_dem_jen","atg_18_dem_jen","atg_18_dem_jen","atg_18_dem_jen","atg_18_dem_jen","atg_18_dem_jen","atg_18_dem_jen","atg_18_dem_jen","atg_18_dem_jen","uss_18_dem_car","uss_18_dem_car","uss_18_dem_car","uss_18_dem_car","uss_18_dem_car","uss_18_dem_car","uss_18_dem_car","uss_18_dem_car","uss_18_dem_car","uss_18_dem_car","uss_18_dem_car","uss_18_dem_car","uss_18_dem_car","uss_18_dem_car","uss_18_dem_car","uss_18_dem_car","uss_18_dem_car","uss_18_dem_car","gov_20_dem_car","gov_20_dem_car","gov_20_dem_car","gov_20_dem_car","gov_20_dem_car","gov_20_dem_car","gov_20_dem_car","gov_20_dem_car","gov_20_dem_car","gov_20_dem_car","gov_20_dem_car","gov_20_dem_car","gov_20_dem_car","gov_20_dem_car","gov_20_dem_car","gov_20_dem_car","gov_20_dem_car","gov_20_dem_car","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","uss_20_dem_coo","uss_20_dem_coo","uss_20_dem_coo","uss_20_dem_coo","uss_20_dem_coo","uss_20_dem_coo","uss_20_dem_coo","uss_20_dem_coo","uss_20_dem_coo","uss_20_dem_coo","uss_20_dem_coo","uss_20_dem_coo","uss_20_dem_coo","uss_20_dem_coo","uss_20_dem_coo","uss_20_dem_coo","uss_20_dem_coo","uss_20_dem_coo"],"mean":[0.3341,0.9263,0.6774,0.5243,0.5612,0.613,0.5381,0.9667,0.9332,0.6633,0.546,0.8529,0.4236,0.657,0.4815,0.5039,0.524,0.46,0.2625,0.9266,0.7224,0.6249,0.5453,0.7221,0.485,0.9637,0.9274,0.7248,0.6554,0.8668,0.3304,0.6135,0.3951,0.5183,0.5187,0.5124,0.3731,0.9262,0.686,0.5742,0.5447,0.68,0.6074,0.9337,0.86,0.7447,0.4527,0.3113,0.4491,0.6096,0.3921,0.517,0.4889,0.4675,0.3494,0.9405,0.6792,0.6044,0.5407,0.7955,0.5763,0.97,0.936,0.7795,0.5811,0.8479,0.4127,0.6041,0.3806,0.2982,0.4741,0.4634,0.3541,0.9201,0.7119,0.5769,0.5112,0.7165,0.5684,0.966,0.9091,0.7839,0.6063,0.7862,0.4145,0.6045,0.3837,0.4849,0.5122,0.4728,0.3375,0.9235,0.7121,0.6482,0.535,0.6736,0.5491,0.9665,0.8978,0.7725,0.4964,0.8159,0.4033,0.5506,0.4213,0.5124,0.4897,0.4724,0.3534,0.9235,0.716,0.6532,0.5037,0.6937,0.5772,0.9677,0.923,0.7901,0.5049,0.7719,0.4138,0.5908,0.4195,0.5071,0.5118,0.4759],"sd":[0.0202,0.0273,0.1175,0.1572,0.1875,0.1669,0.0075,0.0067,0.0171,0.0628,0.1611,0.0484,0.0157,0.1134,0.1046,0.1591,0.1693,0.156,0.0191,0.0248,0.1007,0.1535,0.16,0.1262,0.0073,0.0073,0.0188,0.0636,0.1385,0.0438,0.0181,0.1206,0.0954,0.1629,0.1971,0.1608,0.021,0.0308,0.1209,0.1572,0.1591,0.1312,0.0082,0.0121,0.0351,0.0725,0.1434,0.1282,0.0166,0.1136,0.1035,0.1538,0.1679,0.1625,0.0183,0.0186,0.1222,0.1634,0.1626,0.1294,0.0083,0.0054,0.0161,0.0672,0.1751,0.0494,0.0198,0.1304,0.1064,0.1958,0.1658,0.1673,0.0182,0.0239,0.1059,0.1659,0.1618,0.1402,0.0079,0.0069,0.0214,0.0637,0.1519,0.0626,0.0153,0.1155,0.104,0.1506,0.1651,0.1639,0.0196,0.0273,0.1192,0.1445,0.1776,0.1511,0.0088,0.0064,0.0256,0.0651,0.1588,0.0578,0.0188,0.1127,0.1035,0.157,0.1705,0.1635,0.0189,0.0259,0.114,0.1381,0.1721,0.1387,0.0088,0.0058,0.0189,0.0643,0.1701,0.0751,0.0159,0.1103,0.1127,0.1828,0.182,0.1499],"ci_95_lower":[0.2972,0.8609,0.4363,0.2211,0.1973,0.261,0.5236,0.9517,0.8956,0.5421,0.2235,0.734,0.3945,0.4021,0.2725,0.1918,0.2089,0.1697,0.2236,0.8688,0.4973,0.2939,0.228,0.4425,0.4721,0.9478,0.8853,0.5866,0.3594,0.7705,0.2929,0.3462,0.2302,0.226,0.1278,0.2009,0.3352,0.8512,0.4278,0.2383,0.2477,0.3814,0.5923,0.9098,0.7834,0.5979,0.1802,0.1313,0.4187,0.3823,0.2114,0.2118,0.1935,0.1869,0.3176,0.9009,0.3969,0.2614,0.218,0.4874,0.5614,0.9587,0.9007,0.6464,0.2394,0.7304,0.3714,0.3375,0.1958,0.0721,0.1707,0.1903,0.3203,0.8657,0.4906,0.2388,0.215,0.4207,0.5532,0.9515,0.8624,0.6528,0.2877,0.6547,0.3857,0.3612,0.2015,0.1983,0.1804,0.1675,0.3013,0.8609,0.4172,0.3119,0.1972,0.3405,0.5325,0.951,0.8432,0.6425,0.1925,0.68,0.3684,0.3332,0.2227,0.227,0.1723,0.1837,0.3193,0.8654,0.4413,0.3401,0.1817,0.3739,0.5625,0.9557,0.8795,0.6474,0.1862,0.6255,0.3835,0.3702,0.2023,0.1502,0.176,0.2042],"ci_95_upper":[0.3764,0.966,0.8762,0.8165,0.8746,0.8743,0.5526,0.9788,0.9599,0.7807,0.8203,0.9253,0.4544,0.8562,0.6803,0.7834,0.8428,0.7779,0.3016,0.9661,0.8854,0.8701,0.8277,0.9141,0.5007,0.9769,0.9586,0.8409,0.8834,0.9378,0.3637,0.8255,0.5974,0.8156,0.8604,0.8191,0.4186,0.9701,0.8891,0.8392,0.8389,0.8774,0.6245,0.9556,0.92,0.8776,0.7324,0.6083,0.4878,0.8258,0.6116,0.7927,0.8055,0.7815,0.3891,0.9723,0.876,0.8653,0.8468,0.9422,0.5929,0.9799,0.9631,0.895,0.885,0.925,0.4494,0.84,0.5939,0.727,0.7934,0.7995,0.3907,0.959,0.8842,0.8498,0.8258,0.9229,0.584,0.9776,0.9447,0.9007,0.8562,0.9,0.4445,0.8188,0.6271,0.7872,0.8053,0.778,0.3813,0.9662,0.8961,0.8736,0.8712,0.8995,0.566,0.9775,0.9437,0.8873,0.7654,0.9031,0.4412,0.7629,0.6218,0.8274,0.811,0.8112,0.3913,0.9635,0.8876,0.8786,0.8242,0.9074,0.5962,0.9783,0.955,0.8948,0.8343,0.8979,0.4451,0.7941,0.6641,0.8326,0.8525,0.7719],"election":["Governor 2016","Governor 2016","Governor 2016","Governor 2016","Governor 2016","Governor 2016","Governor 2016","Governor 2016","Governor 2016","Governor 2016","Governor 2016","Governor 2016","Governor 2016","Governor 2016","Governor 2016","Governor 2016","Governor 2016","Governor 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","Attorney General 2018","Attorney General 2018","Attorney General 2018","Attorney General 2018","Attorney General 2018","Attorney General 2018","Attorney General 2018","Attorney General 2018","Attorney General 2018","Attorney General 2018","Attorney General 2018","Attorney General 2018","Attorney General 2018","Attorney General 2018","Attorney General 2018","Attorney General 2018","Attorney General 2018","Attorney General 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","Governor 2020","Governor 2020","Governor 2020","Governor 2020","Governor 2020","Governor 2020","Governor 2020","Governor 2020","Governor 2020","Governor 2020","Governor 2020","Governor 2020","Governor 2020","Governor 2020","Governor 2020","Governor 2020","Governor 2020","Governor 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020"],"year":[2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020]}}]}
 </script>
 
 
@@ -148,35 +125,37 @@ gtag('config', 'G-DMTGHZ2N2J', { 'anonymize_ip': true});
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">RPV Near Me</span>
     </a>
   </div>
+            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html">
+    <a class="nav-link" href="../index.html" rel="" target="">
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../about.html">
+    <a class="nav-link" href="../about.html" rel="" target="">
  <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../data.html">
+    <a class="nav-link" href="../data.html" rel="" target="">
  <span class="menu-text">Data</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../states.html">
+    <a class="nav-link" href="../states.html" rel="" target="">
  <span class="menu-text">States</span></a>
   </li>  
 </ul>
-              <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -188,7 +167,7 @@ gtag('config', 'G-DMTGHZ2N2J', { 'anonymize_ip': true});
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://raw.githubusercontent.com/electionlawclinic/rpvnearme/main/docs/elc.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption"><a href="https://www.hlselectionlaw.org/">hlselectionlaw.org</a></figcaption><p></p>
+<figcaption class="figure-caption"><a href="https://www.hlselectionlaw.org/">hlselectionlaw.org</a></figcaption>
 </figure>
 </div>
 </div></div>
@@ -241,7 +220,7 @@ gtag('config', 'G-DMTGHZ2N2J', { 'anonymize_ip': true});
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb1" data-startfrom="55" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 54;"><span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>ei <span class="op">=</span> <span class="fu">transpose</span>(ei_df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb1" data-startfrom="57" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 56;"><span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>ei <span class="op">=</span> <span class="fu">transpose</span>(ei_df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-1" data-nodetype="declaration">
 
@@ -249,43 +228,43 @@ gtag('config', 'G-DMTGHZ2N2J', { 'anonymize_ip': true});
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb2" data-startfrom="61" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 60;"><span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>viewof countyInput <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">select</span>(ei<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">county</span>)<span class="op">,</span></span>
-<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a>                                {<span class="dt">sort</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span> <span class="dt">unique</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Choose a county:"</span>})</span>
-<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<div class="sourceCode cell-code hidden" id="cb2" data-startfrom="63" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 62;"><span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a>viewof countyInput <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">select</span>(ei<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">county</span>)<span class="op">,</span></span>
+<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a>                                {<span class="dt">sort</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span> <span class="dt">unique</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Choose a county:"</span>})</span>
 <span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a><span class="dt">marks</span><span class="op">:</span> [</span>
-<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a>  Plot<span class="op">.</span><span class="fu">ruleX</span>([<span class="dv">0</span>])<span class="op">,</span></span>
-<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a>  Plot<span class="op">.</span><span class="fu">dot</span>(ei<span class="op">,</span></span>
-<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a>    {</span>
-<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a>    <span class="dt">x</span><span class="op">:</span> <span class="st">"mean"</span><span class="op">,</span></span>
-<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a>    <span class="dt">y</span><span class="op">:</span> <span class="st">"race"</span><span class="op">,</span></span>
-<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a>    <span class="dt">fill</span><span class="op">:</span> <span class="st">"race"</span><span class="op">,</span></span>
-<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a>    <span class="dt">r</span><span class="op">:</span> <span class="dv">4</span><span class="op">,</span></span>
-<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a>    <span class="dt">filter</span><span class="op">:</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">county</span> <span class="op">===</span> countyInput<span class="op">,</span></span>
-<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a>    <span class="dt">sort</span><span class="op">:</span> {<span class="dt">y</span><span class="op">:</span> <span class="kw">null</span>}</span>
-<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a>  })<span class="op">,</span></span>
-<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a>  Plot<span class="op">.</span><span class="fu">link</span>(ei<span class="op">,</span></span>
-<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a>  {</span>
-<span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a>  <span class="dt">x1</span><span class="op">:</span> <span class="st">"ci_95_lower"</span><span class="op">,</span></span>
-<span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a>  <span class="dt">x2</span><span class="op">:</span> <span class="st">"ci_95_upper"</span><span class="op">,</span></span>
-<span id="cb2-81"><a href="#cb2-81" aria-hidden="true" tabindex="-1"></a>  <span class="dt">y1</span><span class="op">:</span> <span class="st">"race"</span><span class="op">,</span></span>
-<span id="cb2-82"><a href="#cb2-82" aria-hidden="true" tabindex="-1"></a>  <span class="dt">y2</span><span class="op">:</span> <span class="st">"race"</span><span class="op">,</span></span>
-<span id="cb2-83"><a href="#cb2-83" aria-hidden="true" tabindex="-1"></a>  <span class="dt">filter</span><span class="op">:</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">county</span> <span class="op">===</span> countyInput</span>
-<span id="cb2-84"><a href="#cb2-84" aria-hidden="true" tabindex="-1"></a>  })</span>
-<span id="cb2-85"><a href="#cb2-85" aria-hidden="true" tabindex="-1"></a>]<span class="op">,</span></span>
-<span id="cb2-86"><a href="#cb2-86" aria-hidden="true" tabindex="-1"></a><span class="dt">facet</span><span class="op">:</span> {<span class="dt">data</span><span class="op">:</span> ei<span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"election"</span><span class="op">,</span> <span class="dt">filter</span><span class="op">:</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">county</span> <span class="op">===</span> countyInput<span class="op">,</span></span>
-<span id="cb2-87"><a href="#cb2-87" aria-hidden="true" tabindex="-1"></a><span class="dt">marginRight</span><span class="op">:</span> <span class="dv">150</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Contest"</span><span class="op">,</span> <span class="dt">sort</span><span class="op">:</span> {<span class="dt">fy</span><span class="op">:</span> <span class="kw">null</span>}}<span class="op">,</span></span>
-<span id="cb2-88"><a href="#cb2-88" aria-hidden="true" tabindex="-1"></a><span class="dt">fill</span><span class="op">:</span> {<span class="dt">legend</span><span class="op">:</span> <span class="kw">true</span>}<span class="op">,</span></span>
-<span id="cb2-89"><a href="#cb2-89" aria-hidden="true" tabindex="-1"></a><span class="dt">x</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"(%) Estimated Support for Democrats"</span><span class="op">,</span></span>
-<span id="cb2-90"><a href="#cb2-90" aria-hidden="true" tabindex="-1"></a>    <span class="dt">percent</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
-<span id="cb2-91"><a href="#cb2-91" aria-hidden="true" tabindex="-1"></a>    <span class="dt">labelAnchor</span><span class="op">:</span> <span class="st">"center"</span>}<span class="op">,</span></span>
-<span id="cb2-92"><a href="#cb2-92" aria-hidden="true" tabindex="-1"></a><span class="dt">y</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"Race"</span>}<span class="op">,</span></span>
-<span id="cb2-93"><a href="#cb2-93" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-94"><a href="#cb2-94" aria-hidden="true" tabindex="-1"></a><span class="dt">height</span><span class="op">:</span> <span class="dv">600</span><span class="op">,</span></span>
-<span id="cb2-95"><a href="#cb2-95" aria-hidden="true" tabindex="-1"></a><span class="dt">marginLeft</span><span class="op">:</span> <span class="dv">80</span></span>
-<span id="cb2-96"><a href="#cb2-96" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-97"><a href="#cb2-97" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a><span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a>  Plot<span class="op">.</span><span class="fu">ruleX</span>([<span class="dv">0</span>])<span class="op">,</span></span>
+<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a>  Plot<span class="op">.</span><span class="fu">dot</span>(ei<span class="op">,</span></span>
+<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a>    {</span>
+<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a>    <span class="dt">x</span><span class="op">:</span> <span class="st">"mean"</span><span class="op">,</span></span>
+<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a>    <span class="dt">y</span><span class="op">:</span> <span class="st">"race"</span><span class="op">,</span></span>
+<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a>    <span class="dt">fill</span><span class="op">:</span> <span class="st">"race"</span><span class="op">,</span></span>
+<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a>    <span class="dt">r</span><span class="op">:</span> <span class="dv">4</span><span class="op">,</span></span>
+<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a>    <span class="dt">filter</span><span class="op">:</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">county</span> <span class="op">===</span> countyInput<span class="op">,</span></span>
+<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a>    <span class="dt">sort</span><span class="op">:</span> {<span class="dt">y</span><span class="op">:</span> <span class="kw">null</span>}</span>
+<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a>  })<span class="op">,</span></span>
+<span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a>  Plot<span class="op">.</span><span class="fu">link</span>(ei<span class="op">,</span></span>
+<span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a>  {</span>
+<span id="cb2-81"><a href="#cb2-81" aria-hidden="true" tabindex="-1"></a>  <span class="dt">x1</span><span class="op">:</span> <span class="st">"ci_95_lower"</span><span class="op">,</span></span>
+<span id="cb2-82"><a href="#cb2-82" aria-hidden="true" tabindex="-1"></a>  <span class="dt">x2</span><span class="op">:</span> <span class="st">"ci_95_upper"</span><span class="op">,</span></span>
+<span id="cb2-83"><a href="#cb2-83" aria-hidden="true" tabindex="-1"></a>  <span class="dt">y1</span><span class="op">:</span> <span class="st">"race"</span><span class="op">,</span></span>
+<span id="cb2-84"><a href="#cb2-84" aria-hidden="true" tabindex="-1"></a>  <span class="dt">y2</span><span class="op">:</span> <span class="st">"race"</span><span class="op">,</span></span>
+<span id="cb2-85"><a href="#cb2-85" aria-hidden="true" tabindex="-1"></a>  <span class="dt">filter</span><span class="op">:</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">county</span> <span class="op">===</span> countyInput</span>
+<span id="cb2-86"><a href="#cb2-86" aria-hidden="true" tabindex="-1"></a>  })</span>
+<span id="cb2-87"><a href="#cb2-87" aria-hidden="true" tabindex="-1"></a>]<span class="op">,</span></span>
+<span id="cb2-88"><a href="#cb2-88" aria-hidden="true" tabindex="-1"></a><span class="dt">facet</span><span class="op">:</span> {<span class="dt">data</span><span class="op">:</span> ei<span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"election"</span><span class="op">,</span> <span class="dt">filter</span><span class="op">:</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">county</span> <span class="op">===</span> countyInput<span class="op">,</span></span>
+<span id="cb2-89"><a href="#cb2-89" aria-hidden="true" tabindex="-1"></a><span class="dt">marginRight</span><span class="op">:</span> <span class="dv">150</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Contest"</span><span class="op">,</span> <span class="dt">sort</span><span class="op">:</span> {<span class="dt">fy</span><span class="op">:</span> <span class="kw">null</span>}}<span class="op">,</span></span>
+<span id="cb2-90"><a href="#cb2-90" aria-hidden="true" tabindex="-1"></a><span class="dt">fill</span><span class="op">:</span> {<span class="dt">legend</span><span class="op">:</span> <span class="kw">true</span>}<span class="op">,</span></span>
+<span id="cb2-91"><a href="#cb2-91" aria-hidden="true" tabindex="-1"></a><span class="dt">x</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"(%) Estimated Support for Democrats"</span><span class="op">,</span></span>
+<span id="cb2-92"><a href="#cb2-92" aria-hidden="true" tabindex="-1"></a>    <span class="dt">percent</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb2-93"><a href="#cb2-93" aria-hidden="true" tabindex="-1"></a>    <span class="dt">labelAnchor</span><span class="op">:</span> <span class="st">"center"</span>}<span class="op">,</span></span>
+<span id="cb2-94"><a href="#cb2-94" aria-hidden="true" tabindex="-1"></a><span class="dt">y</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"Race"</span>}<span class="op">,</span></span>
+<span id="cb2-95"><a href="#cb2-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-96"><a href="#cb2-96" aria-hidden="true" tabindex="-1"></a><span class="dt">height</span><span class="op">:</span> <span class="dv">600</span><span class="op">,</span></span>
+<span id="cb2-97"><a href="#cb2-97" aria-hidden="true" tabindex="-1"></a><span class="dt">marginLeft</span><span class="op">:</span> <span class="dv">80</span></span>
+<span id="cb2-98"><a href="#cb2-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-99"><a href="#cb2-99" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-2-1" data-nodetype="declaration">
@@ -333,7 +312,7 @@ gtag('config', 'G-DMTGHZ2N2J', { 'anonymize_ip': true});
 &nbsp;
 <strong>Summary File</strong>
 &nbsp;
-<svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 512c141.4 0 256-114.6 256-256s-114.6-256-256-256C114.6 0 0 114.6 0 256S114.6 512 256 512zM129.2 265.9C131.7 259.9 137.5 256 144 256h64V160c0-17.67 14.33-32 32-32h32c17.67 0 32 14.33 32 32v96h64c6.469 0 12.31 3.891 14.78 9.875c2.484 5.984 1.109 12.86-3.469 17.44l-112 112c-6.248 6.248-16.38 6.248-22.62 0l-112-112C128.1 278.7 126.7 271.9 129.2 265.9z"></path></svg>
+<svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 464a208 208 0 1 1 0-416 208 208 0 1 1 0 416zM256 0a256 256 0 1 0 0 512A256 256 0 1 0 256 0zM376.9 294.6c4.5-4.2 7.1-10.1 7.1-16.3c0-12.3-10-22.3-22.3-22.3H304V160c0-17.7-14.3-32-32-32l-32 0c-17.7 0-32 14.3-32 32v96H150.3C138 256 128 266 128 278.3c0 6.2 2.6 12.1 7.1 16.3l107.1 99.9c3.8 3.5 8.7 5.5 13.8 5.5s10.1-2 13.8-5.5l107.1-99.9z"></path></svg>
 &nbsp;
 <code style="color: #777777;">DE_county_2020_summary.csv</code>
 <br>
@@ -347,7 +326,7 @@ gtag('config', 'G-DMTGHZ2N2J', { 'anonymize_ip': true});
 &nbsp;
 <strong>Precinct Estimates</strong>
 &nbsp;
-<svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 512c141.4 0 256-114.6 256-256s-114.6-256-256-256C114.6 0 0 114.6 0 256S114.6 512 256 512zM129.2 265.9C131.7 259.9 137.5 256 144 256h64V160c0-17.67 14.33-32 32-32h32c17.67 0 32 14.33 32 32v96h64c6.469 0 12.31 3.891 14.78 9.875c2.484 5.984 1.109 12.86-3.469 17.44l-112 112c-6.248 6.248-16.38 6.248-22.62 0l-112-112C128.1 278.7 126.7 271.9 129.2 265.9z"></path></svg>
+<svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 464a208 208 0 1 1 0-416 208 208 0 1 1 0 416zM256 0a256 256 0 1 0 0 512A256 256 0 1 0 256 0zM376.9 294.6c4.5-4.2 7.1-10.1 7.1-16.3c0-12.3-10-22.3-22.3-22.3H304V160c0-17.7-14.3-32-32-32l-32 0c-17.7 0-32 14.3-32 32v96H150.3C138 256 128 266 128 278.3c0 6.2 2.6 12.1 7.1 16.3l107.1 99.9c3.8 3.5 8.7 5.5 13.8 5.5s10.1-2 13.8-5.5l107.1-99.9z"></path></svg>
 &nbsp;
 <code style="color: #777777;">DE_county_2020_precinct.csv</code>
 <br>
@@ -365,6 +344,7 @@ gtag('config', 'G-DMTGHZ2N2J', { 'anonymize_ip': true});
 {"contents":[{"methodName":"interpret","cellName":"ojs-cell-1","inline":false,"source":"ei = transpose(ei_df)\n"},{"methodName":"interpret","cellName":"ojs-cell-2","inline":false,"source":"viewof countyInput = Inputs.select(ei.map(d => d.county),\n                                {sort: true, unique: true, label: \"Choose a county:\"})\n\nPlot.plot({\n\nmarks: [\n  Plot.ruleX([0]),\n  Plot.dot(ei,\n    {\n    x: \"mean\",\n    y: \"race\",\n    fill: \"race\",\n    r: 4,\n    filter: d => d.county === countyInput,\n    sort: {y: null}\n  }),\n  Plot.link(ei,\n  {\n  x1: \"ci_95_lower\",\n  x2: \"ci_95_upper\",\n  y1: \"race\",\n  y2: \"race\",\n  filter: d => d.county === countyInput\n  })\n],\nfacet: {data: ei, y: \"election\", filter: d => d.county === countyInput,\nmarginRight: 150, label: \"Contest\", sort: {fy: null}},\nfill: {legend: true},\nx: {label: \"(%) Estimated Support for Democrats\",\n    percent: true,\n    labelAnchor: \"center\"},\ny: {label: \"Race\"},\n\nheight: 600,\nmarginLeft: 80\n\n})\n"},{"methodName":"interpretQuiet","source":"shinyInput('countyInput')"}]}
 </script>
 <script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
 window._ojs.paths.runtimeToDoc = "../../analyses";
 window._ojs.paths.runtimeToRoot = "../..";
 window._ojs.paths.docToRoot = "..";
@@ -398,9 +378,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -436,10 +430,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -449,8 +442,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -465,6 +467,147 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    if (id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        for (let i = 0; i < 2; i++) {
+          container.appendChild(note.children[i].cloneNode(true));
+        }
+        return container.innerHTML
+      } else {
+        return note.innerHTML;
+      }
+    } else {
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      try { hash = new URL(url).hash; } catch {}
+      const id = hash.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note !== null) {
+        try {
+          const html = processXRef(id, note);
+          instance.setContent(html);
+        } finally {
+          instance.enable();
+          instance.show();
+        }
+      } else {
+        // See if we can fetch this
+        fetch(url.split('#')[0])
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.getElementById(id);
+          if (note !== null) {
+            const html = processXRef(id, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -507,9 +650,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-      <div class="nav-footer-center">RPV Near Me is a project of the <a href="https://www.hlselectionlaw.org/">Election Law Clinic (ELC) at Harvard Law School</a>. <br> The mission of the Election Law Clinic at Harvard Law School is to train the next generation of election lawyers through litigation and advocacy that bring novel academic ideas to the practice of election law. It aims to build power for voters, not politicians, and recognizes that the struggle for voting rights is a struggle for racial justice.<br> Election data is originally from the <a href="https://dataverse.harvard.edu/dataverse/electionscience">Voting and Election Science Team</a>. Joined demographic and election data is used from ALARM Project’s <a href="https://alarm-redist.github.io/posts/2021-08-10-census-2020/">2020 Redistricting Data Files</a>.</div>
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>RPV Near Me is a project of the <a href="https://www.hlselectionlaw.org/">Election Law Clinic (ELC) at Harvard Law School</a>. <br> The mission of the Election Law Clinic at Harvard Law School is to train the next generation of election lawyers through litigation and advocacy that bring novel academic ideas to the practice of election law. It aims to build power for voters, not politicians, and recognizes that the struggle for voting rights is a struggle for racial justice.<br> Election data is originally from the <a href="https://dataverse.harvard.edu/dataverse/electionscience">Voting and Election Science Team</a>. Joined demographic and election data is used from ALARM Project’s <a href="https://alarm-redist.github.io/posts/2021-08-10-census-2020/">2020 Redistricting Data Files</a>.</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
   </div>
 </footer>
+
 
 
 

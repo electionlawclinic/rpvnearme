@@ -26,7 +26,7 @@ alarm_abb <- function() {
     'sos', 'Secretary of State'
   )
 }
-ei_tb <- read_csv(str_glue('https://raw.githubusercontent.com/electionlawclinic/rpvnearme/main/data/{abb}_county_2020_summary.csv'))
+ei_tb <- read_csv(str_glue('https://raw.githubusercontent.com/electionlawclinic/rpvnearme/main/data/{abb}_county_2020_summary_b.csv'))
 
 ei_tb <- ei_tb  |>
   mutate(
@@ -34,10 +34,12 @@ ei_tb <- ei_tb  |>
       race,
       'vap_black' = 'Black',
       'vap_hisp' = 'Hispanic',
-      'vap_oth' = 'Other',
-      'vap_white' = 'White'
+      'vap_oth_b' = 'Other',
+      'vap_white' = 'White',
+      'vap_asian' = 'Asian',
+      'vap_aian' = 'AI/AN'
     ),
-    race = factor(race, levels = c('White', 'Black', 'Hispanic', 'Other'))
+    race = factor(race, levels = c('White', 'Black', 'Hispanic', 'Asian', 'AI/AN', 'Other'))
   ) |>
   filter(str_detect(cand, '_dem')) |>
   mutate(election = word(cand, sep = fixed('_')),

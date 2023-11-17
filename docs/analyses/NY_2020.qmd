@@ -26,18 +26,20 @@ alarm_abb <- function() {
     'sos', 'Secretary of State'
   )
 }
-ei_tb <- read_csv(str_glue('https://raw.githubusercontent.com/electionlawclinic/rpvnearme/main/data/{abb}_county_2020_summary.csv'))
+ei_tb <- read_csv(str_glue('https://raw.githubusercontent.com/electionlawclinic/rpvnearme/main/data/{abb}_county_2020_summary_b.csv'))
 
-ei_tb <- ei_tb  |> 
+ei_tb <- ei_tb  |>
   mutate(
     race = recode(
       race,
       'vap_black' = 'Black',
       'vap_hisp' = 'Hispanic',
-      'vap_oth' = 'Other',
-      'vap_white' = 'White'
+      'vap_oth_b' = 'Other',
+      'vap_white' = 'White',
+      'vap_asian' = 'Asian',
+      'vap_aian' = 'AI/AN'
     ),
-    race = factor(race, levels = c('White', 'Black', 'Hispanic', 'Other'))
+    race = factor(race, levels = c('White', 'Black', 'Hispanic', 'Asian', 'AI/AN', 'Other'))
   ) |>
   filter(str_detect(cand, '_dem')) |>
   mutate(election = word(cand, sep = fixed('_')),
@@ -58,14 +60,14 @@ ei = transpose(ei_df)
 
 ```{ojs, echo = FALSE}
 //| echo: false
-viewof countyInput = Inputs.select(ei.map(d => d.county), 
+viewof countyInput = Inputs.select(ei.map(d => d.county),
                                 {sort: true, unique: true, label: "Choose a county:"})
 
 Plot.plot({
 
 marks: [
   Plot.ruleX([0]),
-  Plot.dot(ei, 
+  Plot.dot(ei,
     {
     x: "mean",
     y: "race",
@@ -86,7 +88,7 @@ marks: [
 facet: {data: ei, y: "election", filter: d => d.county === countyInput,
 marginRight: 150, label: "Contest", sort: {fy: null}},
 fill: {legend: true},
-x: {label: "(%) Estimated Support for Democrats", 
+x: {label: "(%) Estimated Support for Democrats",
     percent: true,
     labelAnchor: "center"},
 y: {label: "Race"},
@@ -113,10 +115,10 @@ tibble(
     stringr::str_glue('https://raw.githubusercontent.com/electionlawclinic/rpvnearme/main/data/{abb}_county_2020_summary.csv'),
     stringr::str_glue('https://raw.githubusercontent.com/electionlawclinic/rpvnearme/main/data/{abb}_county_2020_precinct.csv')
   )
-) |> 
+) |>
   mutate(
     filename = fs::path_file(url)
-  ) |> 
+  ) |>
   pmap(function(name, url, filename, ...) {
       a(
     href = url, target = '_blank', download = filename,
@@ -135,7 +137,7 @@ tibble(
       tags$br()
     )
   )
-  }) |> 
+  }) |>
   as.tags()
 
 ```
