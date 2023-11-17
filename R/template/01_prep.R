@@ -27,7 +27,10 @@ state_md_path <- 'analyses/``STATE``_``type``_``YEAR``/doc_``STATE``_``type``_``
 if (!file_exists(here(state_path))) {
   ``state`` <- read_csv(here(path_data), col_types = cols(GEOID``YR`` = 'c')) |>
     rename_with(function(x) gsub('[0-9.]', '', x), starts_with('GEOID')) |>
-    mutate(vap_oth = vap - vap_white - vap_black - vap_hisp)
+    mutate(
+      vap_oth = vap - vap_white - vap_black - vap_hisp,
+      vap_oth_b = vap_oth - vap_asian - vap_aian
+    )
 
   md <- read_lines(file = here(state_md_path))
   if (md[length(md)] == '### Elections Included in Analysis') {

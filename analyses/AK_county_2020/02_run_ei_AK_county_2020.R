@@ -1,6 +1,6 @@
 ###############################################################################
 # Run EI for `AK_county_2020`
-# © Election Law Clinic, Harvard Law School, December 2022
+# © Election Law Clinic, Harvard Law School, September 2023
 ###############################################################################
 
 # Run the simulation -----
@@ -16,7 +16,7 @@ county_list <- ak |>
   group_by(county) |>
   group_split()
 
-races <- c('vap_white', 'vap_black', 'vap_hisp', 'vap_oth')
+races <- c('vap_white', 'vap_black', 'vap_hisp', 'vap_asian', 'vap_aian', 'vap_oth_b')
 id <- 'GEOID'
 
 ei_l <- lapply(

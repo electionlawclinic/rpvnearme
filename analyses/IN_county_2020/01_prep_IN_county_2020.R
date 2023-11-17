@@ -1,6 +1,6 @@
 ###############################################################################
 # Download and prepare data for `IN_county_2020` analysis
-# © Election Law Clinic, Harvard Law School, December 2022
+# © Election Law Clinic, Harvard Law School, October 2023
 ###############################################################################
 
 suppressMessages({
@@ -25,20 +25,23 @@ state_path <- 'data-out/IN_2020/state_data.rds'
 state_md_path <- 'analyses/IN_county_2020/doc_IN_county_2020.md'
 
 if (!file_exists(here(state_path))) {
-  ind <- read_csv(here(path_data), col_types = cols(GEOID20 = 'c')) |>
+  in2 <- read_csv(here(path_data), col_types = cols(GEOID20 = 'c')) |>
     rename_with(function(x) gsub('[0-9.]', '', x), starts_with('GEOID')) |>
-    mutate(vap_oth = vap - vap_white - vap_black - vap_hisp)
+    mutate(
+      vap_oth = vap - vap_white - vap_black - vap_hisp,
+      vap_oth_b = vap_oth - vap_asian - vap_aian
+    )
 
   md <- read_lines(file = here(state_md_path))
   if (md[length(md)] == '### Elections Included in Analysis') {
-    md <- c(md, paste0('  - ', list_elections(ind)))
+    md <- c(md, paste0('  - ', list_elections(in2)))
     write_lines(md, file = here(state_md_path))
   }
 
-  write_rds(ind, here(state_path), compress = 'gz')
+  write_rds(in2, here(state_path), compress = 'gz')
   cli_process_done()
 
 } else {
-  ind <- read_rds(here(state_path))
+  in2 <- read_rds(here(state_path))
   cli_alert_success('Loaded {.strong IN} data.')
 }

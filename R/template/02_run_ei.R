@@ -16,7 +16,7 @@ county_list <- ``state`` |>
   group_by(county) |>
   group_split()
 
-races <- c('vap_white', 'vap_black', 'vap_hisp', 'vap_oth')
+races <- c('vap_white', 'vap_black', 'vap_hisp', 'vap_asian', 'vap_aian', 'vap_oth_b')
 id <- 'GEOID'
 
 ei_l <- lapply(
@@ -39,6 +39,6 @@ cli_process_done()
 # Output the `ei` objects. Do not edit this path.
 cli_process_start('Saving {.cls ei} outputs.')
 
-write_rds(ei_l, here('data-out/``STATE``_``YEAR``/``SLUG``_ei.rds'), compress = 'xz')
+write_rds(ei_l, here('data-out/``STATE``_``YEAR``/``SLUG``_ei_b.rds'), compress = 'xz')
 
 cli_process_done()

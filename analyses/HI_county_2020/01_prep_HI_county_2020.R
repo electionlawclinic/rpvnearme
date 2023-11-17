@@ -1,6 +1,6 @@
 ###############################################################################
 # Download and prepare data for `HI_county_2020` analysis
-# © Election Law Clinic, Harvard Law School, December 2022
+# © Election Law Clinic, Harvard Law School, September 2023
 ###############################################################################
 
 suppressMessages({
@@ -29,14 +29,14 @@ if (!file_exists(here(state_path))) {
     rename_with(function(x) gsub('[0-9.]', '', x), starts_with('GEOID')) |>
     mutate(
       vap_oth = vap - vap_white - vap_black - vap_hisp,
-      GEOID = str_sub(GEOID, 1, 11)
+      vap_oth_b = vap_oth - vap_asian - vap_aian
     ) |>
-    group_by(GEOID) |>
-    summarize(
-      state = state[1],
-      county = county[1],
-      across(where(is.numeric), sum)
-    )
+  group_by(GEOID) |>
+  summarize(
+    state = state[1],
+    county = county[1],
+    across(where(is.numeric), sum)
+  )
 
   md <- read_lines(file = here(state_md_path))
   if (md[length(md)] == '### Elections Included in Analysis') {
