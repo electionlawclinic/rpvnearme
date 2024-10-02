@@ -110,10 +110,13 @@ Each point indicates the estimated mean for that race or ethnicity's estimated s
 
 state <- censable::match_name(abb)
 tibble(
-  name = c('Summary File', 'Precinct Estimates'),
+  name = c('Summary File A', 'Precinct Estimates A',
+           'Summary File B', 'Precinct Estimates B'),
   url = c(
     stringr::str_glue('https://raw.githubusercontent.com/electionlawclinic/rpvnearme/main/data/{abb}_county_2020_summary.csv'),
-    stringr::str_glue('https://raw.githubusercontent.com/electionlawclinic/rpvnearme/main/data/{abb}_county_2020_precinct.csv')
+    stringr::str_glue('https://raw.githubusercontent.com/electionlawclinic/rpvnearme/main/data/{abb}_county_2020_precinct.csv'),
+    stringr::str_glue('https://raw.githubusercontent.com/electionlawclinic/rpvnearme/main/data/{abb}_county_2020_summary_b.csv'),
+    stringr::str_glue('https://raw.githubusercontent.com/electionlawclinic/rpvnearme/main/data/{abb}_county_2020_precinct_b.csv')
   )
 ) |>
   mutate(
