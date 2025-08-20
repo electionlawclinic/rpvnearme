@@ -12,6 +12,4 @@ if (FALSE) {
   saveRDS(usa, 'docs/usa_shp.rds', compress = 'xz')
 
 
-} else {
-  usa <- readRDS('docs/usa_shp.rds')
 }
