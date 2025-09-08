@@ -30,7 +30,7 @@ process_rds <- function(state, version = '') {
 
 process_national_csv <- function(type = 'county', version = '') {
   purrr::map_dfr(
-    fs::dir_ls(path = 'data', regexp = stringr::str_glue('.+{type}.+summary\\.csv')),
+    fs::dir_ls(path = 'data', regexp = stringr::str_glue('.+{type}.+summary{version}\\.csv')),
     readr::read_csv,
     col_types = readr::cols(
       county = readr::col_character(),
@@ -44,5 +44,5 @@ process_national_csv <- function(type = 'county', version = '') {
     .id = 'state'
   ) |>
     dplyr::mutate(state = stringr::str_sub(state, 6, 7)) |>
-    readr::write_csv(stringr::str_sub('data/national_summary_2020{version}.csv'))
+    readr::write_csv(stringr::str_glue('data/national_summary_2020{version}.csv'))
 }
