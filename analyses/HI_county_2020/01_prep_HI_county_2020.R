@@ -29,7 +29,8 @@ if (!file_exists(here(state_path))) {
     rename_with(function(x) gsub('[0-9.]', '', x), starts_with('GEOID')) |>
     mutate(
       vap_oth = vap - vap_white - vap_black - vap_hisp,
-      vap_oth_b = vap_oth - vap_asian - vap_aian
+      vap_oth_b = vap_oth - vap_asian - vap_aian,
+      GEOID = str_sub(GEOID, 1, 11)
     ) |>
   group_by(GEOID) |>
   summarize(
