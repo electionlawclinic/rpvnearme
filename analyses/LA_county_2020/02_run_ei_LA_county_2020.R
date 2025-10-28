@@ -12,6 +12,20 @@ elecs <- la |>
   stringr::str_sub(1, 6) |>
   unique()
 
+la <- la |>
+  select(-starts_with(c('uss_16_', 'sos_18_', 'uss_20_')))
+
+la <- la |>
+  rename_with(
+    .fn = \(x) str_replace(x, 'uss_r16_', 'uss_16_')
+  ) |>
+  rename_with(
+    .fn = \(x) str_replace(x, 'sos_r18_', 'sos_18_')
+  ) |>
+  rename_with(
+    .fn = \(x) str_replace(x, 'uss_r20_', 'uss_20_')
+  )
+
 county_list <- la |>
   group_by(county) |>
   group_split()
