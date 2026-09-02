@@ -31,3 +31,7 @@ RPV Near Me is intended to inform the public, not serve as evidence for litigati
 We are exploring adding RPV data for all the cities, towns, and villages in the U.S. If this would be useful to you, please contact us at [elc\@law.harvard.edu](mailto:elc@law.harvard.edu) to let us know.
 
 If there are other related products that would be useful in your efforts to enfranchise communities of color at the local level, please also reach out with a description of those products [elc\@law.harvard.edu](mailto:elc@law.harvard.edu).
+
+## Contributors
+
+RPV Near Me was built thanks to the efforts of multiple key contributors, including [Christopher T. Kenny](https://christophertkenny.com/), [Angelo Dagonel](https://sites.google.com/g.harvard.edu/dagonel/), and Alexander Fung.
