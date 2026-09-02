@@ -20,7 +20,7 @@ The RPV estimates on this site were generated using the techniques approved by f
 
 The code to replicate the analyses is available on [GitHub](https://github.com/electionlawclinic/rpvnearme).
 
-The analysis was conducted by [Christopher T. Kenny](https://christophertkenny.com/), a Ph.D. candidate in the Department of Government at Harvard University.
+The analysis for 2020 and earlier was conducted by [Christopher T. Kenny](https://christophertkenny.com/) when he was a Ph.D. candidate in the Department of Government at Harvard University. The 2024 analysis was conducted by Alexander Fung while he was a quantitative researcher at ELC.
 
 ## Using This Site
 
