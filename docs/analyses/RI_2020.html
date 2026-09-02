@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.55">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -10,10 +10,16 @@
 
 <title>Rhode Island 2020 – RPV Near Me</title>
 <style>
-code{white-space: pre-wrap;}
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -22,8 +28,9 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 /* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -34,7 +41,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -66,15 +73,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="../elc_logo.png" rel="icon" type="image/png">
-<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-4d3679a3291c5d2fa76912fa1a3c5959.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -114,17 +122,14 @@ gtag('config', 'G-DMTGHZ2N2J', { 'anonymize_ip': true});
 <script type="module" src="../site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
 <link href="../site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 <script type="ojs-define">
-
-{"contents":[{"name":"ei_df","value":{"county":["Bristol County","Bristol County","Bristol County","Bristol County","Bristol County","Bristol County","Kent County","Kent County","Kent County","Kent County","Kent County","Kent County","Newport County","Newport County","Newport County","Newport County","Newport County","Newport County","Providence County","Providence County","Providence County","Providence County","Providence County","Providence County","Washington County","Washington County","Washington County","Washington County","Washington County","Washington County","Bristol County","Bristol County","Bristol County","Bristol County","Bristol County","Bristol County","Kent County","Kent County","Kent County","Kent County","Kent County","Kent County","Newport County","Newport County","Newport County","Newport County","Newport County","Newport County","Providence County","Providence County","Providence County","Providence County","Providence County","Providence County","Washington County","Washington County","Washington County","Washington County","Washington County","Washington County","Bristol County","Bristol County","Bristol County","Bristol County","Bristol County","Bristol County","Kent County","Kent County","Kent County","Kent County","Kent County","Kent County","Newport County","Newport County","Newport County","Newport County","Newport County","Newport County","Providence County","Providence County","Providence County","Providence County","Providence County","Providence County","Washington County","Washington County","Washington County","Washington County","Washington County","Washington County","Bristol County","Bristol County","Bristol County","Bristol County","Bristol County","Bristol County","Kent County","Kent County","Kent County","Kent County","Kent County","Kent County","Newport County","Newport County","Newport County","Newport County","Newport County","Newport County","Providence County","Providence County","Providence County","Providence County","Providence County","Providence County","Washington County","Washington County","Washington County","Washington County","Washington County","Washington County","Bristol County","Bristol County","Bristol County","Bristol County","Bristol County","Bristol County","Kent County","Kent County","Kent County","Kent County","Kent County","Kent County","Newport County","Newport County","Newport County","Newport County","Newport County","Newport County","Providence County","Providence County","Providence County","Providence County","Providence County","Providence County","Washington County","Washington County","Washington County","Washington County","Washington County","Washington County","Bristol County","Bristol County","Bristol County","Bristol County","Bristol County","Bristol County","Kent County","Kent County","Kent County","Kent County","Kent County","Kent County","Newport County","Newport County","Newport County","Newport County","Newport County","Newport County","Providence County","Providence County","Providence County","Providence County","Providence County","Providence County","Washington County","Washington County","Washington County","Washington County","Washington County","Washington County"],"race":["White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other"],"cand":["pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","gov_18_dem_rai","gov_18_dem_rai","gov_18_dem_rai","gov_18_dem_rai","gov_18_dem_rai","gov_18_dem_rai","gov_18_dem_rai","gov_18_dem_rai","gov_18_dem_rai","gov_18_dem_rai","gov_18_dem_rai","gov_18_dem_rai","gov_18_dem_rai","gov_18_dem_rai","gov_18_dem_rai","gov_18_dem_rai","gov_18_dem_rai","gov_18_dem_rai","gov_18_dem_rai","gov_18_dem_rai","gov_18_dem_rai","gov_18_dem_rai","gov_18_dem_rai","gov_18_dem_rai","gov_18_dem_rai","gov_18_dem_rai","gov_18_dem_rai","gov_18_dem_rai","gov_18_dem_rai","gov_18_dem_rai","sos_18_dem_gor","sos_18_dem_gor","sos_18_dem_gor","sos_18_dem_gor","sos_18_dem_gor","sos_18_dem_gor","sos_18_dem_gor","sos_18_dem_gor","sos_18_dem_gor","sos_18_dem_gor","sos_18_dem_gor","sos_18_dem_gor","sos_18_dem_gor","sos_18_dem_gor","sos_18_dem_gor","sos_18_dem_gor","sos_18_dem_gor","sos_18_dem_gor","sos_18_dem_gor","sos_18_dem_gor","sos_18_dem_gor","sos_18_dem_gor","sos_18_dem_gor","sos_18_dem_gor","sos_18_dem_gor","sos_18_dem_gor","sos_18_dem_gor","sos_18_dem_gor","sos_18_dem_gor","sos_18_dem_gor","uss_18_dem_whi","uss_18_dem_whi","uss_18_dem_whi","uss_18_dem_whi","uss_18_dem_whi","uss_18_dem_whi","uss_18_dem_whi","uss_18_dem_whi","uss_18_dem_whi","uss_18_dem_whi","uss_18_dem_whi","uss_18_dem_whi","uss_18_dem_whi","uss_18_dem_whi","uss_18_dem_whi","uss_18_dem_whi","uss_18_dem_whi","uss_18_dem_whi","uss_18_dem_whi","uss_18_dem_whi","uss_18_dem_whi","uss_18_dem_whi","uss_18_dem_whi","uss_18_dem_whi","uss_18_dem_whi","uss_18_dem_whi","uss_18_dem_whi","uss_18_dem_whi","uss_18_dem_whi","uss_18_dem_whi","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","uss_20_dem_ree","uss_20_dem_ree","uss_20_dem_ree","uss_20_dem_ree","uss_20_dem_ree","uss_20_dem_ree","uss_20_dem_ree","uss_20_dem_ree","uss_20_dem_ree","uss_20_dem_ree","uss_20_dem_ree","uss_20_dem_ree","uss_20_dem_ree","uss_20_dem_ree","uss_20_dem_ree","uss_20_dem_ree","uss_20_dem_ree","uss_20_dem_ree","uss_20_dem_ree","uss_20_dem_ree","uss_20_dem_ree","uss_20_dem_ree","uss_20_dem_ree","uss_20_dem_ree","uss_20_dem_ree","uss_20_dem_ree","uss_20_dem_ree","uss_20_dem_ree","uss_20_dem_ree","uss_20_dem_ree"],"mean":[0.6285,0.5213,0.4823,0.4788,0.5172,0.4997,0.4829,0.5134,0.5631,0.5899,0.4722,0.5126,0.6066,0.6226,0.6984,0.5314,0.5012,0.5868,0.474,0.922,0.9564,0.876,0.5404,0.8953,0.5557,0.519,0.5271,0.5193,0.5496,0.5219,0.6543,0.4998,0.482,0.5171,0.5028,0.4975,0.4831,0.5465,0.6044,0.548,0.5318,0.5123,0.6681,0.6847,0.8083,0.5577,0.5097,0.5783,0.4823,0.8979,0.941,0.8042,0.5146,0.8758,0.594,0.5313,0.5228,0.5516,0.5367,0.4751,0.7204,0.5051,0.4761,0.498,0.5104,0.5052,0.6261,0.5218,0.603,0.5257,0.4876,0.4539,0.696,0.6924,0.7238,0.5409,0.5573,0.5911,0.6077,0.9178,0.9534,0.8511,0.4872,0.9204,0.6635,0.5185,0.5412,0.556,0.5299,0.4548,0.6502,0.5095,0.4893,0.5132,0.508,0.4774,0.5423,0.5099,0.566,0.5437,0.4566,0.4961,0.6455,0.6689,0.7306,0.5535,0.5239,0.6091,0.5346,0.921,0.9539,0.856,0.5112,0.8963,0.5952,0.5237,0.4967,0.4982,0.5192,0.4961,0.6595,0.5008,0.5191,0.5106,0.4932,0.4954,0.529,0.5313,0.5577,0.6225,0.496,0.5048,0.6617,0.6366,0.7109,0.5332,0.5246,0.6023,0.5284,0.8748,0.8233,0.8644,0.4658,0.8775,0.6073,0.5365,0.5102,0.5684,0.5226,0.4731,0.7208,0.5033,0.4933,0.4884,0.49,0.4834,0.6101,0.5474,0.579,0.5853,0.5132,0.4994,0.7036,0.6675,0.7291,0.5708,0.5295,0.5715,0.604,0.9002,0.8938,0.8738,0.5554,0.9079,0.656,0.5285,0.4961,0.542,0.5139,0.4773],"sd":[0.0107,0.1827,0.1776,0.1848,0.1792,0.1768,0.0121,0.1639,0.165,0.1595,0.1689,0.1613,0.0115,0.1519,0.1259,0.1719,0.169,0.1583,0.0047,0.0187,0.0069,0.0377,0.1548,0.0345,0.0082,0.162,0.1535,0.1528,0.1702,0.1607,0.0112,0.174,0.1738,0.1804,0.1879,0.1682,0.0129,0.1893,0.151,0.1578,0.1633,0.167,0.011,0.125,0.1224,0.1646,0.1695,0.1528,0.0059,0.0287,0.0091,0.052,0.1295,0.0335,0.0095,0.1696,0.1705,0.175,0.169,0.1692,0.0111,0.1801,0.1752,0.1843,0.1991,0.1735,0.0125,0.1802,0.15,0.1624,0.1562,0.1822,0.0108,0.1412,0.1206,0.163,0.1804,0.1541,0.0045,0.0185,0.0077,0.0411,0.1142,0.0184,0.0089,0.1653,0.1821,0.1673,0.1692,0.1909,0.0104,0.1782,0.1696,0.1771,0.1951,0.1682,0.0121,0.1764,0.1553,0.1719,0.1923,0.1808,0.0107,0.1375,0.1201,0.1634,0.1693,0.1529,0.0049,0.0215,0.0076,0.0375,0.1226,0.0228,0.0086,0.1735,0.1687,0.1629,0.166,0.1593,0.0105,0.1732,0.1703,0.1746,0.1825,0.169,0.0119,0.1652,0.1671,0.1742,0.157,0.1495,0.011,0.1482,0.1321,0.1629,0.1818,0.1623,0.0061,0.034,0.0152,0.0467,0.145,0.0397,0.0084,0.1709,0.1653,0.1787,0.1758,0.1696,0.0112,0.1803,0.1844,0.1766,0.1877,0.1682,0.011,0.1625,0.1416,0.1596,0.1602,0.159,0.0105,0.1411,0.1145,0.1663,0.1705,0.1573,0.0056,0.0304,0.0124,0.0512,0.1669,0.0385,0.0084,0.1904,0.1662,0.1538,0.1614,0.172],"ci_95_lower":[0.607,0.1788,0.108,0.0789,0.1646,0.1675,0.4602,0.1751,0.2521,0.273,0.1808,0.1984,0.5863,0.2886,0.4226,0.1754,0.1679,0.2581,0.4651,0.8786,0.9419,0.7872,0.2235,0.8085,0.5391,0.2115,0.235,0.2218,0.2179,0.2058,0.6321,0.1777,0.1582,0.1644,0.1491,0.1722,0.4596,0.1774,0.3177,0.2203,0.2147,0.1948,0.647,0.4145,0.5332,0.2365,0.1917,0.2658,0.471,0.8314,0.9223,0.6918,0.2545,0.8057,0.5751,0.2266,0.1843,0.2172,0.2028,0.1715,0.6979,0.1631,0.1504,0.1386,0.1597,0.1867,0.6025,0.1805,0.2955,0.1892,0.2023,0.1257,0.6759,0.3811,0.456,0.2071,0.1874,0.2774,0.5994,0.8752,0.9375,0.757,0.2671,0.8802,0.6457,0.2004,0.2043,0.219,0.188,0.1121,0.63,0.1758,0.172,0.166,0.1469,0.1637,0.517,0.1431,0.242,0.2259,0.0955,0.1507,0.6245,0.3821,0.4641,0.232,0.188,0.3027,0.5251,0.8727,0.938,0.7753,0.258,0.8465,0.5782,0.1852,0.1939,0.1912,0.1965,0.2035,0.6394,0.1771,0.1864,0.1776,0.1465,0.1799,0.5046,0.2041,0.2333,0.2432,0.1947,0.2154,0.6413,0.3115,0.4308,0.2231,0.177,0.2675,0.5175,0.7978,0.794,0.7604,0.2006,0.7796,0.591,0.1969,0.1967,0.2213,0.1919,0.1547,0.6983,0.1513,0.1409,0.1607,0.1466,0.1752,0.5896,0.2174,0.2932,0.2409,0.2224,0.2075,0.6841,0.3415,0.4841,0.2314,0.2082,0.2586,0.5943,0.8275,0.8688,0.7266,0.241,0.8177,0.6387,0.1742,0.1782,0.2385,0.1986,0.159],"ci_95_upper":[0.6494,0.8641,0.8022,0.818,0.8469,0.8347,0.5063,0.7949,0.8566,0.8765,0.8138,0.7945,0.6323,0.8795,0.894,0.8319,0.8165,0.8591,0.4834,0.9527,0.9686,0.9345,0.8036,0.9453,0.5711,0.8247,0.811,0.8019,0.8613,0.8109,0.6761,0.8367,0.8118,0.8672,0.848,0.8123,0.5082,0.8675,0.8793,0.8298,0.847,0.8225,0.6904,0.8977,0.9623,0.8487,0.8278,0.8515,0.494,0.9449,0.9573,0.8947,0.7767,0.9331,0.6125,0.8645,0.8431,0.8699,0.8446,0.8087,0.7423,0.8402,0.8042,0.853,0.9166,0.8399,0.6505,0.8344,0.842,0.8272,0.7754,0.8165,0.718,0.919,0.9128,0.8241,0.8632,0.8529,0.6173,0.9491,0.9671,0.9196,0.7222,0.9528,0.6808,0.828,0.8565,0.8568,0.8341,0.8337,0.6711,0.8484,0.8063,0.8335,0.8741,0.7949,0.566,0.8392,0.8341,0.8683,0.7973,0.8435,0.666,0.906,0.9264,0.8453,0.8334,0.8687,0.5446,0.9545,0.9677,0.919,0.7292,0.9351,0.6113,0.8441,0.8208,0.8016,0.8248,0.7833,0.6796,0.8224,0.8339,0.8382,0.838,0.8142,0.5537,0.8288,0.8633,0.8981,0.7846,0.7931,0.6836,0.8817,0.9243,0.8285,0.8586,0.8964,0.5412,0.9302,0.8538,0.9334,0.7279,0.9362,0.624,0.8381,0.8172,0.8936,0.8445,0.779,0.7428,0.8407,0.8417,0.8254,0.8536,0.81,0.6323,0.8385,0.8421,0.8501,0.8112,0.7886,0.7251,0.8938,0.9093,0.8572,0.8466,0.8427,0.6164,0.9476,0.9179,0.9379,0.8739,0.9597,0.6717,0.8896,0.7924,0.8192,0.811,0.8102],"election":["President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Secretary of State 2018","Secretary of State 2018","Secretary of State 2018","Secretary of State 2018","Secretary of State 2018","Secretary of State 2018","Secretary of State 2018","Secretary of State 2018","Secretary of State 2018","Secretary of State 2018","Secretary of State 2018","Secretary of State 2018","Secretary of State 2018","Secretary of State 2018","Secretary of State 2018","Secretary of State 2018","Secretary of State 2018","Secretary of State 2018","Secretary of State 2018","Secretary of State 2018","Secretary of State 2018","Secretary of State 2018","Secretary of State 2018","Secretary of State 2018","Secretary of State 2018","Secretary of State 2018","Secretary of State 2018","Secretary of State 2018","Secretary of State 2018","Secretary of State 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020"],"year":[2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020]}}]}
-
+{"contents":[{"name":"ei_df","value":{"county":["Bristol County","Bristol County","Bristol County","Bristol County","Bristol County","Bristol County","Kent County","Kent County","Kent County","Kent County","Kent County","Kent County","Newport County","Newport County","Newport County","Newport County","Newport County","Newport County","Providence County","Providence County","Providence County","Providence County","Providence County","Providence County","Washington County","Washington County","Washington County","Washington County","Washington County","Washington County","Bristol County","Bristol County","Bristol County","Bristol County","Bristol County","Bristol County","Kent County","Kent County","Kent County","Kent County","Kent County","Kent County","Newport County","Newport County","Newport County","Newport County","Newport County","Newport County","Providence County","Providence County","Providence County","Providence County","Providence County","Providence County","Washington County","Washington County","Washington County","Washington County","Washington County","Washington County","Bristol County","Bristol County","Bristol County","Bristol County","Bristol County","Bristol County","Kent County","Kent County","Kent County","Kent County","Kent County","Kent County","Newport County","Newport County","Newport County","Newport County","Newport County","Newport County","Providence County","Providence County","Providence County","Providence County","Providence County","Providence County","Washington County","Washington County","Washington County","Washington County","Washington County","Washington County","Bristol County","Bristol County","Bristol County","Bristol County","Bristol County","Bristol County","Kent County","Kent County","Kent County","Kent County","Kent County","Kent County","Newport County","Newport County","Newport County","Newport County","Newport County","Newport County","Providence County","Providence County","Providence County","Providence County","Providence County","Providence County","Washington County","Washington County","Washington County","Washington County","Washington County","Washington County","Bristol County","Bristol County","Bristol County","Bristol County","Bristol County","Bristol County","Kent County","Kent County","Kent County","Kent County","Kent County","Kent County","Newport County","Newport County","Newport County","Newport County","Newport County","Newport County","Providence County","Providence County","Providence County","Providence County","Providence County","Providence County","Washington County","Washington County","Washington County","Washington County","Washington County","Washington County","Bristol County","Bristol County","Bristol County","Bristol County","Bristol County","Bristol County","Kent County","Kent County","Kent County","Kent County","Kent County","Kent County","Newport County","Newport County","Newport County","Newport County","Newport County","Newport County","Providence County","Providence County","Providence County","Providence County","Providence County","Providence County","Washington County","Washington County","Washington County","Washington County","Washington County","Washington County"],"race":["White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other"],"cand":["pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","gov_18_dem_rai","gov_18_dem_rai","gov_18_dem_rai","gov_18_dem_rai","gov_18_dem_rai","gov_18_dem_rai","gov_18_dem_rai","gov_18_dem_rai","gov_18_dem_rai","gov_18_dem_rai","gov_18_dem_rai","gov_18_dem_rai","gov_18_dem_rai","gov_18_dem_rai","gov_18_dem_rai","gov_18_dem_rai","gov_18_dem_rai","gov_18_dem_rai","gov_18_dem_rai","gov_18_dem_rai","gov_18_dem_rai","gov_18_dem_rai","gov_18_dem_rai","gov_18_dem_rai","gov_18_dem_rai","gov_18_dem_rai","gov_18_dem_rai","gov_18_dem_rai","gov_18_dem_rai","gov_18_dem_rai","sos_18_dem_gor","sos_18_dem_gor","sos_18_dem_gor","sos_18_dem_gor","sos_18_dem_gor","sos_18_dem_gor","sos_18_dem_gor","sos_18_dem_gor","sos_18_dem_gor","sos_18_dem_gor","sos_18_dem_gor","sos_18_dem_gor","sos_18_dem_gor","sos_18_dem_gor","sos_18_dem_gor","sos_18_dem_gor","sos_18_dem_gor","sos_18_dem_gor","sos_18_dem_gor","sos_18_dem_gor","sos_18_dem_gor","sos_18_dem_gor","sos_18_dem_gor","sos_18_dem_gor","sos_18_dem_gor","sos_18_dem_gor","sos_18_dem_gor","sos_18_dem_gor","sos_18_dem_gor","sos_18_dem_gor","uss_18_dem_whi","uss_18_dem_whi","uss_18_dem_whi","uss_18_dem_whi","uss_18_dem_whi","uss_18_dem_whi","uss_18_dem_whi","uss_18_dem_whi","uss_18_dem_whi","uss_18_dem_whi","uss_18_dem_whi","uss_18_dem_whi","uss_18_dem_whi","uss_18_dem_whi","uss_18_dem_whi","uss_18_dem_whi","uss_18_dem_whi","uss_18_dem_whi","uss_18_dem_whi","uss_18_dem_whi","uss_18_dem_whi","uss_18_dem_whi","uss_18_dem_whi","uss_18_dem_whi","uss_18_dem_whi","uss_18_dem_whi","uss_18_dem_whi","uss_18_dem_whi","uss_18_dem_whi","uss_18_dem_whi","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","uss_20_dem_ree","uss_20_dem_ree","uss_20_dem_ree","uss_20_dem_ree","uss_20_dem_ree","uss_20_dem_ree","uss_20_dem_ree","uss_20_dem_ree","uss_20_dem_ree","uss_20_dem_ree","uss_20_dem_ree","uss_20_dem_ree","uss_20_dem_ree","uss_20_dem_ree","uss_20_dem_ree","uss_20_dem_ree","uss_20_dem_ree","uss_20_dem_ree","uss_20_dem_ree","uss_20_dem_ree","uss_20_dem_ree","uss_20_dem_ree","uss_20_dem_ree","uss_20_dem_ree","uss_20_dem_ree","uss_20_dem_ree","uss_20_dem_ree","uss_20_dem_ree","uss_20_dem_ree","uss_20_dem_ree"],"mean":[0.628474652102485,0.521342207820161,0.482286878014108,0.478838984615098,0.517233055284293,0.499744629293602,0.482867986299383,0.513393888286052,0.563068049469482,0.589852670711811,0.472245043057066,0.512609059281096,0.60664962452044,0.622561662954802,0.698362955146578,0.531384563066525,0.501187632737516,0.586835754086711,0.473951380233207,0.922038680977474,0.95640704615581,0.876010690511081,0.540449551865923,0.89533417914895,0.555674087653972,0.519047334159654,0.527132963253763,0.519308339148452,0.549581640684942,0.521865561200771,0.654260714304242,0.499782206400737,0.482021012789089,0.517135401075752,0.502752591659157,0.497458795048891,0.483086638972392,0.546536489548285,0.604363356571181,0.548028376016286,0.531777758313346,0.512270403485882,0.668120647413149,0.684692188793372,0.808264221759054,0.557721555808559,0.509689024275725,0.578254111537747,0.482272812487082,0.897876114984851,0.940996523410343,0.804222420413234,0.514611535332242,0.875829342972069,0.594036886108109,0.531299718434598,0.522820009860767,0.551643606261408,0.536684026346025,0.475110568761279,0.720401104698115,0.505077812732478,0.476085170649457,0.497979332594761,0.510430650356374,0.505217760739615,0.626070664254753,0.521772572555468,0.602963505079823,0.525697663494069,0.487616680360191,0.453920422225495,0.696001408235382,0.692362723057328,0.723784975076542,0.540939744412456,0.557338669511628,0.591080473929395,0.607711147050307,0.917761929897459,0.9533878527408,0.851090318286463,0.487185631697394,0.920351688541992,0.663538799667505,0.518461114026509,0.541152770300078,0.555950062250195,0.529915149168149,0.454793480192058,0.650158753722756,0.509488842561414,0.489339741343081,0.513199267085353,0.507996890887752,0.47736102858846,0.542261027731078,0.509854811220342,0.566024077861347,0.543722963228322,0.456602425294347,0.496070699829436,0.64549182435998,0.668850189073661,0.730554321184415,0.553487742387798,0.523878938775513,0.609137203035686,0.534592957538614,0.92102941774301,0.953923610240989,0.856009527976413,0.511179445040454,0.896309078928253,0.595211449097318,0.523697694800127,0.49671154871868,0.498178058890819,0.519211511485653,0.496146867706154,0.659485400746889,0.500787846190463,0.519145654704824,0.510560092999059,0.493160467920483,0.495417668026026,0.528979154485849,0.531266247350704,0.5576560679805,0.62253054406592,0.495994173218373,0.504824460615614,0.661650619838743,0.636559969963196,0.710893929594064,0.533196849448185,0.524581085018392,0.602257021494101,0.528407107347087,0.874800073945856,0.823348384775042,0.864437943040459,0.465821210031912,0.877542226895586,0.607323794688773,0.536548036698617,0.51020979745279,0.568446186254349,0.522564373229641,0.473135904981368,0.720846429902392,0.503324833649618,0.493344572832981,0.488369883764319,0.490039686068878,0.483416003980825,0.610143619966259,0.547399147316659,0.578953205184368,0.585335026149752,0.513194138028494,0.499366120872952,0.703630761737467,0.667534738941993,0.729098162813918,0.570783807090371,0.529481855551301,0.571544890882176,0.60400419798764,0.900156947310586,0.893820089332612,0.873753218471698,0.55543108433256,0.907891385347024,0.656049621102217,0.528485617360926,0.496068150334956,0.541950831082996,0.513945466241739,0.477343814412432],"sd":[0.0107013988984567,0.182682176509432,0.177585111847853,0.184818455882682,0.179204272172412,0.176838976539908,0.0120580389117348,0.16392307411937,0.16498877026375,0.159456529315164,0.168946454935913,0.161254702136532,0.0114562623063236,0.151913645160284,0.125872437146833,0.171944434632696,0.169033431908872,0.158322928820502,0.00469743855103527,0.0187117452547716,0.00685977773686608,0.0376823219639895,0.154803966908043,0.0344620928329059,0.00824299710594135,0.162019561441452,0.153490017749159,0.152839874231784,0.170196818411657,0.160661832338207,0.0112416736822498,0.174007443148959,0.173822317061391,0.18043391152845,0.187946621065989,0.168157852328825,0.0128574032060296,0.189280077723453,0.151019610456681,0.157807242356848,0.163331553328545,0.166997548942832,0.0109913325633104,0.125027669673622,0.122351848160849,0.16457193862327,0.169519760400352,0.152819528950587,0.00588310577096875,0.0286938249376491,0.00905738616606747,0.0520456448726571,0.129486323079492,0.0334858625062796,0.00948025809672777,0.169626426020532,0.17049212232225,0.174953892787448,0.168992379902565,0.169201303560716,0.0111321293176078,0.180133670352451,0.175175432389922,0.184251496585748,0.199054789245748,0.173532215156764,0.0124618836270315,0.180171394756734,0.149954802095558,0.16238670906133,0.156178047786062,0.182199741003815,0.0107681483698809,0.141166331062599,0.120615414607588,0.162961904966208,0.180445048445521,0.154069067478184,0.0044774801109858,0.0184556175366073,0.00772944683553934,0.0410886190828939,0.11418648850375,0.0184228686108716,0.00885912513307501,0.165342340934517,0.182108727329434,0.167345744431928,0.169183136025248,0.190920151734782,0.0104202383644956,0.178199771369435,0.169580268053015,0.177072926486074,0.195142573705976,0.16817690076215,0.0121499221232706,0.176358249569362,0.155327404074789,0.171851220815757,0.192318118587414,0.180758415047935,0.010689086871697,0.137520342535794,0.120138007119547,0.163444294423027,0.169288823245263,0.152925392479549,0.00490680725994063,0.0215235970391148,0.00761156558874632,0.0374791491448584,0.122564274913271,0.0227566866526184,0.0085656720008139,0.173518670222218,0.168727274625812,0.162875407085991,0.166045801596181,0.159284027741537,0.0104758089790493,0.173244232600065,0.17030919738516,0.17460310394329,0.182471789889718,0.168970116849974,0.0119423922732647,0.165156901049185,0.167112681122462,0.17424924522523,0.157040422790218,0.149515319692503,0.010961748419361,0.148226945205149,0.132145503074327,0.162883054295541,0.181797503858075,0.162326752939537,0.00610146304635406,0.0339532418528015,0.0151903305758009,0.0466595703297686,0.144955097080982,0.0396941173834713,0.00844647991420389,0.170928583314121,0.165349647459107,0.178708735724966,0.175827118531235,0.16958932863431,0.0112491027120855,0.180262334957802,0.184410675932463,0.176609573155245,0.187733603376139,0.168244550863777,0.0110104297515737,0.162456771945966,0.141648146745248,0.159625424672102,0.160218396958304,0.158984007285013,0.0104860361639156,0.141143424527238,0.114514685219283,0.166252868619611,0.170465583375253,0.157303712905993,0.00557701376057039,0.0303761472143888,0.0123688304432162,0.0512131377413065,0.166881462642315,0.0384764655493833,0.00843689199884933,0.19038317559182,0.166209640073836,0.153798402770606,0.161418782966606,0.171982195818758],"ci_95_lower":[0.606982147909297,0.178787034871078,0.107976891095538,0.0789079306894775,0.164590525288226,0.167473997210097,0.460157868085344,0.175081084660599,0.252079610570953,0.272969324674759,0.180800915862315,0.198414321210526,0.586298677906963,0.288574944214177,0.422615605324902,0.175408001661127,0.167924996221721,0.258090207088708,0.46513052589616,0.878558241912056,0.94193894465619,0.787245028250513,0.223473165311438,0.808516134919122,0.539146403644455,0.21154123177456,0.235041601065169,0.22179134994131,0.217913565072655,0.205816139340052,0.632149292095369,0.177653989286909,0.158232130493526,0.164402635846112,0.149093585069916,0.172226549608479,0.459609011108193,0.177437143555204,0.317662000476876,0.220320617058827,0.214723311757065,0.194807229515252,0.646971373383657,0.41449030784815,0.533221540632502,0.23648604450227,0.191655295386895,0.265825323576498,0.470978410224969,0.831376990526174,0.922289357875731,0.691751909200767,0.254514517478452,0.805679615402519,0.575141708654184,0.226600608661875,0.184271640333694,0.217152981703264,0.202771390791006,0.171460022352881,0.697869265627571,0.163100222210913,0.1504215524882,0.138595193626422,0.159696007327579,0.186696788082949,0.602454438117336,0.180470191395303,0.295487569943651,0.189155918835033,0.202268760456206,0.125708411812401,0.67593735492823,0.381146586162192,0.456045082727019,0.207129631213223,0.187431579427432,0.277379048518189,0.599444834280712,0.87521909530371,0.93748186154688,0.75703678027676,0.267069317319907,0.880193299385197,0.645725319133179,0.200353893972039,0.204290410118914,0.218956671397574,0.187993252637209,0.112062175708475,0.629971349376651,0.175817523686433,0.172002341307071,0.165952492887441,0.146850950522403,0.163711218918113,0.516978286767885,0.1431469985029,0.241994861621708,0.22587763023695,0.095516525019931,0.150655470556557,0.624543584566806,0.382109155203165,0.464100314552606,0.232000467181585,0.187985752683026,0.302698377051442,0.525121254686428,0.872705304876167,0.937955586288179,0.775274044852866,0.257968546435398,0.846490653311284,0.578175459404377,0.185211603580772,0.193893799913703,0.191204543517495,0.196511114302467,0.203545591374539,0.63942801401721,0.177146238911668,0.186403860690739,0.177557917780006,0.146522562703934,0.179863710636671,0.504649631100371,0.204077273396298,0.233304597705868,0.243174393574554,0.194714434759427,0.21539622032567,0.64128410522978,0.311487724371613,0.430759300691229,0.223114692582785,0.177043811242599,0.267519699973522,0.517540521419903,0.797846581888397,0.793963406613853,0.760374825544257,0.200591171649358,0.779646063818926,0.590962349883438,0.196919952647264,0.196727771121502,0.221312686265952,0.191871552271549,0.154731777994198,0.698321884580742,0.151256043069599,0.14087426170316,0.160702197887238,0.146586283324654,0.175210250410535,0.589573542011231,0.217441432812175,0.293204012820116,0.240945803005487,0.222394202474847,0.207472543693274,0.684082082029585,0.34151045968866,0.484103067186794,0.231394392664941,0.208246424004209,0.258574627890837,0.594285860931637,0.827549990366949,0.868805499744264,0.726630217398261,0.2409596484206,0.817706553016535,0.63868175798287,0.174186075123503,0.178240963333396,0.238476957119803,0.198581241348696,0.15904139825988],"ci_95_upper":[0.649423996143655,0.864146045445356,0.802161178249873,0.817955026248825,0.846890621687389,0.834722150755334,0.506303829426293,0.79494712744448,0.85663469035144,0.876512251872962,0.813757963160936,0.79450753911654,0.632320338779344,0.879494557648222,0.893986903888945,0.831888769678924,0.816523646368692,0.859121193979823,0.48342946020647,0.952678188129509,0.968586698715509,0.93447216699625,0.803616011110204,0.945340168480683,0.57107191737648,0.824747914124814,0.811014918529977,0.801930124375612,0.861258743853921,0.810881009343515,0.676080960810544,0.83671563619662,0.81181459012893,0.867221852287045,0.847955334359845,0.812275856262114,0.508197130090697,0.867511089184381,0.879280177458785,0.829797233571695,0.846978563374535,0.822513458536399,0.690433566339635,0.897691349525612,0.962293734415903,0.84865630281994,0.827792737941679,0.851468488266161,0.493950685030101,0.944854457175869,0.957272356210498,0.89472523187768,0.776741229270699,0.933092172026723,0.612516837359355,0.86446995808389,0.843109067312055,0.869875227105031,0.844640868392561,0.808741164113944,0.742278365775775,0.840182198753025,0.804203093964728,0.853039966694397,0.916590811670904,0.839862910762623,0.650521955418828,0.834445346179122,0.841996197272409,0.827237186857094,0.775436452062853,0.816481092405322,0.718008058937476,0.918959624760751,0.912849063944597,0.824060499785618,0.863228159803282,0.852865743342212,0.617303015102767,0.949058348317534,0.967136648128201,0.919620198812004,0.722229639935458,0.952843996836765,0.680831186007636,0.828039076257024,0.856490758943503,0.856775242023599,0.834054304853802,0.833698053117499,0.671123920243909,0.848387184614111,0.806310172414112,0.833532455563572,0.874053224794962,0.794926014922941,0.565984897402232,0.83924739886039,0.834149427224493,0.868338902272762,0.797338795691555,0.843525203020056,0.666039706789863,0.905982303991807,0.92642158929418,0.84531204855465,0.83339683157238,0.868746643211657,0.54459509116377,0.954492942404679,0.967654446965754,0.918996395572479,0.729190462022512,0.935110227112837,0.611266275756875,0.844079716950542,0.820847224286891,0.801588344180662,0.824827823781623,0.783251202411624,0.67956445253911,0.822419649978649,0.833917957405831,0.838222365654193,0.838043794394447,0.814221664579691,0.553744187626976,0.828766287452828,0.863289805169104,0.898102377632702,0.784622502378747,0.793065953358296,0.68359183603229,0.881699153951629,0.924278347974719,0.828497396599324,0.858643474848736,0.896428495171398,0.541187617288507,0.930192615562469,0.85382721788487,0.933395754331106,0.727941687607715,0.936227571584725,0.624009651038785,0.838123114031402,0.817155852713931,0.893626139524164,0.844506308869921,0.779047845635657,0.742770971004074,0.840726810671974,0.841749334524274,0.825352614511719,0.853636090172042,0.80996218174058,0.632331156347129,0.838498349708655,0.842088860217078,0.850121199677951,0.811222732837397,0.788634243635634,0.725121488106838,0.893801356222846,0.909320881069001,0.857160247764849,0.84662628978702,0.842664210861697,0.616357598679222,0.947551169644706,0.917852761614286,0.937865730342047,0.873890599505804,0.959667716211306,0.671656197285816,0.88957380429161,0.792353120851417,0.819165361496772,0.811021290771809,0.810177103109311],"election":["President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Secretary of State 2018","Secretary of State 2018","Secretary of State 2018","Secretary of State 2018","Secretary of State 2018","Secretary of State 2018","Secretary of State 2018","Secretary of State 2018","Secretary of State 2018","Secretary of State 2018","Secretary of State 2018","Secretary of State 2018","Secretary of State 2018","Secretary of State 2018","Secretary of State 2018","Secretary of State 2018","Secretary of State 2018","Secretary of State 2018","Secretary of State 2018","Secretary of State 2018","Secretary of State 2018","Secretary of State 2018","Secretary of State 2018","Secretary of State 2018","Secretary of State 2018","Secretary of State 2018","Secretary of State 2018","Secretary of State 2018","Secretary of State 2018","Secretary of State 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020"],"year":[2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020]}}]}
 </script>
-
 
 
 <link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -227,7 +232,7 @@ gtag('config', 'G-DMTGHZ2N2J', { 'anonymize_ip': true});
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb1" data-startfrom="57" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 56;"><span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>ei <span class="op">=</span> <span class="fu">transpose</span>(ei_df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb1" data-startfrom="57" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 56;"><span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>ei <span class="op">=</span> <span class="fu">transpose</span>(ei_df)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-1" data-nodetype="declaration">
 
@@ -235,7 +240,7 @@ gtag('config', 'G-DMTGHZ2N2J', { 'anonymize_ip': true});
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb2" data-startfrom="63" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 62;"><span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a>viewof countyInput <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">select</span>(ei<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">county</span>)<span class="op">,</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb2" data-startfrom="63" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 62;"><span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a>viewof countyInput <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">select</span>(ei<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">county</span>)<span class="op">,</span></span>
 <span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a>                                {<span class="dt">sort</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span> <span class="dt">unique</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Choose a county:"</span>})</span>
 <span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
@@ -271,7 +276,7 @@ gtag('config', 'G-DMTGHZ2N2J', { 'anonymize_ip': true});
 <span id="cb2-96"><a href="#cb2-96" aria-hidden="true" tabindex="-1"></a><span class="dt">height</span><span class="op">:</span> <span class="dv">600</span><span class="op">,</span></span>
 <span id="cb2-97"><a href="#cb2-97" aria-hidden="true" tabindex="-1"></a><span class="dt">marginLeft</span><span class="op">:</span> <span class="dv">80</span></span>
 <span id="cb2-98"><a href="#cb2-98" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-99"><a href="#cb2-99" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-99"><a href="#cb2-99" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-2-1" data-nodetype="declaration">
@@ -387,239 +392,243 @@ window._ojs.selfContained = false;
 window._ojs.runtime.interpretFromScriptTags();
 </script>
 <script id="quarto-html-after-body" type="application/javascript">
-window.document.addEventListener("DOMContentLoaded", function (event) {
-  const toggleBodyColorMode = (bsSheetEl) => {
-    const mode = bsSheetEl.getAttribute("data-mode");
-    const bodyEl = window.document.querySelector("body");
-    if (mode === "dark") {
-      bodyEl.classList.add("quarto-dark");
-      bodyEl.classList.remove("quarto-light");
-    } else {
-      bodyEl.classList.add("quarto-light");
-      bodyEl.classList.remove("quarto-dark");
-    }
-  }
-  const toggleBodyColorPrimary = () => {
-    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
-    if (bsSheetEl) {
-      toggleBodyColorMode(bsSheetEl);
-    }
-  }
-  toggleBodyColorPrimary();  
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
-  const isCodeAnnotation = (el) => {
-    for (const clz of el.classList) {
-      if (clz.startsWith('code-annotation-')) {                     
-        return true;
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
       }
+      return false;
     }
-    return false;
-  }
-  const onCopySuccess = function(e) {
-    // button target
-    const button = e.trigger;
-    // don't keep focus
-    button.blur();
-    // flash "checked"
-    button.classList.add('code-copy-button-checked');
-    var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
-    let tooltip;
-    if (window.bootstrap) {
-      button.setAttribute("data-bs-toggle", "tooltip");
-      button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
-      tooltip = new bootstrap.Tooltip(button, 
-        { trigger: "manual", 
-          customClass: "code-copy-button-tooltip",
-          offset: [0, -8]});
-      tooltip.show();    
-    }
-    setTimeout(function() {
-      if (tooltip) {
-        tooltip.hide();
-        button.removeAttribute("data-bs-title");
-        button.removeAttribute("data-bs-toggle");
-        button.removeAttribute("data-bs-placement");
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
       }
-      button.setAttribute("title", currentTitle);
-      button.classList.remove('code-copy-button-checked');
-    }, 1000);
-    // clear code selection
-    e.clearSelection();
-  }
-  const getTextToCopy = function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
       for (const childEl of codeEl.children) {
         if (isCodeAnnotation(childEl)) {
           childEl.remove();
         }
       }
       return codeEl.innerText;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-    text: getTextToCopy
-  });
-  clipboard.on('success', onCopySuccess);
-  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
-    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-      text: getTextToCopy,
-      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
     });
-    clipboardModal.on('success', onCopySuccess);
-  }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-    var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
     }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-        // undo the damage that might have been done by quarto-nav.js in the case of
-        // links that we want to consider external
-        if (link.dataset.originalHref !== undefined) {
-          link.href = link.dataset.originalHref;
-        }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
-    }
-  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-    const config = {
-      allowHTML: true,
-      maxWidth: 500,
-      delay: 100,
-      arrow: false,
-      appendTo: function(el) {
-          return el.parentElement;
-      },
-      interactive: true,
-      interactiveBorder: 10,
-      theme: 'quarto',
-      placement: 'bottom-start',
-    };
-    if (contentFn) {
-      config.content = contentFn;
-    }
-    if (onTriggerFn) {
-      config.onTrigger = onTriggerFn;
-    }
-    if (onUntriggerFn) {
-      config.onUntrigger = onUntriggerFn;
-    }
-    window.tippy(el, config); 
-  }
-  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-  for (var i=0; i<noterefs.length; i++) {
-    const ref = noterefs[i];
-    tippyHover(ref, function() {
-      // use id or data attribute instead here
-      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-      try { href = new URL(href).hash; } catch {}
-      const id = href.replace(/^#\/?/, "");
-      const note = window.document.getElementById(id);
-      if (note) {
-        return note.innerHTML;
-      } else {
-        return "";
-      }
-    });
-  }
-  const xrefs = window.document.querySelectorAll('a.quarto-xref');
-  const processXRef = (id, note) => {
-    // Strip column container classes
-    const stripColumnClz = (el) => {
-      el.classList.remove("page-full", "page-columns");
-      if (el.children) {
-        for (const child of el.children) {
-          stripColumnClz(child);
-        }
-      }
-    }
-    stripColumnClz(note)
-    if (id === null || id.startsWith('sec-')) {
-      // Special case sections, only their first couple elements
-      const container = document.createElement("div");
-      if (note.children && note.children.length > 2) {
-        container.appendChild(note.children[0].cloneNode(true));
-        for (let i = 1; i < note.children.length; i++) {
-          const child = note.children[i];
-          if (child.tagName === "P" && child.innerText === "") {
-            continue;
-          } else {
-            container.appendChild(child.cloneNode(true));
-            break;
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
           }
         }
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(container);
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
         }
-        return container.innerHTML
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
       } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
         if (window.Quarto?.typesetMath) {
           window.Quarto.typesetMath(note);
         }
-        return note.innerHTML;
-      }
-    } else {
-      // Remove any anchor links if they are present
-      const anchorLink = note.querySelector('a.anchorjs-link');
-      if (anchorLink) {
-        anchorLink.remove();
-      }
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(note);
-      }
-      // TODO in 1.5, we should make sure this works without a callout special case
-      if (note.classList.contains("callout")) {
-        return note.outerHTML;
-      } else {
-        return note.innerHTML;
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
       }
     }
-  }
-  for (var i=0; i<xrefs.length; i++) {
-    const xref = xrefs[i];
-    tippyHover(xref, undefined, function(instance) {
-      instance.disable();
-      let url = xref.getAttribute('href');
-      let hash = undefined; 
-      if (url.startsWith('#')) {
-        hash = url;
-      } else {
-        try { hash = new URL(url).hash; } catch {}
-      }
-      if (hash) {
-        const id = hash.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note !== null) {
-          try {
-            const html = processXRef(id, note.cloneNode(true));
-            instance.setContent(html);
-          } finally {
-            instance.enable();
-            instance.show();
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
           }
         } else {
-          // See if we can fetch this
-          fetch(url.split('#')[0])
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
           .then(res => res.text())
           .then(html => {
             const parser = new DOMParser();
             const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.getElementById(id);
+            const note = htmlDoc.querySelector('main.content');
             if (note !== null) {
-              const html = processXRef(id, note);
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
               instance.setContent(html);
             } 
           }).finally(() => {
@@ -627,185 +636,161 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             instance.show();
           });
         }
-      } else {
-        // See if we can fetch a full url (with no hash to target)
-        // This is a special case and we should probably do some content thinning / targeting
-        fetch(url)
-        .then(res => res.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const htmlDoc = parser.parseFromString(html, "text/html");
-          const note = htmlDoc.querySelector('main.content');
-          if (note !== null) {
-            // This should only happen for chapter cross references
-            // (since there is no id in the URL)
-            // remove the first header
-            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-              note.children[0].remove();
-            }
-            const html = processXRef(null, note);
-            instance.setContent(html);
-          } 
-        }).finally(() => {
-          instance.enable();
-          instance.show();
-        });
-      }
-    }, function(instance) {
-    });
-  }
-      let selectedAnnoteEl;
-      const selectorForAnnotation = ( cell, annotation) => {
-        let cellAttr = 'data-code-cell="' + cell + '"';
-        let lineAttr = 'data-code-annotation="' +  annotation + '"';
-        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-        return selector;
-      }
-      const selectCodeLines = (annoteEl) => {
-        const doc = window.document;
-        const targetCell = annoteEl.getAttribute("data-target-cell");
-        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-        const lineIds = lines.map((line) => {
-          return targetCell + "-" + line;
-        })
-        let top = null;
-        let height = null;
-        let parent = null;
-        if (lineIds.length > 0) {
-            //compute the position of the single el (top and bottom and make a div)
-            const el = window.document.getElementById(lineIds[0]);
-            top = el.offsetTop;
-            height = el.offsetHeight;
-            parent = el.parentElement.parentElement;
-          if (lineIds.length > 1) {
-            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-            height = bottom - top;
-          }
-          if (top !== null && height !== null && parent !== null) {
-            // cook up a div (if necessary) and position it 
-            let div = window.document.getElementById("code-annotation-line-highlight");
-            if (div === null) {
-              div = window.document.createElement("div");
-              div.setAttribute("id", "code-annotation-line-highlight");
-              div.style.position = 'absolute';
-              parent.appendChild(div);
-            }
-            div.style.top = top - 2 + "px";
-            div.style.height = height + 4 + "px";
-            div.style.left = 0;
-            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-            if (gutterDiv === null) {
-              gutterDiv = window.document.createElement("div");
-              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-              gutterDiv.style.position = 'absolute';
-              const codeCell = window.document.getElementById(targetCell);
-              const gutter = codeCell.querySelector('.code-annotation-gutter');
-              gutter.appendChild(gutterDiv);
-            }
-            gutterDiv.style.top = top - 2 + "px";
-            gutterDiv.style.height = height + 4 + "px";
-          }
-          selectedAnnoteEl = annoteEl;
-        }
-      };
-      const unselectCodeLines = () => {
-        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-        elementsIds.forEach((elId) => {
-          const div = window.document.getElementById(elId);
-          if (div) {
-            div.remove();
-          }
-        });
-        selectedAnnoteEl = undefined;
-      };
-        // Handle positioning of the toggle
-    window.addEventListener(
-      "resize",
-      throttle(() => {
-        elRect = undefined;
-        if (selectedAnnoteEl) {
-          selectCodeLines(selectedAnnoteEl);
-        }
-      }, 10)
-    );
-    function throttle(fn, ms) {
-    let throttle = false;
-    let timer;
-      return (...args) => {
-        if(!throttle) { // first call gets through
-            fn.apply(this, args);
-            throttle = true;
-        } else { // all the others get throttled
-            if(timer) clearTimeout(timer); // cancel #2
-            timer = setTimeout(() => {
-              fn.apply(this, args);
-              timer = throttle = false;
-            }, ms);
-        }
-      };
-    }
-      // Attach click handler to the DT
-      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-      for (const annoteDlNode of annoteDls) {
-        annoteDlNode.addEventListener('click', (event) => {
-          const clickedEl = event.target;
-          if (clickedEl !== selectedAnnoteEl) {
-            unselectCodeLines();
-            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-            if (activeEl) {
-              activeEl.classList.remove('code-annotation-active');
-            }
-            selectCodeLines(clickedEl);
-            clickedEl.classList.add('code-annotation-active');
-          } else {
-            // Unselect the line
-            unselectCodeLines();
-            clickedEl.classList.remove('code-annotation-active');
-          }
-        });
-      }
-  const findCites = (el) => {
-    const parentEl = el.parentElement;
-    if (parentEl) {
-      const cites = parentEl.dataset.cites;
-      if (cites) {
-        return {
-          el,
-          cites: cites.split(' ')
-        };
-      } else {
-        return findCites(el.parentElement)
-      }
-    } else {
-      return undefined;
-    }
-  };
-  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-  for (var i=0; i<bibliorefs.length; i++) {
-    const ref = bibliorefs[i];
-    const citeInfo = findCites(ref);
-    if (citeInfo) {
-      tippyHover(citeInfo.el, function() {
-        var popup = window.document.createElement('div');
-        citeInfo.cites.forEach(function(cite) {
-          var citeDiv = window.document.createElement('div');
-          citeDiv.classList.add('hanging-indent');
-          citeDiv.classList.add('csl-entry');
-          var biblioDiv = window.document.getElementById('ref-' + cite);
-          if (biblioDiv) {
-            citeDiv.innerHTML = biblioDiv.innerHTML;
-          }
-          popup.appendChild(citeDiv);
-        });
-        return popup.innerHTML;
+      }, function(instance) {
       });
     }
-  }
-});
-</script>
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

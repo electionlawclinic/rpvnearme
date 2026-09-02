@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.55">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -10,10 +10,16 @@
 
 <title>Maine 2020 – RPV Near Me</title>
 <style>
-code{white-space: pre-wrap;}
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -22,8 +28,9 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 /* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -34,7 +41,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -66,15 +73,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="../elc_logo.png" rel="icon" type="image/png">
-<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-4d3679a3291c5d2fa76912fa1a3c5959.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -114,17 +122,14 @@ gtag('config', 'G-DMTGHZ2N2J', { 'anonymize_ip': true});
 <script type="module" src="../site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
 <link href="../site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 <script type="ojs-define">
-
-{"contents":[{"name":"ei_df","value":{"county":["Androscoggin County","Androscoggin County","Androscoggin County","Androscoggin County","Androscoggin County","Androscoggin County","Cumberland County","Cumberland County","Cumberland County","Cumberland County","Cumberland County","Cumberland County","Kennebec County","Kennebec County","Kennebec County","Kennebec County","Kennebec County","Kennebec County","Sagadahoc County","Sagadahoc County","Sagadahoc County","Sagadahoc County","Sagadahoc County","Sagadahoc County","Waldo County","Waldo County","Waldo County","Waldo County","Waldo County","Waldo County","York County","York County","York County","York County","York County","York County","Androscoggin County","Androscoggin County","Androscoggin County","Androscoggin County","Androscoggin County","Androscoggin County","Cumberland County","Cumberland County","Cumberland County","Cumberland County","Cumberland County","Cumberland County","Kennebec County","Kennebec County","Kennebec County","Kennebec County","Kennebec County","Kennebec County","Sagadahoc County","Sagadahoc County","Sagadahoc County","Sagadahoc County","Sagadahoc County","Sagadahoc County","Waldo County","Waldo County","Waldo County","Waldo County","Waldo County","Waldo County","York County","York County","York County","York County","York County","York County","Androscoggin County","Androscoggin County","Androscoggin County","Androscoggin County","Androscoggin County","Androscoggin County","Cumberland County","Cumberland County","Cumberland County","Cumberland County","Cumberland County","Cumberland County","Kennebec County","Kennebec County","Kennebec County","Kennebec County","Kennebec County","Kennebec County","Sagadahoc County","Sagadahoc County","Sagadahoc County","Sagadahoc County","Sagadahoc County","Sagadahoc County","Waldo County","Waldo County","Waldo County","Waldo County","Waldo County","Waldo County","York County","York County","York County","York County","York County","York County","Androscoggin County","Androscoggin County","Androscoggin County","Androscoggin County","Androscoggin County","Androscoggin County","Cumberland County","Cumberland County","Cumberland County","Cumberland County","Cumberland County","Cumberland County","Kennebec County","Kennebec County","Kennebec County","Kennebec County","Kennebec County","Kennebec County","Sagadahoc County","Sagadahoc County","Sagadahoc County","Sagadahoc County","Sagadahoc County","Sagadahoc County","Waldo County","Waldo County","Waldo County","Waldo County","Waldo County","Waldo County","York County","York County","York County","York County","York County","York County","Androscoggin County","Androscoggin County","Androscoggin County","Androscoggin County","Androscoggin County","Androscoggin County","Cumberland County","Cumberland County","Cumberland County","Cumberland County","Cumberland County","Cumberland County","Kennebec County","Kennebec County","Kennebec County","Kennebec County","Kennebec County","Kennebec County","Sagadahoc County","Sagadahoc County","Sagadahoc County","Sagadahoc County","Sagadahoc County","Sagadahoc County","Waldo County","Waldo County","Waldo County","Waldo County","Waldo County","Waldo County","York County","York County","York County","York County","York County","York County"],"race":["White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other"],"cand":["pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid"],"mean":[0.4344,0.6707,0.5193,0.5157,0.5086,0.537,0.6538,0.7106,0.5691,0.5119,0.5276,0.5055,0.4881,0.5228,0.5312,0.5426,0.5044,0.526,0.5716,0.4932,0.5015,0.5329,0.5151,0.5172,0.4928,0.4849,0.4682,0.535,0.4969,0.5048,0.5055,0.5032,0.5049,0.55,0.4849,0.4987,0.4629,0.7676,0.5307,0.51,0.4624,0.5254,0.6519,0.7419,0.612,0.5684,0.4915,0.5506,0.5214,0.5154,0.5332,0.5498,0.4909,0.5087,0.614,0.4968,0.4943,0.4918,0.4921,0.4906,0.5396,0.5136,0.4798,0.4956,0.5007,0.4988,0.5109,0.5136,0.5076,0.7326,0.5002,0.4708,0.1509,0.7003,0.5576,0.5361,0.4826,0.5857,0.3311,0.6927,0.6282,0.5827,0.5336,0.5771,0.1749,0.5592,0.5417,0.5409,0.5042,0.6193,0.2201,0.5314,0.5212,0.5008,0.4979,0.5184,0.2065,0.5115,0.5075,0.5097,0.4939,0.5117,0.2229,0.5058,0.5246,0.5452,0.4858,0.5549,0.4741,0.6574,0.5305,0.5304,0.5153,0.5265,0.6978,0.7434,0.6378,0.5269,0.4949,0.5091,0.5129,0.5282,0.5474,0.5716,0.529,0.5164,0.6247,0.475,0.4908,0.4765,0.4888,0.5065,0.5134,0.4814,0.5218,0.4822,0.4882,0.5181,0.5451,0.5013,0.495,0.4996,0.4968,0.5007,0.3832,0.6437,0.5384,0.5199,0.5003,0.528,0.5942,0.6992,0.6188,0.571,0.503,0.5154,0.4163,0.5199,0.5238,0.5427,0.5233,0.505,0.5257,0.499,0.5092,0.4986,0.507,0.498,0.4265,0.4866,0.494,0.4921,0.4965,0.4937,0.4456,0.5369,0.5441,0.5021,0.4983,0.5234],"sd":[0.0095,0.1394,0.1756,0.1624,0.172,0.1547,0.0094,0.1254,0.1533,0.1629,0.1709,0.1674,0.0089,0.1634,0.1607,0.1694,0.1589,0.1721,0.0099,0.1894,0.1697,0.176,0.2017,0.1824,0.008,0.1693,0.1688,0.1708,0.1741,0.1709,0.0072,0.1781,0.1782,0.1745,0.1675,0.1682,0.0098,0.124,0.1739,0.1641,0.1816,0.1788,0.0082,0.0987,0.1487,0.1575,0.1679,0.1552,0.0088,0.1684,0.1712,0.1742,0.1723,0.165,0.0098,0.1886,0.1683,0.1753,0.1812,0.1753,0.0081,0.1771,0.1717,0.1658,0.1729,0.1669,0.0077,0.1746,0.1683,0.2071,0.1594,0.1668,0.01,0.1461,0.1737,0.1701,0.1715,0.1592,0.0099,0.125,0.1516,0.1595,0.1679,0.1615,0.0099,0.1712,0.1812,0.1759,0.1676,0.1795,0.0115,0.1812,0.1711,0.1643,0.1821,0.1712,0.0082,0.1859,0.1651,0.1631,0.1786,0.1615,0.0077,0.1668,0.1874,0.1743,0.1713,0.1693,0.0102,0.1341,0.1695,0.1871,0.1705,0.1707,0.0075,0.1027,0.1449,0.1555,0.1657,0.1495,0.0086,0.1683,0.172,0.1661,0.1671,0.1689,0.0095,0.1887,0.1782,0.1868,0.1759,0.1695,0.0083,0.1697,0.1689,0.1805,0.1718,0.1762,0.0071,0.1623,0.1635,0.1708,0.1663,0.1654,0.0111,0.1812,0.1771,0.1745,0.1756,0.1663,0.0094,0.1269,0.1662,0.1651,0.1634,0.1829,0.0094,0.177,0.1712,0.1653,0.18,0.1722,0.01,0.1849,0.1758,0.1761,0.1759,0.1806,0.0076,0.1731,0.1662,0.1712,0.1723,0.1608,0.0074,0.1749,0.1691,0.1644,0.1629,0.1694],"ci_95_lower":[0.4165,0.3656,0.1899,0.1985,0.1888,0.2324,0.6352,0.4349,0.254,0.1943,0.2216,0.1848,0.4712,0.1833,0.2122,0.197,0.2099,0.2188,0.553,0.1338,0.1774,0.2025,0.1442,0.1689,0.4778,0.1747,0.141,0.2009,0.1656,0.1696,0.4921,0.1608,0.1675,0.2097,0.1725,0.1904,0.4451,0.4929,0.1786,0.1874,0.0848,0.1821,0.6365,0.5274,0.3001,0.2524,0.1906,0.2145,0.5043,0.1969,0.2086,0.2037,0.177,0.208,0.5946,0.1461,0.1694,0.1594,0.1535,0.1618,0.5242,0.1829,0.1627,0.1767,0.194,0.1705,0.4949,0.175,0.1866,0.2803,0.1983,0.1646,0.1328,0.3723,0.2083,0.2017,0.1425,0.2691,0.3117,0.4313,0.2856,0.2505,0.1982,0.2536,0.1575,0.2176,0.1725,0.2091,0.1964,0.2405,0.1984,0.1796,0.1936,0.1883,0.1513,0.1758,0.1905,0.1606,0.1838,0.2072,0.1514,0.1811,0.2084,0.2034,0.1651,0.1959,0.1573,0.2251,0.4542,0.3804,0.216,0.1777,0.1995,0.1942,0.6831,0.5218,0.3418,0.2289,0.1885,0.2327,0.4966,0.2086,0.2016,0.2374,0.201,0.1999,0.6061,0.1283,0.1496,0.1151,0.1524,0.1822,0.4974,0.1637,0.1963,0.1462,0.1703,0.198,0.5313,0.1943,0.1747,0.1604,0.1923,0.1856,0.3625,0.2797,0.2089,0.1873,0.1655,0.2063,0.5753,0.4098,0.297,0.228,0.1876,0.1508,0.398,0.1649,0.1887,0.2161,0.1975,0.2029,0.5065,0.1655,0.1767,0.1645,0.1749,0.156,0.4116,0.1653,0.1699,0.1769,0.1657,0.1919,0.4307,0.1843,0.2158,0.1985,0.1948,0.1937],"ci_95_upper":[0.4544,0.9039,0.8382,0.8161,0.8314,0.8219,0.6717,0.9084,0.8393,0.8034,0.8562,0.8239,0.5046,0.8116,0.8227,0.8395,0.8051,0.8369,0.5917,0.8433,0.8167,0.8726,0.8958,0.8601,0.5085,0.8045,0.8001,0.8444,0.8132,0.8102,0.5195,0.8173,0.8411,0.8752,0.8068,0.8225,0.483,0.9561,0.8387,0.8223,0.7991,0.8369,0.6685,0.9073,0.8598,0.8409,0.8148,0.8083,0.5382,0.8423,0.8378,0.8493,0.8074,0.8206,0.6325,0.8563,0.8122,0.8185,0.8379,0.8387,0.5555,0.8443,0.8045,0.7945,0.8328,0.8123,0.5253,0.8328,0.8215,0.9548,0.8146,0.7901,0.1714,0.9267,0.8647,0.8557,0.8018,0.8692,0.3508,0.9056,0.8793,0.8501,0.8278,0.8698,0.1951,0.8709,0.8542,0.8657,0.8124,0.9026,0.2428,0.8639,0.8471,0.8197,0.8377,0.832,0.2223,0.8515,0.8137,0.8135,0.8198,0.8092,0.2375,0.8201,0.8682,0.8706,0.8043,0.8568,0.4938,0.8939,0.8468,0.9065,0.8389,0.8438,0.7124,0.91,0.8842,0.8022,0.8005,0.7943,0.5292,0.8453,0.8443,0.8592,0.8319,0.8217,0.6429,0.8403,0.8273,0.8241,0.8234,0.8258,0.529,0.8067,0.8371,0.8211,0.8052,0.8571,0.5589,0.8056,0.8025,0.8097,0.8113,0.809,0.4063,0.9396,0.875,0.8389,0.8372,0.8292,0.6118,0.8988,0.9252,0.8525,0.8056,0.8286,0.4341,0.8232,0.832,0.843,0.8671,0.828,0.5451,0.8561,0.8408,0.823,0.8341,0.8276,0.441,0.8134,0.8041,0.8215,0.8105,0.8112,0.46,0.8568,0.8347,0.809,0.819,0.8286],"election":["President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020"],"year":[2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020]}}]}
-
+{"contents":[{"name":"ei_df","value":{"county":["Androscoggin County","Androscoggin County","Androscoggin County","Androscoggin County","Androscoggin County","Androscoggin County","Aroostook County","Aroostook County","Aroostook County","Aroostook County","Aroostook County","Aroostook County","Cumberland County","Cumberland County","Cumberland County","Cumberland County","Cumberland County","Cumberland County","Franklin County","Franklin County","Franklin County","Franklin County","Franklin County","Franklin County","Hancock County","Hancock County","Hancock County","Hancock County","Hancock County","Hancock County","Kennebec County","Kennebec County","Kennebec County","Kennebec County","Kennebec County","Kennebec County","Knox County","Knox County","Knox County","Knox County","Knox County","Knox County","Lincoln County","Lincoln County","Lincoln County","Lincoln County","Lincoln County","Lincoln County","Oxford County","Oxford County","Oxford County","Oxford County","Oxford County","Oxford County","Penobscot County","Penobscot County","Penobscot County","Penobscot County","Penobscot County","Penobscot County","Piscataquis County","Piscataquis County","Piscataquis County","Piscataquis County","Piscataquis County","Piscataquis County","Sagadahoc County","Sagadahoc County","Sagadahoc County","Sagadahoc County","Sagadahoc County","Sagadahoc County","Somerset County","Somerset County","Somerset County","Somerset County","Somerset County","Somerset County","Waldo County","Waldo County","Waldo County","Waldo County","Waldo County","Waldo County","Washington County","Washington County","Washington County","Washington County","Washington County","Washington County","York County","York County","York County","York County","York County","York County","Androscoggin County","Androscoggin County","Androscoggin County","Androscoggin County","Androscoggin County","Androscoggin County","Aroostook County","Aroostook County","Aroostook County","Aroostook County","Aroostook County","Aroostook County","Cumberland County","Cumberland County","Cumberland County","Cumberland County","Cumberland County","Cumberland County","Franklin County","Franklin County","Franklin County","Franklin County","Franklin County","Franklin County","Hancock County","Hancock County","Hancock County","Hancock County","Hancock County","Hancock County","Kennebec County","Kennebec County","Kennebec County","Kennebec County","Kennebec County","Kennebec County","Knox County","Knox County","Knox County","Knox County","Knox County","Knox County","Lincoln County","Lincoln County","Lincoln County","Lincoln County","Lincoln County","Lincoln County","Oxford County","Oxford County","Oxford County","Oxford County","Oxford County","Oxford County","Penobscot County","Penobscot County","Penobscot County","Penobscot County","Penobscot County","Penobscot County","Piscataquis County","Piscataquis County","Piscataquis County","Piscataquis County","Piscataquis County","Piscataquis County","Sagadahoc County","Sagadahoc County","Sagadahoc County","Sagadahoc County","Sagadahoc County","Sagadahoc County","Somerset County","Somerset County","Somerset County","Somerset County","Somerset County","Somerset County","Waldo County","Waldo County","Waldo County","Waldo County","Waldo County","Waldo County","Washington County","Washington County","Washington County","Washington County","Washington County","Washington County","York County","York County","York County","York County","York County","York County","Androscoggin County","Androscoggin County","Androscoggin County","Androscoggin County","Androscoggin County","Androscoggin County","Aroostook County","Aroostook County","Aroostook County","Aroostook County","Aroostook County","Aroostook County","Cumberland County","Cumberland County","Cumberland County","Cumberland County","Cumberland County","Cumberland County","Franklin County","Franklin County","Franklin County","Franklin County","Franklin County","Franklin County","Hancock County","Hancock County","Hancock County","Hancock County","Hancock County","Hancock County","Kennebec County","Kennebec County","Kennebec County","Kennebec County","Kennebec County","Kennebec County","Knox County","Knox County","Knox County","Knox County","Knox County","Knox County","Lincoln County","Lincoln County","Lincoln County","Lincoln County","Lincoln County","Lincoln County","Oxford County","Oxford County","Oxford County","Oxford County","Oxford County","Oxford County","Penobscot County","Penobscot County","Penobscot County","Penobscot County","Penobscot County","Penobscot County","Piscataquis County","Piscataquis County","Piscataquis County","Piscataquis County","Piscataquis County","Piscataquis County","Sagadahoc County","Sagadahoc County","Sagadahoc County","Sagadahoc County","Sagadahoc County","Sagadahoc County","Somerset County","Somerset County","Somerset County","Somerset County","Somerset County","Somerset County","Waldo County","Waldo County","Waldo County","Waldo County","Waldo County","Waldo County","Washington County","Washington County","Washington County","Washington County","Washington County","Washington County","York County","York County","York County","York County","York County","York County","Androscoggin County","Androscoggin County","Androscoggin County","Androscoggin County","Androscoggin County","Androscoggin County","Aroostook County","Aroostook County","Aroostook County","Aroostook County","Aroostook County","Aroostook County","Cumberland County","Cumberland County","Cumberland County","Cumberland County","Cumberland County","Cumberland County","Franklin County","Franklin County","Franklin County","Franklin County","Franklin County","Franklin County","Hancock County","Hancock County","Hancock County","Hancock County","Hancock County","Hancock County","Kennebec County","Kennebec County","Kennebec County","Kennebec County","Kennebec County","Kennebec County","Knox County","Knox County","Knox County","Knox County","Knox County","Knox County","Lincoln County","Lincoln County","Lincoln County","Lincoln County","Lincoln County","Lincoln County","Oxford County","Oxford County","Oxford County","Oxford County","Oxford County","Oxford County","Penobscot County","Penobscot County","Penobscot County","Penobscot County","Penobscot County","Penobscot County","Piscataquis County","Piscataquis County","Piscataquis County","Piscataquis County","Piscataquis County","Piscataquis County","Sagadahoc County","Sagadahoc County","Sagadahoc County","Sagadahoc County","Sagadahoc County","Sagadahoc County","Somerset County","Somerset County","Somerset County","Somerset County","Somerset County","Somerset County","Waldo County","Waldo County","Waldo County","Waldo County","Waldo County","Waldo County","Washington County","Washington County","Washington County","Washington County","Washington County","Washington County","York County","York County","York County","York County","York County","York County","Androscoggin County","Androscoggin County","Androscoggin County","Androscoggin County","Androscoggin County","Androscoggin County","Aroostook County","Aroostook County","Aroostook County","Aroostook County","Aroostook County","Aroostook County","Cumberland County","Cumberland County","Cumberland County","Cumberland County","Cumberland County","Cumberland County","Franklin County","Franklin County","Franklin County","Franklin County","Franklin County","Franklin County","Hancock County","Hancock County","Hancock County","Hancock County","Hancock County","Hancock County","Kennebec County","Kennebec County","Kennebec County","Kennebec County","Kennebec County","Kennebec County","Knox County","Knox County","Knox County","Knox County","Knox County","Knox County","Lincoln County","Lincoln County","Lincoln County","Lincoln County","Lincoln County","Lincoln County","Oxford County","Oxford County","Oxford County","Oxford County","Oxford County","Oxford County","Penobscot County","Penobscot County","Penobscot County","Penobscot County","Penobscot County","Penobscot County","Piscataquis County","Piscataquis County","Piscataquis County","Piscataquis County","Piscataquis County","Piscataquis County","Sagadahoc County","Sagadahoc County","Sagadahoc County","Sagadahoc County","Sagadahoc County","Sagadahoc County","Somerset County","Somerset County","Somerset County","Somerset County","Somerset County","Somerset County","Waldo County","Waldo County","Waldo County","Waldo County","Waldo County","Waldo County","Washington County","Washington County","Washington County","Washington County","Washington County","Washington County","York County","York County","York County","York County","York County","York County"],"race":["White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other"],"cand":["pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","gov_18_dem_mil","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","uss_18_dem_rin","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid","uss_20_dem_gid"],"mean":[0.464943787819224,0.701610334401681,0.500185616038248,0.523099083913657,0.491391702788121,0.541252203715721,0.401758639618897,0.493577506996458,0.490013810542558,0.516457161730618,0.468737946440769,0.515295459986351,0.640219666322679,0.84150517785964,0.666944980357052,0.577795319047204,0.498209818241324,0.582138636874099,0.460494211523019,0.5119105952481,0.505953863524411,0.528271987426815,0.494761813962674,0.512701847192513,0.536453707108426,0.490206155556145,0.487932883748623,0.524005558723937,0.500123974328183,0.486813390901501,0.48422947345179,0.508123693756822,0.521679939706247,0.525440002530979,0.481528655673016,0.51382293154738,0.575836346173573,0.482963639501133,0.506778613126494,0.522349107864376,0.505164607436694,0.504974882589022,0.532383683345875,0.495843777585372,0.501094873710196,0.498450991258536,0.497524498252496,0.495662866797734,0.423413032201459,0.513471098983976,0.502700046912048,0.509725550573811,0.477997552305258,0.517552558076559,0.421238355988119,0.547995843319361,0.54269287079267,0.575263246522265,0.560943344118881,0.552498459045402,0.355460759507515,0.502137975304248,0.501082862403121,0.514873205675485,0.51178319984248,0.510261276989992,0.540788405290914,0.502181948244067,0.509272730498158,0.491204546010107,0.494173160836155,0.510376352807288,0.362549403531163,0.494041838649138,0.494662973038633,0.5235294174979,0.508266903776173,0.493815523725581,0.488900233203,0.484468065150643,0.452712683308989,0.492702299803039,0.485888458784881,0.499855401842482,0.398118149412285,0.502145924071335,0.499971327043255,0.506928901361012,0.541116805988913,0.485096506630965,0.529054024423922,0.544694817100346,0.540233075454161,0.465777512023839,0.486516872655349,0.485605707451744,0.498164793436967,0.791802562143253,0.536417669957535,0.525327970564606,0.508408132256159,0.543465522080102,0.408256008503557,0.512091530085232,0.514061406805457,0.486949815794002,0.500609209348936,0.477176532609694,0.642439084009284,0.823133366427866,0.665150801121921,0.581475787761043,0.501646299378592,0.558982014133767,0.524256796969897,0.55466814015891,0.499019796408384,0.513163335675013,0.502337981579302,0.499808282748734,0.568491645426047,0.494546260205222,0.486820952416703,0.509762293504776,0.512707235493115,0.475641837132081,0.514164423588233,0.503099137388213,0.512342797991932,0.541899788241792,0.493477811681825,0.519518260312676,0.602642866039467,0.484207642437631,0.513004553040802,0.498374335951585,0.489216714715548,0.494512850820304,0.553304032445579,0.494604529198291,0.497862278672565,0.504480544030107,0.507045545007647,0.511977724969098,0.456934060783705,0.503840767355365,0.487819175495017,0.529665754029282,0.50574357099087,0.481500105938219,0.463391540696008,0.549851408182477,0.559204862460699,0.56199559445453,0.498531395435309,0.527114851542301,0.40413105286461,0.500862908896488,0.490844992599974,0.517411138882199,0.494701088467214,0.51008529596756,0.579320940083956,0.506478082132376,0.499206151944776,0.490631701744963,0.527770503465039,0.504738503229047,0.424759508895077,0.499597382540739,0.516966562210634,0.512040642124068,0.508053108527056,0.495693225613257,0.531691578200922,0.492414676657464,0.496963304250448,0.508207990547798,0.499196547539507,0.490076603856691,0.468356911009877,0.49595626066979,0.487398909825485,0.50321736839897,0.481205916061191,0.507316075908973,0.535111526269469,0.54690378871143,0.522878850526804,0.50965253079171,0.540055834919543,0.506690901929207,0.172572650806079,0.786184507799081,0.562005156186977,0.535542182551402,0.517580580151631,0.635542140806485,0.11494872517214,0.517853083392774,0.505510965334612,0.550264582656408,0.548724087751222,0.576265386088298,0.335438731935699,0.789411091909441,0.65552086079455,0.61281936724596,0.522168482717379,0.592010467209914,0.181964104710468,0.509440478727955,0.489293887137591,0.505447745729445,0.491023319260147,0.52412838100348,0.216834865489438,0.495844599713525,0.531640576294453,0.516535050215935,0.538376372922957,0.525225048695681,0.162511032614523,0.526886599694217,0.555085520201953,0.518936845419388,0.529939862207283,0.619395821370142,0.257497876909744,0.50510035231344,0.49661190861054,0.504676940253258,0.485391022004278,0.498825076576039,0.175851288243241,0.503112572613515,0.503886212300904,0.498397058972179,0.485338744830156,0.517737272652557,0.142537868308553,0.500514803598639,0.517808792223826,0.518053202193189,0.497990087795251,0.581491784754835,0.146429337014424,0.528702907885341,0.550872270885166,0.6140515311795,0.342301600889505,0.648572529022572,0.0900632042890791,0.51162442439298,0.515491285974918,0.509548530891076,0.51061146730022,0.551744984585275,0.185705433909357,0.502327980508451,0.507160086242239,0.515469324661427,0.491824177279505,0.490888573353904,0.100087870439337,0.514884428647041,0.537790647583569,0.513221939545807,0.495297951583677,0.591260360059853,0.188435198330499,0.506186009304723,0.508162239615775,0.497082106077591,0.517712680704476,0.501005097350074,0.126226157535712,0.518451569658383,0.496701414089907,0.506743438429395,0.410750285372354,0.537351616908815,0.2436194955854,0.552420540739503,0.568291558546956,0.559043067525131,0.522189070244888,0.530186508955625,0.507455897197272,0.705588858827242,0.523754469538506,0.527204149959562,0.497067062052291,0.510058941616374,0.391932704420354,0.521265188305024,0.512498510270691,0.489246074955519,0.51875445323191,0.486201506493348,0.688575734957577,0.840491839822802,0.635932227319472,0.586453523001042,0.506798993526497,0.612401410178567,0.477389203737365,0.503415882676398,0.498982224022398,0.510879731843368,0.490115820111541,0.499932262645694,0.564186104309062,0.519973514497297,0.497770502293272,0.508977481652646,0.505540551763965,0.497728437187512,0.504018428954189,0.603853548805683,0.527740135117936,0.502893824797911,0.497372783179823,0.536443772783586,0.601256649852515,0.503992131502285,0.488872143263845,0.484878944927694,0.513718673968,0.501658390436115,0.574705527967685,0.505568451084761,0.50755722579336,0.499504857878609,0.493492624502322,0.483045944307034,0.449506196037864,0.48242638664958,0.499048105535641,0.512828930211623,0.493331166342477,0.495542047419974,0.437167752918648,0.510405028925277,0.528405950119957,0.567247932875528,0.562852742646971,0.547483149434372,0.360744609155149,0.50471443010879,0.49345299026678,0.5535900875895,0.497358323035444,0.501796527504504,0.592976602130038,0.500497407290237,0.491665926443222,0.492701065549682,0.520341517655917,0.496188793841682,0.365103849478646,0.505818738516092,0.508495626870652,0.510229408755921,0.498303991489561,0.50852835213037,0.511492008613267,0.496210373834579,0.498093485257308,0.493629046134812,0.498327749513958,0.495250248710833,0.393140775218642,0.507682238792132,0.493645677652703,0.499723693222527,0.528089546642678,0.512462979174291,0.571516342897485,0.520422407974775,0.523507176893122,0.492252937639517,0.506933595429353,0.47657340620315,0.413163146647147,0.694686641658794,0.529214692943589,0.523334438105442,0.516535389134285,0.530506812282908,0.273664045513797,0.50578096180675,0.503718585088857,0.514361704523852,0.495058385559326,0.505307109315227,0.587029119595293,0.823871401503864,0.631660046215975,0.618021771225217,0.49659224618694,0.578199925318218,0.378619072942565,0.510029994414253,0.497364515506142,0.513513994894246,0.51022680507128,0.511066818825316,0.464797558475117,0.504706784184179,0.498096728017489,0.518293823263048,0.503243692032774,0.47220990269639,0.40895248216171,0.515793335815884,0.531037103432812,0.546454272019079,0.492057413244082,0.523921485612014,0.50348225469514,0.499725524575511,0.504386561649048,0.503971650828899,0.499325312012165,0.485582949684996,0.467727424583597,0.500633435589606,0.509692806265115,0.494085346119354,0.501082887355432,0.487637094130755,0.363278881687462,0.493141586737377,0.491514586673321,0.495707701576382,0.487897831857107,0.51677451547614,0.340163675310597,0.525436168529481,0.54159516236877,0.518615384620883,0.505438622927214,0.514617916773541,0.277488737822714,0.515596525365801,0.448028556794481,0.491507001252435,0.497188126593921,0.500605353977232,0.489111387787887,0.509980840532708,0.48974322779287,0.496041576381518,0.497931940488893,0.502285788743966,0.270042154348906,0.49643771402012,0.519744118104299,0.497087818786402,0.503083861548584,0.540493020483441,0.420656057606699,0.497096451205603,0.50893172930339,0.497350614454568,0.508446818291716,0.498333278710014,0.304296762216086,0.497642158923094,0.503661302791647,0.507492590275923,0.510717066195119,0.512287304311932,0.47095704591059,0.547896643729729,0.532486084148362,0.546321905062497,0.513536459229046,0.495452670589254],"sd":[0.0122791681147273,0.114548070535305,0.172862644696574,0.164337418402283,0.162321253517567,0.171735433279231,0.00657563441555663,0.166339244764815,0.17525498630452,0.178350682900335,0.176321973396255,0.178126275379272,0.00790201789028461,0.0739591907088566,0.136592786797073,0.151838414337983,0.162582246789438,0.150393225602049,0.0090588296249293,0.195706592747545,0.178817858000427,0.206000155170439,0.183253245531121,0.178415870361023,0.00763958944914387,0.171979582843007,0.169031152696541,0.179672130257151,0.168853651140873,0.170766238700205,0.00901215173881578,0.167208405706279,0.169367044854658,0.16859257883355,0.165926890531455,0.181806828554159,0.00849596870729396,0.198380528329782,0.172440104020605,0.185021591648002,0.186676020833464,0.173674997004212,0.00807657723532017,0.188250655766605,0.183311384205848,0.180377658328641,0.181883370802924,0.187382861262494,0.00823469126713569,0.177170648906131,0.175659995818443,0.170181519468172,0.165713223715241,0.163239180833786,0.00703175826779519,0.169836124845475,0.16297711604766,0.165222059113271,0.0653104898136626,0.154733042719877,0.00955819467508614,0.197021069276024,0.183871557152477,0.203726656973633,0.19595906700041,0.18341594310169,0.00883643575626562,0.20352534554632,0.179087417806033,0.182901265469222,0.186719722548693,0.183219061651663,0.00871415959653619,0.169596643911074,0.171360568864613,0.18106621003312,0.176635768542582,0.174876910016125,0.00887579620269935,0.197565793250921,0.231406309920739,0.18641777583224,0.188033395459255,0.187976192636841,0.0119599295774602,0.186388972600074,0.180603346324083,0.179373469938228,0.188218323021488,0.178188543407588,0.00751633000002751,0.176414989328782,0.160294014787095,0.178494732531221,0.175068572929387,0.163852106521719,0.0108241497337598,0.0890240271482142,0.165571482603586,0.164657370078467,0.176643263915675,0.168844478230717,0.00647387225526901,0.172271961462488,0.177348693737899,0.174144339419017,0.168167931411259,0.179100084241285,0.00743582153548488,0.0720398578567135,0.121826791990073,0.157536229488451,0.153529155511066,0.145594923893969,0.00914816023868178,0.233018173017905,0.183949441199599,0.20934701034641,0.1803315529564,0.178119623309599,0.0079561076223927,0.192397443191537,0.17657159341207,0.186832639654498,0.169934653911411,0.173563900437449,0.00891612561578922,0.16682085636997,0.17053514236912,0.170663560986254,0.17304263469018,0.178182174609893,0.00866147115992086,0.200906637016872,0.177070424761692,0.180645931260929,0.188049889229429,0.176656273687598,0.00794271205712636,0.181046298168615,0.187454015580686,0.183910771099533,0.188868163790483,0.178686179641019,0.00875980424622863,0.175828838040199,0.172113496241976,0.181919694003564,0.170086844052106,0.170213079666139,0.00707421030181797,0.168826154304154,0.156807050752155,0.159848156767525,0.0670654189187547,0.161379721362756,0.010006951249431,0.200540133985724,0.185555163309648,0.200567330116613,0.1851594065746,0.183657069650649,0.00883709998520115,0.193876225357889,0.17801500398833,0.185364566914623,0.204139561769186,0.179716219911858,0.00838493894135847,0.168745276533786,0.178051618945929,0.175197776920311,0.167719703488244,0.164110998775728,0.00870733098124544,0.191672522961573,0.183306662361608,0.190944332397112,0.192192152207636,0.186917431485684,0.0123021741180736,0.192681964598024,0.173307400859752,0.179240722294299,0.19288334059066,0.174600144445947,0.00736515531326599,0.154117117352886,0.168046609144594,0.15841481042073,0.18293267769695,0.167468123663837,0.0115870122293264,0.10321150880281,0.166347120737016,0.159083499982637,0.165505672330661,0.16143467613479,0.00676880311554449,0.167290905123796,0.175247293239029,0.175459955399342,0.186675261896041,0.185459381827787,0.00932238771822776,0.0908183838420873,0.142537068157138,0.160906276496479,0.156501218138589,0.148415431475175,0.00983407742814577,0.198065994522577,0.181081658968135,0.206655972515501,0.177930805974395,0.184989937230916,0.0084775655115481,0.186689687324373,0.170473917002524,0.182632116089725,0.183885530960998,0.182857540945921,0.00790836441225928,0.176220619999761,0.163919554328667,0.165597270359576,0.169382366429537,0.15187658543455,0.00918906014286209,0.199749154568776,0.176025788371119,0.185093511377286,0.190848277551785,0.17166991624392,0.00864528131552633,0.192589804606051,0.180025835713493,0.178859592175815,0.188015500756458,0.181857713986987,0.00904730964000746,0.176440845953586,0.167600065312143,0.18214257378732,0.178116844036835,0.180864783431606,0.00703733235210557,0.166292931333422,0.160094566896381,0.169613583627283,0.0675802769598553,0.150182553555221,0.00938722658190403,0.200391221155042,0.181850858578571,0.200582129841035,0.186938752584921,0.190409467635252,0.00997879231418743,0.192103338581487,0.178144080967459,0.187740347860327,0.189296298536891,0.196775898183347,0.00860466443235116,0.187526212934529,0.175637956173608,0.167507798357215,0.176053409206315,0.16574631672952,0.00879978201321024,0.178732648011366,0.186401200804189,0.190958580699855,0.186329198105754,0.182815285708146,0.0110161738517281,0.187906485431738,0.177152506266932,0.184961434657171,0.151429336553156,0.186448056342354,0.00743103960091384,0.162865858342526,0.162351269922784,0.174871721640897,0.167232858130596,0.163225564553666,0.0115823455448599,0.11794232940681,0.169287479436027,0.167091595867656,0.157986815767304,0.157316344471028,0.00639699278525033,0.174816996523498,0.166179782087876,0.175966335507781,0.171042962086378,0.173945313236381,0.00790795257255848,0.0568932211765948,0.151099997550837,0.160421189383538,0.154955390462782,0.15033357595738,0.00888850425888761,0.198189698859548,0.174661691335244,0.199759765195189,0.189330579768587,0.183821955169839,0.00784277788439463,0.174231978794219,0.176643549472993,0.175306087138841,0.187208876048536,0.17286620860408,0.00803813097919664,0.210733416606761,0.161807757061186,0.187041962405814,0.160733528098856,0.157265699537104,0.00821270088131158,0.198411735743744,0.179063980686908,0.187947784167113,0.186129921399286,0.169607338687192,0.00769136369743037,0.189411187913906,0.18812747957811,0.182797611380552,0.176676074348385,0.179335222373609,0.00843941421936856,0.17245383206312,0.173988689357056,0.170038025599952,0.177269498509913,0.169560234794433,0.0085305438693618,0.179337407931429,0.171585955128275,0.154762369987421,0.0707758689785194,0.191062497254461,0.00933894819530032,0.1961719459852,0.184885029629994,0.228564695307293,0.186588591577625,0.18373516198955,0.00863723952374915,0.192260195557303,0.180005924423527,0.182636810716691,0.201522192872747,0.176504407139541,0.00822830122601014,0.174496531384726,0.168091786859636,0.170640131359078,0.173248090458702,0.167979738186366,0.00800136308099373,0.183603590236309,0.183485129038791,0.187721572380554,0.18069790618579,0.176577950836923,0.01183032637045,0.191077414920519,0.1754606133538,0.176569173756475,0.1889468856832,0.172737758938005,0.00739280402168972,0.173746088585777,0.173350830278369,0.163708073255939,0.175949986876948,0.172345937349379,0.0111748275963919,0.111848036151495,0.153407408672962,0.181917108383222,0.169677646161501,0.161565565827581,0.00629378812003136,0.178937338897258,0.178615612503099,0.165955700823952,0.182487682820601,0.168930034012465,0.00914734326295286,0.0856890515634802,0.153312801184742,0.15585275844179,0.156570266760803,0.173013499861192,0.00875130002292207,0.197490567163212,0.181407060402364,0.202593811308481,0.179378771816195,0.174064928681101,0.00737026969763645,0.170809725202656,0.183069548989345,0.162486151625796,0.174518882978279,0.16591789732309,0.008599944405211,0.165366997060534,0.161499126991237,0.180029941041694,0.162788742929882,0.167528344849137,0.008495595582865,0.193005555991042,0.175766057731978,0.183585906827118,0.186374729331106,0.177653574138963,0.00786820850153517,0.193986437241125,0.188604534983719,0.180685756144642,0.178484329998103,0.184209843083629,0.00814109602688482,0.175128999290942,0.175182128859143,0.168960841097912,0.173768249278691,0.164125222780945,0.00767154285916514,0.169008699039316,0.153368293658525,0.175010805620774,0.0656225092196306,0.169363297885052,0.00920492870149016,0.19696957450492,0.208795222470738,0.202521787194475,0.188805602022916,0.186330966261543,0.00882945174038037,0.202518342141386,0.181689045221832,0.192112172913839,0.185609519631649,0.181609565538353,0.00834192494330048,0.171543269198853,0.169856067809583,0.18828782928359,0.17796747449465,0.166224794772764,0.00828374887308495,0.181641421579485,0.182034994315577,0.188501490464677,0.183484056096985,0.183088343978876,0.0116656877530042,0.188832113202556,0.183637341641776,0.173454467226153,0.17954577583751,0.1771781519887,0.00749059247135477,0.157037623017488,0.16425199455277,0.165168773812964,0.158914491517351,0.165763857137427],"ci_95_lower":[0.44156170839204,0.448054506367461,0.185502424221036,0.21804974605008,0.190235581651514,0.199442372518068,0.38881759923378,0.177325830530188,0.169603995099202,0.174508045172979,0.146493676054776,0.189195603932889,0.624580478451672,0.664412431513757,0.358549053399336,0.261184941837974,0.197940839281681,0.274433966637542,0.442692201712179,0.144886854173088,0.162148973139279,0.130609055549236,0.139472747617889,0.172493099059716,0.521154799316861,0.162325850300334,0.170539490415216,0.184956786358656,0.178554064261343,0.169458459869048,0.467029954505311,0.188292209148914,0.184991880393342,0.208678406791946,0.181693140347766,0.157789100492211,0.559812283008084,0.131632983184594,0.167837120696094,0.17095781380022,0.145396417398323,0.177818668960617,0.516543227338601,0.142690426020884,0.158879346426447,0.15583963206232,0.149842335905728,0.140293447280731,0.40808262385024,0.179006363270408,0.168627680422407,0.182994685395182,0.173717178464582,0.201638650047079,0.407539309288136,0.218201745830561,0.217375020547639,0.222631814120878,0.434462293664848,0.247022329623303,0.337282972636829,0.132006042958284,0.153300093705318,0.122952694227413,0.146515011380963,0.152029988896402,0.523568184131539,0.0919450888068761,0.167783489443997,0.146140395142176,0.136307036280618,0.177164884017289,0.346228963894354,0.175637034336922,0.165418022878721,0.17213327431192,0.170521318480354,0.14706398678539,0.471773301592719,0.0999987700108141,0.0413652201653291,0.137861432714288,0.13101089343091,0.152153795290677,0.375187870504545,0.159359513076683,0.173931592328094,0.179957052608415,0.165395644890667,0.162529270482642,0.514466013237086,0.187726691129261,0.217574350034583,0.112616378748458,0.147131562355534,0.173192283328531,0.477313898280235,0.594629051472661,0.19941925849223,0.206254242960778,0.185127660784087,0.201467611443409,0.395406475337132,0.183302498201904,0.180283697278112,0.167794896852723,0.193775696404867,0.131699290111962,0.628290963610105,0.656815012835432,0.39282250298868,0.234779956694862,0.21390440211819,0.278662588341228,0.50646046081328,0.133161766543906,0.150378909417937,0.106688610073143,0.162519745146511,0.16408535208086,0.552513441566183,0.111282661565434,0.149470124394516,0.152344663512633,0.188093594146051,0.165566691658181,0.498207103893386,0.180929427752652,0.19552958825724,0.196520927226389,0.165853173098253,0.163939155438957,0.586059629148476,0.120626839976292,0.182475840121801,0.157876717318836,0.139623248741096,0.166433855090914,0.537861544926601,0.165457243945996,0.151314592126233,0.159172561814341,0.159402300111446,0.178106758979825,0.439974204398199,0.173765760168274,0.168979084364572,0.196776944127181,0.182172609774306,0.159303454213987,0.449739814558447,0.221787793723015,0.224436517922166,0.251021517812845,0.371509051894518,0.233102733857907,0.385014940196129,0.126900919348452,0.13681523334789,0.131878525523854,0.151611678643153,0.16694605323444,0.562432912487691,0.137757472944061,0.155942151903503,0.140571438134776,0.148099266675704,0.169400584245153,0.408615144545094,0.182338812071824,0.180295128388719,0.17902200582327,0.199454673740287,0.186423781672884,0.514932572860102,0.118897670064265,0.152144544927682,0.14755703179535,0.139284874468396,0.13907682552839,0.443904754132429,0.137924199589869,0.166663737461278,0.164379341472706,0.125950096294196,0.167883206046609,0.519278707921919,0.226999991995943,0.201334929576909,0.184583538231659,0.204307269314491,0.206759117682742,0.152078086082706,0.530147088207195,0.210687622710503,0.221637555448236,0.220857625968016,0.278190245556345,0.102147134004727,0.2086229761037,0.1705113989088,0.214760763996873,0.199218210609938,0.203031135186724,0.318834910780556,0.576074093432207,0.328342656552519,0.27079061505286,0.242646928512913,0.259763268811401,0.163119782246458,0.140782877518176,0.158746737688695,0.109330712088257,0.154487792024524,0.16938197158009,0.20038982733411,0.141905156489855,0.198295082517714,0.15160967387937,0.199350701189036,0.185577935679495,0.148248654230583,0.157133806450034,0.221653476087051,0.214673961954517,0.20561030970399,0.307359563752256,0.239845067446868,0.12278151617011,0.170502501979012,0.159658749374666,0.122942915324649,0.168010298674646,0.158903312195962,0.132164029592462,0.164711937156571,0.165082306779313,0.11925435708747,0.171982920148776,0.125139124334841,0.172602921584507,0.191854008749098,0.164197923366393,0.170234746738826,0.241627635479314,0.133891809444827,0.20598092097151,0.208317331263676,0.251591334312987,0.210114789696234,0.326231135941471,0.0723173724870114,0.133899847460394,0.163037203656088,0.129227770519831,0.144096608897798,0.178549564026759,0.167247609566558,0.138890125967331,0.156190188962077,0.158200795028766,0.138615273000445,0.0857341306995731,0.0845152552011174,0.179548508817619,0.195001679561557,0.20433890679682,0.171141180948336,0.248946981175661,0.171978185397928,0.167701262060757,0.161099931510024,0.132748660323286,0.169264492405866,0.13700867688254,0.105508023158534,0.15954477107368,0.164914715326286,0.152800102058173,0.114193639279446,0.176017219657234,0.229736735263751,0.215253058450147,0.247411490904311,0.209438843343667,0.21288362249168,0.194759105803149,0.486559015887541,0.447555078949726,0.19146551609568,0.189757676488772,0.198128262550285,0.195620539114076,0.379817094913819,0.180901288528375,0.196331248350106,0.152837572633633,0.184366741925895,0.147768249705901,0.674216850459414,0.712467835932695,0.301912925463311,0.245556639363431,0.19377552130831,0.311821168408657,0.46026348414385,0.131507728804022,0.164655544348747,0.131857615477587,0.130018332141297,0.164258993593631,0.549314870340817,0.189558920810866,0.178721876450406,0.171827121735978,0.149516170159966,0.17438153864089,0.488315560566011,0.182126966556225,0.213030505328065,0.129049945403127,0.194206008323116,0.218909734359939,0.585438808498337,0.138540518260874,0.152501740055113,0.140148092621114,0.161836528886315,0.176506511586445,0.559900187948111,0.155079353667274,0.159803559093083,0.162567870825847,0.154594974965568,0.150790135261901,0.43327702870209,0.161025381951636,0.170546647047294,0.187896207598874,0.163946746183037,0.172222279523586,0.420331395486914,0.17582125459325,0.200560506266126,0.24958543885722,0.423830466588595,0.210531223141095,0.342797136770598,0.139064364259667,0.143742746454609,0.134359785763155,0.153750552433746,0.159688624180891,0.57668921126247,0.140764075980198,0.149763809483388,0.149415113126411,0.155325842917302,0.153330463203197,0.34942055873757,0.170825866601448,0.181814916607749,0.169949784181615,0.163507205962133,0.190984102212612,0.496195413316396,0.137548502184889,0.151994237743181,0.141708171996485,0.157310336656608,0.16779415237082,0.370601819326533,0.150768721934784,0.167992442549527,0.159974051670264,0.167694946482234,0.176938769797243,0.557063147539357,0.187161452824742,0.18894999545043,0.181234166147935,0.195266390552252,0.162516352183206,0.391558285360808,0.457294333434558,0.240888631597387,0.170623057131609,0.186805614568381,0.215376851774815,0.261426704684716,0.14972769381622,0.171996044931223,0.195738714287561,0.158383650643927,0.189084274944857,0.57085482883313,0.616121323990664,0.324589496411531,0.294982867493811,0.188514056480818,0.23819413314474,0.3615432910032,0.134201803764708,0.156874284945094,0.126180932525546,0.162249522139153,0.189476752850283,0.45082918545297,0.182420585713452,0.159180544305806,0.209517315510088,0.171806031607932,0.167602796575391,0.39271381144478,0.188047858978009,0.208800537227933,0.195715278313107,0.182395007060349,0.188950098689066,0.487271428833734,0.139559989879494,0.171757565023959,0.157597719438006,0.155589470992667,0.163425916969501,0.452146096829483,0.135204639699266,0.1534321132889,0.164240589299226,0.160556051631373,0.145464794400709,0.347721076859969,0.15376505644577,0.169919994864033,0.190711561594489,0.165659509032105,0.203245567823393,0.32544281247407,0.189300069481493,0.237790829926259,0.181156516368339,0.381331467421598,0.187406763352402,0.259554403560681,0.128188755680829,0.0568021812100392,0.109297651401821,0.142531234151807,0.140172674013025,0.472592584170955,0.115366133814093,0.146157529186362,0.136171682102162,0.151842268133975,0.150668073730412,0.254383459545514,0.175402986147673,0.191446707090992,0.13100994038534,0.183866673928624,0.21657687851071,0.404863256377697,0.1624457158107,0.161424187093692,0.138622637419373,0.160712976340124,0.155972990830545,0.281813378634916,0.148113814015731,0.157397664611316,0.171893141978134,0.16853500126946,0.172773848567968,0.456841039205101,0.245880076987449,0.212134714866873,0.223533158380081,0.197040923938409,0.184558009176382],"ci_95_upper":[0.489108728777512,0.888290351333977,0.819639341025642,0.83479675541061,0.797564657513195,0.848286714136215,0.414123494067783,0.801874046790599,0.832119899437384,0.847536147124445,0.806125913034214,0.851937998781666,0.65444487197241,0.949306136536874,0.875769520297508,0.837383569128342,0.808320278840829,0.852914302644544,0.478016779033286,0.868043607767909,0.83945777150501,0.901343357880039,0.838527615874269,0.853190803414164,0.551038290865695,0.823856007302238,0.812498358238895,0.853583679498408,0.813105719386644,0.809333950136765,0.502031887231518,0.817294257926144,0.836672406875447,0.840586277034608,0.817196865051615,0.84770118716243,0.592179703507754,0.861210757790608,0.817654493588785,0.864928357612321,0.846838711106811,0.828696944552596,0.548010951215267,0.844961286173706,0.859267284713282,0.83944619623938,0.84296790242735,0.856076319128802,0.43966668001231,0.850800899210276,0.826759044246308,0.824133140988814,0.794393646106953,0.818019004389791,0.435194081320485,0.847214406282174,0.823049256943231,0.85231351893007,0.688662463779014,0.845438072588691,0.373880538457343,0.878770782537534,0.843696591153997,0.879818032541502,0.889083048948361,0.847891103451619,0.557779213592016,0.873168955371954,0.851480033465683,0.83642239116007,0.84612789434697,0.863399391366565,0.380043202642654,0.822672461688951,0.822472855384355,0.863888409863622,0.834562641670151,0.809635777882162,0.506014688031994,0.851719746101359,0.871763798767108,0.839566318743678,0.840496631983864,0.866256268789697,0.421463060733877,0.85653857028164,0.848225927791927,0.841625140694346,0.880270006978191,0.8221686524839,0.543795473450822,0.870706341949671,0.848995489982209,0.797365751993148,0.814007527609962,0.813079963560242,0.519598181512389,0.934038803944734,0.826341758608416,0.823634184295326,0.837886072214686,0.841890032419924,0.420805360281071,0.829558008105399,0.837915919744151,0.825207961403823,0.819788043956119,0.830685698860455,0.65629706614761,0.930953871886116,0.866816168385848,0.853674585464982,0.775914777231805,0.824377231532746,0.541720953040877,0.976166393592833,0.85146438636487,0.892343720847472,0.843846251498146,0.832799275071609,0.5829936380619,0.842857946678758,0.820023787510955,0.849508904340334,0.829504678604921,0.813345882440808,0.532183769699933,0.806520280758711,0.828969224235228,0.833975792862134,0.815817828325002,0.826683924516417,0.619384807297617,0.874253482755815,0.845642379753621,0.844538035591298,0.843741024817749,0.830148771895279,0.568657332858423,0.844151504266538,0.850900519344831,0.846493000316022,0.859087355625333,0.846322272243225,0.47365569740418,0.832564435064606,0.816586642181742,0.885512132604025,0.824407658228979,0.797755289457013,0.476940462445577,0.843242353720541,0.819314223646665,0.855747589269806,0.630546670393367,0.82524026992273,0.423741201718906,0.883346892293623,0.841707458322507,0.888059348863383,0.850359758794557,0.863209424074394,0.596344058421976,0.870722556717252,0.833687362894171,0.850882994285069,0.910761720280223,0.83832853126541,0.441007794644596,0.819847529109587,0.853670796404293,0.835812442522062,0.823524435461465,0.795967290753914,0.548299719690926,0.847946592432672,0.846563965220794,0.868460558487214,0.867885635946857,0.830693349423024,0.492379501034404,0.852732097487118,0.821531119094459,0.824893837021784,0.856048258820568,0.824225465192923,0.548560036344831,0.813448873837473,0.836401808007103,0.798679321100363,0.876918841105022,0.854432265259293,0.196592158978065,0.936505222637997,0.844092303123508,0.823442474337718,0.836054722025112,0.896038305175004,0.128662445339418,0.829348368254683,0.830493500296057,0.880445182958473,0.89367853034887,0.92268826320251,0.35501066223606,0.925030828144639,0.882812689294089,0.867711672169366,0.818917155179318,0.84138899110016,0.201155848304128,0.880129937095574,0.842441000115365,0.886363029937955,0.827501770002619,0.865913286716852,0.233408438801227,0.846192292086316,0.843972967280061,0.83324298712869,0.893742933975505,0.86978801033731,0.178168419007462,0.83426530399603,0.83303156359626,0.820843955976263,0.827152595293216,0.871662231957252,0.275117598856337,0.869388572606113,0.838253571653551,0.853579048452495,0.838005232776856,0.811567663506128,0.192631899786557,0.861042316382622,0.834109997536419,0.827555889896392,0.83579774933807,0.866369106828884,0.159618261208671,0.831154998429861,0.822584214040517,0.853998476693438,0.834474763158786,0.918959403679323,0.16085065017897,0.830146885676295,0.816353240010467,0.891440467688653,0.472248185375992,0.897346456279595,0.109043527826661,0.900031760465735,0.850932237007422,0.881304813217677,0.850676976957818,0.897795175184194,0.206384703124423,0.859536664693069,0.833132267256606,0.863777651953012,0.84541877346974,0.840162635246707,0.117838934572423,0.890145146060838,0.850183695154298,0.832861269769993,0.824863753777595,0.867512811550202,0.206293626137001,0.842204315465795,0.855325075687207,0.85542094968686,0.870188835482683,0.831871905687351,0.14839912710877,0.8614393219506,0.82869442121031,0.850873031456613,0.683519606092812,0.895021594361939,0.258493044619468,0.839793695568295,0.856294227016153,0.880730779028173,0.83929829675418,0.811152747079006,0.530934196434665,0.896921903038689,0.825851644381786,0.828901058751249,0.798542758126598,0.79670828097767,0.404477909021547,0.836149487075898,0.824555149794953,0.819166763342017,0.837890718845744,0.803986112851374,0.7044296358508,0.931374225944455,0.87030657864585,0.8687437374957,0.789506176905096,0.871440821280703,0.494454761944476,0.877159576997988,0.826474612343072,0.880219871233322,0.853758919992662,0.858759035574197,0.579383041832159,0.845896597585602,0.837203097728761,0.835730441476643,0.857762536275447,0.818928128025449,0.519520099620499,0.931834360808822,0.830257827373723,0.831770029818532,0.808228820699551,0.829763944061315,0.617138267615108,0.873678960808111,0.83028942635429,0.837342140247785,0.857852882310064,0.818002281529132,0.589486854900913,0.882139145201694,0.879337514323693,0.84238141181723,0.826892416577949,0.823605339057883,0.465791309340765,0.812460204370571,0.824328489432549,0.826922004312644,0.83962893693464,0.812757667324723,0.452556442454656,0.840747071550944,0.847482395417819,0.838337972005698,0.700266317204216,0.922926891132011,0.378762092628857,0.872793073421404,0.844836922120469,0.971039779965084,0.866231229828011,0.852870358384409,0.60979850426711,0.856113617474849,0.831742675813828,0.837721221823444,0.943075091199116,0.828326321149845,0.38084413607097,0.826063773749566,0.828681941089154,0.826171050818109,0.812934962190473,0.821267863253872,0.526971273975121,0.847814634425342,0.844835702752235,0.8485490940706,0.837431362657751,0.828602317868491,0.416523228578527,0.872348025638129,0.835914293115648,0.828675062865984,0.880868874298142,0.830606531280036,0.585341735741169,0.8275487120442,0.834977230223743,0.8112858578674,0.841027862047088,0.798948915243198,0.434754665368666,0.889168550533164,0.816441268398597,0.861745411804824,0.824184378827067,0.844826748221256,0.28580633118367,0.829432777088884,0.84403031614297,0.819557492706919,0.836163859422524,0.832248853636915,0.606023899123292,0.945066452595174,0.874515494992943,0.871610171135117,0.789929162505517,0.870566777743125,0.395159785984966,0.874867485008469,0.837294189694596,0.883590112354604,0.842593721149202,0.833751863095523,0.479462436039687,0.832740444520231,0.848806035389213,0.82658757621233,0.827048326644975,0.795465556928933,0.425699386980033,0.816760689207936,0.818183401737461,0.851208998226666,0.796792268364938,0.827778302467986,0.519614025515765,0.858610071922275,0.839520132236537,0.851540608149178,0.857780237625272,0.820376034622675,0.482769624639972,0.868749307081549,0.87041350521555,0.841948591222815,0.833384428064837,0.845346033603408,0.379104980836782,0.822181739407801,0.836265432715473,0.826645616675185,0.831487311905258,0.836379955308578,0.355415961026383,0.830286657385511,0.819421800524497,0.835051345392467,0.63332122739278,0.83177197956652,0.295687754296059,0.877326898562437,0.82831545046269,0.869586471942906,0.856419604887286,0.843307082521639,0.507027212905756,0.882878407826755,0.823459926456532,0.860028146896569,0.850515854987204,0.84047473841885,0.286619453374556,0.809810125424627,0.826595159363585,0.834590185766726,0.853797346325056,0.840236958593403,0.436821434974053,0.841220180389561,0.847951020250751,0.850920332305595,0.847404816963061,0.841820904869089,0.327816911132581,0.852784220357649,0.844700853149798,0.822437821289491,0.85167467045132,0.843940364793696,0.485809561362389,0.820368257870905,0.834582747448848,0.863527736986601,0.802448603936145,0.804429879588863],"election":["President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","Governor 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020"],"year":[2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020]}}]}
 </script>
-
 
 
 <link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -227,7 +232,7 @@ gtag('config', 'G-DMTGHZ2N2J', { 'anonymize_ip': true});
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb1" data-startfrom="57" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 56;"><span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>ei <span class="op">=</span> <span class="fu">transpose</span>(ei_df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb1" data-startfrom="57" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 56;"><span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>ei <span class="op">=</span> <span class="fu">transpose</span>(ei_df)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-1" data-nodetype="declaration">
 
@@ -235,7 +240,7 @@ gtag('config', 'G-DMTGHZ2N2J', { 'anonymize_ip': true});
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb2" data-startfrom="63" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 62;"><span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a>viewof countyInput <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">select</span>(ei<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">county</span>)<span class="op">,</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb2" data-startfrom="63" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 62;"><span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a>viewof countyInput <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">select</span>(ei<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">county</span>)<span class="op">,</span></span>
 <span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a>                                {<span class="dt">sort</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span> <span class="dt">unique</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Choose a county:"</span>})</span>
 <span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
@@ -271,7 +276,7 @@ gtag('config', 'G-DMTGHZ2N2J', { 'anonymize_ip': true});
 <span id="cb2-96"><a href="#cb2-96" aria-hidden="true" tabindex="-1"></a><span class="dt">height</span><span class="op">:</span> <span class="dv">600</span><span class="op">,</span></span>
 <span id="cb2-97"><a href="#cb2-97" aria-hidden="true" tabindex="-1"></a><span class="dt">marginLeft</span><span class="op">:</span> <span class="dv">80</span></span>
 <span id="cb2-98"><a href="#cb2-98" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-99"><a href="#cb2-99" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-99"><a href="#cb2-99" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-2-1" data-nodetype="declaration">
@@ -385,239 +390,243 @@ window._ojs.selfContained = false;
 window._ojs.runtime.interpretFromScriptTags();
 </script>
 <script id="quarto-html-after-body" type="application/javascript">
-window.document.addEventListener("DOMContentLoaded", function (event) {
-  const toggleBodyColorMode = (bsSheetEl) => {
-    const mode = bsSheetEl.getAttribute("data-mode");
-    const bodyEl = window.document.querySelector("body");
-    if (mode === "dark") {
-      bodyEl.classList.add("quarto-dark");
-      bodyEl.classList.remove("quarto-light");
-    } else {
-      bodyEl.classList.add("quarto-light");
-      bodyEl.classList.remove("quarto-dark");
-    }
-  }
-  const toggleBodyColorPrimary = () => {
-    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
-    if (bsSheetEl) {
-      toggleBodyColorMode(bsSheetEl);
-    }
-  }
-  toggleBodyColorPrimary();  
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
-  const isCodeAnnotation = (el) => {
-    for (const clz of el.classList) {
-      if (clz.startsWith('code-annotation-')) {                     
-        return true;
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
       }
+      return false;
     }
-    return false;
-  }
-  const onCopySuccess = function(e) {
-    // button target
-    const button = e.trigger;
-    // don't keep focus
-    button.blur();
-    // flash "checked"
-    button.classList.add('code-copy-button-checked');
-    var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
-    let tooltip;
-    if (window.bootstrap) {
-      button.setAttribute("data-bs-toggle", "tooltip");
-      button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
-      tooltip = new bootstrap.Tooltip(button, 
-        { trigger: "manual", 
-          customClass: "code-copy-button-tooltip",
-          offset: [0, -8]});
-      tooltip.show();    
-    }
-    setTimeout(function() {
-      if (tooltip) {
-        tooltip.hide();
-        button.removeAttribute("data-bs-title");
-        button.removeAttribute("data-bs-toggle");
-        button.removeAttribute("data-bs-placement");
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
       }
-      button.setAttribute("title", currentTitle);
-      button.classList.remove('code-copy-button-checked');
-    }, 1000);
-    // clear code selection
-    e.clearSelection();
-  }
-  const getTextToCopy = function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
       for (const childEl of codeEl.children) {
         if (isCodeAnnotation(childEl)) {
           childEl.remove();
         }
       }
       return codeEl.innerText;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-    text: getTextToCopy
-  });
-  clipboard.on('success', onCopySuccess);
-  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
-    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-      text: getTextToCopy,
-      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
     });
-    clipboardModal.on('success', onCopySuccess);
-  }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-    var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
     }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-        // undo the damage that might have been done by quarto-nav.js in the case of
-        // links that we want to consider external
-        if (link.dataset.originalHref !== undefined) {
-          link.href = link.dataset.originalHref;
-        }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
-    }
-  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-    const config = {
-      allowHTML: true,
-      maxWidth: 500,
-      delay: 100,
-      arrow: false,
-      appendTo: function(el) {
-          return el.parentElement;
-      },
-      interactive: true,
-      interactiveBorder: 10,
-      theme: 'quarto',
-      placement: 'bottom-start',
-    };
-    if (contentFn) {
-      config.content = contentFn;
-    }
-    if (onTriggerFn) {
-      config.onTrigger = onTriggerFn;
-    }
-    if (onUntriggerFn) {
-      config.onUntrigger = onUntriggerFn;
-    }
-    window.tippy(el, config); 
-  }
-  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-  for (var i=0; i<noterefs.length; i++) {
-    const ref = noterefs[i];
-    tippyHover(ref, function() {
-      // use id or data attribute instead here
-      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-      try { href = new URL(href).hash; } catch {}
-      const id = href.replace(/^#\/?/, "");
-      const note = window.document.getElementById(id);
-      if (note) {
-        return note.innerHTML;
-      } else {
-        return "";
-      }
-    });
-  }
-  const xrefs = window.document.querySelectorAll('a.quarto-xref');
-  const processXRef = (id, note) => {
-    // Strip column container classes
-    const stripColumnClz = (el) => {
-      el.classList.remove("page-full", "page-columns");
-      if (el.children) {
-        for (const child of el.children) {
-          stripColumnClz(child);
-        }
-      }
-    }
-    stripColumnClz(note)
-    if (id === null || id.startsWith('sec-')) {
-      // Special case sections, only their first couple elements
-      const container = document.createElement("div");
-      if (note.children && note.children.length > 2) {
-        container.appendChild(note.children[0].cloneNode(true));
-        for (let i = 1; i < note.children.length; i++) {
-          const child = note.children[i];
-          if (child.tagName === "P" && child.innerText === "") {
-            continue;
-          } else {
-            container.appendChild(child.cloneNode(true));
-            break;
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
           }
         }
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(container);
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
         }
-        return container.innerHTML
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
       } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
         if (window.Quarto?.typesetMath) {
           window.Quarto.typesetMath(note);
         }
-        return note.innerHTML;
-      }
-    } else {
-      // Remove any anchor links if they are present
-      const anchorLink = note.querySelector('a.anchorjs-link');
-      if (anchorLink) {
-        anchorLink.remove();
-      }
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(note);
-      }
-      // TODO in 1.5, we should make sure this works without a callout special case
-      if (note.classList.contains("callout")) {
-        return note.outerHTML;
-      } else {
-        return note.innerHTML;
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
       }
     }
-  }
-  for (var i=0; i<xrefs.length; i++) {
-    const xref = xrefs[i];
-    tippyHover(xref, undefined, function(instance) {
-      instance.disable();
-      let url = xref.getAttribute('href');
-      let hash = undefined; 
-      if (url.startsWith('#')) {
-        hash = url;
-      } else {
-        try { hash = new URL(url).hash; } catch {}
-      }
-      if (hash) {
-        const id = hash.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note !== null) {
-          try {
-            const html = processXRef(id, note.cloneNode(true));
-            instance.setContent(html);
-          } finally {
-            instance.enable();
-            instance.show();
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
           }
         } else {
-          // See if we can fetch this
-          fetch(url.split('#')[0])
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
           .then(res => res.text())
           .then(html => {
             const parser = new DOMParser();
             const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.getElementById(id);
+            const note = htmlDoc.querySelector('main.content');
             if (note !== null) {
-              const html = processXRef(id, note);
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
               instance.setContent(html);
             } 
           }).finally(() => {
@@ -625,185 +634,161 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             instance.show();
           });
         }
-      } else {
-        // See if we can fetch a full url (with no hash to target)
-        // This is a special case and we should probably do some content thinning / targeting
-        fetch(url)
-        .then(res => res.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const htmlDoc = parser.parseFromString(html, "text/html");
-          const note = htmlDoc.querySelector('main.content');
-          if (note !== null) {
-            // This should only happen for chapter cross references
-            // (since there is no id in the URL)
-            // remove the first header
-            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-              note.children[0].remove();
-            }
-            const html = processXRef(null, note);
-            instance.setContent(html);
-          } 
-        }).finally(() => {
-          instance.enable();
-          instance.show();
-        });
-      }
-    }, function(instance) {
-    });
-  }
-      let selectedAnnoteEl;
-      const selectorForAnnotation = ( cell, annotation) => {
-        let cellAttr = 'data-code-cell="' + cell + '"';
-        let lineAttr = 'data-code-annotation="' +  annotation + '"';
-        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-        return selector;
-      }
-      const selectCodeLines = (annoteEl) => {
-        const doc = window.document;
-        const targetCell = annoteEl.getAttribute("data-target-cell");
-        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-        const lineIds = lines.map((line) => {
-          return targetCell + "-" + line;
-        })
-        let top = null;
-        let height = null;
-        let parent = null;
-        if (lineIds.length > 0) {
-            //compute the position of the single el (top and bottom and make a div)
-            const el = window.document.getElementById(lineIds[0]);
-            top = el.offsetTop;
-            height = el.offsetHeight;
-            parent = el.parentElement.parentElement;
-          if (lineIds.length > 1) {
-            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-            height = bottom - top;
-          }
-          if (top !== null && height !== null && parent !== null) {
-            // cook up a div (if necessary) and position it 
-            let div = window.document.getElementById("code-annotation-line-highlight");
-            if (div === null) {
-              div = window.document.createElement("div");
-              div.setAttribute("id", "code-annotation-line-highlight");
-              div.style.position = 'absolute';
-              parent.appendChild(div);
-            }
-            div.style.top = top - 2 + "px";
-            div.style.height = height + 4 + "px";
-            div.style.left = 0;
-            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-            if (gutterDiv === null) {
-              gutterDiv = window.document.createElement("div");
-              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-              gutterDiv.style.position = 'absolute';
-              const codeCell = window.document.getElementById(targetCell);
-              const gutter = codeCell.querySelector('.code-annotation-gutter');
-              gutter.appendChild(gutterDiv);
-            }
-            gutterDiv.style.top = top - 2 + "px";
-            gutterDiv.style.height = height + 4 + "px";
-          }
-          selectedAnnoteEl = annoteEl;
-        }
-      };
-      const unselectCodeLines = () => {
-        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-        elementsIds.forEach((elId) => {
-          const div = window.document.getElementById(elId);
-          if (div) {
-            div.remove();
-          }
-        });
-        selectedAnnoteEl = undefined;
-      };
-        // Handle positioning of the toggle
-    window.addEventListener(
-      "resize",
-      throttle(() => {
-        elRect = undefined;
-        if (selectedAnnoteEl) {
-          selectCodeLines(selectedAnnoteEl);
-        }
-      }, 10)
-    );
-    function throttle(fn, ms) {
-    let throttle = false;
-    let timer;
-      return (...args) => {
-        if(!throttle) { // first call gets through
-            fn.apply(this, args);
-            throttle = true;
-        } else { // all the others get throttled
-            if(timer) clearTimeout(timer); // cancel #2
-            timer = setTimeout(() => {
-              fn.apply(this, args);
-              timer = throttle = false;
-            }, ms);
-        }
-      };
-    }
-      // Attach click handler to the DT
-      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-      for (const annoteDlNode of annoteDls) {
-        annoteDlNode.addEventListener('click', (event) => {
-          const clickedEl = event.target;
-          if (clickedEl !== selectedAnnoteEl) {
-            unselectCodeLines();
-            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-            if (activeEl) {
-              activeEl.classList.remove('code-annotation-active');
-            }
-            selectCodeLines(clickedEl);
-            clickedEl.classList.add('code-annotation-active');
-          } else {
-            // Unselect the line
-            unselectCodeLines();
-            clickedEl.classList.remove('code-annotation-active');
-          }
-        });
-      }
-  const findCites = (el) => {
-    const parentEl = el.parentElement;
-    if (parentEl) {
-      const cites = parentEl.dataset.cites;
-      if (cites) {
-        return {
-          el,
-          cites: cites.split(' ')
-        };
-      } else {
-        return findCites(el.parentElement)
-      }
-    } else {
-      return undefined;
-    }
-  };
-  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-  for (var i=0; i<bibliorefs.length; i++) {
-    const ref = bibliorefs[i];
-    const citeInfo = findCites(ref);
-    if (citeInfo) {
-      tippyHover(citeInfo.el, function() {
-        var popup = window.document.createElement('div');
-        citeInfo.cites.forEach(function(cite) {
-          var citeDiv = window.document.createElement('div');
-          citeDiv.classList.add('hanging-indent');
-          citeDiv.classList.add('csl-entry');
-          var biblioDiv = window.document.getElementById('ref-' + cite);
-          if (biblioDiv) {
-            citeDiv.innerHTML = biblioDiv.innerHTML;
-          }
-          popup.appendChild(citeDiv);
-        });
-        return popup.innerHTML;
+      }, function(instance) {
       });
     }
-  }
-});
-</script>
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
