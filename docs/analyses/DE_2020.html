@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.55">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -10,10 +10,16 @@
 
 <title>Delaware 2020 – RPV Near Me</title>
 <style>
-code{white-space: pre-wrap;}
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -22,8 +28,9 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 /* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -34,7 +41,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -66,15 +73,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="../elc_logo.png" rel="icon" type="image/png">
-<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-4d3679a3291c5d2fa76912fa1a3c5959.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -114,17 +122,14 @@ gtag('config', 'G-DMTGHZ2N2J', { 'anonymize_ip': true});
 <script type="module" src="../site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
 <link href="../site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 <script type="ojs-define">
-
-{"contents":[{"name":"ei_df","value":{"county":["Kent County","Kent County","Kent County","Kent County","Kent County","Kent County","New Castle County","New Castle County","New Castle County","New Castle County","New Castle County","New Castle County","Sussex County","Sussex County","Sussex County","Sussex County","Sussex County","Sussex County","Kent County","Kent County","Kent County","Kent County","Kent County","Kent County","New Castle County","New Castle County","New Castle County","New Castle County","New Castle County","New Castle County","Sussex County","Sussex County","Sussex County","Sussex County","Sussex County","Sussex County","Kent County","Kent County","Kent County","Kent County","Kent County","Kent County","New Castle County","New Castle County","New Castle County","New Castle County","New Castle County","New Castle County","Sussex County","Sussex County","Sussex County","Sussex County","Sussex County","Sussex County","Kent County","Kent County","Kent County","Kent County","Kent County","Kent County","New Castle County","New Castle County","New Castle County","New Castle County","New Castle County","New Castle County","Sussex County","Sussex County","Sussex County","Sussex County","Sussex County","Sussex County","Kent County","Kent County","Kent County","Kent County","Kent County","Kent County","New Castle County","New Castle County","New Castle County","New Castle County","New Castle County","New Castle County","Sussex County","Sussex County","Sussex County","Sussex County","Sussex County","Sussex County","Kent County","Kent County","Kent County","Kent County","Kent County","Kent County","New Castle County","New Castle County","New Castle County","New Castle County","New Castle County","New Castle County","Sussex County","Sussex County","Sussex County","Sussex County","Sussex County","Sussex County","Kent County","Kent County","Kent County","Kent County","Kent County","Kent County","New Castle County","New Castle County","New Castle County","New Castle County","New Castle County","New Castle County","Sussex County","Sussex County","Sussex County","Sussex County","Sussex County","Sussex County"],"race":["White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other"],"cand":["gov_16_dem_car","gov_16_dem_car","gov_16_dem_car","gov_16_dem_car","gov_16_dem_car","gov_16_dem_car","gov_16_dem_car","gov_16_dem_car","gov_16_dem_car","gov_16_dem_car","gov_16_dem_car","gov_16_dem_car","gov_16_dem_car","gov_16_dem_car","gov_16_dem_car","gov_16_dem_car","gov_16_dem_car","gov_16_dem_car","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","atg_18_dem_jen","atg_18_dem_jen","atg_18_dem_jen","atg_18_dem_jen","atg_18_dem_jen","atg_18_dem_jen","atg_18_dem_jen","atg_18_dem_jen","atg_18_dem_jen","atg_18_dem_jen","atg_18_dem_jen","atg_18_dem_jen","atg_18_dem_jen","atg_18_dem_jen","atg_18_dem_jen","atg_18_dem_jen","atg_18_dem_jen","atg_18_dem_jen","uss_18_dem_car","uss_18_dem_car","uss_18_dem_car","uss_18_dem_car","uss_18_dem_car","uss_18_dem_car","uss_18_dem_car","uss_18_dem_car","uss_18_dem_car","uss_18_dem_car","uss_18_dem_car","uss_18_dem_car","uss_18_dem_car","uss_18_dem_car","uss_18_dem_car","uss_18_dem_car","uss_18_dem_car","uss_18_dem_car","gov_20_dem_car","gov_20_dem_car","gov_20_dem_car","gov_20_dem_car","gov_20_dem_car","gov_20_dem_car","gov_20_dem_car","gov_20_dem_car","gov_20_dem_car","gov_20_dem_car","gov_20_dem_car","gov_20_dem_car","gov_20_dem_car","gov_20_dem_car","gov_20_dem_car","gov_20_dem_car","gov_20_dem_car","gov_20_dem_car","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","uss_20_dem_coo","uss_20_dem_coo","uss_20_dem_coo","uss_20_dem_coo","uss_20_dem_coo","uss_20_dem_coo","uss_20_dem_coo","uss_20_dem_coo","uss_20_dem_coo","uss_20_dem_coo","uss_20_dem_coo","uss_20_dem_coo","uss_20_dem_coo","uss_20_dem_coo","uss_20_dem_coo","uss_20_dem_coo","uss_20_dem_coo","uss_20_dem_coo"],"mean":[0.3341,0.9263,0.6774,0.5243,0.5612,0.613,0.5381,0.9667,0.9332,0.6633,0.546,0.8529,0.4236,0.657,0.4815,0.5039,0.524,0.46,0.2625,0.9266,0.7224,0.6249,0.5453,0.7221,0.485,0.9637,0.9274,0.7248,0.6554,0.8668,0.3304,0.6135,0.3951,0.5183,0.5187,0.5124,0.3731,0.9262,0.686,0.5742,0.5447,0.68,0.6074,0.9337,0.86,0.7447,0.4527,0.3113,0.4491,0.6096,0.3921,0.517,0.4889,0.4675,0.3494,0.9405,0.6792,0.6044,0.5407,0.7955,0.5763,0.97,0.936,0.7795,0.5811,0.8479,0.4127,0.6041,0.3806,0.2982,0.4741,0.4634,0.3541,0.9201,0.7119,0.5769,0.5112,0.7165,0.5684,0.966,0.9091,0.7839,0.6063,0.7862,0.4145,0.6045,0.3837,0.4849,0.5122,0.4728,0.3375,0.9235,0.7121,0.6482,0.535,0.6736,0.5491,0.9665,0.8978,0.7725,0.4964,0.8159,0.4033,0.5506,0.4213,0.5124,0.4897,0.4724,0.3534,0.9235,0.716,0.6532,0.5037,0.6937,0.5772,0.9677,0.923,0.7901,0.5049,0.7719,0.4138,0.5908,0.4195,0.5071,0.5118,0.4759],"sd":[0.0202,0.0273,0.1175,0.1572,0.1875,0.1669,0.0075,0.0067,0.0171,0.0628,0.1611,0.0484,0.0157,0.1134,0.1046,0.1591,0.1693,0.156,0.0191,0.0248,0.1007,0.1535,0.16,0.1262,0.0073,0.0073,0.0188,0.0636,0.1385,0.0438,0.0181,0.1206,0.0954,0.1629,0.1971,0.1608,0.021,0.0308,0.1209,0.1572,0.1591,0.1312,0.0082,0.0121,0.0351,0.0725,0.1434,0.1282,0.0166,0.1136,0.1035,0.1538,0.1679,0.1625,0.0183,0.0186,0.1222,0.1634,0.1626,0.1294,0.0083,0.0054,0.0161,0.0672,0.1751,0.0494,0.0198,0.1304,0.1064,0.1958,0.1658,0.1673,0.0182,0.0239,0.1059,0.1659,0.1618,0.1402,0.0079,0.0069,0.0214,0.0637,0.1519,0.0626,0.0153,0.1155,0.104,0.1506,0.1651,0.1639,0.0196,0.0273,0.1192,0.1445,0.1776,0.1511,0.0088,0.0064,0.0256,0.0651,0.1588,0.0578,0.0188,0.1127,0.1035,0.157,0.1705,0.1635,0.0189,0.0259,0.114,0.1381,0.1721,0.1387,0.0088,0.0058,0.0189,0.0643,0.1701,0.0751,0.0159,0.1103,0.1127,0.1828,0.182,0.1499],"ci_95_lower":[0.2972,0.8609,0.4363,0.2211,0.1973,0.261,0.5236,0.9517,0.8956,0.5421,0.2235,0.734,0.3945,0.4021,0.2725,0.1918,0.2089,0.1697,0.2236,0.8688,0.4973,0.2939,0.228,0.4425,0.4721,0.9478,0.8853,0.5866,0.3594,0.7705,0.2929,0.3462,0.2302,0.226,0.1278,0.2009,0.3352,0.8512,0.4278,0.2383,0.2477,0.3814,0.5923,0.9098,0.7834,0.5979,0.1802,0.1313,0.4187,0.3823,0.2114,0.2118,0.1935,0.1869,0.3176,0.9009,0.3969,0.2614,0.218,0.4874,0.5614,0.9587,0.9007,0.6464,0.2394,0.7304,0.3714,0.3375,0.1958,0.0721,0.1707,0.1903,0.3203,0.8657,0.4906,0.2388,0.215,0.4207,0.5532,0.9515,0.8624,0.6528,0.2877,0.6547,0.3857,0.3612,0.2015,0.1983,0.1804,0.1675,0.3013,0.8609,0.4172,0.3119,0.1972,0.3405,0.5325,0.951,0.8432,0.6425,0.1925,0.68,0.3684,0.3332,0.2227,0.227,0.1723,0.1837,0.3193,0.8654,0.4413,0.3401,0.1817,0.3739,0.5625,0.9557,0.8795,0.6474,0.1862,0.6255,0.3835,0.3702,0.2023,0.1502,0.176,0.2042],"ci_95_upper":[0.3764,0.966,0.8762,0.8165,0.8746,0.8743,0.5526,0.9788,0.9599,0.7807,0.8203,0.9253,0.4544,0.8562,0.6803,0.7834,0.8428,0.7779,0.3016,0.9661,0.8854,0.8701,0.8277,0.9141,0.5007,0.9769,0.9586,0.8409,0.8834,0.9378,0.3637,0.8255,0.5974,0.8156,0.8604,0.8191,0.4186,0.9701,0.8891,0.8392,0.8389,0.8774,0.6245,0.9556,0.92,0.8776,0.7324,0.6083,0.4878,0.8258,0.6116,0.7927,0.8055,0.7815,0.3891,0.9723,0.876,0.8653,0.8468,0.9422,0.5929,0.9799,0.9631,0.895,0.885,0.925,0.4494,0.84,0.5939,0.727,0.7934,0.7995,0.3907,0.959,0.8842,0.8498,0.8258,0.9229,0.584,0.9776,0.9447,0.9007,0.8562,0.9,0.4445,0.8188,0.6271,0.7872,0.8053,0.778,0.3813,0.9662,0.8961,0.8736,0.8712,0.8995,0.566,0.9775,0.9437,0.8873,0.7654,0.9031,0.4412,0.7629,0.6218,0.8274,0.811,0.8112,0.3913,0.9635,0.8876,0.8786,0.8242,0.9074,0.5962,0.9783,0.955,0.8948,0.8343,0.8979,0.4451,0.7941,0.6641,0.8326,0.8525,0.7719],"election":["Governor 2016","Governor 2016","Governor 2016","Governor 2016","Governor 2016","Governor 2016","Governor 2016","Governor 2016","Governor 2016","Governor 2016","Governor 2016","Governor 2016","Governor 2016","Governor 2016","Governor 2016","Governor 2016","Governor 2016","Governor 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","Attorney General 2018","Attorney General 2018","Attorney General 2018","Attorney General 2018","Attorney General 2018","Attorney General 2018","Attorney General 2018","Attorney General 2018","Attorney General 2018","Attorney General 2018","Attorney General 2018","Attorney General 2018","Attorney General 2018","Attorney General 2018","Attorney General 2018","Attorney General 2018","Attorney General 2018","Attorney General 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","Governor 2020","Governor 2020","Governor 2020","Governor 2020","Governor 2020","Governor 2020","Governor 2020","Governor 2020","Governor 2020","Governor 2020","Governor 2020","Governor 2020","Governor 2020","Governor 2020","Governor 2020","Governor 2020","Governor 2020","Governor 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020"],"year":[2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020]}}]}
-
+{"contents":[{"name":"ei_df","value":{"county":["Kent County","Kent County","Kent County","Kent County","Kent County","Kent County","New Castle County","New Castle County","New Castle County","New Castle County","New Castle County","New Castle County","Sussex County","Sussex County","Sussex County","Sussex County","Sussex County","Sussex County","Kent County","Kent County","Kent County","Kent County","Kent County","Kent County","New Castle County","New Castle County","New Castle County","New Castle County","New Castle County","New Castle County","Sussex County","Sussex County","Sussex County","Sussex County","Sussex County","Sussex County","Kent County","Kent County","Kent County","Kent County","Kent County","Kent County","New Castle County","New Castle County","New Castle County","New Castle County","New Castle County","New Castle County","Sussex County","Sussex County","Sussex County","Sussex County","Sussex County","Sussex County","Kent County","Kent County","Kent County","Kent County","Kent County","Kent County","New Castle County","New Castle County","New Castle County","New Castle County","New Castle County","New Castle County","Sussex County","Sussex County","Sussex County","Sussex County","Sussex County","Sussex County","Kent County","Kent County","Kent County","Kent County","Kent County","Kent County","New Castle County","New Castle County","New Castle County","New Castle County","New Castle County","New Castle County","Sussex County","Sussex County","Sussex County","Sussex County","Sussex County","Sussex County","Kent County","Kent County","Kent County","Kent County","Kent County","Kent County","New Castle County","New Castle County","New Castle County","New Castle County","New Castle County","New Castle County","Sussex County","Sussex County","Sussex County","Sussex County","Sussex County","Sussex County","Kent County","Kent County","Kent County","Kent County","Kent County","Kent County","New Castle County","New Castle County","New Castle County","New Castle County","New Castle County","New Castle County","Sussex County","Sussex County","Sussex County","Sussex County","Sussex County","Sussex County"],"race":["White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other","White","Black","Hispanic","Asian","AI/AN","Other"],"cand":["gov_16_dem_car","gov_16_dem_car","gov_16_dem_car","gov_16_dem_car","gov_16_dem_car","gov_16_dem_car","gov_16_dem_car","gov_16_dem_car","gov_16_dem_car","gov_16_dem_car","gov_16_dem_car","gov_16_dem_car","gov_16_dem_car","gov_16_dem_car","gov_16_dem_car","gov_16_dem_car","gov_16_dem_car","gov_16_dem_car","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","pre_16_dem_cli","atg_18_dem_jen","atg_18_dem_jen","atg_18_dem_jen","atg_18_dem_jen","atg_18_dem_jen","atg_18_dem_jen","atg_18_dem_jen","atg_18_dem_jen","atg_18_dem_jen","atg_18_dem_jen","atg_18_dem_jen","atg_18_dem_jen","atg_18_dem_jen","atg_18_dem_jen","atg_18_dem_jen","atg_18_dem_jen","atg_18_dem_jen","atg_18_dem_jen","uss_18_dem_car","uss_18_dem_car","uss_18_dem_car","uss_18_dem_car","uss_18_dem_car","uss_18_dem_car","uss_18_dem_car","uss_18_dem_car","uss_18_dem_car","uss_18_dem_car","uss_18_dem_car","uss_18_dem_car","uss_18_dem_car","uss_18_dem_car","uss_18_dem_car","uss_18_dem_car","uss_18_dem_car","uss_18_dem_car","gov_20_dem_car","gov_20_dem_car","gov_20_dem_car","gov_20_dem_car","gov_20_dem_car","gov_20_dem_car","gov_20_dem_car","gov_20_dem_car","gov_20_dem_car","gov_20_dem_car","gov_20_dem_car","gov_20_dem_car","gov_20_dem_car","gov_20_dem_car","gov_20_dem_car","gov_20_dem_car","gov_20_dem_car","gov_20_dem_car","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","pre_20_dem_bid","uss_20_dem_coo","uss_20_dem_coo","uss_20_dem_coo","uss_20_dem_coo","uss_20_dem_coo","uss_20_dem_coo","uss_20_dem_coo","uss_20_dem_coo","uss_20_dem_coo","uss_20_dem_coo","uss_20_dem_coo","uss_20_dem_coo","uss_20_dem_coo","uss_20_dem_coo","uss_20_dem_coo","uss_20_dem_coo","uss_20_dem_coo","uss_20_dem_coo"],"mean":[0.334096432907108,0.926289059051306,0.677428793209841,0.524326098826693,0.561184113135726,0.61300383111618,0.538056436747499,0.96668618423958,0.933190849085918,0.663250436468358,0.546012587265806,0.852887901907641,0.423564282077218,0.65702277566667,0.481474741058595,0.503867680135361,0.523976150719807,0.459973072986621,0.262481798597643,0.926559654205376,0.722387285029137,0.624925699343542,0.545348633329565,0.722120278354617,0.4849881622634,0.963720562671986,0.927415937871426,0.724814186826399,0.65536848326,0.86681345476494,0.330411305250711,0.613463566686405,0.395108187048106,0.518310113785151,0.518725016983182,0.512373260402218,0.373056676852539,0.92616659550914,0.685952370405035,0.574226959985916,0.544670367698377,0.679989697573804,0.607355609705981,0.933730275654624,0.860029073775701,0.744711929352076,0.452735959815953,0.31131656037093,0.449091419556654,0.609559130670123,0.392136032055359,0.516984580175558,0.48885014456191,0.467543947458407,0.349381047019749,0.940498771550225,0.679230934756041,0.604370350413899,0.540722571420396,0.795533164906318,0.576317836211592,0.970046192646258,0.935957516441585,0.779472041019985,0.581114764460373,0.847869987730271,0.412668316235497,0.604141788121997,0.380632649250787,0.298205117083808,0.4740588114575,0.463421592347109,0.354064687941485,0.920133126152238,0.711915179283809,0.576872209410305,0.511167845629094,0.716488957837102,0.568353409141794,0.96603340883905,0.909066377200487,0.783906097801191,0.60632321338385,0.786195298919945,0.414490001908622,0.604494518647785,0.383739982498395,0.484927074129836,0.512198627671013,0.47284280669979,0.337511682135241,0.923506867444357,0.712088528916464,0.648194289887031,0.535035519886069,0.673576048944913,0.549128787472431,0.966452576075026,0.897844720478533,0.772499054041787,0.49639552217146,0.815856667310034,0.403340974292646,0.550586452308463,0.42128162247026,0.512404349521434,0.489653552338648,0.472391960399416,0.3534289800629,0.92353037079414,0.71597518637477,0.653150964207013,0.503719387640329,0.69373628742571,0.57722680833097,0.967679010108847,0.922969975010742,0.7900736122259,0.504937564917972,0.771858304391425,0.413834116665498,0.590752246541833,0.419520768725476,0.507141345365735,0.511824355632737,0.475859425623458],"sd":[0.0201542770022113,0.0272607804548211,0.117452874100352,0.157201395916287,0.187548375665896,0.166865279405032,0.00750814175434765,0.00672071639024113,0.017139716074075,0.062818286883093,0.161096661460743,0.048427412755789,0.0156659356304462,0.113400007246687,0.10456537554688,0.159085652120491,0.169325635436585,0.155994849487648,0.0191368474569028,0.024829641934391,0.100746539771947,0.153481770654484,0.159986271576649,0.126207023511044,0.007347194153575,0.00733296713464503,0.0188018339254031,0.0636352840204938,0.138471273579917,0.0438352172080514,0.0180732752861241,0.120565203749877,0.0953984207592894,0.162900446598665,0.197087128422788,0.160841274329885,0.0209751256033154,0.0307848086299075,0.120912558083679,0.157248699666198,0.159064905830358,0.131233586856605,0.00822862175825032,0.0121455006308304,0.0351152189321199,0.0725411821569831,0.143387740005929,0.128218345996613,0.01662884198585,0.113610980647676,0.103513741153836,0.153832371193082,0.167878004866231,0.162547812864899,0.01825378308221,0.0185754171775199,0.122219399802659,0.163418270999224,0.162571156601489,0.129358276420413,0.00831395833579609,0.00542255327669088,0.0161226943659438,0.0671919992027426,0.175087037612669,0.0494132618728074,0.0198485621376825,0.130422527035214,0.106405280986381,0.195825604445549,0.165847131188422,0.167346005438939,0.0182398774522149,0.0238533024622148,0.10589257334852,0.165937873036618,0.161817265874631,0.140218540823041,0.00786799664196047,0.00685026231061975,0.0213752476255238,0.0636560980922299,0.151890108047764,0.062587159200901,0.015320469437274,0.11554424844155,0.103999522187234,0.150601582531251,0.16507526567894,0.163871733366821,0.0196018162188133,0.0272607719472745,0.119245653009402,0.144458224405992,0.17764129100053,0.151095836461255,0.00879835187882016,0.00638148642057753,0.0256185897771087,0.0651320583452274,0.158782819031844,0.0577848481071877,0.0187994755451693,0.112682590441373,0.103518823707036,0.156951064399561,0.170527535215037,0.16347246773081,0.0188744895812029,0.0259327798636069,0.114009353160817,0.138098316509543,0.172099703706249,0.138657788210511,0.00881252577345098,0.00576133684509873,0.0188562718203854,0.0643248825436837,0.170076124745299,0.0750855218062357,0.0159348344347235,0.110348493714005,0.112663055440886,0.182773944851153,0.182011599838814,0.149915835340534],"ci_95_lower":[0.297229817069262,0.86087226523478,0.436269219349513,0.221111559320946,0.197312242385669,0.260976864403387,0.523588535414367,0.951724416086413,0.895612637088891,0.542085360345648,0.22353666418686,0.734037278166193,0.394536866734089,0.402079559230988,0.272519682248407,0.191812110424516,0.20893638104002,0.169705659456455,0.223639235609991,0.868837352976792,0.49734753005154,0.293857350796352,0.228021403385589,0.442513391848406,0.472108984057024,0.947849497693144,0.885269879452995,0.586644148624272,0.359352500617044,0.770474358470632,0.292852473444584,0.346240874324769,0.230242884131321,0.226049852951632,0.127758211785483,0.200868888639481,0.335243200231705,0.851151182705974,0.427796122022463,0.238265082296356,0.247671498104549,0.381443645050539,0.592309539841813,0.90984277611368,0.783412319132355,0.597922104593039,0.180239527453591,0.131347296385364,0.418706135640307,0.382283103773198,0.211432786493183,0.211822715100338,0.193464049487978,0.186946822530247,0.317589241390343,0.900889046190159,0.396912994221256,0.26135782036536,0.217997161229464,0.487397114623572,0.561449330997374,0.958721572993028,0.90072472645113,0.646426769613914,0.239351751294352,0.730414373731107,0.371371534771789,0.33746746663127,0.195777671641811,0.0720919525085794,0.170678487042281,0.1903362761182,0.32031893226467,0.865652674799278,0.49057440473726,0.238820812507306,0.214964809420055,0.420747000611676,0.553158655412904,0.951528884789291,0.862384592897267,0.652761313822793,0.287742433402076,0.654660853442344,0.385707307947957,0.361208233423324,0.201492954442561,0.198339357262245,0.180387023902554,0.167474060769352,0.301297913398615,0.860879536384361,0.417226023691917,0.31193350938825,0.197218158030905,0.340469572711357,0.532457649155431,0.951022977062174,0.843155505631829,0.64245771952271,0.192517147228523,0.680028221724084,0.368387957720179,0.333195757238966,0.222668748273582,0.227020232694126,0.172313557674856,0.183742595446273,0.319306012151391,0.865433166157928,0.441332153054908,0.340127747645955,0.181684914747321,0.373919173387113,0.562505121534397,0.955702708736515,0.879472869878152,0.647420597916369,0.186177128819449,0.625471434192917,0.383492161519001,0.370182609390589,0.20225129275272,0.150237366138309,0.176012171857295,0.204153052795577],"ci_95_upper":[0.376423592757974,0.965998628107892,0.876152692870454,0.816515405029554,0.874561250199504,0.87425054044392,0.552632359473763,0.978809935500394,0.959871701150004,0.780696337410276,0.82031153396872,0.925295664028335,0.454441551820267,0.856150928423995,0.680305686220927,0.78343280912417,0.842831334955994,0.7778515309531,0.301583525234613,0.966141099891215,0.885446628881744,0.870133783765023,0.827685014908001,0.914113998520229,0.500671964101476,0.976939872880245,0.958604172823736,0.840867945819102,0.883436934653853,0.937825586346952,0.363698518705961,0.825506308596646,0.597428494382817,0.815568942720049,0.860369345655536,0.819117188091181,0.418584227314715,0.970073175049356,0.889143833731605,0.83921933929139,0.838899707710175,0.877397129797545,0.624451347104229,0.955615177559939,0.920033259762428,0.87763720106236,0.732355367509578,0.608306266648633,0.487757902109693,0.825840318321423,0.611576555105873,0.792692937320457,0.805479408024613,0.781486121294214,0.389051149832002,0.972297857889065,0.876044130229596,0.865276692191492,0.846807641764319,0.942163227701918,0.592863910505679,0.979905648573576,0.963145528648737,0.894952030455753,0.885017675389171,0.924968576674492,0.449418867360772,0.839951646468169,0.593914601093253,0.726956821821223,0.793401711244649,0.799478658813339,0.390709852059186,0.959047456292177,0.884242993211092,0.849773894351402,0.825757648132187,0.922876970123982,0.583958527605049,0.977578024815851,0.944749067919561,0.900681447092693,0.85616481950673,0.899991004850903,0.444499294672613,0.818754640032763,0.62708562276679,0.787216740754353,0.805262035722608,0.778025216578369,0.381349011962898,0.966220341312355,0.896056081255546,0.873579308001384,0.871240829100862,0.899509954891185,0.565991168666758,0.977464746419536,0.943740579818958,0.887264265519297,0.765424259470411,0.903114564818616,0.441160619126652,0.76289881197162,0.621807612811802,0.827448597323163,0.811021828897506,0.811171629851697,0.391276519565828,0.96349192007543,0.887618987589291,0.878554258314178,0.824158705170153,0.907425217564199,0.596222131701032,0.978288701122552,0.954963035374083,0.894789593735484,0.834285135745217,0.897866500541448,0.445080197054703,0.794090315384172,0.664143154072535,0.832644090066202,0.85254205630627,0.771940037341013],"election":["Governor 2016","Governor 2016","Governor 2016","Governor 2016","Governor 2016","Governor 2016","Governor 2016","Governor 2016","Governor 2016","Governor 2016","Governor 2016","Governor 2016","Governor 2016","Governor 2016","Governor 2016","Governor 2016","Governor 2016","Governor 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","President 2016","Attorney General 2018","Attorney General 2018","Attorney General 2018","Attorney General 2018","Attorney General 2018","Attorney General 2018","Attorney General 2018","Attorney General 2018","Attorney General 2018","Attorney General 2018","Attorney General 2018","Attorney General 2018","Attorney General 2018","Attorney General 2018","Attorney General 2018","Attorney General 2018","Attorney General 2018","Attorney General 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","US Senate 2018","Governor 2020","Governor 2020","Governor 2020","Governor 2020","Governor 2020","Governor 2020","Governor 2020","Governor 2020","Governor 2020","Governor 2020","Governor 2020","Governor 2020","Governor 2020","Governor 2020","Governor 2020","Governor 2020","Governor 2020","Governor 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","President 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020","US Senate 2020"],"year":[2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2016,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020]}}]}
 </script>
-
 
 
 <link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -227,7 +232,7 @@ gtag('config', 'G-DMTGHZ2N2J', { 'anonymize_ip': true});
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb1" data-startfrom="57" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 56;"><span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>ei <span class="op">=</span> <span class="fu">transpose</span>(ei_df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb1" data-startfrom="57" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 56;"><span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>ei <span class="op">=</span> <span class="fu">transpose</span>(ei_df)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-1" data-nodetype="declaration">
 
@@ -235,7 +240,7 @@ gtag('config', 'G-DMTGHZ2N2J', { 'anonymize_ip': true});
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb2" data-startfrom="63" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 62;"><span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a>viewof countyInput <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">select</span>(ei<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">county</span>)<span class="op">,</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb2" data-startfrom="63" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 62;"><span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a>viewof countyInput <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">select</span>(ei<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">county</span>)<span class="op">,</span></span>
 <span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a>                                {<span class="dt">sort</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span> <span class="dt">unique</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Choose a county:"</span>})</span>
 <span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
@@ -271,7 +276,7 @@ gtag('config', 'G-DMTGHZ2N2J', { 'anonymize_ip': true});
 <span id="cb2-96"><a href="#cb2-96" aria-hidden="true" tabindex="-1"></a><span class="dt">height</span><span class="op">:</span> <span class="dv">600</span><span class="op">,</span></span>
 <span id="cb2-97"><a href="#cb2-97" aria-hidden="true" tabindex="-1"></a><span class="dt">marginLeft</span><span class="op">:</span> <span class="dv">80</span></span>
 <span id="cb2-98"><a href="#cb2-98" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-99"><a href="#cb2-99" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-99"><a href="#cb2-99" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-2-1" data-nodetype="declaration">
@@ -387,239 +392,243 @@ window._ojs.selfContained = false;
 window._ojs.runtime.interpretFromScriptTags();
 </script>
 <script id="quarto-html-after-body" type="application/javascript">
-window.document.addEventListener("DOMContentLoaded", function (event) {
-  const toggleBodyColorMode = (bsSheetEl) => {
-    const mode = bsSheetEl.getAttribute("data-mode");
-    const bodyEl = window.document.querySelector("body");
-    if (mode === "dark") {
-      bodyEl.classList.add("quarto-dark");
-      bodyEl.classList.remove("quarto-light");
-    } else {
-      bodyEl.classList.add("quarto-light");
-      bodyEl.classList.remove("quarto-dark");
-    }
-  }
-  const toggleBodyColorPrimary = () => {
-    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
-    if (bsSheetEl) {
-      toggleBodyColorMode(bsSheetEl);
-    }
-  }
-  toggleBodyColorPrimary();  
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
-  const isCodeAnnotation = (el) => {
-    for (const clz of el.classList) {
-      if (clz.startsWith('code-annotation-')) {                     
-        return true;
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
       }
+      return false;
     }
-    return false;
-  }
-  const onCopySuccess = function(e) {
-    // button target
-    const button = e.trigger;
-    // don't keep focus
-    button.blur();
-    // flash "checked"
-    button.classList.add('code-copy-button-checked');
-    var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
-    let tooltip;
-    if (window.bootstrap) {
-      button.setAttribute("data-bs-toggle", "tooltip");
-      button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
-      tooltip = new bootstrap.Tooltip(button, 
-        { trigger: "manual", 
-          customClass: "code-copy-button-tooltip",
-          offset: [0, -8]});
-      tooltip.show();    
-    }
-    setTimeout(function() {
-      if (tooltip) {
-        tooltip.hide();
-        button.removeAttribute("data-bs-title");
-        button.removeAttribute("data-bs-toggle");
-        button.removeAttribute("data-bs-placement");
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
       }
-      button.setAttribute("title", currentTitle);
-      button.classList.remove('code-copy-button-checked');
-    }, 1000);
-    // clear code selection
-    e.clearSelection();
-  }
-  const getTextToCopy = function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
       for (const childEl of codeEl.children) {
         if (isCodeAnnotation(childEl)) {
           childEl.remove();
         }
       }
       return codeEl.innerText;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-    text: getTextToCopy
-  });
-  clipboard.on('success', onCopySuccess);
-  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
-    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-      text: getTextToCopy,
-      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
     });
-    clipboardModal.on('success', onCopySuccess);
-  }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-    var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
     }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-        // undo the damage that might have been done by quarto-nav.js in the case of
-        // links that we want to consider external
-        if (link.dataset.originalHref !== undefined) {
-          link.href = link.dataset.originalHref;
-        }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
-    }
-  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-    const config = {
-      allowHTML: true,
-      maxWidth: 500,
-      delay: 100,
-      arrow: false,
-      appendTo: function(el) {
-          return el.parentElement;
-      },
-      interactive: true,
-      interactiveBorder: 10,
-      theme: 'quarto',
-      placement: 'bottom-start',
-    };
-    if (contentFn) {
-      config.content = contentFn;
-    }
-    if (onTriggerFn) {
-      config.onTrigger = onTriggerFn;
-    }
-    if (onUntriggerFn) {
-      config.onUntrigger = onUntriggerFn;
-    }
-    window.tippy(el, config); 
-  }
-  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-  for (var i=0; i<noterefs.length; i++) {
-    const ref = noterefs[i];
-    tippyHover(ref, function() {
-      // use id or data attribute instead here
-      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-      try { href = new URL(href).hash; } catch {}
-      const id = href.replace(/^#\/?/, "");
-      const note = window.document.getElementById(id);
-      if (note) {
-        return note.innerHTML;
-      } else {
-        return "";
-      }
-    });
-  }
-  const xrefs = window.document.querySelectorAll('a.quarto-xref');
-  const processXRef = (id, note) => {
-    // Strip column container classes
-    const stripColumnClz = (el) => {
-      el.classList.remove("page-full", "page-columns");
-      if (el.children) {
-        for (const child of el.children) {
-          stripColumnClz(child);
-        }
-      }
-    }
-    stripColumnClz(note)
-    if (id === null || id.startsWith('sec-')) {
-      // Special case sections, only their first couple elements
-      const container = document.createElement("div");
-      if (note.children && note.children.length > 2) {
-        container.appendChild(note.children[0].cloneNode(true));
-        for (let i = 1; i < note.children.length; i++) {
-          const child = note.children[i];
-          if (child.tagName === "P" && child.innerText === "") {
-            continue;
-          } else {
-            container.appendChild(child.cloneNode(true));
-            break;
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
           }
         }
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(container);
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
         }
-        return container.innerHTML
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
       } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
         if (window.Quarto?.typesetMath) {
           window.Quarto.typesetMath(note);
         }
-        return note.innerHTML;
-      }
-    } else {
-      // Remove any anchor links if they are present
-      const anchorLink = note.querySelector('a.anchorjs-link');
-      if (anchorLink) {
-        anchorLink.remove();
-      }
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(note);
-      }
-      // TODO in 1.5, we should make sure this works without a callout special case
-      if (note.classList.contains("callout")) {
-        return note.outerHTML;
-      } else {
-        return note.innerHTML;
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
       }
     }
-  }
-  for (var i=0; i<xrefs.length; i++) {
-    const xref = xrefs[i];
-    tippyHover(xref, undefined, function(instance) {
-      instance.disable();
-      let url = xref.getAttribute('href');
-      let hash = undefined; 
-      if (url.startsWith('#')) {
-        hash = url;
-      } else {
-        try { hash = new URL(url).hash; } catch {}
-      }
-      if (hash) {
-        const id = hash.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note !== null) {
-          try {
-            const html = processXRef(id, note.cloneNode(true));
-            instance.setContent(html);
-          } finally {
-            instance.enable();
-            instance.show();
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
           }
         } else {
-          // See if we can fetch this
-          fetch(url.split('#')[0])
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
           .then(res => res.text())
           .then(html => {
             const parser = new DOMParser();
             const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.getElementById(id);
+            const note = htmlDoc.querySelector('main.content');
             if (note !== null) {
-              const html = processXRef(id, note);
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
               instance.setContent(html);
             } 
           }).finally(() => {
@@ -627,185 +636,161 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             instance.show();
           });
         }
-      } else {
-        // See if we can fetch a full url (with no hash to target)
-        // This is a special case and we should probably do some content thinning / targeting
-        fetch(url)
-        .then(res => res.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const htmlDoc = parser.parseFromString(html, "text/html");
-          const note = htmlDoc.querySelector('main.content');
-          if (note !== null) {
-            // This should only happen for chapter cross references
-            // (since there is no id in the URL)
-            // remove the first header
-            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-              note.children[0].remove();
-            }
-            const html = processXRef(null, note);
-            instance.setContent(html);
-          } 
-        }).finally(() => {
-          instance.enable();
-          instance.show();
-        });
-      }
-    }, function(instance) {
-    });
-  }
-      let selectedAnnoteEl;
-      const selectorForAnnotation = ( cell, annotation) => {
-        let cellAttr = 'data-code-cell="' + cell + '"';
-        let lineAttr = 'data-code-annotation="' +  annotation + '"';
-        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-        return selector;
-      }
-      const selectCodeLines = (annoteEl) => {
-        const doc = window.document;
-        const targetCell = annoteEl.getAttribute("data-target-cell");
-        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-        const lineIds = lines.map((line) => {
-          return targetCell + "-" + line;
-        })
-        let top = null;
-        let height = null;
-        let parent = null;
-        if (lineIds.length > 0) {
-            //compute the position of the single el (top and bottom and make a div)
-            const el = window.document.getElementById(lineIds[0]);
-            top = el.offsetTop;
-            height = el.offsetHeight;
-            parent = el.parentElement.parentElement;
-          if (lineIds.length > 1) {
-            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-            height = bottom - top;
-          }
-          if (top !== null && height !== null && parent !== null) {
-            // cook up a div (if necessary) and position it 
-            let div = window.document.getElementById("code-annotation-line-highlight");
-            if (div === null) {
-              div = window.document.createElement("div");
-              div.setAttribute("id", "code-annotation-line-highlight");
-              div.style.position = 'absolute';
-              parent.appendChild(div);
-            }
-            div.style.top = top - 2 + "px";
-            div.style.height = height + 4 + "px";
-            div.style.left = 0;
-            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-            if (gutterDiv === null) {
-              gutterDiv = window.document.createElement("div");
-              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-              gutterDiv.style.position = 'absolute';
-              const codeCell = window.document.getElementById(targetCell);
-              const gutter = codeCell.querySelector('.code-annotation-gutter');
-              gutter.appendChild(gutterDiv);
-            }
-            gutterDiv.style.top = top - 2 + "px";
-            gutterDiv.style.height = height + 4 + "px";
-          }
-          selectedAnnoteEl = annoteEl;
-        }
-      };
-      const unselectCodeLines = () => {
-        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-        elementsIds.forEach((elId) => {
-          const div = window.document.getElementById(elId);
-          if (div) {
-            div.remove();
-          }
-        });
-        selectedAnnoteEl = undefined;
-      };
-        // Handle positioning of the toggle
-    window.addEventListener(
-      "resize",
-      throttle(() => {
-        elRect = undefined;
-        if (selectedAnnoteEl) {
-          selectCodeLines(selectedAnnoteEl);
-        }
-      }, 10)
-    );
-    function throttle(fn, ms) {
-    let throttle = false;
-    let timer;
-      return (...args) => {
-        if(!throttle) { // first call gets through
-            fn.apply(this, args);
-            throttle = true;
-        } else { // all the others get throttled
-            if(timer) clearTimeout(timer); // cancel #2
-            timer = setTimeout(() => {
-              fn.apply(this, args);
-              timer = throttle = false;
-            }, ms);
-        }
-      };
-    }
-      // Attach click handler to the DT
-      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-      for (const annoteDlNode of annoteDls) {
-        annoteDlNode.addEventListener('click', (event) => {
-          const clickedEl = event.target;
-          if (clickedEl !== selectedAnnoteEl) {
-            unselectCodeLines();
-            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-            if (activeEl) {
-              activeEl.classList.remove('code-annotation-active');
-            }
-            selectCodeLines(clickedEl);
-            clickedEl.classList.add('code-annotation-active');
-          } else {
-            // Unselect the line
-            unselectCodeLines();
-            clickedEl.classList.remove('code-annotation-active');
-          }
-        });
-      }
-  const findCites = (el) => {
-    const parentEl = el.parentElement;
-    if (parentEl) {
-      const cites = parentEl.dataset.cites;
-      if (cites) {
-        return {
-          el,
-          cites: cites.split(' ')
-        };
-      } else {
-        return findCites(el.parentElement)
-      }
-    } else {
-      return undefined;
-    }
-  };
-  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-  for (var i=0; i<bibliorefs.length; i++) {
-    const ref = bibliorefs[i];
-    const citeInfo = findCites(ref);
-    if (citeInfo) {
-      tippyHover(citeInfo.el, function() {
-        var popup = window.document.createElement('div');
-        citeInfo.cites.forEach(function(cite) {
-          var citeDiv = window.document.createElement('div');
-          citeDiv.classList.add('hanging-indent');
-          citeDiv.classList.add('csl-entry');
-          var biblioDiv = window.document.getElementById('ref-' + cite);
-          if (biblioDiv) {
-            citeDiv.innerHTML = biblioDiv.innerHTML;
-          }
-          popup.appendChild(citeDiv);
-        });
-        return popup.innerHTML;
+      }, function(instance) {
       });
     }
-  }
-});
-</script>
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
