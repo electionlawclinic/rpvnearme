@@ -21,6 +21,7 @@ man/*
 *.png
 !data/**/*.rds
 !data/**/*.csv
+!docs/*.rds
 
 # misc and  LaTeX
 *.tmp
