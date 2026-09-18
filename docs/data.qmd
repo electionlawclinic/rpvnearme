@@ -7,14 +7,20 @@ format:
 
 You can access a `.csv` with detailed RPV estimates and their confidence intervals, for every state.
 
-```{r, echo = FALSE, message = FALSE, warning = FALSE}
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
 library(tidyverse)
 library(htmltools)
 HTML(readLines("state-svg-defs.svg"))
 
 ```
 
-```{r echo = FALSE}
+```{r}
+#| echo: false
+
 raw <- gh::gh('GET /repos/electionlawclinic/rpvnearme/contents/data/')
 files <- keep(raw, ~ str_ends(.$name, pattern = 'summary\\.csv')) %>%
   map_dfr(~ tibble(

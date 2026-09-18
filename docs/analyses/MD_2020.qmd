@@ -7,7 +7,11 @@ format: html
 
 # Ecological Inference Estimates
 
-```{r, echo = FALSE, message = FALSE, warning=FALSE}
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
 library(tidyverse)
 library(ggiraph)
 library(ggdist)
@@ -53,12 +57,12 @@ ojs_define(ei_df = ei_tb)
 ```
 
 
-```{ojs, echo = FALSE}
+```{ojs}
 //| echo: false
 ei = transpose(ei_df)
 ```
 
-```{ojs, echo = FALSE}
+```{ojs}
 //| echo: false
 viewof countyInput = Inputs.select(ei.map(d => d.county),
                                 {sort: true, unique: true, label: "Choose a county:"})
@@ -106,7 +110,8 @@ Each point indicates the estimated mean for that race or ethnicity's estimated s
 ## Data Download
 
 
-```{r, echo = FALSE}
+```{r}
+#| echo: false
 
 state <- censable::match_name(abb)
 tibble(
