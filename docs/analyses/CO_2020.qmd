@@ -30,7 +30,7 @@ alarm_abb <- function() {
     'sos', 'Secretary of State'
   )
 }
-ei_tb <- read_csv(str_glue('https://raw.githubusercontent.com/electionlawclinic/rpvnearme/main/data/{abb}_county_2020_summary_b.csv'))
+ei_tb <- read_csv(str_glue('../../data/{abb}_county_2020_summary_b.csv'))
 
 ei_tb <- ei_tb  |>
   mutate(

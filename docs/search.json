@@ -1125,5 +1125,82 @@
     "title": "RPV Near Me",
     "section": "",
     "text": "This is a resource designed to be used by voters, community groups, activists, and lawyers to aid in their development of campaigns to fully enfranchise voters of color in local government.\n\n\n\n\n\n\nRead more about the project here.\nDownload the data."
+  },
+  {
+    "objectID": "AZ_2020_staged.html",
+    "href": "AZ_2020_staged.html",
+    "title": "Arizona 2020",
+    "section": "",
+    "text": "AK                        AL                        AR                        AZ                        CA                        CO                        CT                        DE                        FL                        GA                        HI                        IA                        ID                        IL                        IN                        KS                        KY                        LA                        MA                        MD                        ME                        MI                        MN                        MO                        MS                        MT                        NC                        ND                        NE                        NH                        NJ                        NM                        NV                        NY                        OH                        OK                        OR                        PA                        RI                        SC                        SD                        TN                        TX                        UT                        VA                        VT                        WA                        WI                        WV                        WY                        DC                        USA                \n\n\n\nei = transpose(ei_df)\n\n\n\n\n\n\n\nviewof countyInput = Inputs.select(ei.map(d =&gt; d.county),\n                                {sort: true, unique: true, label: \"Choose a county:\"})\n\nPlot.plot({\n\nmarks: [\n  Plot.ruleX([0]),\n  Plot.dot(ei,\n    {\n    x: \"mean\",\n    y: \"race\",\n    fill: \"race\",\n    r: 4,\n    filter: d =&gt; d.county === countyInput,\n    sort: {y: null}\n  }),\n  Plot.link(ei,\n  {\n  x1: \"ci_95_lower\",\n  x2: \"ci_95_upper\",\n  y1: \"race\",\n  y2: \"race\",\n  filter: d =&gt; d.county === countyInput\n  })\n],\nfacet: {data: ei, y: \"election\", filter: d =&gt; d.county === countyInput,\nmarginRight: 150, label: \"Contest\", sort: {fy: null}},\nfill: {legend: true},\nx: {label: \"(%) Estimated Support for Democrats\",\n    percent: true,\n    labelAnchor: \"center\"},\ny: {label: \"Race\"},\n\nheight: 600,\nmarginLeft: 80\n\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEach point indicates the estimated mean for that race or ethnicity’s estimated support for the Democratic candidate. The extent of the bar indicates a 95% confidence interval."
+  },
+  {
+    "objectID": "AZ_2020_staged.html#data-sources",
+    "href": "AZ_2020_staged.html#data-sources",
+    "title": "Arizona 2020",
+    "section": "Data Sources",
+    "text": "Data Sources\nData for Arizona comes from the ALARM Project’s 2020 Redistricting Data Files. This data standardizes the Voting and Election Science Team (VEST) data from the Harvard Dataverse to geographies from the US Census Bureau, primarily at the VTD level.\n\nElections Included in Analysis\n\nPresident 2016\nUS Senate 2016\nUS Senate 2018\nGovernor 2018\nAttorney General 2018\nSecretary of State 2018\nPresident 2020\nUS Senate 2020"
+  },
+  {
+    "objectID": "AZ_2020_staged.html#data-download",
+    "href": "AZ_2020_staged.html#data-download",
+    "title": "Arizona 2020",
+    "section": "Data Download",
+    "text": "Data Download\n\n\n\n\n\n\n\n \nSummary File A\n \n\n \nAZ_county_2020_summary.csv\n\n\n\n\n\n\n\n\n \nPrecinct Estimates A\n \n\n \nAZ_county_2020_precinct.csv\n\n\n\n\n\n\n\n\n \nSummary File B\n \n\n \nAZ_county_2020_summary_b.csv\n\n\n\n\n\n\n\n\n \nPrecinct Estimates B\n \n\n \nAZ_county_2020_precinct_b.csv"
+  },
+  {
+    "objectID": "about_111.html",
+    "href": "about_111.html",
+    "title": "About",
+    "section": "",
+    "text": "RPV Near Me is a project of the Election Law Clinic (“ELC”) at Harvard Law School. The mission of the Election Law Clinic at Harvard Law School is to train the next generation of election lawyers through litigation and advocacy that bring novel academic ideas to the practice of election law. It aims to build power for voters, not politicians, and recognizes that the struggle for voting rights is a struggle for racial justice.\n\n\n\nRacially polarized voting (RPV) occurs where voters of one race or ethnicity tend to support certain candidates in elections, while voters of another race or ethnicity support different candidates. Given the types of electoral systems used across the U.S., RPV often causes voters of color to have less representation than white voters, and in some cases no representation at all.\nAt the congressional and state legislative level, the Voting Rights Act has been used by civil rights groups and political actors to counter attempts to dilute the voting power of Black, Latino, Asian American, and Native American voters. But at the local level, it can be hard to access the data and techniques necessary to determine whether RPV exists. This site aims to bridge that gap by providing RPV estimates for every county in the country for at least two recent statewide elections.\n\n\n\nThe RPV estimates on this site were generated using the techniques approved by federal courts for use in Voting Rights Act litigation, namely King’s Ecological Inference (King’s EI). Specifically, we use election data from the Voting and Election Science Team, tabulated to Census Bureau geographies in the ALARM Project 2020 Redistricting Files. We analyze those contests using RxC ecological inference, using the R package eiPack. For demographic characteristics of each geography, we use voting age populations for White, Black, Hispanic, and other people.\nThe code to replicate the analyses is available on GitHub.\nThe analysis was conducted by Christopher T. Kenny, a Ph.D. candidate in the Department of Government at Harvard University.\n\n\n\nRPV Near Me is intended to inform the public, not serve as evidence for litigation. Analyses are conducted in a cookie-cutter style and are not adjusted to suit potential needs of particular places, which could require additional expert discretion. This site should be used to identify trends and hotspots in state and federal electoral contests, often called “exogenous” elections in legal contexts. Evidence of RPV in “exogenous” elections does not necessarily imply RPV in “endogenous” elections, nor does absence of RPV in “exogenous” elections imply absence of RPV in “endogenous” elections.\n\n\n\nWe are exploring adding RPV data for all the cities, towns, and villages in the U.S. If this would be useful to you, please contact us at elc@law.harvard.edu to let us know.\nIf there are other related products that would be useful in your efforts to enfranchise communities of color at the local level, please also reach out with a description of those products elc@law.harvard.edu."
+  },
+  {
+    "objectID": "about_111.html#background",
+    "href": "about_111.html#background",
+    "title": "About",
+    "section": "",
+    "text": "Racially polarized voting (RPV) occurs where voters of one race or ethnicity tend to support certain candidates in elections, while voters of another race or ethnicity support different candidates. Given the types of electoral systems used across the U.S., RPV often causes voters of color to have less representation than white voters, and in some cases no representation at all.\nAt the congressional and state legislative level, the Voting Rights Act has been used by civil rights groups and political actors to counter attempts to dilute the voting power of Black, Latino, Asian American, and Native American voters. But at the local level, it can be hard to access the data and techniques necessary to determine whether RPV exists. This site aims to bridge that gap by providing RPV estimates for every county in the country for at least two recent statewide elections."
+  },
+  {
+    "objectID": "about_111.html#data-and-methods",
+    "href": "about_111.html#data-and-methods",
+    "title": "About",
+    "section": "",
+    "text": "The RPV estimates on this site were generated using the techniques approved by federal courts for use in Voting Rights Act litigation, namely King’s Ecological Inference (King’s EI). Specifically, we use election data from the Voting and Election Science Team, tabulated to Census Bureau geographies in the ALARM Project 2020 Redistricting Files. We analyze those contests using RxC ecological inference, using the R package eiPack. For demographic characteristics of each geography, we use voting age populations for White, Black, Hispanic, and other people.\nThe code to replicate the analyses is available on GitHub.\nThe analysis was conducted by Christopher T. Kenny, a Ph.D. candidate in the Department of Government at Harvard University."
+  },
+  {
+    "objectID": "about_111.html#using-this-site",
+    "href": "about_111.html#using-this-site",
+    "title": "About",
+    "section": "",
+    "text": "RPV Near Me is intended to inform the public, not serve as evidence for litigation. Analyses are conducted in a cookie-cutter style and are not adjusted to suit potential needs of particular places, which could require additional expert discretion. This site should be used to identify trends and hotspots in state and federal electoral contests, often called “exogenous” elections in legal contexts. Evidence of RPV in “exogenous” elections does not necessarily imply RPV in “endogenous” elections, nor does absence of RPV in “exogenous” elections imply absence of RPV in “endogenous” elections."
+  },
+  {
+    "objectID": "about_111.html#next-steps",
+    "href": "about_111.html#next-steps",
+    "title": "About",
+    "section": "",
+    "text": "We are exploring adding RPV data for all the cities, towns, and villages in the U.S. If this would be useful to you, please contact us at elc@law.harvard.edu to let us know.\nIf there are other related products that would be useful in your efforts to enfranchise communities of color at the local level, please also reach out with a description of those products elc@law.harvard.edu."
+  },
+  {
+    "objectID": "AZ_2020_111.html",
+    "href": "AZ_2020_111.html",
+    "title": "Arizona 2020",
+    "section": "",
+    "text": "AK                        AL                        AR                        AZ                        CA                        CO                        CT                        DE                        FL                        GA                        HI                        IA                        ID                        IL                        IN                        KS                        KY                        LA                        MA                        MD                        ME                        MI                        MN                        MO                        MS                        MT                        NC                        ND                        NE                        NH                        NJ                        NM                        NV                        NY                        OH                        OK                        OR                        PA                        RI                        SC                        SD                        TN                        TX                        UT                        VA                        VT                        WA                        WI                        WV                        WY                        DC                        USA                \n\n\n\nei = transpose(ei_df)\n\n\n\n\n\n\n\nviewof countyInput = Inputs.select(ei.map(d =&gt; d.county),\n                                {sort: true, unique: true, label: \"Choose a county:\"})\n\nPlot.plot({\n\nmarks: [\n  Plot.ruleX([0]),\n  Plot.dot(ei,\n    {\n    x: \"mean\",\n    y: \"race\",\n    fill: \"race\",\n    r: 4,\n    filter: d =&gt; d.county === countyInput,\n    sort: {y: null}\n  }),\n  Plot.link(ei,\n  {\n  x1: \"ci_95_lower\",\n  x2: \"ci_95_upper\",\n  y1: \"race\",\n  y2: \"race\",\n  filter: d =&gt; d.county === countyInput\n  })\n],\nfacet: {data: ei, y: \"election\", filter: d =&gt; d.county === countyInput,\nmarginRight: 150, label: \"Contest\", sort: {fy: null}},\nfill: {legend: true},\nx: {label: \"(%) Estimated Support for Democrats\",\n    percent: true,\n    labelAnchor: \"center\"},\ny: {label: \"Race\"},\n\nheight: 600,\nmarginLeft: 80\n\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEach point indicates the estimated mean for that race or ethnicity’s estimated support for the Democratic candidate. The extent of the bar indicates a 95% confidence interval."
+  },
+  {
+    "objectID": "AZ_2020_111.html#data-sources",
+    "href": "AZ_2020_111.html#data-sources",
+    "title": "Arizona 2020",
+    "section": "Data Sources",
+    "text": "Data Sources\nData for Arizona comes from the ALARM Project’s 2020 Redistricting Data Files. This data standardizes the Voting and Election Science Team (VEST) data from the Harvard Dataverse to geographies from the US Census Bureau, primarily at the VTD level.\n\nElections Included in Analysis\n\nPresident 2016\nUS Senate 2016\nUS Senate 2018\nGovernor 2018\nAttorney General 2018\nSecretary of State 2018\nPresident 2020\nUS Senate 2020"
+  },
+  {
+    "objectID": "AZ_2020_111.html#data-download",
+    "href": "AZ_2020_111.html#data-download",
+    "title": "Arizona 2020",
+    "section": "Data Download",
+    "text": "Data Download\n\n\n\n\n\n\n\n \nSummary File A\n \n\n \nAZ_county_2020_summary.csv\n\n\n\n\n\n\n\n\n \nPrecinct Estimates A\n \n\n \nAZ_county_2020_precinct.csv\n\n\n\n\n\n\n\n\n \nSummary File B\n \n\n \nAZ_county_2020_summary_b.csv\n\n\n\n\n\n\n\n\n \nPrecinct Estimates B\n \n\n \nAZ_county_2020_precinct_b.csv"
   }
 ]
