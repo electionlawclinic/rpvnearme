@@ -9,7 +9,7 @@ process_rds <- function(state, version = '') {
       dplyr::bind_rows(lapply(w, FUN = function(x) x$estimates))
     }) |>
     dplyr::bind_rows(.id = 'county') |>
-    readr::write_csv(stringr::str_glue('data/{state}_county_2020_summary{version}.csv'))
+    readr::write_csv(stringr::str_glue('data/2020/{state}_county_2020_summary{version}.csv'))
 
   l |>
     purrr::discard(.p = function(x) all(sapply(x, purrr::is_null))) |>
@@ -20,17 +20,18 @@ process_rds <- function(state, version = '') {
     }) |>
     dplyr::bind_rows(.id = 'county') |>
     dplyr::select(-.rn) |>
-    readr::write_csv(stringr::str_glue('data/{state}_county_2020_precinct{version}.csv'))
+    readr::write_csv(stringr::str_glue('data/2020/{state}_county_2020_precinct{version}.csv'))
 
   list(
-    summary = stringr::str_glue('data/{state}_county_2020_summary{version}.csv'),
-    precinct = stringr::str_glue('data/{state}_county_2020_precinct{version}.csv')
+    summary = stringr::str_glue('data/2020/{state}_county_2020_summary{version}.csv'),
+    precinct = stringr::str_glue('data/2020/{state}_county_2020_precinct{version}.csv')
   )
 }
 
 process_national_csv <- function(type = 'county', version = '') {
+  data_dir <- 'data/2020'
   purrr::map_dfr(
-    fs::dir_ls(path = 'data', regexp = stringr::str_glue('.+{type}.+summary{version}\\.csv')),
+    fs::dir_ls(path = data_dir, regexp = stringr::str_glue('.+{type}.+summary{version}\\.csv')),
     readr::read_csv,
     col_types = readr::cols(
       county = readr::col_character(),
@@ -43,6 +44,6 @@ process_national_csv <- function(type = 'county', version = '') {
     ),
     .id = 'state'
   ) |>
-    dplyr::mutate(state = stringr::str_sub(state, 6, 7)) |>
-    readr::write_csv(stringr::str_glue('data/national_summary_2020{version}.csv'))
+    dplyr::mutate(state = stringr::str_sub(fs::path_file(state), 1, 2)) |>
+    readr::write_csv(stringr::str_glue('data/2020/national_summary_2020{version}.csv'))
 }

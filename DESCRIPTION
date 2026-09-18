@@ -1,15 +1,18 @@
 Package: rpvnearme
 Title: Ecological Inference Estimates for the United States
 Version: 0.0.0.9000
-Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
+Authors@R:
+    person(given = "Christopher T.",
+           family = "Kenny",
+           role = c("aut", "cre"),
+           email = "ctkenny@proton.me",
+           comment = c(ORCID = "0000-0002-9386-6860"))
 Description: County-by-county racially polarized voting analyses.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
-Imports: 
+Imports:
     cli,
     dplyr,
     eiCompare,
@@ -18,5 +21,5 @@ Imports:
     readr,
     rlang,
     stringr
-Suggests: 
+Suggests:
     rstudioapi
