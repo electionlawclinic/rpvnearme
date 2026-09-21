@@ -7,7 +7,11 @@ format: html
 
 # Ecological Inference Estimates
 
-```{r, echo = FALSE, message = FALSE, warning=FALSE}
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
 library(tidyverse)
 library(ggiraph)
 library(ggdist)
@@ -26,7 +30,7 @@ alarm_abb <- function() {
     'sos', 'Secretary of State'
   )
 }
-ei_tb <- read_csv(str_glue('https://raw.githubusercontent.com/electionlawclinic/rpvnearme/main/data/{abb}_county_2020_summary_b.csv'))
+ei_tb <- read_csv(str_glue('../../data/{abb}_county_2020_summary_b.csv'))
 
 ei_tb <- ei_tb  |>
   mutate(
@@ -53,12 +57,12 @@ ojs_define(ei_df = ei_tb)
 ```
 
 
-```{ojs, echo = FALSE}
+```{ojs}
 //| echo: false
 ei = transpose(ei_df)
 ```
 
-```{ojs, echo = FALSE}
+```{ojs}
 //| echo: false
 viewof countyInput = Inputs.select(ei.map(d => d.county),
                                 {sort: true, unique: true, label: "Choose a county:"})
@@ -101,12 +105,15 @@ marginLeft: 80
 
 Each point indicates the estimated mean for that race or ethnicity's estimated support for the Democratic candidate. The extent of the bar indicates a 95% confidence interval.
 
+Source: 2016–2020 estimates from Voting and Election Science Team precinct returns aligned by the ALARM Project. 2024 estimates from Redistricting Data Hub, Benjamin J. Rosenblatt and `@cincy9`, Christopher T. Kenny, and Josh Metcalf.
+
 {{< include ../../analyses/NM_county_2020/doc_NM_county_2020.md >}}
 
 ## Data Download
 
 
-```{r, echo = FALSE}
+```{r}
+#| echo: false
 
 state <- censable::match_name(abb)
 tibble(
