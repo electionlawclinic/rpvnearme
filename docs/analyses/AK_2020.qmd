@@ -105,6 +105,8 @@ marginLeft: 80
 
 Each point indicates the estimated mean for that race or ethnicity's estimated support for the Democratic candidate. The extent of the bar indicates a 95% confidence interval.
 
+Source: 2016–2020 estimates from Voting and Election Science Team precinct returns aligned by the ALARM Project. 2024 estimates from Redistricting Data Hub, Benjamin J. Rosenblatt and `@cincy9`, Christopher T. Kenny, and Josh Metcalf.
+
 {{< include ../../analyses/AK_county_2020/doc_AK_county_2020.md >}}
 
 ## Data Download
