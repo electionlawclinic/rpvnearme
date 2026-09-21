@@ -1,5 +1,6 @@
 compile_reader <- function(
-  source_dirs = fs::path('data', c('2020', '2024'))
+  source_dirs = fs::path('data', c('2020', '2024')),
+  normalize_counties = FALSE
 ) {
   if (any(!fs::dir_exists(source_dirs))) {
     cli::cli_abort(
@@ -28,7 +29,7 @@ compile_reader <- function(
 
   outputs <- purrr::imap(file_groups, function(files, output_name) {
     data <- purrr::map(files, function(file) {
-      readr::read_csv(
+      file_data <- readr::read_csv(
         file,
         col_types = readr::cols(
           .default = readr::col_guess(),
@@ -40,6 +41,13 @@ compile_reader <- function(
         ),
         show_col_types = FALSE
       )
+
+      if (normalize_counties) {
+        abb <- stringr::str_extract(fs::path_file(file), '^[A-Za-z]+')
+        file_data <- normalize_county(file_data, abb)
+      }
+
+      file_data
     }) |>
       purrr::list_rbind()
 
