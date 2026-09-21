@@ -38,19 +38,18 @@ normalize_county <- function(df, abb) {
   by_name <- county_key %in% ref$key
 
   if (all(by_fips)) {
-    lookup <- ref[, c('county', 'name')] |>
-      dplyr::rename(county_fips = county, county_name = name)
+    lookup <- ref[, c('county', 'name')]
     df |>
-      dplyr::left_join(lookup, by = c('county' = 'county_fips')) |>
-      dplyr::mutate(county_fips = county, county = county_name) |>
-      dplyr::select(-county_name)
+      dplyr::left_join(lookup, by = 'county') |>
+      dplyr::mutate(county = name) |>
+      dplyr::select(-name)
   } else if (all(by_name)) {
-    lookup <- ref[, c('key', 'county')] |>
-      dplyr::rename(county_fips = county)
+    lookup <- ref[, c('key', 'name')]
     df |>
       dplyr::mutate(.key = county_key) |>
       dplyr::left_join(lookup, by = c('.key' = 'key')) |>
-      dplyr::select(-.key)
+      dplyr::mutate(county = name) |>
+      dplyr::select(-.key, -name)
   } else {
     n_unmatched <- sum(!by_fips & !by_name)
     cli::cli_warn(
